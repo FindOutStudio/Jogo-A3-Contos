@@ -34,23 +34,38 @@ public class LauncherBase : MonoBehaviour
         }
     }
 
-    private void OnMouseDown()
-    {
-        if (isPlayerReady)
-        {
-            isDragging = true;
-            startPoint = transform.position; 
-            trajectoryLine.enabled = true; // Liga a linha quando começa a mirar
-        }
-    }
+
 
     void Update()
     {
+        // 1. Detecta o clique inicial
+        if (isPlayerReady && !isDragging && Input.GetMouseButtonDown(0))
+        {
+            // Pega a posição do mouse no mundo 2D
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            // "Raio-X": Pega TODOS os colisores que estão embaixo do mouse nesse exato ponto
+            Collider2D[] hits = Physics2D.OverlapPointAll(mousePos);
+
+            // Verifica se o nosso lançador é um desses colisores que o mouse tocou
+            foreach (Collider2D hit in hits)
+            {
+                if (hit.gameObject == this.gameObject) // Se clicou neste objeto
+                {
+                    isDragging = true;
+                    startPoint = transform.position;
+                    trajectoryLine.enabled = true; // Liga a linha quando começa a mirar
+                    break; // Achou o lançador, pode parar de checar os outros colisores
+                }
+            }
+        }
+
+        // 2. Continua a lógica de arrastar e soltar (O resto continua igual)
         if (isDragging)
         {
             DrawTrajectory(); // Atualiza o desenho da linha todo frame
 
-            if (Input.GetMouseButtonUp(0))
+            if (Input.GetMouseButtonUp(0)) // Quando soltar o clique em qualquer lugar
             {
                 isDragging = false;
                 trajectoryLine.enabled = false; // Esconde a linha ao soltar

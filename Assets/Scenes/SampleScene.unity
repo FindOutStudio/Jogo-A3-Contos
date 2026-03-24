@@ -564,7 +564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a98af546aa874a947b9ffb99c2ed0cc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LauncherBase
-  powerMultiplier: 5
+  powerMultiplier: 30
   maxDragDistance: 3
   trajectoryLine: {fileID: 147601593}
   trajectoryResolution: 30
@@ -1537,7 +1537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a98af546aa874a947b9ffb99c2ed0cc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LauncherBase
-  powerMultiplier: 5
+  powerMultiplier: 30
   maxDragDistance: 3
   trajectoryLine: {fileID: 586753041}
   trajectoryResolution: 30
@@ -1987,7 +1987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a98af546aa874a947b9ffb99c2ed0cc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LauncherBase
-  powerMultiplier: 5
+  powerMultiplier: 30
   maxDragDistance: 3
   trajectoryLine: {fileID: 628566582}
   trajectoryResolution: 30
@@ -4939,7 +4939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a98af546aa874a947b9ffb99c2ed0cc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LauncherBase
-  powerMultiplier: 5
+  powerMultiplier: 30
   maxDragDistance: 3
   trajectoryLine: {fileID: 1695214770}
   trajectoryResolution: 30

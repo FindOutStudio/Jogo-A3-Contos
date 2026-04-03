@@ -4021,6 +4021,10 @@ PrefabInstance:
       propertyPath: trajectoryLine
       value: 
       objectReference: {fileID: 586753041}
+    - target: {fileID: 1311495768047322093, guid: a8319c2b71bb4604aa0269db2a6f4240, type: 3}
+      propertyPath: powerMultiplier
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3710856986835354308, guid: a8319c2b71bb4604aa0269db2a6f4240, type: 3}
       propertyPath: m_Name
       value: Player

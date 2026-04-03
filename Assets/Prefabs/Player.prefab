@@ -173,6 +173,6 @@ MonoBehaviour:
   reloadDelayMs: 400
   powerMultiplier: 5
   maxDragDistance: 5
-  trajectoryLine: {fileID: 0}
+  trajectoryLine: {fileID: 7968531402269715248, guid: 6ef61a7f53a35ef4289c7cc0174e26e6, type: 3}
   trajectoryResolution: 30
   trajectoryTime: 0.5

@@ -143,4 +143,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MovingSaw
   pointA: {fileID: 0}
   pointB: {fileID: 0}
-  speed: 5
+  speed: 7

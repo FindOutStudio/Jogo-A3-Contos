@@ -171,8 +171,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDeath
   knockbackSpeed: 5
   reloadDelayMs: 400
-  powerMultiplier: 5
+  powerMultiplier: 6
   maxDragDistance: 5
-  trajectoryLine: {fileID: 7968531402269715248, guid: 6ef61a7f53a35ef4289c7cc0174e26e6, type: 3}
+  trajectoryLine: {fileID: 0}
   trajectoryResolution: 30
   trajectoryTime: 0.5

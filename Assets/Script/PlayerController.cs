@@ -28,6 +28,9 @@ public class PlayerController : MonoBehaviour
     public CinemachineVirtualCamera camVirtual; 
     private float tamanhoCameraOriginal;
 
+    [Header("Efeitos Visuais")]
+    public TrailRenderer rastroArremesso;
+
     [Header("Lançamento Aéreo")]
     public int maxMidAirLaunches = 1;
     private int midAirLaunchesLeft;
@@ -58,6 +61,12 @@ public class PlayerController : MonoBehaviour
         {
             tamanhoCameraOriginal = camVirtual.m_Lens.OrthographicSize;
         }
+
+        if (rastroArremesso != null)
+        {
+            rastroArremesso.emitting = false;
+            rastroArremesso.Clear();
+        }
     }
 
     private void Update()
@@ -83,6 +92,11 @@ public class PlayerController : MonoBehaviour
                 Time.fixedDeltaTime = 0.02f;
                 rb.gravityScale = originalGravity;
             }
+        }
+
+        if (rastroArremesso != null && rb.linearVelocity.magnitude < 0.5f && !isDragging)
+        {
+            rastroArremesso.emitting = false;
         }
 
         if (!isDragging && Input.GetMouseButtonDown(0))
@@ -138,6 +152,8 @@ public class PlayerController : MonoBehaviour
         isReadyToLaunch = true;
         
         midAirLaunchesLeft = maxMidAirLaunches;
+
+        if (rastroArremesso != null) rastroArremesso.emitting = false;
     }
 
     private void Shoot()
@@ -155,6 +171,8 @@ public class PlayerController : MonoBehaviour
         
         isReadyToLaunch = false;
         currentLauncher = null;
+
+        if (rastroArremesso != null) rastroArremesso.emitting = true;
     }
 
     private void IniciarArraste(Vector2 pontoDeInicio)
@@ -242,7 +260,14 @@ public class PlayerController : MonoBehaviour
         col.enabled = false;
         rb.linearVelocity = direction * knockbackSpeed;
 
+        if (rastroArremesso != null) rastroArremesso.emitting = false;
+
         await Task.Delay(reloadDelayMs);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        if (rastroArremesso != null) 
+        {
+            rastroArremesso.emitting = false;
+            rastroArremesso.Clear();
+        }
     }
 }

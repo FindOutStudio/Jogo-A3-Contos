@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Threading.Tasks;
+using Cinemachine; 
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Collider2D))]
@@ -13,6 +14,23 @@ public class PlayerController : MonoBehaviour
     [Header("Configurações do Lançamento")]
     public float powerMultiplier = 5f;
     public float maxDragDistance = 3f;
+
+    [Header("Camera Lenta (Zelda)")]
+    public float slowMotionTimeScale = 0.35f; 
+    public float slowMotionGravityMultiplier = 0.2f;
+    public float tempoMaximoMira = 2f; 
+    private float contadorMira;
+
+    [Header("Efeito de Câmera (Cinemachine)")]
+    public float zoomMultiplicador = 0.85f; 
+    public float zoomMultiplicadorLancador = 0.95f;
+    public float zoomVelocidade = 8f;
+    public CinemachineVirtualCamera camVirtual; 
+    private float tamanhoCameraOriginal;
+
+    [Header("Lançamento Aéreo")]
+    public int maxMidAirLaunches = 1;
+    private int midAirLaunchesLeft;
 
     [Header("Configurações da Trajetória")]
     public LineRenderer trajectoryLine;
@@ -35,31 +53,68 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
         originalGravity = rb.gravityScale;
+        
+        if (camVirtual != null)
+        {
+            tamanhoCameraOriginal = camVirtual.m_Lens.OrthographicSize;
+        }
     }
 
     private void Update()
     {
-        if (isDead || !isReadyToLaunch) return;
+        if (camVirtual != null)
+        {
+            float zoomAlvo = tamanhoCameraOriginal;
+            if (isDragging)
+            {
+                zoomAlvo = tamanhoCameraOriginal * (isReadyToLaunch ? zoomMultiplicadorLancador : zoomMultiplicador);
+            }
+            camVirtual.m_Lens.OrthographicSize = Mathf.Lerp(camVirtual.m_Lens.OrthographicSize, zoomAlvo, Time.unscaledDeltaTime * zoomVelocidade);
+        }
+
+        if (isDead) return;
+
+        if (isDragging && !isReadyToLaunch)
+        {
+            contadorMira += Time.unscaledDeltaTime;
+            if (contadorMira >= tempoMaximoMira)
+            {
+                Time.timeScale = 1f;
+                Time.fixedDeltaTime = 0.02f;
+                rb.gravityScale = originalGravity;
+            }
+        }
 
         if (!isDragging && Input.GetMouseButtonDown(0))
         {
-            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Collider2D[] hits = Physics2D.OverlapPointAll(mousePos);
-
-            foreach (Collider2D hit in hits)
+            if (isReadyToLaunch)
             {
-                if (hit.transform == currentLauncher)
+                Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                Collider2D[] hits = Physics2D.OverlapPointAll(mousePos);
+
+                foreach (Collider2D hit in hits)
                 {
-                    isDragging = true;
-                    startPoint = currentLauncher.position;
-                    trajectoryLine.enabled = true;
-                    break;
+                    if (hit.transform == currentLauncher)
+                    {
+                        IniciarArraste(currentLauncher.position);
+                        break;
+                    }
                 }
+            }
+            else if (midAirLaunchesLeft > 0)
+            {
+                IniciarArraste(transform.position);
+                midAirLaunchesLeft--;
             }
         }
 
         if (isDragging)
         {
+            if (!isReadyToLaunch)
+            {
+                startPoint = transform.position;
+            }
+
             DrawTrajectory();
 
             if (Input.GetMouseButtonUp(0))
@@ -81,19 +136,42 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
         transform.position = launcherTransform.position;
         isReadyToLaunch = true;
+        
+        midAirLaunchesLeft = maxMidAirLaunches;
     }
 
     private void Shoot()
     {
+        Time.timeScale = 1f;
+        Time.fixedDeltaTime = 0.02f;
+
         Vector2 direction = (startPoint - endPoint).normalized;
         float distance = Vector2.Distance(startPoint, endPoint);
         distance = Mathf.Clamp(distance, 0, maxDragDistance);
 
         rb.gravityScale = originalGravity;
+        rb.linearVelocity = Vector2.zero; 
         rb.AddForce(direction * distance * powerMultiplier, ForceMode2D.Impulse);
         
         isReadyToLaunch = false;
         currentLauncher = null;
+    }
+
+    private void IniciarArraste(Vector2 pontoDeInicio)
+    {
+        isDragging = true;
+        startPoint = pontoDeInicio;
+        trajectoryLine.enabled = true;
+        contadorMira = 0f; 
+
+        if (!isReadyToLaunch)
+        {
+            rb.linearVelocity = Vector2.zero; 
+            rb.gravityScale = originalGravity * slowMotionGravityMultiplier;
+            
+            Time.timeScale = slowMotionTimeScale;
+            Time.fixedDeltaTime = 0.02f * Time.timeScale;
+        }
     }
 
     private void DrawTrajectory()
@@ -156,6 +234,9 @@ public class PlayerController : MonoBehaviour
 
     private async Task DeathSequence(Vector2 direction)
     {
+        Time.timeScale = 1f;
+        Time.fixedDeltaTime = 0.02f;
+
         isDead = true;
         rb.gravityScale = 0f;
         col.enabled = false;

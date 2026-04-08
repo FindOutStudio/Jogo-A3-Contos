@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     [Header("Configurações do Lançamento")]
     public float powerMultiplier = 5f;
     public float maxDragDistance = 3f;
+    public float imunidadeMesmoLancador = 0.5f; // NOVO: Tempo pra não ser atropelado pela própria base
 
     [Header("Camera Lenta (Zelda)")]
     public float slowMotionTimeScale = 0.35f; 
@@ -51,16 +52,19 @@ public class PlayerController : MonoBehaviour
     private float originalGravity;
     private Transform currentLauncher;
 
+    private Vector2 telaPosicaoInicialMouse; 
+
+    // NOVO: Variáveis para a imunidade de recarregamento
+    private Transform ultimoLancador;
+    private float timerImunidadeLancador;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
         originalGravity = rb.gravityScale;
         
-        if (camVirtual != null)
-        {
-            tamanhoCameraOriginal = camVirtual.m_Lens.OrthographicSize;
-        }
+        if (camVirtual != null) tamanhoCameraOriginal = camVirtual.m_Lens.OrthographicSize;
 
         if (rastroArremesso != null)
         {
@@ -71,18 +75,29 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        // NOVO: Diminui o cronômetro de imunidade
+        if (timerImunidadeLancador > 0f)
+        {
+            timerImunidadeLancador -= Time.unscaledDeltaTime;
+        }
+
+        // Lógica de Zoom
         if (camVirtual != null)
         {
             float zoomAlvo = tamanhoCameraOriginal;
-            if (isDragging)
-            {
-                zoomAlvo = tamanhoCameraOriginal * (isReadyToLaunch ? zoomMultiplicadorLancador : zoomMultiplicador);
-            }
+            if (isDragging) zoomAlvo = tamanhoCameraOriginal * (isReadyToLaunch ? zoomMultiplicadorLancador : zoomMultiplicador);
             camVirtual.m_Lens.OrthographicSize = Mathf.Lerp(camVirtual.m_Lens.OrthographicSize, zoomAlvo, Time.unscaledDeltaTime * zoomVelocidade);
         }
 
         if (isDead) return;
 
+        // Mantém "colado" no lançador se ele se mover
+        if (isReadyToLaunch && currentLauncher != null)
+        {
+            transform.position = currentLauncher.position;
+        }
+
+        // Limite de tempo de mira
         if (isDragging && !isReadyToLaunch)
         {
             contadorMira += Time.unscaledDeltaTime;
@@ -94,18 +109,15 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (rastroArremesso != null && rb.linearVelocity.magnitude < 0.5f && !isDragging)
-        {
-            rastroArremesso.emitting = false;
-        }
+        if (rastroArremesso != null && rb.linearVelocity.magnitude < 0.5f && !isDragging) rastroArremesso.emitting = false;
 
+        // Detecta o clique
         if (!isDragging && Input.GetMouseButtonDown(0))
         {
             if (isReadyToLaunch)
             {
                 Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 Collider2D[] hits = Physics2D.OverlapPointAll(mousePos);
-
                 foreach (Collider2D hit in hits)
                 {
                     if (hit.transform == currentLauncher)
@@ -122,11 +134,16 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        // Arrastando
         if (isDragging)
         {
-            if (!isReadyToLaunch)
+            if (isReadyToLaunch && currentLauncher != null)
             {
-                startPoint = transform.position;
+                startPoint = currentLauncher.position;
+            }
+            else if (!isReadyToLaunch)
+            {
+                startPoint = Camera.main.ScreenToWorldPoint(telaPosicaoInicialMouse);
             }
 
             DrawTrajectory();
@@ -144,16 +161,37 @@ public class PlayerController : MonoBehaviour
     public void SetReadyToLaunch(Transform launcherTransform)
     {
         if (isDead) return;
-        
+
+        // A CORREÇÃO DE OURO AQUI:
+        // Se a base que estamos encostando for a ÚLTIMA que saímos, e o tempo de imunidade não zerou, nós IGNORAMOS a base.
+        if (launcherTransform == ultimoLancador && timerImunidadeLancador > 0f) return;
+
         currentLauncher = launcherTransform;
+        ultimoLancador = launcherTransform; // Registra quem está segurando o player agora
+
         rb.gravityScale = 0f;
         rb.linearVelocity = Vector2.zero;
         transform.position = launcherTransform.position;
         isReadyToLaunch = true;
         
         midAirLaunchesLeft = maxMidAirLaunches;
-
         if (rastroArremesso != null) rastroArremesso.emitting = false;
+    }
+
+    private void IniciarArraste(Vector2 pontoDeInicio)
+    {
+        isDragging = true;
+        startPoint = pontoDeInicio;
+        telaPosicaoInicialMouse = Input.mousePosition; 
+        trajectoryLine.enabled = true;
+        contadorMira = 0f; 
+
+        if (!isReadyToLaunch)
+        {
+            rb.gravityScale = originalGravity * slowMotionGravityMultiplier; 
+            Time.timeScale = slowMotionTimeScale;
+            Time.fixedDeltaTime = 0.02f * Time.timeScale;
+        }
     }
 
     private void Shoot()
@@ -169,31 +207,17 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity = Vector2.zero; 
         rb.AddForce(direction * distance * powerMultiplier, ForceMode2D.Impulse);
         
+        // NOVO: Ativa a imunidade de 0.5s e esvazia o lançador atual
+        timerImunidadeLancador = imunidadeMesmoLancador;
         isReadyToLaunch = false;
         currentLauncher = null;
 
         if (rastroArremesso != null) rastroArremesso.emitting = true;
     }
 
-    private void IniciarArraste(Vector2 pontoDeInicio)
-    {
-        isDragging = true;
-        startPoint = pontoDeInicio;
-        trajectoryLine.enabled = true;
-        contadorMira = 0f; 
-
-        if (!isReadyToLaunch)
-        {
-            rb.linearVelocity = Vector2.zero; 
-            rb.gravityScale = originalGravity * slowMotionGravityMultiplier;
-            
-            Time.timeScale = slowMotionTimeScale;
-            Time.fixedDeltaTime = 0.02f * Time.timeScale;
-        }
-    }
-
     private void DrawTrajectory()
     {
+        // ... (Seu código de DrawTrajectory continua exatamente igual)
         Vector2 currentMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 direction = (startPoint - currentMousePos).normalized;
         float distance = Vector2.Distance(startPoint, currentMousePos);
@@ -226,10 +250,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // ... (Seu código de DeathSequence continua exatamente igual)
     private async void OnCollisionEnter2D(Collision2D collision)
     {
         if (isDead) return;
-
         if (collision.gameObject.CompareTag("Obstacle"))
         {
             Vector2 knockbackDir = (transform.position - collision.transform.position).normalized;
@@ -241,7 +265,6 @@ public class PlayerController : MonoBehaviour
     private async void OnTriggerEnter2D(Collider2D collision)
     {
         if (isDead) return;
-
         if (collision.gameObject.CompareTag("Obstacle"))
         {
             Vector2 knockbackDir = (transform.position - collision.transform.position).normalized;

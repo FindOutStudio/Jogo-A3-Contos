@@ -14,7 +14,13 @@ public class PlayerController : MonoBehaviour
     [Header("Configurações do Lançamento")]
     public float powerMultiplier = 5f;
     public float maxDragDistance = 3f;
-    public float imunidadeMesmoLancador = 0.5f; // NOVO: Tempo pra não ser atropelado pela própria base
+    public float imunidadeMesmoLancador = 0.5f; 
+
+    [Header("Ricochete Clássico (Espelho)")]
+    public float multiplicadorRicochete = 0.9f; 
+    [Tooltip("Força extra jogada para cima após o quique pra linha não 'broxar' e cair rápido")]
+    public float forcaExtraParaCima = 5f; 
+    public int maximoDeQuiquesNaLinha = 1; 
 
     [Header("Camera Lenta (Zelda)")]
     public float slowMotionTimeScale = 0.35f; 
@@ -22,7 +28,7 @@ public class PlayerController : MonoBehaviour
     public float tempoMaximoMira = 2f; 
     private float contadorMira;
 
-    [Header("Efeito de Câmera (Cinemachine)")]
+    [Header("Efeito de Câmera")]
     public float zoomMultiplicador = 0.85f; 
     public float zoomMultiplicadorLancador = 0.95f;
     public float zoomVelocidade = 8f;
@@ -38,8 +44,8 @@ public class PlayerController : MonoBehaviour
 
     [Header("Configurações da Trajetória")]
     public LineRenderer trajectoryLine;
-    public int trajectoryResolution = 30;
-    public float trajectoryTime = 1f;
+    public int trajectoryResolution = 40; 
+    public float trajectoryTime = 1.5f;
 
     private Rigidbody2D rb;
     private Collider2D col;
@@ -53,10 +59,10 @@ public class PlayerController : MonoBehaviour
     private Transform currentLauncher;
 
     private Vector2 telaPosicaoInicialMouse; 
-
-    // NOVO: Variáveis para a imunidade de recarregamento
     private Transform ultimoLancador;
     private float timerImunidadeLancador;
+
+    private Vector2 lastFrameVelocity;
 
     private void Awake()
     {
@@ -64,24 +70,21 @@ public class PlayerController : MonoBehaviour
         col = GetComponent<Collider2D>();
         originalGravity = rb.gravityScale;
         
-        if (camVirtual != null) tamanhoCameraOriginal = camVirtual.m_Lens.OrthographicSize;
+        rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous; 
 
-        if (rastroArremesso != null)
-        {
-            rastroArremesso.emitting = false;
-            rastroArremesso.Clear();
-        }
+        if (camVirtual != null) tamanhoCameraOriginal = camVirtual.m_Lens.OrthographicSize;
+        if (rastroArremesso != null) { rastroArremesso.emitting = false; rastroArremesso.Clear(); }
+    }
+
+    private void FixedUpdate()
+    {
+        if (rb != null) lastFrameVelocity = rb.linearVelocity;
     }
 
     private void Update()
     {
-        // NOVO: Diminui o cronômetro de imunidade
-        if (timerImunidadeLancador > 0f)
-        {
-            timerImunidadeLancador -= Time.unscaledDeltaTime;
-        }
+        if (timerImunidadeLancador > 0f) timerImunidadeLancador -= Time.unscaledDeltaTime;
 
-        // Lógica de Zoom
         if (camVirtual != null)
         {
             float zoomAlvo = tamanhoCameraOriginal;
@@ -91,13 +94,8 @@ public class PlayerController : MonoBehaviour
 
         if (isDead) return;
 
-        // Mantém "colado" no lançador se ele se mover
-        if (isReadyToLaunch && currentLauncher != null)
-        {
-            transform.position = currentLauncher.position;
-        }
+        if (isReadyToLaunch && currentLauncher != null) transform.position = currentLauncher.position;
 
-        // Limite de tempo de mira
         if (isDragging && !isReadyToLaunch)
         {
             contadorMira += Time.unscaledDeltaTime;
@@ -111,7 +109,6 @@ public class PlayerController : MonoBehaviour
 
         if (rastroArremesso != null && rb.linearVelocity.magnitude < 0.5f && !isDragging) rastroArremesso.emitting = false;
 
-        // Detecta o clique
         if (!isDragging && Input.GetMouseButtonDown(0))
         {
             if (isReadyToLaunch)
@@ -120,11 +117,7 @@ public class PlayerController : MonoBehaviour
                 Collider2D[] hits = Physics2D.OverlapPointAll(mousePos);
                 foreach (Collider2D hit in hits)
                 {
-                    if (hit.transform == currentLauncher)
-                    {
-                        IniciarArraste(currentLauncher.position);
-                        break;
-                    }
+                    if (hit.transform == currentLauncher) { IniciarArraste(currentLauncher.position); break; }
                 }
             }
             else if (midAirLaunchesLeft > 0)
@@ -134,17 +127,10 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        // Arrastando
         if (isDragging)
         {
-            if (isReadyToLaunch && currentLauncher != null)
-            {
-                startPoint = currentLauncher.position;
-            }
-            else if (!isReadyToLaunch)
-            {
-                startPoint = Camera.main.ScreenToWorldPoint(telaPosicaoInicialMouse);
-            }
+            if (isReadyToLaunch && currentLauncher != null) startPoint = currentLauncher.position;
+            else if (!isReadyToLaunch) startPoint = Camera.main.ScreenToWorldPoint(telaPosicaoInicialMouse);
 
             DrawTrajectory();
 
@@ -161,13 +147,10 @@ public class PlayerController : MonoBehaviour
     public void SetReadyToLaunch(Transform launcherTransform)
     {
         if (isDead) return;
-
-        // A CORREÇÃO DE OURO AQUI:
-        // Se a base que estamos encostando for a ÚLTIMA que saímos, e o tempo de imunidade não zerou, nós IGNORAMOS a base.
         if (launcherTransform == ultimoLancador && timerImunidadeLancador > 0f) return;
 
         currentLauncher = launcherTransform;
-        ultimoLancador = launcherTransform; // Registra quem está segurando o player agora
+        ultimoLancador = launcherTransform; 
 
         rb.gravityScale = 0f;
         rb.linearVelocity = Vector2.zero;
@@ -199,6 +182,7 @@ public class PlayerController : MonoBehaviour
         Time.timeScale = 1f;
         Time.fixedDeltaTime = 0.02f;
 
+        // Mira estilo Angry Birds (Puxa para um lado, atira para o outro)
         Vector2 direction = (startPoint - endPoint).normalized;
         float distance = Vector2.Distance(startPoint, endPoint);
         distance = Mathf.Clamp(distance, 0, maxDragDistance);
@@ -207,7 +191,6 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity = Vector2.zero; 
         rb.AddForce(direction * distance * powerMultiplier, ForceMode2D.Impulse);
         
-        // NOVO: Ativa a imunidade de 0.5s e esvazia o lançador atual
         timerImunidadeLancador = imunidadeMesmoLancador;
         isReadyToLaunch = false;
         currentLauncher = null;
@@ -217,43 +200,85 @@ public class PlayerController : MonoBehaviour
 
     private void DrawTrajectory()
     {
-        // ... (Seu código de DrawTrajectory continua exatamente igual)
         Vector2 currentMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        
+        // Direção oposta ao mouse (Angry Birds)
         Vector2 direction = (startPoint - currentMousePos).normalized;
         float distance = Vector2.Distance(startPoint, currentMousePos);
         distance = Mathf.Clamp(distance, 0, maxDragDistance);
 
-        Vector2 initialVelocity = (direction * distance * powerMultiplier) / rb.mass;
+        Vector2 currentVel = (direction * distance * powerMultiplier) / rb.mass;
+        Vector2 currentPos = transform.position;
 
-        Vector2 startPos = transform.position;
-        Vector2 previousPos = startPos;
-        
         trajectoryLine.positionCount = trajectoryResolution;
-        trajectoryLine.SetPosition(0, startPos);
+        trajectoryLine.SetPosition(0, currentPos);
+
+        float timeStep = trajectoryTime / trajectoryResolution; 
+        int bouncesCalculated = 0;
 
         for (int i = 1; i < trajectoryResolution; i++)
         {
-            float t = i / (float)trajectoryResolution * trajectoryTime;
-            Vector2 calculatedPosition = startPos + initialVelocity * t + 0.5f * Physics2D.gravity * originalGravity * (t * t);
+            Vector2 nextPos = currentPos + currentVel * timeStep + 0.5f * Physics2D.gravity * originalGravity * (timeStep * timeStep);
+            RaycastHit2D hit = Physics2D.Raycast(currentPos, nextPos - currentPos, Vector2.Distance(currentPos, nextPos));
 
-            RaycastHit2D hit = Physics2D.Raycast(previousPos, calculatedPosition - previousPos, Vector2.Distance(previousPos, calculatedPosition));
-
-            if (hit.collider != null && (hit.collider.CompareTag("Obstacle") || hit.collider.CompareTag("Ground")))
+            if (hit.collider != null)
             {
-                trajectoryLine.positionCount = i + 1;
-                trajectoryLine.SetPosition(i, hit.point);
-                break;
+                if (hit.collider.CompareTag("Bouncy") && bouncesCalculated < maximoDeQuiquesNaLinha)
+                {
+                    currentPos = hit.point;
+                    trajectoryLine.SetPosition(i, currentPos);
+                    
+                    PlataformaSinuca sinuca = hit.collider.GetComponent<PlataformaSinuca>();
+                    if (sinuca != null)
+                    {
+                        currentVel = sinuca.direcaoDoRicochete.normalized * sinuca.forcaDoRicochete;
+                    }
+                    else
+                    {
+                        // O SEGREDO PRA LINHA NÃO BROXAR: Adiciona a força extra pra cima na previsão!
+                        currentVel = Vector2.Reflect(currentVel, hit.normal) * multiplicadorRicochete;
+                        currentVel += Vector2.up * forcaExtraParaCima; 
+                    }
+
+                    currentPos += hit.normal * 0.05f; 
+                    bouncesCalculated++;
+                    continue; 
+                }
+                else if (hit.collider.CompareTag("Obstacle") || hit.collider.CompareTag("Ground"))
+                {
+                    trajectoryLine.positionCount = i + 1;
+                    trajectoryLine.SetPosition(i, hit.point);
+                    break;
+                }
             }
 
-            trajectoryLine.SetPosition(i, calculatedPosition);
-            previousPos = calculatedPosition;
+            currentVel += Physics2D.gravity * originalGravity * timeStep;
+            currentPos = nextPos;
+            trajectoryLine.SetPosition(i, currentPos);
         }
     }
 
-    // ... (Seu código de DeathSequence continua exatamente igual)
     private async void OnCollisionEnter2D(Collision2D collision)
     {
         if (isDead) return;
+
+        if (collision.gameObject.CompareTag("Bouncy"))
+        {
+            PlataformaSinuca sinuca = collision.gameObject.GetComponent<PlataformaSinuca>();
+            if (sinuca != null)
+            {
+                rb.linearVelocity = sinuca.direcaoDoRicochete.normalized * sinuca.forcaDoRicochete;
+            }
+            else
+            {
+                // O SEGREDO PRA FÍSICA NÃO BROXAR: Adiciona a força extra pra cima no player também!
+                Vector2 normal = collision.contacts[0].normal;
+                Vector2 reboteDir = Vector2.Reflect(lastFrameVelocity, normal);
+                rb.linearVelocity = (reboteDir * multiplicadorRicochete) + (Vector2.up * forcaExtraParaCima);
+            }
+            return; 
+        }
+
         if (collision.gameObject.CompareTag("Obstacle"))
         {
             Vector2 knockbackDir = (transform.position - collision.transform.position).normalized;
@@ -287,10 +312,6 @@ public class PlayerController : MonoBehaviour
 
         await Task.Delay(reloadDelayMs);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        if (rastroArremesso != null) 
-        {
-            rastroArremesso.emitting = false;
-            rastroArremesso.Clear();
-        }
+        if (rastroArremesso != null) { rastroArremesso.emitting = false; rastroArremesso.Clear(); }
     }
 }

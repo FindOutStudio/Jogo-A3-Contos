@@ -5023,9 +5023,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1894642925}
     m_Modifications:
+    - target: {fileID: 3411610225972589721, guid: d018006667bbf354dbf812405a3747f3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
     - target: {fileID: 8772257480746817345, guid: d018006667bbf354dbf812405a3747f3, type: 3}
       propertyPath: m_Name
       value: Espinho
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820785503172003737, guid: d018006667bbf354dbf812405a3747f3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8820785503172003737, guid: d018006667bbf354dbf812405a3747f3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5176,6 +5184,10 @@ PrefabInstance:
     - target: {fileID: 133350281079301936, guid: 40e0cfdd23ee6a3439e72b6e3effc06a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545248279096093998, guid: 40e0cfdd23ee6a3439e72b6e3effc06a, type: 3}
+      propertyPath: m_Radius
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5391410737041988406, guid: 40e0cfdd23ee6a3439e72b6e3effc06a, type: 3}
       propertyPath: m_Name

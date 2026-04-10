@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7430780198686320594}
   - component: {fileID: 5868724503095272998}
   m_Layer: 0
-  m_Name: CorrenteDeAr
+  m_Name: Correnteza De Ar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

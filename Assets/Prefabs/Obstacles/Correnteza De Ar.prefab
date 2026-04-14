@@ -152,5 +152,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CorrenteTile
   direcao: 2
-  velocidadeDoVento: 50
-  forcaDeCaptura: 8
+  velocidadeDoVento: 23
+  forcaDeCaptura: 40

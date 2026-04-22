@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6773402004289629464}
   - component: {fileID: 871552264838427554}
   - component: {fileID: 7968531402269715248}
+  - component: {fileID: 1690679748534585860}
   m_Layer: 0
   m_Name: Launcher
   m_TagString: Untagged
@@ -106,6 +107,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a98af546aa874a947b9ffb99c2ed0cc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LauncherBase
+  caiQuandoPisa: 0
+  tempoParaCair: 0.5
 --- !u!58 &871552264838427554
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -192,8 +195,36 @@ LineRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  - {x: -0.43642998, y: -5.5306206, z: 0}
+  - {x: 0.035369992, y: -5.3734097, z: 0}
+  - {x: 0.50716996, y: -5.232866, z: 0}
+  - {x: 0.97896993, y: -5.108989, z: 0}
+  - {x: 1.4507699, y: -5.001778, z: 0}
+  - {x: 1.9225699, y: -4.9112344, z: 0}
+  - {x: 2.3943698, y: -4.837357, z: 0}
+  - {x: 2.86617, y: -4.7801466, z: 0}
+  - {x: 3.3379698, y: -4.7396026, z: 0}
+  - {x: 3.8097696, y: -4.7157254, z: 0}
+  - {x: 4.2815695, y: -4.7085147, z: 0}
+  - {x: 4.7533693, y: -4.717971, z: 0}
+  - {x: 5.225169, y: -4.7440934, z: 0}
+  - {x: 5.696969, y: -4.786883, z: 0}
+  - {x: 6.168769, y: -4.8463387, z: 0}
+  - {x: 6.6405687, y: -4.9224615, z: 0}
+  - {x: 7.1123686, y: -5.0152507, z: 0}
+  - {x: 7.5841684, y: -5.1247067, z: 0}
+  - {x: 8.055968, y: -5.2508297, z: 0}
+  - {x: 8.527768, y: -5.393619, z: 0}
+  - {x: 8.999568, y: -5.5530753, z: 0}
+  - {x: 9.471368, y: -5.729198, z: 0}
+  - {x: 9.943168, y: -5.9219875, z: 0}
+  - {x: 10.414968, y: -6.1314435, z: 0}
+  - {x: 10.886767, y: -6.3575664, z: 0}
+  - {x: 11.358567, y: -6.6003556, z: 0}
+  - {x: 11.830367, y: -6.859812, z: 0}
+  - {x: 12.302167, y: -7.1359344, z: 0}
+  - {x: 12.773967, y: -7.428724, z: 0}
+  - {x: 13.245767, y: -7.7381797, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -252,3 +283,30 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!50 &1690679748534585860
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5040326478893986558}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

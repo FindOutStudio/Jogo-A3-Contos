@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using System.Threading.Tasks;
 using Cinemachine; 
@@ -109,19 +110,22 @@ public class PlayerController : MonoBehaviour
 
         if (rastroArremesso != null && rb.linearVelocity.magnitude < 0.5f && !isDragging) rastroArremesso.emitting = false;
 
+        // ==========================================
+        // A MÁGICA DO CLIQUE LIVRE NA TELA ACONTECE AQUI
+        // ==========================================
         if (!isDragging && Input.GetMouseButtonDown(0))
         {
-            if (isReadyToLaunch)
+            // Proteção para botões da UI (Mobile) - Ignora o tiro se clicou no menu
+            if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject()) return;
+
+            if (isReadyToLaunch && currentLauncher != null)
             {
-                Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                Collider2D[] hits = Physics2D.OverlapPointAll(mousePos);
-                foreach (Collider2D hit in hits)
-                {
-                    if (hit.transform == currentLauncher) { IniciarArraste(currentLauncher.position); break; }
-                }
+                // Apagamos a checagem chata! Clicou na tela, já inicia o arraste da base!
+                IniciarArraste(currentLauncher.position);
             }
             else if (midAirLaunchesLeft > 0)
             {
+                // Lançamento aéreo continua igual (clicou no ar, inicia)
                 IniciarArraste(transform.position);
                 midAirLaunchesLeft--;
             }
@@ -182,7 +186,6 @@ public class PlayerController : MonoBehaviour
         Time.timeScale = 1f;
         Time.fixedDeltaTime = 0.02f;
 
-        // Mira estilo Angry Birds (Puxa para um lado, atira para o outro)
         Vector2 direction = (startPoint - endPoint).normalized;
         float distance = Vector2.Distance(startPoint, endPoint);
         distance = Mathf.Clamp(distance, 0, maxDragDistance);
@@ -202,7 +205,6 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 currentMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         
-        // Direção oposta ao mouse (Angry Birds)
         Vector2 direction = (startPoint - currentMousePos).normalized;
         float distance = Vector2.Distance(startPoint, currentMousePos);
         distance = Mathf.Clamp(distance, 0, maxDragDistance);
@@ -235,7 +237,6 @@ public class PlayerController : MonoBehaviour
                     }
                     else
                     {
-                        // O SEGREDO PRA LINHA NÃO BROXAR: Adiciona a força extra pra cima na previsão!
                         currentVel = Vector2.Reflect(currentVel, hit.normal) * multiplicadorRicochete;
                         currentVel += Vector2.up * forcaExtraParaCima; 
                     }
@@ -271,7 +272,6 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                // O SEGREDO PRA FÍSICA NÃO BROXAR: Adiciona a força extra pra cima no player também!
                 Vector2 normal = collision.contacts[0].normal;
                 Vector2 reboteDir = Vector2.Reflect(lastFrameVelocity, normal);
                 rb.linearVelocity = (reboteDir * multiplicadorRicochete) + (Vector2.up * forcaExtraParaCima);

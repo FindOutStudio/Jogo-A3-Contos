@@ -5,15 +5,20 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private GameObject pausePanel;
-
-    private bool jogoPausado = false;
     
+    public static bool isPaused = false;
+
+    void Awake()
+    {
+        isPaused = false;
+        Time.timeScale = 1f;
+    }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (jogoPausado)
+            if (isPaused)
             {
                 Continuar();
             }
@@ -28,14 +33,21 @@ public class PauseMenu : MonoBehaviour
     {
         pausePanel.SetActive(false);
         Time.timeScale = 1f;
-        jogoPausado = false;
+        isPaused = false;
     }
 
-    private void Pausar()
+    public void Pausar()
     {
         pausePanel.SetActive(true);
         Time.timeScale = 0f;
-        jogoPausado = true;
+        isPaused = true;
+    }
+
+    public void ResetarNivel()
+    {
+        Time.timeScale = 1f;
+        isPaused = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void AbrirConfig()
@@ -46,6 +58,7 @@ public class PauseMenu : MonoBehaviour
     public void SairParaMenu()
     {
         Time.timeScale = 1f;
+        isPaused = false;
         SceneManager.LoadScene("MainMenu");
     }
 }

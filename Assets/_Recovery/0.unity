@@ -156,7 +156,10 @@ MonoBehaviour:
   timeOn: 2
   timeOff: 1.5
   startOn: 1
-  laserVisual: {fileID: 70338962}
+  arcRenderer: {fileID: 0}
+  segments: 10
+  arcVolatility: 0.5
+  fps: 20
 --- !u!61 &70338961
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -400,6 +403,7 @@ GameObject:
   - component: {fileID: 147601595}
   - component: {fileID: 147601594}
   - component: {fileID: 147601593}
+  - component: {fileID: 147601598}
   m_Layer: 0
   m_Name: Launcher (3)
   m_TagString: Untagged
@@ -565,10 +569,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a98af546aa874a947b9ffb99c2ed0cc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LauncherBase
-  powerMultiplier: 30
-  maxDragDistance: 3
-  trajectoryLine: {fileID: 147601593}
-  trajectoryResolution: 30
+  caiQuandoPisa: 0
+  tempoParaCair: 0.5
 --- !u!212 &147601596
 SpriteRenderer:
   serializedVersion: 2
@@ -643,6 +645,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &147601598
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147601592}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &157060846
 GameObject:
   m_ObjectHideFlags: 0
@@ -1483,6 +1512,7 @@ GameObject:
   - component: {fileID: 586753038}
   - component: {fileID: 586753037}
   - component: {fileID: 586753041}
+  - component: {fileID: 586753042}
   m_Layer: 0
   m_Name: Launcher
   m_TagString: Untagged
@@ -1538,10 +1568,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a98af546aa874a947b9ffb99c2ed0cc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LauncherBase
-  powerMultiplier: 30
-  maxDragDistance: 3
-  trajectoryLine: {fileID: 586753041}
-  trajectoryResolution: 30
+  caiQuandoPisa: 0
+  tempoParaCair: 0.5
 --- !u!212 &586753039
 SpriteRenderer:
   serializedVersion: 2
@@ -1726,6 +1754,33 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!50 &586753042
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586753036}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1823,6 +1878,7 @@ GameObject:
   - component: {fileID: 628566584}
   - component: {fileID: 628566583}
   - component: {fileID: 628566582}
+  - component: {fileID: 628566587}
   m_Layer: 0
   m_Name: Launcher (1)
   m_TagString: Untagged
@@ -1988,10 +2044,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a98af546aa874a947b9ffb99c2ed0cc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LauncherBase
-  powerMultiplier: 30
-  maxDragDistance: 3
-  trajectoryLine: {fileID: 628566582}
-  trajectoryResolution: 30
+  caiQuandoPisa: 0
+  tempoParaCair: 0.5
 --- !u!212 &628566585
 SpriteRenderer:
   serializedVersion: 2
@@ -2066,6 +2120,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &628566587
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628566581}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &659227518
 GameObject:
   m_ObjectHideFlags: 0
@@ -3292,6 +3373,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDeath
   knockbackSpeed: 5
   reloadDelayMs: 400
+  powerMultiplier: 5
+  maxDragDistance: 3
+  imunidadeMesmoLancador: 0.5
+  multiplicadorRicochete: 0.9
+  forcaExtraParaCima: 5
+  maximoDeQuiquesNaLinha: 1
+  slowMotionTimeScale: 0.35
+  slowMotionGravityMultiplier: 0.2
+  tempoMaximoMira: 2
+  zoomMultiplicador: 0.85
+  zoomMultiplicadorLancador: 0.95
+  zoomVelocidade: 8
+  camVirtual: {fileID: 0}
+  rastroArremesso: {fileID: 0}
+  maxMidAirLaunches: 1
+  trajectoryLine: {fileID: 0}
+  trajectoryResolution: 40
+  trajectoryTime: 1.5
 --- !u!1 &1117864884
 GameObject:
   m_ObjectHideFlags: 0
@@ -4958,6 +5057,7 @@ GameObject:
   - component: {fileID: 1695214772}
   - component: {fileID: 1695214771}
   - component: {fileID: 1695214770}
+  - component: {fileID: 1695214775}
   m_Layer: 0
   m_Name: Launcher (2)
   m_TagString: Untagged
@@ -5123,10 +5223,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a98af546aa874a947b9ffb99c2ed0cc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LauncherBase
-  powerMultiplier: 30
-  maxDragDistance: 3
-  trajectoryLine: {fileID: 1695214770}
-  trajectoryResolution: 30
+  caiQuandoPisa: 0
+  tempoParaCair: 0.5
 --- !u!212 &1695214773
 SpriteRenderer:
   serializedVersion: 2
@@ -5201,6 +5299,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1695214775
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695214769}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1695909717
 GameObject:
   m_ObjectHideFlags: 0

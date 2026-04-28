@@ -15,6 +15,7 @@ public class MusicManager : MonoBehaviour
     public AudioClip musicaMenu;
     public AudioClip musicaGameplay1;
     public AudioClip musicaGameplay2;
+    public AudioClip musicaAlgoz;
 
     [Header("Efeito de Pause")]
     public float frequenciaNormal = 22000f;
@@ -24,6 +25,7 @@ public class MusicManager : MonoBehaviour
     private AudioSource audioSource;
     private AudioLowPassFilter lowPass;
     private bool isGameplay = false;
+    private bool tocandoAlgoz = false; // Controle para saber se o tema do Algoz está ativo
     private int musicaAtualGameplay = 1;
 
     private void Awake()
@@ -55,6 +57,9 @@ public class MusicManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        // Sempre que mudar de fase, o Algoz "perde" a vez por segurança
+        tocandoAlgoz = false;
+
         if (scene.name == nomeCenaMenu || scene.name == nomeCenaCreditos) 
         {
             TocarMusicaMenu();
@@ -68,6 +73,7 @@ public class MusicManager : MonoBehaviour
     public void TocarMusicaMenu()
     {
         isGameplay = false;
+        tocandoAlgoz = false;
         
         if (audioSource.clip != musicaMenu)
         {
@@ -79,9 +85,11 @@ public class MusicManager : MonoBehaviour
 
     public void IniciarMusicaGameplay()
     {
-        if (isGameplay) return; 
+        // Se já estiver na gameplay normal e não estiver vindo do Algoz, não faz nada
+        if (isGameplay && !tocandoAlgoz) return; 
 
         isGameplay = true;
+        tocandoAlgoz = false;
         audioSource.loop = false;
         musicaAtualGameplay = Random.Range(1, 3); 
 
@@ -96,10 +104,42 @@ public class MusicManager : MonoBehaviour
 
     private void Update()
     {
+        // ======= LÓGICA DO BOTÃO K (TOGGLE ALGOZ) =======
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            if (!tocandoAlgoz)
+            {
+                // Entra no Modo Algoz: Para tudo e toca a dele
+                tocandoAlgoz = true;
+                audioSource.clip = musicaAlgoz;
+                audioSource.loop = true; // Boss fight costuma ser loop
+                audioSource.Play();
+            }
+            else
+            {
+                // Sai do Modo Algoz: Verifica onde estamos e volta a música normal
+                tocandoAlgoz = false;
+                string cenaNome = SceneManager.GetActiveScene().name;
+
+                if (cenaNome == nomeCenaMenu || cenaNome == nomeCenaCreditos)
+                {
+                    TocarMusicaMenu();
+                }
+                else
+                {
+                    // Resetamos o isGameplay para forçar a reinicialização da playlist da fase
+                    isGameplay = false; 
+                    IniciarMusicaGameplay();
+                }
+            }
+        }
+
+        // Sistema de abafar o som (Low Pass) continua funcionando independente da música
         float frequenciaAlvo = PauseMenu.isPaused ? frequenciaAbafada : frequenciaNormal;
         lowPass.cutoffFrequency = Mathf.Lerp(lowPass.cutoffFrequency, frequenciaAlvo, Time.unscaledDeltaTime * velocidadeTransicao);
 
-        if (isGameplay && !audioSource.isPlaying && !PauseMenu.isPaused)
+        // Playlist de gameplay só alterna se NÃO estiver no modo Algoz
+        if (isGameplay && !tocandoAlgoz && !audioSource.isPlaying && !PauseMenu.isPaused)
         {
             musicaAtualGameplay = (musicaAtualGameplay == 1) ? 2 : 1;
             TocarFaixaAtual();

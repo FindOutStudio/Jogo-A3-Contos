@@ -1378,6 +1378,7 @@ MonoBehaviour:
   musicaMenu: {fileID: 8300000, guid: a2ed9fab5889d894cb3ba94ca8fdaea0, type: 3}
   musicaGameplay1: {fileID: 8300000, guid: 37abaed4252e1634596f2637756914d8, type: 3}
   musicaGameplay2: {fileID: 8300000, guid: d59d7f5c47bd51e469f79bdeb4bbb49e, type: 3}
+  musicaAlgoz: {fileID: 8300000, guid: 7a988aea1c989c645b341213c012ecd3, type: 3}
   frequenciaNormal: 22000
   frequenciaAbafada: 800
   velocidadeTransicao: 10

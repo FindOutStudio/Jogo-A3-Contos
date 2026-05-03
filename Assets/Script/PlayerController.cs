@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour
             camVirtual.m_Lens.OrthographicSize = Mathf.Lerp(camVirtual.m_Lens.OrthographicSize, zoomAlvo, Time.unscaledDeltaTime * zoomVelocidade);
         }
 
-        if (isDead) return;
+        if (isDead || PauseMenu.isPaused) return;
 
         if (isReadyToLaunch && currentLauncher != null) transform.position = currentLauncher.position;
 
@@ -110,22 +110,16 @@ public class PlayerController : MonoBehaviour
 
         if (rastroArremesso != null && rb.linearVelocity.magnitude < 0.5f && !isDragging) rastroArremesso.emitting = false;
 
-        // ==========================================
-        // A MÁGICA DO CLIQUE LIVRE NA TELA ACONTECE AQUI
-        // ==========================================
         if (!isDragging && Input.GetMouseButtonDown(0))
         {
-            // Proteção para botões da UI (Mobile) - Ignora o tiro se clicou no menu
             if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject()) return;
 
             if (isReadyToLaunch && currentLauncher != null)
             {
-                // Apagamos a checagem chata! Clicou na tela, já inicia o arraste da base!
                 IniciarArraste(currentLauncher.position);
             }
             else if (midAirLaunchesLeft > 0)
             {
-                // Lançamento aéreo continua igual (clicou no ar, inicia)
                 IniciarArraste(transform.position);
                 midAirLaunchesLeft--;
             }
@@ -155,6 +149,11 @@ public class PlayerController : MonoBehaviour
 
         currentLauncher = launcherTransform;
         ultimoLancador = launcherTransform; 
+
+        // Trava ele bonitinho no lançador
+        rb.angularVelocity = 0f; 
+        transform.rotation = Quaternion.identity; 
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation; 
 
         rb.gravityScale = 0f;
         rb.linearVelocity = Vector2.zero;
@@ -189,6 +188,9 @@ public class PlayerController : MonoBehaviour
         Vector2 direction = (startPoint - endPoint).normalized;
         float distance = Vector2.Distance(startPoint, endPoint);
         distance = Mathf.Clamp(distance, 0, maxDragDistance);
+
+        // ======= A MÁGICA: DESTRAVA ELE ASSIM QUE ATIRAR =======
+        rb.constraints = RigidbodyConstraints2D.None;
 
         rb.gravityScale = originalGravity;
         rb.linearVelocity = Vector2.zero; 

@@ -44,5 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af386be523ce0334eafa7918cc8d87eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelTimer
-  tempoInicial: 60
-  textoTempo: {fileID: 0}
+  iconesMoedas:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  iconeVazio: {fileID: 21300000, guid: bdd554e6471e4c6488f67ec2c27dd3d7, type: 3}
+  iconeCheio: {fileID: 21300000, guid: 6e5ce3a179bcd0c44ad1a27b83354799, type: 3}

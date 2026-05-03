@@ -1172,6 +1172,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8820785503172003737, guid: d018006667bbf354dbf812405a3747f3, type: 3}
   m_PrefabInstance: {fileID: 182306221}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &189486032 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1404270784881651270, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+  m_PrefabInstance: {fileID: 2100280307}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1 &196163459
 GameObject:
   m_ObjectHideFlags: 0
@@ -3806,6 +3817,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8820785503172003737, guid: d018006667bbf354dbf812405a3747f3, type: 3}
   m_PrefabInstance: {fileID: 841648105}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &842254258 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6045559590360525567, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+  m_PrefabInstance: {fileID: 2100280307}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1001 &850398397
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5912,6 +5934,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8820785503172003737, guid: d018006667bbf354dbf812405a3747f3, type: 3}
   m_PrefabInstance: {fileID: 1171591399}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1175392178 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7875022360038921138, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+  m_PrefabInstance: {fileID: 2100280307}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1001 &1186010414
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6316,41 +6349,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 342011018}
     m_Modifications:
-    - target: {fileID: 476277597376589510, guid: a8319c2b71bb4604aa0269db2a6f4240, type: 3}
-      propertyPath: m_Color.b
-      value: 0.050980408
-      objectReference: {fileID: 0}
-    - target: {fileID: 476277597376589510, guid: a8319c2b71bb4604aa0269db2a6f4240, type: 3}
-      propertyPath: m_Color.g
-      value: 0.09340395
-      objectReference: {fileID: 0}
-    - target: {fileID: 476277597376589510, guid: a8319c2b71bb4604aa0269db2a6f4240, type: 3}
-      propertyPath: m_Color.r
-      value: 0.8392157
-      objectReference: {fileID: 0}
     - target: {fileID: 1311495768047322093, guid: a8319c2b71bb4604aa0269db2a6f4240, type: 3}
       propertyPath: trajectoryLine
       value: 
       objectReference: {fileID: 1589861139}
-    - target: {fileID: 1311495768047322093, guid: a8319c2b71bb4604aa0269db2a6f4240, type: 3}
-      propertyPath: powerMultiplier
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 3710856986835354308, guid: a8319c2b71bb4604aa0269db2a6f4240, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8546814723608952754, guid: a8319c2b71bb4604aa0269db2a6f4240, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8546814723608952754, guid: a8319c2b71bb4604aa0269db2a6f4240, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8546814723608952754, guid: a8319c2b71bb4604aa0269db2a6f4240, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8546814723608952754, guid: a8319c2b71bb4604aa0269db2a6f4240, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6391,10 +6396,6 @@ PrefabInstance:
     - target: {fileID: 8546814723608952754, guid: a8319c2b71bb4604aa0269db2a6f4240, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8546814723608952754, guid: a8319c2b71bb4604aa0269db2a6f4240, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8984,17 +8985,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8930990306837083622, guid: edc6acb7aa012b84c97d35be66533ce9, type: 3}
   m_PrefabInstance: {fileID: 1722900873}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1736650246 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 569573584913443618, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
-  m_PrefabInstance: {fileID: 2100280307}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1001 &1746137484
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9013,7 +9003,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6794396589018712450, guid: 6ef61a7f53a35ef4289c7cc0174e26e6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -59.259537
+      value: -58.18
       objectReference: {fileID: 0}
     - target: {fileID: 6794396589018712450, guid: 6ef61a7f53a35ef4289c7cc0174e26e6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10052,7 +10042,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4017780133928813155, guid: f9d5e73942ea6f942ba57c7f84765688, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -41.769085
+      value: -41.4
       objectReference: {fileID: 0}
     - target: {fileID: 4017780133928813155, guid: f9d5e73942ea6f942ba57c7f84765688, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10245,9 +10235,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 1112540651}
     m_Modifications:
     - target: {fileID: 1227594260810957375, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
-      propertyPath: textoTempo
+      propertyPath: 'iconesMoedas.Array.data[0]'
       value: 
-      objectReference: {fileID: 1736650246}
+      objectReference: {fileID: 189486032}
+    - target: {fileID: 1227594260810957375, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
+      propertyPath: 'iconesMoedas.Array.data[1]'
+      value: 
+      objectReference: {fileID: 842254258}
+    - target: {fileID: 1227594260810957375, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
+      propertyPath: 'iconesMoedas.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1175392178}
     - target: {fileID: 2376509581205463844, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
       propertyPath: m_Name
       value: GameManager

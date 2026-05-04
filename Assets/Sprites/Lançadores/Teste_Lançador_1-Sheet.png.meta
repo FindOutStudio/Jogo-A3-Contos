@@ -1,25 +1,40 @@
 fileFormatVersion: 2
-guid: 602d9b2c635ad9c42a5cb6ac965e383d
+guid: 91b8ea5b59e3f7a48b8ec5f6050d5b34
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4521531171625759107
-    second: Idle_Frente-Sheet_0
+      213: 1702446342206641860
+    second: "Teste_Lan\xE7ador_1-Sheet_0"
   - first:
-      213: 1252919426937873428
-    second: Idle_Frente-Sheet_1
+      213: -7690561526186726602
+    second: "Teste_Lan\xE7ador_1-Sheet_1"
   - first:
-      213: -4045184133655979990
-    second: Idle_Frente-Sheet_2
+      213: -8573478863729128665
+    second: "Teste_Lan\xE7ador_1-Sheet_2"
   - first:
-      213: -5031138912603300037
-    second: Idle_Frente-Sheet_3
+      213: 696478533902220934
+    second: "Teste_Lan\xE7ador_1-Sheet_3"
   - first:
-      213: -2671696689301455161
-    second: Idle_Frente-Sheet_4
+      213: 2323521494130684574
+    second: "Teste_Lan\xE7ador_1-Sheet_4"
   - first:
-      213: 3466622974632767985
-    second: Idle_Frente-Sheet_5
+      213: 7410511595696495977
+    second: "Teste_Lan\xE7ador_1-Sheet_5"
+  - first:
+      213: -3417049024514051377
+    second: "Teste_Lan\xE7ador_1-Sheet_6"
+  - first:
+      213: 4625985039067526954
+    second: "Teste_Lan\xE7ador_1-Sheet_7"
+  - first:
+      213: 2111516549759675668
+    second: "Teste_Lan\xE7ador_1-Sheet_8"
+  - first:
+      213: -2459117613252965872
+    second: "Teste_Lan\xE7ador_1-Sheet_9"
+  - first:
+      213: 1775364917094408528
+    second: "Teste_Lan\xE7ador_1-Sheet_10"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -154,35 +169,57 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_Frente-Sheet_0
+      name: "Teste_Lan\xE7ador_1-Sheet_0"
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4}
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 381fb9df4a4bfbe30800000000000000
-      internalID: 4521531171625759107
+      spriteID: 4c6d364aded40a710800000000000000
+      internalID: 1702446342206641860
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Frente-Sheet_1
+      name: "Teste_Lan\xE7ador_1-Sheet_1"
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63baa5cc903a54590800000000000000
+      internalID: -7690561526186726602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Teste_Lan\xE7ador_1-Sheet_2"
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,96 +228,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 41461de9493436110800000000000000
-      internalID: 1252919426937873428
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_Frente-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a289366767e9cd7c0800000000000000
-      internalID: -4045184133655979990
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_Frente-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b3f92aaa0ddcd2ab0800000000000000
-      internalID: -5031138912603300037
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_Frente-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7ce799e240a3cead0800000000000000
-      internalID: -2671696689301455161
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_Frente-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1f1b13d7a3beb1030800000000000000
-      internalID: 3466622974632767985
+      spriteID: 72b0b1ec562e40980800000000000000
+      internalID: -8573478863729128665
       vertices: []
       indices: 
       edges: []
@@ -289,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2966f2cf7c8143d4b833221cc8c606ed
+    spriteID: 1fe5e892807896145b8f6ce045543328
     internalID: 0
     vertices: []
     indices: 
@@ -299,14 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Idle_Frente-Sheet_0: 4521531171625759107
-      Idle_Frente-Sheet_1: 1252919426937873428
-      Idle_Frente-Sheet_2: -4045184133655979990
-      Idle_Frente-Sheet_3: -5031138912603300037
-      Idle_Frente-Sheet_4: -2671696689301455161
-      Idle_Frente-Sheet_5: 3466622974632767985
+      "Teste_Lan\xE7ador_1-Sheet_0": 1702446342206641860
+      "Teste_Lan\xE7ador_1-Sheet_1": -7690561526186726602
+      "Teste_Lan\xE7ador_1-Sheet_2": -8573478863729128665
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

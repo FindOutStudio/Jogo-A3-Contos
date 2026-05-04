@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 2719408719243487550, guid: e68c574e085462042983b2aec48a9726, type: 3}
+  m_Sprite: {fileID: -3293185677204246028, guid: 77cc9df862acb4e48a644102d78952eb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -129,7 +129,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 0.65
 --- !u!114 &2002468001432849309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,7 +142,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edc833f7a6102e34fbd9cced1f543b9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColetavelTempo
-  tempoParaAdicionar: 1
 --- !u!95 &6015180714550565935
 Animator:
   serializedVersion: 7

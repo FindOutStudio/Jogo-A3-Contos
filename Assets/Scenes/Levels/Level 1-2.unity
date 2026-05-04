@@ -169,7 +169,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4631778595135173261, guid: 45343aa8d69ad4c4aa7360de78f7f394, type: 3}
       propertyPath: orthographic size
-      value: 9.999988
+      value: 9.999972
       objectReference: {fileID: 0}
     - target: {fileID: 4631778595135173261, guid: 45343aa8d69ad4c4aa7360de78f7f394, type: 3}
       propertyPath: m_BackGroundColor.b
@@ -2393,7 +2393,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8609514712341869109, guid: a173e08ab87cb464986e4918f5b8de4e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.37417
+      value: -11.37417
       objectReference: {fileID: 0}
     - target: {fileID: 8609514712341869109, guid: a173e08ab87cb464986e4918f5b8de4e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4727,11 +4727,11 @@ PrefabInstance:
       objectReference: {fileID: 28487442}
     - target: {fileID: 8609514712341869109, guid: a173e08ab87cb464986e4918f5b8de4e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.514
+      value: 9.764
       objectReference: {fileID: 0}
     - target: {fileID: 8609514712341869109, guid: a173e08ab87cb464986e4918f5b8de4e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.1241703
+      value: -3.8741703
       objectReference: {fileID: 0}
     - target: {fileID: 8609514712341869109, guid: a173e08ab87cb464986e4918f5b8de4e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11433,7 +11433,7 @@ PrefabInstance:
       objectReference: {fileID: 1241808137}
     - target: {fileID: 6347922182509419204, guid: 07056154a17d5784c883f9d19d69de20, type: 3}
       propertyPath: m_Lens.OrthographicSize
-      value: 9.999988
+      value: 9.999972
       objectReference: {fileID: 0}
     - target: {fileID: 9103730488506695823, guid: 07056154a17d5784c883f9d19d69de20, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26968,6 +26968,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2231771668284322275, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5172503594075454756, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 5172503594075454756, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 110
+      objectReference: {fileID: 0}
     - target: {fileID: 6374887283468803524, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -27048,6 +27060,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8589280034838656560, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8589280034838656560, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5667ae3567809b74fab9b350683a8b28, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

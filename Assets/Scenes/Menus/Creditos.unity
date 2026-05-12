@@ -325,10 +325,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Felipe Coimbra\n\"Felps\"\nProducer\n\nBrunno Rossi\n\"TynniBru\"\r\nLevel/Game
-    Designer\n\r\nGabriel Kanthack \r\n \"Katraka\"\nProgrammer\r\n\r\nGabriela Laurenti\r\n\"Bibs\"\nUI/UX
-    & Concept - Character Artist\n\r\nRuan Narvaes\r\n\"Neno\"\nPrincipal Artist\n\nLana
-    Piotto\nConcept Artist - Environment\r\n\nKau\xE3  Alves\r\nNarrative Design\r\n\r\n\r\n"
+  m_text: "Felipe Coimbra Ximenes\n\"Felps\"\nProdutor e Sound Designer\n\nBrunno
+    Lazaro Rossi\n\"TynniBru\"\r\nGame Designer, Level Designer e Programa\xE7\xE3o
+    Adicional\n\r\nGabriel Ferreira Kanthack \r\n \"Katraka\"\nProgramador Principal\r\n\r\nGabriela
+    Laurenti\r\n\"Bibs\"\nConcept Artist e Artista de UI/UX\n\r\nRuan Narvaes\r\n\"Neno\"\nDiretor
+    de Arte e Artista Principal\n\nLana Piotto\nConcept Artist e Artista Adicional\r\n\nKau\xE3 
+    Alves\r\nDesigner de Narrativa\n\nVitor Uva Morgado\n\"Uva\"\nComposi\xE7\xE3o
+    e Produ\xE7\xE3o Musical\n\nAgradecimento especial aos professores;\n\nDelmar
+    Galisi Domingues\nGabriel Davini de Siqueira\n\nAgradecimento especial para esses
+    nomes, que auxiliaram na realiza\xE7\xE3o do projeto, dando feedbacks construtivos
+    e apoio.\n\nRafael Cerchiaro\n\nKayk dos Santos Carneiro\n\nAntonio Junior\n\nJulia
+    Duarte Calazans\n\nJo\xE3o Pedro Silva Miranda Saraiva\n\nOt\xE1vio Luiz de Oliveira
+    Porto\n\nPedro Silva Oliveira\n\nGabriel \"Bisteca\" Pereira\n\nMUITO OBRIGADO
+    POR JOGAR!!!\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

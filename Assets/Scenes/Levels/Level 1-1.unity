@@ -486,6 +486,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1631094285}
     m_Modifications:
     - target: {fileID: 2416351514528017792, guid: f9d5e73942ea6f942ba57c7f84765688, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3769371954360677651, guid: 1ea786c14486eb64da1a44b2007d67aa, type: 3}
+    - target: {fileID: 2416351514528017792, guid: f9d5e73942ea6f942ba57c7f84765688, type: 3}
       propertyPath: m_SortingOrder
       value: 4
       objectReference: {fileID: 0}
@@ -6863,6 +6867,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 588778529}
     m_Modifications:
+    - target: {fileID: 140777115257870684, guid: a173e08ab87cb464986e4918f5b8de4e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2692204232064613565, guid: 73806ed64f2fe214cbbc486be8e94314, type: 3}
     - target: {fileID: 1419473976477458568, guid: a173e08ab87cb464986e4918f5b8de4e, type: 3}
       propertyPath: m_Name
       value: Serra (1)

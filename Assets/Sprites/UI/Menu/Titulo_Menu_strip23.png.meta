@@ -1,0 +1,1282 @@
+fileFormatVersion: 2
+guid: b647edec6f89cd94195a551fa5ba6043
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2427992140543548565
+    second: Titulo_Menu_strip23_0
+  - first:
+      213: 939201506318301533
+    second: Titulo_Menu_strip23_1
+  - first:
+      213: -145628249580147631
+    second: Titulo_Menu_strip23_2
+  - first:
+      213: -6162050835148755902
+    second: Titulo_Menu_strip23_3
+  - first:
+      213: 3678987619118699427
+    second: Titulo_Menu_strip23_4
+  - first:
+      213: 5164421432088968521
+    second: Titulo_Menu_strip23_5
+  - first:
+      213: 4499178275597913385
+    second: Titulo_Menu_strip23_6
+  - first:
+      213: 1529466316643423134
+    second: Titulo_Menu_strip23_7
+  - first:
+      213: -1440213522259735683
+    second: Titulo_Menu_strip23_8
+  - first:
+      213: -3604025566678978865
+    second: Titulo_Menu_strip23_9
+  - first:
+      213: 1074786246376266314
+    second: Titulo_Menu_strip23_10
+  - first:
+      213: -1275011755166194089
+    second: Titulo_Menu_strip23_11
+  - first:
+      213: 3190179229777598571
+    second: Titulo_Menu_strip23_12
+  - first:
+      213: -4580195800088082674
+    second: Titulo_Menu_strip23_13
+  - first:
+      213: 4438475619927770793
+    second: Titulo_Menu_strip23_14
+  - first:
+      213: 8666677102089467013
+    second: Titulo_Menu_strip23_15
+  - first:
+      213: -434818048829265157
+    second: Titulo_Menu_strip23_16
+  - first:
+      213: -378440409562881183
+    second: Titulo_Menu_strip23_17
+  - first:
+      213: 3524347678552939029
+    second: Titulo_Menu_strip23_18
+  - first:
+      213: 5480694415452879466
+    second: Titulo_Menu_strip23_19
+  - first:
+      213: -5668540872946181719
+    second: Titulo_Menu_strip23_20
+  - first:
+      213: -6874360988374873223
+    second: Titulo_Menu_strip23_21
+  - first:
+      213: -5992892418970776330
+    second: Titulo_Menu_strip23_22
+  - first:
+      213: 3950446148957900313
+    second: Titulo_Menu_strip23_23
+  - first:
+      213: -879496091389643896
+    second: Titulo_Menu_strip23_24
+  - first:
+      213: 7551426069405875417
+    second: Titulo_Menu_strip23_25
+  - first:
+      213: -2380551932367238156
+    second: Titulo_Menu_strip23_26
+  - first:
+      213: 4057148142417813783
+    second: Titulo_Menu_strip23_27
+  - first:
+      213: -1505165383300457937
+    second: Titulo_Menu_strip23_28
+  - first:
+      213: -2065055032330976505
+    second: Titulo_Menu_strip23_29
+  - first:
+      213: -127589606621715825
+    second: Titulo_Menu_strip23_30
+  - first:
+      213: 1379109252936764417
+    second: Titulo_Menu_strip23_31
+  - first:
+      213: -6280074764593616370
+    second: Titulo_Menu_strip23_32
+  - first:
+      213: 1947899513401081889
+    second: Titulo_Menu_strip23_33
+  - first:
+      213: -604861094121358921
+    second: Titulo_Menu_strip23_34
+  - first:
+      213: -4111312164287622287
+    second: Titulo_Menu_strip23_35
+  - first:
+      213: -3082672573752364080
+    second: Titulo_Menu_strip23_36
+  - first:
+      213: -7713478025833549410
+    second: Titulo_Menu_strip23_37
+  - first:
+      213: 5149439553889761654
+    second: Titulo_Menu_strip23_38
+  - first:
+      213: -2035042951656949427
+    second: Titulo_Menu_strip23_39
+  - first:
+      213: 3628900443996652850
+    second: Titulo_Menu_strip23_40
+  - first:
+      213: 15371197759609481
+    second: Titulo_Menu_strip23_41
+  - first:
+      213: 3357966581531342376
+    second: Titulo_Menu_strip23_42
+  - first:
+      213: -2003829755183786203
+    second: Titulo_Menu_strip23_43
+  - first:
+      213: 2295451951052046267
+    second: Titulo_Menu_strip23_44
+  - first:
+      213: 1617628184768959365
+    second: Titulo_Menu_strip23_45
+  - first:
+      213: -7926930593205716338
+    second: Titulo_Menu_strip23_46
+  - first:
+      213: -8910159328669781013
+    second: Titulo_Menu_strip23_47
+  - first:
+      213: 6930680397931003926
+    second: Titulo_Menu_strip23_48
+  - first:
+      213: -7895418788637401858
+    second: Titulo_Menu_strip23_49
+  - first:
+      213: -4783294068793338728
+    second: Titulo_Menu_strip23_50
+  - first:
+      213: 7218415578593400139
+    second: Titulo_Menu_strip23_51
+  - first:
+      213: 7987010765555435935
+    second: Titulo_Menu_strip23_52
+  - first:
+      213: -8502960546938781657
+    second: Titulo_Menu_strip23_53
+  - first:
+      213: -8463289304303173801
+    second: Titulo_Menu_strip23_54
+  - first:
+      213: 6775767896662343135
+    second: Titulo_Menu_strip23_55
+  - first:
+      213: 1987165488913659567
+    second: Titulo_Menu_strip23_56
+  - first:
+      213: -4119094173722375171
+    second: Titulo_Menu_strip23_57
+  - first:
+      213: -436308586282711887
+    second: Titulo_Menu_strip23_58
+  - first:
+      213: -4215834034249863460
+    second: Titulo_Menu_strip23_59
+  - first:
+      213: -3678962395339692139
+    second: Titulo_Menu_strip23_60
+  - first:
+      213: -5771255091214588054
+    second: Titulo_Menu_strip23_61
+  - first:
+      213: -8042458159827589840
+    second: Titulo_Menu_strip23_62
+  - first:
+      213: -6439044443691168801
+    second: Titulo_Menu_strip23_63
+  - first:
+      213: -5818582202350182152
+    second: Titulo_Menu_strip23_64
+  - first:
+      213: -6599011829018832393
+    second: Titulo_Menu_strip23_65
+  - first:
+      213: 1361104527078898449
+    second: Titulo_Menu_strip23_66
+  - first:
+      213: 1154323578507463084
+    second: Titulo_Menu_strip23_67
+  - first:
+      213: 6926103767535696015
+    second: Titulo_Menu_strip23_68
+  - first:
+      213: 5320559367314593686
+    second: Titulo_Menu_strip23_69
+  - first:
+      213: -6642933624526075452
+    second: Titulo_Menu_strip23_70
+  - first:
+      213: -3935358602827589380
+    second: Titulo_Menu_strip23_71
+  - first:
+      213: -5584805255696224068
+    second: Titulo_Menu_strip23_72
+  - first:
+      213: 2460214305801171217
+    second: Titulo_Menu_strip23_73
+  - first:
+      213: 1411417296594908299
+    second: Titulo_Menu_strip23_74
+  - first:
+      213: 723475856794289478
+    second: Titulo_Menu_strip23_75
+  - first:
+      213: 5188872171825929610
+    second: Titulo_Menu_strip23_76
+  - first:
+      213: -7456064454346468406
+    second: Titulo_Menu_strip23_77
+  - first:
+      213: 5652315946372849289
+    second: Titulo_Menu_strip23_78
+  - first:
+      213: 7727756479025396058
+    second: Titulo_Menu_strip23_79
+  - first:
+      213: 5701448106523914666
+    second: Titulo_Menu_strip23_80
+  - first:
+      213: 8878024108633666040
+    second: Titulo_Menu_strip23_81
+  - first:
+      213: -7029988759302942465
+    second: Titulo_Menu_strip23_82
+  - first:
+      213: -1879638369144606827
+    second: Titulo_Menu_strip23_83
+  - first:
+      213: 8544465344164299757
+    second: Titulo_Menu_strip23_84
+  - first:
+      213: 3927556236811957252
+    second: Titulo_Menu_strip23_85
+  - first:
+      213: 5279898529192753234
+    second: Titulo_Menu_strip23_86
+  - first:
+      213: 9026594976820310610
+    second: Titulo_Menu_strip23_87
+  - first:
+      213: 2140115936790009283
+    second: Titulo_Menu_strip23_88
+  - first:
+      213: -1365310022078772076
+    second: Titulo_Menu_strip23_89
+  - first:
+      213: 1975968137036124972
+    second: Titulo_Menu_strip23_90
+  - first:
+      213: 8448842528476464878
+    second: Titulo_Menu_strip23_91
+  - first:
+      213: 7182933168193398148
+    second: Titulo_Menu_strip23_92
+  - first:
+      213: 5579627104840033639
+    second: Titulo_Menu_strip23_93
+  - first:
+      213: -675021803919904382
+    second: Titulo_Menu_strip23_94
+  - first:
+      213: -7911853454259140066
+    second: Titulo_Menu_strip23_95
+  - first:
+      213: 7155364918531007394
+    second: Titulo_Menu_strip23_96
+  - first:
+      213: -7242217404852978674
+    second: Titulo_Menu_strip23_97
+  - first:
+      213: 5228843002626228810
+    second: Titulo_Menu_strip23_98
+  - first:
+      213: 1733853610890726466
+    second: Titulo_Menu_strip23_99
+  - first:
+      213: -3495679239054780877
+    second: Titulo_Menu_strip23_100
+  - first:
+      213: -3848625099833715380
+    second: Titulo_Menu_strip23_101
+  - first:
+      213: -5736113927212645367
+    second: Titulo_Menu_strip23_102
+  - first:
+      213: 646037399372047993
+    second: Titulo_Menu_strip23_103
+  - first:
+      213: -1994566240625899508
+    second: Titulo_Menu_strip23_104
+  - first:
+      213: -6607700232341419392
+    second: Titulo_Menu_strip23_105
+  - first:
+      213: -6875066732085452128
+    second: Titulo_Menu_strip23_106
+  - first:
+      213: 6870723851255166204
+    second: Titulo_Menu_strip23_107
+  - first:
+      213: -8272079253112916636
+    second: Titulo_Menu_strip23_108
+  - first:
+      213: 2310739423573798779
+    second: Titulo_Menu_strip23_109
+  - first:
+      213: -8383650983167083870
+    second: Titulo_Menu_strip23_110
+  - first:
+      213: -2617728261546021306
+    second: Titulo_Menu_strip23_111
+  - first:
+      213: 4418109633325916935
+    second: Titulo_Menu_strip23_112
+  - first:
+      213: 846673343106323119
+    second: Titulo_Menu_strip23_113
+  - first:
+      213: -5402297710419748055
+    second: Titulo_Menu_strip23_114
+  - first:
+      213: -2492061739793806889
+    second: Titulo_Menu_strip23_115
+  - first:
+      213: -7876575442892911760
+    second: Titulo_Menu_strip23_116
+  - first:
+      213: 5305040522437991697
+    second: Titulo_Menu_strip23_117
+  - first:
+      213: 5689354717902079085
+    second: Titulo_Menu_strip23_118
+  - first:
+      213: -4677350484023486519
+    second: Titulo_Menu_strip23_119
+  - first:
+      213: -9078368153708294526
+    second: Titulo_Menu_strip23_120
+  - first:
+      213: 3316565924047463671
+    second: Titulo_Menu_strip23_121
+  - first:
+      213: 5405639022779873136
+    second: Titulo_Menu_strip23_122
+  - first:
+      213: -1241535079394750626
+    second: Titulo_Menu_strip23_123
+  - first:
+      213: -6634041260333076820
+    second: Titulo_Menu_strip23_124
+  - first:
+      213: 2658335292145446144
+    second: Titulo_Menu_strip23_125
+  - first:
+      213: -7002480295924278291
+    second: Titulo_Menu_strip23_126
+  - first:
+      213: -7428503750250876552
+    second: Titulo_Menu_strip23_127
+  - first:
+      213: -609925801077197856
+    second: Titulo_Menu_strip23_128
+  - first:
+      213: -8379431470225147416
+    second: Titulo_Menu_strip23_129
+  - first:
+      213: -4414883002483247804
+    second: Titulo_Menu_strip23_130
+  - first:
+      213: -2880600531809202820
+    second: Titulo_Menu_strip23_131
+  - first:
+      213: 5117497159577435824
+    second: Titulo_Menu_strip23_132
+  - first:
+      213: -7818058902315508643
+    second: Titulo_Menu_strip23_133
+  - first:
+      213: -6599670318948709774
+    second: Titulo_Menu_strip23_134
+  - first:
+      213: 5690081798407241787
+    second: Titulo_Menu_strip23_135
+  - first:
+      213: 1226677432170910239
+    second: Titulo_Menu_strip23_136
+  - first:
+      213: 2567113364064534501
+    second: Titulo_Menu_strip23_137
+  - first:
+      213: 6340475360632075216
+    second: Titulo_Menu_strip23_138
+  - first:
+      213: 9086613236268049638
+    second: Titulo_Menu_strip23_139
+  - first:
+      213: 5086700886739760009
+    second: Titulo_Menu_strip23_140
+  - first:
+      213: -6195226279089958206
+    second: Titulo_Menu_strip23_141
+  - first:
+      213: -5382037909798213362
+    second: Titulo_Menu_strip23_142
+  - first:
+      213: -4823356715165805479
+    second: Titulo_Menu_strip23_143
+  - first:
+      213: 3960675002558914318
+    second: Titulo_Menu_strip23_144
+  - first:
+      213: -7347725164929172230
+    second: Titulo_Menu_strip23_145
+  - first:
+      213: 7814648787548387527
+    second: Titulo_Menu_strip23_146
+  - first:
+      213: -2357282852200609347
+    second: Titulo_Menu_strip23_147
+  - first:
+      213: -5842453250345227504
+    second: Titulo_Menu_strip23_148
+  - first:
+      213: -5212610313718617905
+    second: Titulo_Menu_strip23_149
+  - first:
+      213: 2486650244451786686
+    second: Titulo_Menu_strip23_150
+  - first:
+      213: -6626469820006711600
+    second: Titulo_Menu_strip23_151
+  - first:
+      213: -7151222424729778037
+    second: Titulo_Menu_strip23_152
+  - first:
+      213: 6325225326841283171
+    second: Titulo_Menu_strip23_153
+  - first:
+      213: -3537678723062614257
+    second: Titulo_Menu_strip23_154
+  - first:
+      213: -7413347791426076484
+    second: Titulo_Menu_strip23_155
+  - first:
+      213: -817159988075625279
+    second: Titulo_Menu_strip23_156
+  - first:
+      213: 1304259729649633281
+    second: Titulo_Menu_strip23_157
+  - first:
+      213: 1096320925569282878
+    second: Titulo_Menu_strip23_158
+  - first:
+      213: -326889780012408758
+    second: Titulo_Menu_strip23_159
+  - first:
+      213: -8520837391228011910
+    second: Titulo_Menu_strip23_160
+  - first:
+      213: -2261540179071469694
+    second: Titulo_Menu_strip23_161
+  - first:
+      213: -7544986690914647695
+    second: Titulo_Menu_strip23_162
+  - first:
+      213: -3370056221659293891
+    second: Titulo_Menu_strip23_163
+  - first:
+      213: 6091699146389159989
+    second: Titulo_Menu_strip23_164
+  - first:
+      213: -382551500364711040
+    second: Titulo_Menu_strip23_165
+  - first:
+      213: -1639084586462463221
+    second: Titulo_Menu_strip23_166
+  - first:
+      213: 1462594127837270005
+    second: Titulo_Menu_strip23_167
+  - first:
+      213: 6389726222226250808
+    second: Titulo_Menu_strip23_168
+  - first:
+      213: 4784278822266971677
+    second: Titulo_Menu_strip23_169
+  - first:
+      213: 4202722386948264426
+    second: Titulo_Menu_strip23_170
+  - first:
+      213: -8128627870318678172
+    second: Titulo_Menu_strip23_171
+  - first:
+      213: 7422600930361028834
+    second: Titulo_Menu_strip23_172
+  - first:
+      213: -2175360871884085736
+    second: Titulo_Menu_strip23_173
+  - first:
+      213: -9073865691039508731
+    second: Titulo_Menu_strip23_174
+  - first:
+      213: 7319977270379171954
+    second: Titulo_Menu_strip23_175
+  - first:
+      213: -3351276225955005734
+    second: Titulo_Menu_strip23_176
+  - first:
+      213: 4216114204018813043
+    second: Titulo_Menu_strip23_177
+  - first:
+      213: 1729345213343183566
+    second: Titulo_Menu_strip23_178
+  - first:
+      213: 8494909908861120861
+    second: Titulo_Menu_strip23_179
+  - first:
+      213: -3565537439580095993
+    second: Titulo_Menu_strip23_180
+  - first:
+      213: 5872094760045273114
+    second: Titulo_Menu_strip23_181
+  - first:
+      213: -2863113701803130037
+    second: Titulo_Menu_strip23_182
+  - first:
+      213: 7949064282491901990
+    second: Titulo_Menu_strip23_183
+  - first:
+      213: 7861284932510308893
+    second: Titulo_Menu_strip23_184
+  - first:
+      213: -1504266832257101750
+    second: Titulo_Menu_strip23_185
+  - first:
+      213: -3826473681074855102
+    second: Titulo_Menu_strip23_186
+  - first:
+      213: 2572680560910705783
+    second: Titulo_Menu_strip23_187
+  - first:
+      213: -7509307676880349485
+    second: Titulo_Menu_strip23_188
+  - first:
+      213: -6081595145842992072
+    second: Titulo_Menu_strip23_189
+  - first:
+      213: -5400707174180617832
+    second: Titulo_Menu_strip23_190
+  - first:
+      213: 154945974364951289
+    second: Titulo_Menu_strip23_191
+  - first:
+      213: 1978847817962739489
+    second: Titulo_Menu_strip23_192
+  - first:
+      213: 2463715858634151701
+    second: Titulo_Menu_strip23_193
+  - first:
+      213: -5142160601276661515
+    second: Titulo_Menu_strip23_194
+  - first:
+      213: -7824072135243113812
+    second: Titulo_Menu_strip23_195
+  - first:
+      213: -6840669858103906104
+    second: Titulo_Menu_strip23_196
+  - first:
+      213: -3910270943839619074
+    second: Titulo_Menu_strip23_197
+  - first:
+      213: -11664997345943882
+    second: Titulo_Menu_strip23_198
+  - first:
+      213: 8071660015733068559
+    second: Titulo_Menu_strip23_199
+  - first:
+      213: 4539254579354458002
+    second: Titulo_Menu_strip23_200
+  - first:
+      213: -3337809413509306492
+    second: Titulo_Menu_strip23_201
+  - first:
+      213: 7123057498132444354
+    second: Titulo_Menu_strip23_202
+  - first:
+      213: -1756049345162241870
+    second: Titulo_Menu_strip23_203
+  - first:
+      213: -8183747690835489059
+    second: Titulo_Menu_strip23_204
+  - first:
+      213: 2081548262461593521
+    second: Titulo_Menu_strip23_205
+  - first:
+      213: -8446050986324718215
+    second: Titulo_Menu_strip23_206
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Titulo_Menu_strip23_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 384
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59cd98edcf5f1b120800000000000000
+      internalID: 2427992140543548565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titulo_Menu_strip23_1
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 384
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d593d9c3bc6b80d00800000000000000
+      internalID: 939201506318301533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titulo_Menu_strip23_2
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 384
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15c638ae0ef9afdf0800000000000000
+      internalID: -145628249580147631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titulo_Menu_strip23_3
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 384
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24c2f03d96ffb7aa0800000000000000
+      internalID: -6162050835148755902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titulo_Menu_strip23_4
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 384
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a351aa5fb36e0330800000000000000
+      internalID: 3678987619118699427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titulo_Menu_strip23_5
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 384
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94db3122ee5bba740800000000000000
+      internalID: 5164421432088968521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titulo_Menu_strip23_6
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 0
+        width: 384
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92d0b22ddca407e30800000000000000
+      internalID: 4499178275597913385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titulo_Menu_strip23_7
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 0
+        width: 384
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e93d473f281c93510800000000000000
+      internalID: 1529466316643423134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titulo_Menu_strip23_8
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 384
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7b8efc9e65530ce0800000000000000
+      internalID: -1440213522259735683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titulo_Menu_strip23_9
+      rect:
+        serializedVersion: 2
+        x: 3456
+        y: 0
+        width: 384
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fce6ca097ddebfdc0800000000000000
+      internalID: -3604025566678978865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titulo_Menu_strip23_10
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 0
+        width: 384
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4a9bb885686aee00800000000000000
+      internalID: 1074786246376266314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titulo_Menu_strip23_11
+      rect:
+        serializedVersion: 2
+        x: 4224
+        y: 0
+        width: 384
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7562fd0609f3e4ee0800000000000000
+      internalID: -1275011755166194089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titulo_Menu_strip23_12
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 0
+        width: 384
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6819b07b1bc54c20800000000000000
+      internalID: 3190179229777598571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titulo_Menu_strip23_13
+      rect:
+        serializedVersion: 2
+        x: 4992
+        y: 0
+        width: 384
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e07830ecf20ef60c0800000000000000
+      internalID: -4580195800088082674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titulo_Menu_strip23_14
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 0
+        width: 384
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a6c60e6f02a89d30800000000000000
+      internalID: 4438475619927770793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titulo_Menu_strip23_15
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 0
+        width: 384
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 584fd0508e8364870800000000000000
+      internalID: 8666677102089467013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titulo_Menu_strip23_16
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 0
+        width: 384
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfa6a91d94737f9f0800000000000000
+      internalID: -434818048829265157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titulo_Menu_strip23_17
+      rect:
+        serializedVersion: 2
+        x: 6528
+        y: 0
+        width: 384
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 163e95bd3728fbaf0800000000000000
+      internalID: -378440409562881183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titulo_Menu_strip23_18
+      rect:
+        serializedVersion: 2
+        x: 6912
+        y: 0
+        width: 384
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51ade157a8ff8e030800000000000000
+      internalID: 3524347678552939029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titulo_Menu_strip23_19
+      rect:
+        serializedVersion: 2
+        x: 7296
+        y: 0
+        width: 384
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6a398b68865f0c40800000000000000
+      internalID: 5480694415452879466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titulo_Menu_strip23_20
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 0
+        width: 384
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a99249fb1c4551b0800000000000000
+      internalID: -5668540872946181719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titulo_Menu_strip23_21
+      rect:
+        serializedVersion: 2
+        x: 8064
+        y: 0
+        width: 384
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97bcc1e5a1d5990a0800000000000000
+      internalID: -6874360988374873223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titulo_Menu_strip23_22
+      rect:
+        serializedVersion: 2
+        x: 8448
+        y: 0
+        width: 384
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fc8d1eb818f4dca0800000000000000
+      internalID: -5992892418970776330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 158869ad0b168c142b36f8af73827bda
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":23.0,"y":1.0},"gridSpriteSize":{"x":384.0,"y":216.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Titulo_Menu_strip23_0: 2427992140543548565
+      Titulo_Menu_strip23_1: 939201506318301533
+      Titulo_Menu_strip23_10: 1074786246376266314
+      Titulo_Menu_strip23_11: -1275011755166194089
+      Titulo_Menu_strip23_12: 3190179229777598571
+      Titulo_Menu_strip23_13: -4580195800088082674
+      Titulo_Menu_strip23_14: 4438475619927770793
+      Titulo_Menu_strip23_15: 8666677102089467013
+      Titulo_Menu_strip23_16: -434818048829265157
+      Titulo_Menu_strip23_17: -378440409562881183
+      Titulo_Menu_strip23_18: 3524347678552939029
+      Titulo_Menu_strip23_19: 5480694415452879466
+      Titulo_Menu_strip23_2: -145628249580147631
+      Titulo_Menu_strip23_20: -5668540872946181719
+      Titulo_Menu_strip23_21: -6874360988374873223
+      Titulo_Menu_strip23_22: -5992892418970776330
+      Titulo_Menu_strip23_3: -6162050835148755902
+      Titulo_Menu_strip23_4: 3678987619118699427
+      Titulo_Menu_strip23_5: 5164421432088968521
+      Titulo_Menu_strip23_6: 4499178275597913385
+      Titulo_Menu_strip23_7: 1529466316643423134
+      Titulo_Menu_strip23_8: -1440213522259735683
+      Titulo_Menu_strip23_9: -3604025566678978865
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -6,7 +6,7 @@ public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject pauseButton;
-
+    [SerializeField] private GameObject painelConfig; // Arraste seu painel de config aqui
     
     public static bool isPaused = false;
 
@@ -20,7 +20,12 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (isPaused)
+            // Se apertar ESC com a config aberta, ele só volta pro pause normal
+            if (painelConfig != null && painelConfig.activeSelf)
+            {
+                FecharConfig();
+            }
+            else if (isPaused)
             {
                 Continuar();
             }
@@ -34,6 +39,7 @@ public class PauseMenu : MonoBehaviour
     public void Continuar()
     {
         pausePanel.SetActive(false);
+        if (painelConfig != null) painelConfig.SetActive(false);
         pauseButton.SetActive(true);
 
         Time.timeScale = 1f;
@@ -43,6 +49,7 @@ public class PauseMenu : MonoBehaviour
     public void Pausar()
     {
         pausePanel.SetActive(true);
+        if (painelConfig != null) painelConfig.SetActive(false);
         pauseButton.SetActive(false);
         Time.timeScale = 0f;
         isPaused = true;
@@ -55,9 +62,17 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    // ======= O QUE VOCÊ PEDIU =======
     public void AbrirConfig()
     {
-        Debug.Log("Menu de Config");
+        pausePanel.SetActive(false);
+        if (painelConfig != null) painelConfig.SetActive(true);
+    }
+
+    public void FecharConfig()
+    {
+        if (painelConfig != null) painelConfig.SetActive(false);
+        pausePanel.SetActive(true);
     }
 
     public void SairParaMenu()

@@ -3,6 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    [Header("Scripts de Apoio")]
+    public MenuConfiguracoes scriptConfig; // Arraste o objeto com o script de config aqui
+
     [Header("Áudio do Menu")]
     public AudioSource audioSourceMenu;
     public AudioClip somClique;
@@ -21,6 +24,19 @@ public class MainMenu : MonoBehaviour
         if (audioSourceMenu != null && somHover != null)
         {
             audioSourceMenu.PlayOneShot(somHover);
+        }
+    }
+
+    // ======= FUNÇÃO QUE ESTAVA FALTANDO =======
+    public void AbrirConfig()
+    {
+        if (scriptConfig != null)
+        {
+            scriptConfig.AbrirConfiguracoes();
+        }
+        else
+        {
+            Debug.LogError("Irmão, você esqueceu de arrastar o script de Config no Inspector do Menu!");
         }
     }
 
@@ -43,5 +59,4 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Teste");
     }
-
 }

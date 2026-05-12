@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(AudioSource))]
@@ -25,7 +26,7 @@ public class MusicManager : MonoBehaviour
     private AudioSource audioSource;
     private AudioLowPassFilter lowPass;
     private bool isGameplay = false;
-    private bool tocandoAlgoz = false; // Controle para saber se o tema do Algoz está ativo
+    private bool tocandoAlgoz = false;
     private int musicaAtualGameplay = 1;
 
     private void Awake()
@@ -38,10 +39,23 @@ public class MusicManager : MonoBehaviour
             lowPass = GetComponent<AudioLowPassFilter>();
             
             lowPass.cutoffFrequency = frequenciaNormal;
+            
+            // ======= A MÁGICA NOVA AQUI =======
+            AtualizarVolume(); 
         }
         else
         {
             Destroy(gameObject);
+        }
+    }
+
+    // ======= FUNÇÃO NOVA =======
+    public void AtualizarVolume()
+    {
+        if (audioSource != null)
+        {
+            // Puxa o volume salvo lá no menu de config
+            audioSource.volume = PlayerPrefs.GetFloat("VolumeMusica", 1f);
         }
     }
 
@@ -57,7 +71,6 @@ public class MusicManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // Sempre que mudar de fase, o Algoz "perde" a vez por segurança
         tocandoAlgoz = false;
 
         if (scene.name == nomeCenaMenu || scene.name == nomeCenaCreditos) 
@@ -85,7 +98,6 @@ public class MusicManager : MonoBehaviour
 
     public void IniciarMusicaGameplay()
     {
-        // Se já estiver na gameplay normal e não estiver vindo do Algoz, não faz nada
         if (isGameplay && !tocandoAlgoz) return; 
 
         isGameplay = true;
@@ -104,20 +116,26 @@ public class MusicManager : MonoBehaviour
 
     private void Update()
     {
-        // ======= LÓGICA DO BOTÃO K (TOGGLE ALGOZ) =======
+        float frequenciaAlvo = PauseMenu.isPaused ? frequenciaAbafada : frequenciaNormal;
+        lowPass.cutoffFrequency = Mathf.Lerp(lowPass.cutoffFrequency, frequenciaAlvo, Time.unscaledDeltaTime * velocidadeTransicao);
+
+        if (isGameplay && !tocandoAlgoz && !audioSource.isPlaying && !PauseMenu.isPaused)
+        {
+            musicaAtualGameplay = (musicaAtualGameplay == 1) ? 2 : 1;
+            TocarFaixaAtual();
+        }
+
         if (Input.GetKeyDown(KeyCode.K))
         {
             if (!tocandoAlgoz)
             {
-                // Entra no Modo Algoz: Para tudo e toca a dele
                 tocandoAlgoz = true;
                 audioSource.clip = musicaAlgoz;
-                audioSource.loop = true; // Boss fight costuma ser loop
+                audioSource.loop = true;
                 audioSource.Play();
             }
             else
             {
-                // Sai do Modo Algoz: Verifica onde estamos e volta a música normal
                 tocandoAlgoz = false;
                 string cenaNome = SceneManager.GetActiveScene().name;
 
@@ -127,22 +145,10 @@ public class MusicManager : MonoBehaviour
                 }
                 else
                 {
-                    // Resetamos o isGameplay para forçar a reinicialização da playlist da fase
                     isGameplay = false; 
                     IniciarMusicaGameplay();
                 }
             }
-        }
-
-        // Sistema de abafar o som (Low Pass) continua funcionando independente da música
-        float frequenciaAlvo = PauseMenu.isPaused ? frequenciaAbafada : frequenciaNormal;
-        lowPass.cutoffFrequency = Mathf.Lerp(lowPass.cutoffFrequency, frequenciaAlvo, Time.unscaledDeltaTime * velocidadeTransicao);
-
-        // Playlist de gameplay só alterna se NÃO estiver no modo Algoz
-        if (isGameplay && !tocandoAlgoz && !audioSource.isPlaying && !PauseMenu.isPaused)
-        {
-            musicaAtualGameplay = (musicaAtualGameplay == 1) ? 2 : 1;
-            TocarFaixaAtual();
         }
     }
 }

@@ -8,6 +8,8 @@ using Cinemachine;
 [RequireComponent(typeof(Collider2D))]
 public class PlayerController : MonoBehaviour
 {
+    public enum SpriteOrientation { PointsUp, PointsRight }
+
     [Header("Efeito de Morte")]
     [SerializeField] private float knockbackSpeed = 15f;
     [SerializeField] private int reloadDelayMs = 400;
@@ -19,7 +21,6 @@ public class PlayerController : MonoBehaviour
 
     [Header("Ricochete Clássico (Espelho)")]
     public float multiplicadorRicochete = 0.9f; 
-    [Tooltip("Força extra jogada para cima após o quique pra linha não 'broxar' e cair rápido")]
     public float forcaExtraParaCima = 5f; 
     public int maximoDeQuiquesNaLinha = 1; 
 
@@ -36,8 +37,23 @@ public class PlayerController : MonoBehaviour
     public CinemachineVirtualCamera camVirtual; 
     private float tamanhoCameraOriginal;
 
-    [Header("Efeitos Visuais")]
+    [Header("Efeitos Visuais (Game Feel)")]
     public TrailRenderer rastroArremesso;
+    public Transform visualTransform;
+    
+    [Header("Orientação do Desenho")]
+    public SpriteOrientation spriteOriginalOlhaPara = SpriteOrientation.PointsUp;
+    public float rotacaoNoLancador = 0f;
+
+    [Header("Efeito Elástico (Celeste)")]
+    public float velocidadeMinimaParaEsticar = 5f;
+    public float velocidadeMaximaParaEsticar = 25f;
+    [SerializeField] private float esticamentoBicoMaximo = 1.5f;
+    [SerializeField] private float esmagamentoLadosMaximo = 0.7f;
+    
+    [Tooltip("Tempo em segundos que o efeito dura no começo do tiro antes de voltar ao normal (ex: 0.3)")]
+    [SerializeField] private float tempoDoEfeitoElastico = 0.3f;
+    private float timerElastico = 0f; // Cronômetro interno
 
     [Header("Lançamento Aéreo")]
     public int maxMidAirLaunches = 1;
@@ -72,6 +88,7 @@ public class PlayerController : MonoBehaviour
         originalGravity = rb.gravityScale;
         
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous; 
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 
         if (camVirtual != null) tamanhoCameraOriginal = camVirtual.m_Lens.OrthographicSize;
         if (rastroArremesso != null) { rastroArremesso.emitting = false; rastroArremesso.Clear(); }
@@ -110,6 +127,8 @@ public class PlayerController : MonoBehaviour
 
         if (rastroArremesso != null && rb.linearVelocity.magnitude < 0.5f && !isDragging) rastroArremesso.emitting = false;
 
+        AtualizarVisualCeleste();
+
         if (!isDragging && Input.GetMouseButtonDown(0))
         {
             if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject()) return;
@@ -142,24 +161,82 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void AtualizarVisualCeleste()
+    {
+        if (visualTransform == null) return;
+
+        // Diminui o cronômetro do elástico se ele estiver rodando
+        if (timerElastico > 0f)
+        {
+            timerElastico -= Time.deltaTime;
+        }
+
+        if (isReadyToLaunch || isDead || rb.linearVelocity.magnitude < 0.1f)
+        {
+            visualTransform.rotation = Quaternion.Euler(0, 0, rotacaoNoLancador);
+            visualTransform.localScale = Vector3.one;
+            return;
+        }
+
+        float velocidade = rb.linearVelocity.magnitude;
+
+        if (velocidade > 0.1f && !isDragging)
+        {
+            // 1. Rotação Foguete (Baseada na direção do movimento)
+            float anguloBase = Mathf.Atan2(rb.linearVelocity.y, rb.linearVelocity.x) * Mathf.Rad2Deg;
+            float compensacao = (spriteOriginalOlhaPara == SpriteOrientation.PointsUp) ? -90f : 0f;
+            visualTransform.rotation = Quaternion.Euler(0, 0, anguloBase + compensacao);
+
+            // 2. Squash and Stretch COM DECAIMENTO
+            if (velocidade > velocidadeMinimaParaEsticar && timerElastico > 0f)
+            {
+                // Fator de velocidade (quão rápido ele está)
+                float fatorVelocidade = Mathf.InverseLerp(velocidadeMinimaParaEsticar, velocidadeMaximaParaEsticar, velocidade);
+                
+                // Fator de tempo (vai de 1 no momento do tiro, caindo até 0)
+                float fatorTempo = Mathf.Clamp01(timerElastico / tempoDoEfeitoElastico);
+                
+                // O efeito final é a mistura da velocidade com o tempo acabando
+                float fatorFinal = fatorVelocidade * fatorTempo;
+
+                float estica = Mathf.Lerp(1f, esticamentoBicoMaximo, fatorFinal);
+                float esmaga = Mathf.Lerp(1f, esmagamentoLadosMaximo, fatorFinal);
+
+                if (spriteOriginalOlhaPara == SpriteOrientation.PointsUp)
+                    visualTransform.localScale = new Vector3(esmaga, estica, 1f); 
+                else
+                    visualTransform.localScale = new Vector3(estica, esmaga, 1f); 
+            }
+            else
+            {
+                // Se o tempo acabou, volta ao tamanho original (mas continua apontando pra direção)
+                visualTransform.localScale = Vector3.one;
+            }
+        }
+    }
+
     public void SetReadyToLaunch(Transform launcherTransform)
     {
         if (isDead) return;
-        if (launcherTransform == ultimoLancador && timerImunidadeLancador > 0f) return;
+
+        bool tiroFalhou = rb.linearVelocity.magnitude < 0.5f;
+        if (!tiroFalhou && launcherTransform == ultimoLancador && timerImunidadeLancador > 0f) return;
 
         currentLauncher = launcherTransform;
         ultimoLancador = launcherTransform; 
-
-        // Trava ele bonitinho no lançador
-        rb.angularVelocity = 0f; 
-        transform.rotation = Quaternion.identity; 
-        rb.constraints = RigidbodyConstraints2D.FreezeRotation; 
 
         rb.gravityScale = 0f;
         rb.linearVelocity = Vector2.zero;
         transform.position = launcherTransform.position;
         isReadyToLaunch = true;
+        timerElastico = 0f; // Reseta o elástico
         
+        if (visualTransform != null)
+        {
+            visualTransform.rotation = Quaternion.Euler(0, 0, rotacaoNoLancador);
+            visualTransform.localScale = Vector3.one;
+        }
+
         midAirLaunchesLeft = maxMidAirLaunches;
         if (rastroArremesso != null) rastroArremesso.emitting = false;
     }
@@ -189,13 +266,13 @@ public class PlayerController : MonoBehaviour
         float distance = Vector2.Distance(startPoint, endPoint);
         distance = Mathf.Clamp(distance, 0, maxDragDistance);
 
-        // ======= A MÁGICA: DESTRAVA ELE ASSIM QUE ATIRAR =======
-        rb.constraints = RigidbodyConstraints2D.None;
-
         rb.gravityScale = originalGravity;
         rb.linearVelocity = Vector2.zero; 
         rb.AddForce(direction * distance * powerMultiplier, ForceMode2D.Impulse);
         
+        // ======= MÁGICA: ATIVA O TEMPO DO EFEITO AQUI =======
+        timerElastico = tempoDoEfeitoElastico;
+
         timerImunidadeLancador = imunidadeMesmoLancador;
         isReadyToLaunch = false;
         currentLauncher = null;
@@ -203,6 +280,7 @@ public class PlayerController : MonoBehaviour
         if (rastroArremesso != null) rastroArremesso.emitting = true;
     }
 
+    // ... (A função DrawTrajectory continua exatamente igual) ...
     private void DrawTrajectory()
     {
         Vector2 currentMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -267,6 +345,9 @@ public class PlayerController : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Bouncy"))
         {
+            // O impacto com a parede Bouncy TAMBÉM reativa o efeito elástico!
+            timerElastico = tempoDoEfeitoElastico;
+
             PlataformaSinuca sinuca = collision.gameObject.GetComponent<PlataformaSinuca>();
             if (sinuca != null)
             {

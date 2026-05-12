@@ -174,13 +174,13 @@ MonoBehaviour:
   reloadDelayMs: 400
   powerMultiplier: 6
   maxDragDistance: 5
-  imunidadeMesmoLancador: 0.5
+  imunidadeMesmoLancador: 0
   multiplicadorRicochete: 0.9
   forcaExtraParaCima: 5
   maximoDeQuiquesNaLinha: 1
-  slowMotionTimeScale: 0.35
+  slowMotionTimeScale: 0.2
   slowMotionGravityMultiplier: 0.2
-  tempoMaximoMira: 2
+  tempoMaximoMira: 1.3
   zoomMultiplicador: 0.75
   zoomMultiplicadorLancador: 0.85
   zoomVelocidade: 8
@@ -189,7 +189,7 @@ MonoBehaviour:
   maxMidAirLaunches: 1
   trajectoryLine: {fileID: 0}
   trajectoryResolution: 30
-  trajectoryTime: 0.5
+  trajectoryTime: 0.8
 --- !u!96 &2471113864296588339
 TrailRenderer:
   serializedVersion: 4

@@ -170,8 +170,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8355c537d9192e149ab2a7f4fee4630f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDeath
-  knockbackSpeed: 15
-  reloadDelayMs: 400
+  knockbackSpeed: 20
+  reloadDelayMs: 350
   powerMultiplier: 6
   maxDragDistance: 5
   imunidadeMesmoLancador: 0
@@ -237,7 +237,7 @@ TrailRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Time: 0.2
   m_PreviewTimeScale: 1

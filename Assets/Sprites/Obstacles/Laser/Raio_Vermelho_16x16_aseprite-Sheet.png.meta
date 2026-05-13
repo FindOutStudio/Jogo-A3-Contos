@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f07928b85f688384ab3fbeb206e592d3
+guid: 88ade2812af62624390ef4ad1024672a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4593813877572123590
-    second: Botao_Creditos_Apagado_0
+      213: -6527497779988424977
+    second: Raio_Vermelho_16x16_aseprite-Sheet_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,23 +113,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Botao_Creditos_Apagado_0
+      name: Raio_Vermelho_16x16_aseprite-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 48
-        height: 48
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a34cd0f0e9e7f30c0800000000000000
-      internalID: -4593813877572123590
+      spriteID: fe693af6a5ba965a0800000000000000
+      internalID: -6527497779988424977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Raio_Vermelho_16x16_aseprite-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a4b2b89b74641c46a3578d9f0dbc221
+      internalID: -867853185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Raio_Vermelho_16x16_aseprite-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70d7968aae1781340aa81f80822309a0
+      internalID: 942108945
       vertices: []
       indices: 
       edges: []
@@ -138,7 +182,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 55895dbcaeb0aad4d993af24ebcbdaf7
     internalID: 0
     vertices: []
     indices: 
@@ -146,9 +190,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Botao_Creditos_Apagado_0: -4593813877572123590
+      Raio_Vermelho_16x16_aseprite-Sheet_0: -6527497779988424977
+      Raio_Vermelho_16x16_aseprite-Sheet_1: -867853185
+      Raio_Vermelho_16x16_aseprite-Sheet_2: 942108945
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3476539141108018303}
   - component: {fileID: 1227594260810957375}
+  - component: {fileID: 6055767802021951052}
+  - component: {fileID: 6219600205754120830}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -50,3 +52,37 @@ MonoBehaviour:
   - {fileID: 0}
   iconeVazio: {fileID: 21300000, guid: bdd554e6471e4c6488f67ec2c27dd3d7, type: 3}
   iconeCheio: {fileID: 21300000, guid: 6e5ce3a179bcd0c44ad1a27b83354799, type: 3}
+--- !u!114 &6055767802021951052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2376509581205463844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d6839487625be149bc6a7d571c376b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuConfiguracoes
+  painelConfig: {fileID: 0}
+  painelAnterior: {fileID: 0}
+  sliderMusica: {fileID: 0}
+--- !u!114 &6219600205754120830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2376509581205463844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 637899d382e4e024fb9a0ac464cc8acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LogUIManager
+  painelLog: {fileID: 0}
+  tituloTexto: {fileID: 0}
+  conteudoTexto: {fileID: 0}
+  velocidadeEscala: 10
+  tempoPorLetra: 0.01
+  vezesParaEmbaralhar: 1
+  tamanhoDoRastro: 8

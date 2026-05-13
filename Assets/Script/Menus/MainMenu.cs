@@ -5,6 +5,7 @@ public class MainMenu : MonoBehaviour
 {
     [Header("Scripts de Apoio")]
     public MenuConfiguracoes scriptConfig; // Arraste o objeto com o script de config aqui
+    public MenuDeLogs scriptLogs; // NOVO: Arraste o objeto com o script MenuDeLogs aqui
 
     [Header("Áudio do Menu")]
     public AudioSource audioSourceMenu;
@@ -27,7 +28,6 @@ public class MainMenu : MonoBehaviour
         }
     }
 
-    // ======= FUNÇÃO QUE ESTAVA FALTANDO =======
     public void AbrirConfig()
     {
         if (scriptConfig != null)
@@ -37,6 +37,19 @@ public class MainMenu : MonoBehaviour
         else
         {
             Debug.LogError("Irmão, você esqueceu de arrastar o script de Config no Inspector do Menu!");
+        }
+    }
+
+    // ======= NOVA FUNÇÃO PARA OS LOGS =======
+    public void AbrirLogs()
+    {
+        if (scriptLogs != null)
+        {
+            scriptLogs.AbrirMenuLogs();
+        }
+        else
+        {
+            Debug.LogError("Chefe, você esqueceu de arrastar o script MenuDeLogs no Inspector do MainMenu!");
         }
     }
 

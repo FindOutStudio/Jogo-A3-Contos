@@ -20,6 +20,15 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            // ======= A TRAVINHA DO LOG =======
+            // Verifica se o Gerenciador de Log existe e se o painel dele está ativado na tela.
+            // Se estiver, a gente dá um "return", que faz o código parar aqui e não pausar o jogo.
+            if (LogUIManager.instance != null && LogUIManager.instance.painelLog != null && LogUIManager.instance.painelLog.activeSelf)
+            {
+                return; 
+            }
+            // =================================
+
             // Se apertar ESC com a config aberta, ele só volta pro pause normal
             if (painelConfig != null && painelConfig.activeSelf)
             {
@@ -62,7 +71,6 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    // ======= O QUE VOCÊ PEDIU =======
     public void AbrirConfig()
     {
         pausePanel.SetActive(false);

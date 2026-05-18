@@ -53,11 +53,13 @@ public class PlayerController : MonoBehaviour
     
     [Tooltip("Tempo em segundos que o efeito dura no começo do tiro antes de voltar ao normal (ex: 0.3)")]
     [SerializeField] private float tempoDoEfeitoElastico = 0.3f;
-    private float timerElastico = 0f; // Cronômetro interno
+    private float timerElastico = 0f; 
 
     [Header("Lançamento Aéreo")]
     public int maxMidAirLaunches = 1;
     private int midAirLaunchesLeft;
+    
+    [HideInInspector] public bool tutorialTempoInfinito = false; // TRAVA DO TUTORIAL
 
     [Header("Configurações da Trajetória")]
     public LineRenderer trajectoryLine;
@@ -116,12 +118,16 @@ public class PlayerController : MonoBehaviour
 
         if (isDragging && !isReadyToLaunch)
         {
-            contadorMira += Time.unscaledDeltaTime;
-            if (contadorMira >= tempoMaximoMira)
+            // SÓ CONTA O TEMPO SE NÃO ESTIVER NO TUTORIAL
+            if (!tutorialTempoInfinito)
             {
-                Time.timeScale = 1f;
-                Time.fixedDeltaTime = 0.02f;
-                rb.gravityScale = originalGravity;
+                contadorMira += Time.unscaledDeltaTime;
+                if (contadorMira >= tempoMaximoMira)
+                {
+                    Time.timeScale = 1f;
+                    Time.fixedDeltaTime = 0.02f;
+                    rb.gravityScale = originalGravity;
+                }
             }
         }
 
@@ -165,7 +171,6 @@ public class PlayerController : MonoBehaviour
     {
         if (visualTransform == null) return;
 
-        // Diminui o cronômetro do elástico se ele estiver rodando
         if (timerElastico > 0f)
         {
             timerElastico -= Time.deltaTime;
@@ -182,21 +187,14 @@ public class PlayerController : MonoBehaviour
 
         if (velocidade > 0.1f && !isDragging)
         {
-            // 1. Rotação Foguete (Baseada na direção do movimento)
             float anguloBase = Mathf.Atan2(rb.linearVelocity.y, rb.linearVelocity.x) * Mathf.Rad2Deg;
             float compensacao = (spriteOriginalOlhaPara == SpriteOrientation.PointsUp) ? -90f : 0f;
             visualTransform.rotation = Quaternion.Euler(0, 0, anguloBase + compensacao);
 
-            // 2. Squash and Stretch COM DECAIMENTO
             if (velocidade > velocidadeMinimaParaEsticar && timerElastico > 0f)
             {
-                // Fator de velocidade (quão rápido ele está)
                 float fatorVelocidade = Mathf.InverseLerp(velocidadeMinimaParaEsticar, velocidadeMaximaParaEsticar, velocidade);
-                
-                // Fator de tempo (vai de 1 no momento do tiro, caindo até 0)
                 float fatorTempo = Mathf.Clamp01(timerElastico / tempoDoEfeitoElastico);
-                
-                // O efeito final é a mistura da velocidade com o tempo acabando
                 float fatorFinal = fatorVelocidade * fatorTempo;
 
                 float estica = Mathf.Lerp(1f, esticamentoBicoMaximo, fatorFinal);
@@ -209,7 +207,6 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                // Se o tempo acabou, volta ao tamanho original (mas continua apontando pra direção)
                 visualTransform.localScale = Vector3.one;
             }
         }
@@ -229,7 +226,7 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
         transform.position = launcherTransform.position;
         isReadyToLaunch = true;
-        timerElastico = 0f; // Reseta o elástico
+        timerElastico = 0f; 
         
         if (visualTransform != null)
         {
@@ -241,7 +238,7 @@ public class PlayerController : MonoBehaviour
         if (rastroArremesso != null) rastroArremesso.emitting = false;
     }
 
-    private void IniciarArraste(Vector2 pontoDeInicio)
+   private void IniciarArraste(Vector2 pontoDeInicio)
     {
         isDragging = true;
         startPoint = pontoDeInicio;
@@ -251,8 +248,20 @@ public class PlayerController : MonoBehaviour
 
         if (!isReadyToLaunch)
         {
-            rb.gravityScale = originalGravity * slowMotionGravityMultiplier; 
-            Time.timeScale = slowMotionTimeScale;
+            if (tutorialTempoInfinito)
+            {
+                // SE ESTIVER NO TUTORIAL: Congela o boneco 100% no ar e desliga a gravidade
+                Time.timeScale = 0f;
+                rb.gravityScale = 0f;
+                rb.linearVelocity = Vector2.zero; 
+            }
+            else
+            {
+                // GAMEPLAY NORMAL: Faz a câmera lenta estilo Zelda que você já tinha
+                rb.gravityScale = originalGravity * slowMotionGravityMultiplier; 
+                Time.timeScale = slowMotionTimeScale;
+            }
+            
             Time.fixedDeltaTime = 0.02f * Time.timeScale;
         }
     }
@@ -270,9 +279,7 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity = Vector2.zero; 
         rb.AddForce(direction * distance * powerMultiplier, ForceMode2D.Impulse);
         
-        // ======= MÁGICA: ATIVA O TEMPO DO EFEITO AQUI =======
         timerElastico = tempoDoEfeitoElastico;
-
         timerImunidadeLancador = imunidadeMesmoLancador;
         isReadyToLaunch = false;
         currentLauncher = null;
@@ -280,7 +287,6 @@ public class PlayerController : MonoBehaviour
         if (rastroArremesso != null) rastroArremesso.emitting = true;
     }
 
-    // ... (A função DrawTrajectory continua exatamente igual) ...
     private void DrawTrajectory()
     {
         Vector2 currentMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -345,7 +351,6 @@ public class PlayerController : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Bouncy"))
         {
-            // O impacto com a parede Bouncy TAMBÉM reativa o efeito elástico!
             timerElastico = tempoDoEfeitoElastico;
 
             PlataformaSinuca sinuca = collision.gameObject.GetComponent<PlataformaSinuca>();

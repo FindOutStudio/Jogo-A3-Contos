@@ -34,13 +34,27 @@ public class LogUIManager : MonoBehaviour
         if (painelLog != null) painelLog.SetActive(false);
     }
 
+    // ======== ADICIONAMOS ISSO AQUI ========
+    private void Update()
+    {
+        // Se o painel do Log estiver ligado na tela E o jogador apertar ESC
+        if (painelLog != null && painelLog.activeSelf)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                FecharLog();
+            }
+        }
+    }
+    // =======================================
+
     public void MostrarLog(int id, string lore)
     {
         Time.timeScale = 0f;
         PauseMenu.isPaused = true; 
 
         painelLog.SetActive(true);
-        tituloTexto.text = "LOG #" + id;
+        tituloTexto.text = "LOG #" + id.ToString("00");
         conteudoTexto.text = ""; 
 
         painelLog.transform.localScale = Vector3.zero;
@@ -70,23 +84,18 @@ public class LogUIManager : MonoBehaviour
 
     private IEnumerator EfeitoTextoMinecraft(string textoReal)
     {
-        // A máquina vai avançar até o tamanho do texto + o rastro, para garantir que 
-        // o rastro saia da tela e as últimas letras se solidifiquem
         for (int i = 0; i <= textoReal.Length + tamanhoDoRastro; i++)
         {
-            // Pisca as letras do rastro X vezes antes de avançar uma casa
             for (int j = 0; j < vezesParaEmbaralhar; j++)
             {
                 string textoAtual = "";
                 
                 for (int k = 0; k < textoReal.Length; k++)
                 {
-                    // 1. Letras que ficaram para trás do rastro estão "frias/sólidas"
                     if (k < i - tamanhoDoRastro)
                     {
                         textoAtual += textoReal[k];
                     }
-                    // 2. Letras DENTRO do rastro ficam malucas
                     else if (k < i)
                     {
                         if (textoReal[k] == ' ' || textoReal[k] == '\n') 
@@ -94,7 +103,6 @@ public class LogUIManager : MonoBehaviour
                         else 
                             textoAtual += caracteresRandom[Random.Range(0, caracteresRandom.Length)];
                     }
-                    // 3. Letras que o rastro ainda não alcançou ficam invisíveis
                     else
                     {
                         break; 
@@ -106,7 +114,6 @@ public class LogUIManager : MonoBehaviour
             }
         }
 
-        // Fim da animação: crava o texto exato na tela
         conteudoTexto.text = textoReal;
     }
 }

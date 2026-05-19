@@ -2160,8 +2160,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 330365360999770748, guid: 883666c3be35beb4d9392ff40d110f22, type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 75585caaccd92bb42b65e643bdae0813, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 75585caaccd92bb42b65e643bdae0813, type: 3}
+    m_PressedSprite: {fileID: 330365360999770748, guid: 883666c3be35beb4d9392ff40d110f22, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -2532,7 +2532,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -3111,10 +3111,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MusicManager
   nomeCenaMenu: MainMenu
   nomeCenaCreditos: Creditos
-  musicaMenu: {fileID: 8300000, guid: a2ed9fab5889d894cb3ba94ca8fdaea0, type: 3}
-  musicaGameplay1: {fileID: 8300000, guid: 37abaed4252e1634596f2637756914d8, type: 3}
-  musicaGameplay2: {fileID: 8300000, guid: d59d7f5c47bd51e469f79bdeb4bbb49e, type: 3}
-  musicaAlgoz: {fileID: 8300000, guid: 7a988aea1c989c645b341213c012ecd3, type: 3}
+  musicaMenu: {fileID: 8300000, guid: e51a653f2911c0f4a9a4af0af44d94f6, type: 3}
+  musicaGameplay1: {fileID: 8300000, guid: 985ee5fde803d38468a64dfbd394cd00, type: 3}
+  musicaGameplay2: {fileID: 8300000, guid: 4dd0bce8d4a4a16429c8bab31dcdaba4, type: 3}
+  musicaAlgoz: {fileID: 8300000, guid: 06112f2c8fb7b9a4ba126d149de79974, type: 3}
   frequenciaNormal: 22000
   frequenciaAbafada: 800
   velocidadeTransicao: 10

@@ -227,7 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDeath
   knockbackSpeed: 20
   reloadDelayMs: 350
-  powerMultiplier: 6
+  powerMultiplier: 6.5
   maxDragDistance: 5
   imunidadeMesmoLancador: 0
   multiplicadorRicochete: 0.9
@@ -236,8 +236,8 @@ MonoBehaviour:
   slowMotionTimeScale: 0.2
   slowMotionGravityMultiplier: 0.2
   tempoMaximoMira: 1.3
-  zoomMultiplicador: 0.75
-  zoomMultiplicadorLancador: 0.85
+  zoomMultiplicador: 0.65
+  zoomMultiplicadorLancador: 1.3
   zoomVelocidade: 8
   camVirtual: {fileID: 0}
   rastroArremesso: {fileID: 2471113864296588339}
@@ -248,7 +248,9 @@ MonoBehaviour:
   velocidadeMaximaParaEsticar: 25
   esticamentoBicoMaximo: 1.5
   esmagamentoLadosMaximo: 0.7
+  tempoDoEfeitoElastico: 0.3
   maxMidAirLaunches: 1
+  tutorialTempoInfinito: 0
   trajectoryLine: {fileID: 0}
   trajectoryResolution: 30
   trajectoryTime: 0.8

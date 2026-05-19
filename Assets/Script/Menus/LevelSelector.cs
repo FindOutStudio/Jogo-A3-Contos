@@ -2,6 +2,20 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+// Criamos essa caixinha para organizar as opções lá no Inspector
+[System.Serializable]
+public struct FaseConfig
+{
+    [Tooltip("Nome exato da cena (Ex: Level 0)")]
+    public string nomeDaCena;
+    
+    [Tooltip("A imagem ROSA (Nível liberado)")]
+    public Sprite spriteDesbloqueado;
+    
+    [Tooltip("A imagem VERMELHA escuro (Nível bloqueado)")]
+    public Sprite spriteBloqueado;
+}
+
 public class LevelSelector : MonoBehaviour
 {
     [Header("Telas do Menu")]
@@ -11,49 +25,55 @@ public class LevelSelector : MonoBehaviour
     [Header("Gerador de Fases")]
     [Tooltip("Arraste o prefab do botão de fase aqui")]
     public GameObject botaoLevelPrefab; 
-    [Tooltip("O painel/objeto que tem o Grid Layout Group")]
     public Transform containerDeBotoes; 
 
     [Header("Lista de Fases (Game Designer, mexa aqui!)")]
-    [Tooltip("Escreva o nome exato das cenas das fases. Ex: Fase1, Fase2")]
-    public string[] nomeDasCenas;
+    // Mudamos de uma lista de Textos para uma lista de Configurações
+    public FaseConfig[] fases;
 
     void Start()
     {
-        // Garante que a tela de seleção comece escondida
         if (telaSelecaoLevel != null) telaSelecaoLevel.SetActive(false);
-        
         GerarBotoesDeFase();
     }
 
     void GerarBotoesDeFase()
     {
-        // Passo 1: Limpa qualquer botão que já esteja no container (pra não duplicar)
+        // 1. Limpa qualquer botão antigo
         foreach (Transform child in containerDeBotoes)
         {
             Destroy(child.gameObject);
         }
 
-        // Passo 2: Cria um botão para cada fase que o designer colocou na lista
-        for (int i = 0; i < nomeDasCenas.Length; i++)
+        // 2. Cria os botões com as imagens certas
+        for (int i = 0; i < fases.Length; i++)
         {
-            int numeroDaFase = i + 1; // Para exibir "Lvl 1" em vez de "Lvl 0"
-            string cenaParaCarregar = nomeDasCenas[i];
-
-            // Instancia (fabrica) o botão dentro do Grid
+            FaseConfig faseAtual = fases[i];
             GameObject novoBotao = Instantiate(botaoLevelPrefab, containerDeBotoes);
             
-            // Procura o componente de Texto dentro do botão para escrever "Lvl X"
-            // (Se você usa TextMeshPro, troque 'Text' por 'TMPro.TextMeshProUGUI')
-            Text textoDoBotao = novoBotao.GetComponentInChildren<Text>();
-            if (textoDoBotao != null) 
-            {
-                textoDoBotao.text = "Lvl " + numeroDaFase;
-            }
-
-            // Programa o botão para carregar a fase correta quando clicado
+            // Pega os componentes cruciais do botão
             Button componenteBotao = novoBotao.GetComponent<Button>();
-            componenteBotao.onClick.AddListener(() => CarregarFase(cenaParaCarregar));
+            Image imagemDoBotao = novoBotao.GetComponent<Image>();
+
+            // LÓGICA DE DESBLOQUEIO:
+            // A primeira fase (i = 0) sempre está liberada. 
+            // As outras dependem de ter um "1" salvo no PlayerPrefs.
+            bool estaDesbloqueada = (i == 0) || (PlayerPrefs.GetInt("FaseLiberada_" + i, 0) == 1);
+
+            if (estaDesbloqueada)
+            {
+                imagemDoBotao.sprite = faseAtual.spriteDesbloqueado;
+                componenteBotao.interactable = true; // Permite clicar
+                
+                // Variável local para não bugar o Listener dentro do Loop
+                string cenaParaCarregar = faseAtual.nomeDaCena;
+                componenteBotao.onClick.AddListener(() => CarregarFase(cenaParaCarregar));
+            }
+            else
+            {
+                imagemDoBotao.sprite = faseAtual.spriteBloqueado;
+                componenteBotao.interactable = false; // Impede o clique
+            }
         }
     }
 
@@ -62,14 +82,13 @@ public class LevelSelector : MonoBehaviour
         SceneManager.LoadScene(nomeCena);
     }
 
-    // ======= NAVEGAÇÃO DO MENU =======
     public void AbrirSelecao()
     {
         telaMenuPrincipal.SetActive(false);
         telaSelecaoLevel.SetActive(true);
     }
 
-    public void FecharSelecao() // Função para o botão "Voltar"
+    public void FecharSelecao() 
     {
         telaSelecaoLevel.SetActive(false);
         telaMenuPrincipal.SetActive(true);

@@ -11,15 +11,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Dev Rooms/Playground.unity
     guid: 0cbce31159420bd45b3c028d8fac5b0c
-  - enabled: 0
-    path: Assets/Scenes/Playground 2.unity
-    guid: 73221fac16d4ab040b5488287117c9dd
   - enabled: 1
-    path: Assets/Scenes/Descartado/Level 1-1.unity
-    guid: 5776a438f3aa58b4ea766f03584e8ca9
+    path: Assets/Scenes/Levels/Level 0.unity
+    guid: 425a5bd739afacb42915afbaf6c898ca
   - enabled: 1
-    path: Assets/Scenes/Menus/Level 1-2.unity
-    guid: fe0bdf414ffc94d45bad458061196e68
+    path: Assets/Scenes/Levels/Level 1.unity
+    guid: 11505b250c0317840853de085eaf2a50
   - enabled: 1
     path: Assets/Scenes/Menus/Creditos.unity
     guid: ab690c04ec994b74e88eb7cf01942d6a

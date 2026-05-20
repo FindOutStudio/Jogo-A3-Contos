@@ -240,6 +240,8 @@ public class PlayerController : MonoBehaviour
 
    private void IniciarArraste(Vector2 pontoDeInicio)
     {
+        if(SoundManager.instance != null) SoundManager.instance.TocarPuxar();
+
         isDragging = true;
         startPoint = pontoDeInicio;
         telaPosicaoInicialMouse = Input.mousePosition; 
@@ -257,7 +259,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                // GAMEPLAY NORMAL: Faz a câmera lenta estilo Zelda que você já tinha
+                if(SoundManager.instance != null) SoundManager.instance.TocarSlowMotion();
                 rb.gravityScale = originalGravity * slowMotionGravityMultiplier; 
                 Time.timeScale = slowMotionTimeScale;
             }
@@ -268,6 +270,11 @@ public class PlayerController : MonoBehaviour
 
     private void Shoot()
     {
+
+        if(SoundManager.instance != null) SoundManager.instance.PararPuxar();
+
+        if (SoundManager.instance != null) SoundManager.instance.TocarSoltar();
+
         Time.timeScale = 1f;
         Time.fixedDeltaTime = 0.02f;
 
@@ -388,6 +395,10 @@ public class PlayerController : MonoBehaviour
 
     private async Task DeathSequence(Vector2 direction)
     {
+
+        if(SoundManager.instance != null) SoundManager.instance.TocarMorte();
+        if (SoundManager.instance != null) SoundManager.instance.PararPuxar();
+
         Time.timeScale = 1f;
         Time.fixedDeltaTime = 0.02f;
 

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8468541030346996461}
   - component: {fileID: 5175628175944306232}
   - component: {fileID: 3002759871074277629}
+  - component: {fileID: 7432637638576941506}
   m_Layer: 0
   m_Name: Serra Script
   m_TagString: Obstacle
@@ -167,3 +168,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7432637638576941506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419473976477458568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1934250fe229eb243b3258772d5fe85a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SomObstaculo3D
+  meuTipo: 0

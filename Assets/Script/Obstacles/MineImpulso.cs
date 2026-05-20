@@ -25,12 +25,9 @@ public class MinaImpulso : MonoBehaviour
             if (rb != null)
             {
                 // 1. A Matemática da Explosão:
-                // Subtrai a posição da bomba da posição do player para achar o vetor de afastamento
                 Vector2 direcaoDaExplosao = (collision.transform.position - transform.position).normalized;
 
                 // 2. O Toque de "Game Feel":
-                // Se a explosão pegar o player muito de cima ou perfeitamente de lado, 
-                // forçamos o vetor a empurrar ele um pouquinho para cima pra não bater a cara no chão.
                 if (direcaoDaExplosao.y < 0.2f) 
                 {
                     direcaoDaExplosao.y = 0.5f;
@@ -38,11 +35,19 @@ public class MinaImpulso : MonoBehaviour
                 }
 
                 // 3. O Arremesso:
-                // Sobrescrevemos a velocidade atual pela velocidade da explosão!
                 rb.linearVelocity = direcaoDaExplosao * forcaDaExplosao;
 
-                // 4. (Opcional) Efeitos e Destruição:
-                // Aqui você pode colocar um som de explosão ou partículas depois!
+                // === 4. O SOM 3D DIRETO DA CENTRAL ===
+                if (SoundManager.instance != null)
+                {
+                    SoundManager.instance.TocarSom3D(
+                        SoundManager.instance.obstaculoBomba, 
+                        transform.position, 
+                        SoundManager.instance.volumeBomba
+                    );
+                }
+
+                // 5. Destruição:
                 if (destruirAoExplodir)
                 {
                     Destroy(gameObject);

@@ -7,6 +7,11 @@ using TMPro;
 public class LogLore
 {
     public int logID;
+    
+    [Header("Imagens do Botão")]
+    public Sprite spriteDesbloqueado; // A imagem ROSA
+    public Sprite spriteBloqueado;    // A imagem VERMELHA
+
     [TextArea(3, 10)]
     public string textoDoLog;
 }
@@ -24,7 +29,7 @@ public class MenuDeLogs : MonoBehaviour
 
     [Header("Gerador da Grade")]
     public Transform containerDeBotoes;
-    public GameObject botaoLogPrefab; // Prefab do botão (tem que ter TextMeshPro nele)
+    public GameObject botaoLogPrefab; // Prefab do botão
 
     [Header("Banco de Dados (Game Designer)")]
     [Tooltip("Cadastre todos os logs do jogo aqui.")]
@@ -73,23 +78,29 @@ public class MenuDeLogs : MonoBehaviour
         {
             GameObject novoBotao = Instantiate(botaoLogPrefab, containerDeBotoes);
             Button componenteBotao = novoBotao.GetComponent<Button>();
-            TextMeshProUGUI textoBotao = novoBotao.GetComponentInChildren<TextMeshProUGUI>();
+            Image imagemDoBotao = novoBotao.GetComponent<Image>(); // Pegamos o componente de Imagem
 
             // Verifica na memória se o jogador já coletou esse ID
             bool foiColetado = PlayerPrefs.GetInt("LogColetado_" + log.logID, 0) == 1;
 
             if (foiColetado)
             {
-                textoBotao.text = "LOG #" + log.logID.ToString("00"); // Fica "LOG #01"
+                imagemDoBotao.sprite = log.spriteDesbloqueado; // Fica Rosa
                 componenteBotao.interactable = true; // Botão clicável
+
+                // Adiciona o som de clique/hover se não tiver
+                if (novoBotao.GetComponent<SomBotao>() == null) novoBotao.AddComponent<SomBotao>();
                 
                 // Manda o botão abrir a tela de leitura com a história certa
-                componenteBotao.onClick.AddListener(() => AbrirLeitura(log.logID, log.textoDoLog));
+                // Guardamos em variáveis locais para o botão não se confundir
+                int idPassado = log.logID;
+                string textoPassado = log.textoDoLog;
+                componenteBotao.onClick.AddListener(() => AbrirLeitura(idPassado, textoPassado));
             }
             else
             {
-                textoBotao.text = "???"; // Mistério!
-                componenteBotao.interactable = false; // Botão travado (a Unity deixa ele meio cinza sozinho)
+                imagemDoBotao.sprite = log.spriteBloqueado; // Fica Vermelho
+                componenteBotao.interactable = false; // Botão travado (a Unity deixa-o bloqueado)
             }
         }
     }

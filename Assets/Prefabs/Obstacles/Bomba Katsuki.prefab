@@ -141,5 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc282fe8412ce79439fb29b78d5646e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MinaImpulso
+  somExplosao: {fileID: 8300000, guid: c405284b96441294289a26b931fbe256, type: 3}
+  volumeExplosao: 1
   forcaDaExplosao: 25
   destruirAoExplodir: 1

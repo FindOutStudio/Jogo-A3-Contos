@@ -14,15 +14,17 @@ public class IntermittentLaser : MonoBehaviour
     [SerializeField] private bool startOn = true; 
 
     [Header("Visual do Curto-Circuito (Raio)")]
-    [SerializeField] private LineRenderer arcRenderer; // Arraste o Line Renderer pra cá
-    [SerializeField] private int segments = 10; // Em quantos "pedacinhos" o raio se quebra
-    [SerializeField] private float arcVolatility = 0.5f; // O quão longe ele pula pros lados
-    [SerializeField] private float fps = 20f; // Quantas vezes por segundo ele muda de forma
+    [SerializeField] private LineRenderer arcRenderer; 
+    [SerializeField] private int segments = 10; 
+    [SerializeField] private float arcVolatility = 0.5f; 
+    [SerializeField] private float fps = 20f; 
 
     private BoxCollider2D laserCollider;
     private float timer;
     private bool isLaserActive;
-    private float arcTimer; // Cronômetro pra animação do raio
+    private float arcTimer; 
+    
+    private AudioSource meuAudio; 
 
     private void Awake()
     {
@@ -33,6 +35,8 @@ public class IntermittentLaser : MonoBehaviour
     private void Start()
     {
         SetupLaserTransform();
+        ConfigurarAudio3D(); 
+
         isLaserActive = startOn;
         timer = isLaserActive ? timeOn : timeOff;
         UpdateLaserState();
@@ -40,7 +44,6 @@ public class IntermittentLaser : MonoBehaviour
 
     private void Update()
     {
-        // 1. O relógio principal (Liga/Desliga o perigo)
         timer -= Time.deltaTime;
         if (timer <= 0f)
         {
@@ -49,15 +52,13 @@ public class IntermittentLaser : MonoBehaviour
             UpdateLaserState();
         }
 
-        // 2. A Animação Visual do Raio
         if (isLaserActive)
         {
             arcTimer -= Time.deltaTime;
-            // Se passou o tempo do "frame", desenha um novo formato pro raio
             if (arcTimer <= 0f)
             {
                 DrawArc();
-                arcTimer = 1f / fps; // Reseta o cronômetro do raio
+                arcTimer = 1f / fps; 
             }
         }
     }
@@ -66,7 +67,6 @@ public class IntermittentLaser : MonoBehaviour
     {
         if (baseA == null || baseB == null) return;
 
-        // Física e Rotação do colisor (igual antes)
         transform.position = (baseA.position + baseB.position) / 2f;
         Vector2 direction = baseB.position - baseA.position;
         float distance = direction.magnitude;
@@ -74,10 +74,36 @@ public class IntermittentLaser : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, angle);
         transform.localScale = new Vector3(distance, laserThickness, 1f);
 
-        // Prepara o LineRenderer com a quantidade certa de "pontos de quebra"
         if (arcRenderer != null)
         {
             arcRenderer.positionCount = segments + 1;
+        }
+    }
+
+    // === PREPARAÇÃO DO SOM (COM BLINDAGEM) ===
+    private void ConfigurarAudio3D()
+    {
+        if (SoundManager.instance != null && SoundManager.instance.obstaculoLaser != null)
+        {
+            // 1. Tenta pegar uma caixa de som que já exista. Se não achar, aí sim fabrica uma!
+            meuAudio = GetComponent<AudioSource>();
+            if (meuAudio == null)
+            {
+                meuAudio = gameObject.AddComponent<AudioSource>();
+            }
+
+            // 2. Trava de segurança: Proíbe a Unity de tocar o som automaticamente
+            meuAudio.playOnAwake = false;
+
+            meuAudio.spatialBlend = 1f; 
+            meuAudio.rolloffMode = AudioRolloffMode.Linear;
+            meuAudio.minDistance = 2f;
+            meuAudio.maxDistance = 15f; 
+            meuAudio.loop = true;
+
+            meuAudio.clip = SoundManager.instance.obstaculoLaser;
+            meuAudio.volume = SoundManager.instance.volumeLaser;
+            meuAudio.pitch = Random.Range(0.95f, 1.05f); 
         }
     }
 
@@ -85,9 +111,21 @@ public class IntermittentLaser : MonoBehaviour
     {
         laserCollider.enabled = isLaserActive;
         if (arcRenderer != null) arcRenderer.enabled = isLaserActive;
+
+        // === CONTROLE DO SOM ===
+        if (meuAudio != null && meuAudio.clip != null)
+        {
+            if (isLaserActive)
+            {
+                if (!meuAudio.isPlaying) meuAudio.Play(); 
+            }
+            else
+            {
+                if (meuAudio.isPlaying) meuAudio.Stop(); 
+            }
+        }
     }
 
-    // A MÁGICA DA ELETRICIDADE
     private void DrawArc()
     {
         if (arcRenderer == null || baseA == null || baseB == null) return;
@@ -95,28 +133,22 @@ public class IntermittentLaser : MonoBehaviour
         Vector2 start = baseA.position;
         Vector2 end = baseB.position;
         
-        // Calcula qual é o lado (perpendicular) para fazer o raio saltar
         Vector2 direction = (end - start).normalized;
         Vector2 perpendicular = new Vector2(-direction.y, direction.x);
 
-        // O primeiro ponto é sempre cravado na Base A
         arcRenderer.SetPosition(0, start); 
 
-        // Gera os pontos do meio do caminho
         for (int i = 1; i < segments; i++)
         {
-            // Acha o ponto exato na linha reta (Lerp = Linear Interpolation)
             float t = (float)i / segments;
             Vector2 basePos = Vector2.Lerp(start, end, t);
 
-            // Joga esse ponto um pouco pro lado aleatoriamente
             float randomJitter = Random.Range(-arcVolatility, arcVolatility);
             Vector2 finalPos = basePos + (perpendicular * randomJitter);
 
             arcRenderer.SetPosition(i, finalPos);
         }
 
-        // O último ponto é sempre cravado na Base B
         arcRenderer.SetPosition(segments, end); 
     }
 }

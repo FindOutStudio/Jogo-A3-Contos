@@ -104,7 +104,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 87abce0d3d9ee7947b1ce5a02fee5e3b, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -226,7 +226,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDeath
   knockbackSpeed: 20
-  reloadDelayMs: 350
+  tempoDeQuiqueMorte: 0.7
+  sortingOrderMorte: 50
   powerMultiplier: 6.5
   maxDragDistance: 5
   imunidadeMesmoLancador: 0
@@ -242,9 +243,12 @@ MonoBehaviour:
   camVirtual: {fileID: 0}
   rastroArremesso: {fileID: 2471113864296588339}
   visualTransform: {fileID: 5577304837912450447}
+  playerAnimator: {fileID: 502164393467304999}
+  forcaDoTremor: 0.05
+  distanciaParaTremer: 2.5
   spriteOriginalOlhaPara: 0
   rotacaoNoLancador: 0
-  velocidadeMinimaParaEsticar: 5
+  velocidademinimaParaEsticar: 5
   velocidadeMaximaParaEsticar: 25
   esticamentoBicoMaximo: 1.5
   esmagamentoLadosMaximo: 0.7

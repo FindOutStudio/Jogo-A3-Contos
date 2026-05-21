@@ -4885,6 +4885,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5989580565467710740, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
+      propertyPath: volumeLaser
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5989580565467710740, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
+      propertyPath: volumePlayerMorte
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5989580565467710740, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
+      propertyPath: volumeUxSlowMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5989580565467710740, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
+      propertyPath: volumeLancadorPuxar
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5989580565467710740, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
+      propertyPath: volumePlayerPegarLog
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5989580565467710740, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
+      propertyPath: volumePlayerPegarRaio
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6853959403100760164, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
       propertyPath: m_Name
       value: SoundManager

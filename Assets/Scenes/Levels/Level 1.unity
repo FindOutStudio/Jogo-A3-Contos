@@ -6402,18 +6402,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5989580565467710740, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
-      propertyPath: obstaculoBomba
-      value: 
-      objectReference: {fileID: 8300000, guid: c405284b96441294289a26b931fbe256, type: 3}
-    - target: {fileID: 5989580565467710740, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
-      propertyPath: obstaculoLaser
-      value: 
-      objectReference: {fileID: 8300000, guid: 4ced0e94fe874fd44801c1be3d40444f, type: 3}
-    - target: {fileID: 5989580565467710740, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
-      propertyPath: obstaculoSerra
-      value: 
-      objectReference: {fileID: 8300000, guid: aa60fe136dde3b94194ac56aaccd86be, type: 3}
     - target: {fileID: 6853959403100760164, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
       propertyPath: m_Name
       value: SoundManager

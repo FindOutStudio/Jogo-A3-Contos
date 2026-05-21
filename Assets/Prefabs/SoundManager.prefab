@@ -244,6 +244,13 @@ MonoBehaviour:
   sfxSource: {fileID: 1332646031715258210}
   ambienteSource: {fileID: 1332646031715258210}
   puxaoSource: {fileID: 9053647481869827783}
+  volumeGlobalSFX: 1
+  obstaculoSerra: {fileID: 8300000, guid: aa60fe136dde3b94194ac56aaccd86be, type: 3}
+  volumeSerra: 1
+  obstaculoLaser: {fileID: 8300000, guid: 4ced0e94fe874fd44801c1be3d40444f, type: 3}
+  volumeLaser: 0.5
+  obstaculoBomba: {fileID: 8300000, guid: c405284b96441294289a26b931fbe256, type: 3}
+  volumeBomba: 1
   uiHover: {fileID: 8300000, guid: ab79c77a2ad645645aa05497a363ff03, type: 3}
   volumeUiHover: 0.8
   uiSelecao: {fileID: 8300000, guid: f53bf1be59e3f8e4985a08c6ebdba860, type: 3}
@@ -251,19 +258,19 @@ MonoBehaviour:
   uxMaozinha: {fileID: 8300000, guid: 61c0b6e9d5be6f6408e2690b96f12e14, type: 3}
   volumeUxMaozinha: 0.9
   uxSlowMotion: {fileID: 8300000, guid: 2a40d6ac5049f5b4f8152457f0149a73, type: 3}
-  volumeUxSlowMotion: 0.8
+  volumeUxSlowMotion: 1
   uxErro: {fileID: 8300000, guid: f5203d7035f6c7c469088bc77e92c3d1, type: 3}
   volumeUxErro: 0.7
   uxVitoria: {fileID: 8300000, guid: ae538605dbb31f847b1fcfd2660fa0bc, type: 3}
   volumeUxVitoria: 1
   playerMorte: {fileID: 8300000, guid: 436aad4a7c0c5a049af2fcbba04905ee, type: 3}
-  volumePlayerMorte: 1
+  volumePlayerMorte: 0.3
   playerPegarRaio: {fileID: 8300000, guid: 29da51ccb69e9c04086575b1ecad71b2, type: 3}
-  volumePlayerPegarRaio: 0.9
+  volumePlayerPegarRaio: 0.2
   playerPegarLog: {fileID: 8300000, guid: 2c01c8c0e0037e34b977704a9bcc8fa0, type: 3}
-  volumePlayerPegarLog: 0.9
+  volumePlayerPegarLog: 0.5
   lancadorPuxar: {fileID: 8300000, guid: 28057ee95d5dc8847911491101c49f59, type: 3}
-  volumeLancadorPuxar: 0.8
+  volumeLancadorPuxar: 0.05
   lancadorSoltar: {fileID: 8300000, guid: 9236b788cbdc1354189666f6803c0736, type: 3}
   volumeLancadorSoltar: 1
   somAmbiente: {fileID: 8300000, guid: 8655453da4c81cf47b4750313f404f54, type: 3}

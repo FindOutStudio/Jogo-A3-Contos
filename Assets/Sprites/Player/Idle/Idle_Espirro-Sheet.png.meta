@@ -1,25 +1,28 @@
 fileFormatVersion: 2
-guid: 602d9b2c635ad9c42a5cb6ac965e383d
+guid: 4530dae2488df1946ab193cf63e184be
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4521531171625759107
-    second: Idle_Frente-Sheet_0
+      213: 3212660441312842693
+    second: Idle_Espirro-Sheet_0
   - first:
-      213: 1252919426937873428
-    second: Idle_Frente-Sheet_1
+      213: -5497254462138582560
+    second: Idle_Espirro-Sheet_1
   - first:
-      213: -4045184133655979990
-    second: Idle_Frente-Sheet_2
+      213: -4754944821584932161
+    second: Idle_Espirro-Sheet_2
   - first:
-      213: -5031138912603300037
-    second: Idle_Frente-Sheet_3
+      213: 7655024184965169201
+    second: Idle_Espirro-Sheet_3
   - first:
-      213: -2671696689301455161
-    second: Idle_Frente-Sheet_4
+      213: 8982194307633271037
+    second: Idle_Espirro-Sheet_4
   - first:
-      213: 3466622974632767985
-    second: Idle_Frente-Sheet_5
+      213: -4419338627391568100
+    second: Idle_Espirro-Sheet_5
+  - first:
+      213: 7388582165400712884
+    second: Idle_Espirro-Sheet_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -125,37 +128,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -167,133 +144,155 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_Frente-Sheet_0
+      name: Idle_Espirro-Sheet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4}
+        x: 2
+        y: 2
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 381fb9df4a4bfbe30800000000000000
-      internalID: 4521531171625759107
+      spriteID: 5c3d66466a9a59c20800000000000000
+      internalID: 3212660441312842693
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Frente-Sheet_1
+      name: Idle_Espirro-Sheet_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4}
+        x: 34
+        y: 3
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 41461de9493436110800000000000000
-      internalID: 1252919426937873428
+      spriteID: 0e97c404134d5b3b0800000000000000
+      internalID: -5497254462138582560
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Frente-Sheet_2
+      name: Idle_Espirro-Sheet_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4}
+        x: 66
+        y: 3
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a289366767e9cd7c0800000000000000
-      internalID: -4045184133655979990
+      spriteID: fb2d8d6a0ea030eb0800000000000000
+      internalID: -4754944821584932161
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Frente-Sheet_3
+      name: Idle_Espirro-Sheet_3
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4}
+        x: 98
+        y: 3
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b3f92aaa0ddcd2ab0800000000000000
-      internalID: -5031138912603300037
+      spriteID: 1308fdb20fb1c3a60800000000000000
+      internalID: 7655024184965169201
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Frente-Sheet_4
+      name: Idle_Espirro-Sheet_4
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4}
+        x: 130
+        y: 3
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7ce799e240a3cead0800000000000000
-      internalID: -2671696689301455161
+      spriteID: df05402122a27ac70800000000000000
+      internalID: 8982194307633271037
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Frente-Sheet_5
+      name: Idle_Espirro-Sheet_5
       rect:
         serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4}
+        x: 162
+        y: 3
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1f1b13d7a3beb1030800000000000000
-      internalID: 3466622974632767985
+      spriteID: c17c92cdeea5ba2c0800000000000000
+      internalID: -4419338627391568100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Espirro-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 2
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b6fe724554898660800000000000000
+      internalID: 7388582165400712884
       vertices: []
       indices: 
       edges: []
@@ -302,7 +301,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2966f2cf7c8143d4b833221cc8c606ed
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -310,16 +309,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Idle_Frente-Sheet_0: 4521531171625759107
-      Idle_Frente-Sheet_1: 1252919426937873428
-      Idle_Frente-Sheet_2: -4045184133655979990
-      Idle_Frente-Sheet_3: -5031138912603300037
-      Idle_Frente-Sheet_4: -2671696689301455161
-      Idle_Frente-Sheet_5: 3466622974632767985
+      Idle_Espirro-Sheet_0: 3212660441312842693
+      Idle_Espirro-Sheet_1: -5497254462138582560
+      Idle_Espirro-Sheet_2: -4754944821584932161
+      Idle_Espirro-Sheet_3: 7655024184965169201
+      Idle_Espirro-Sheet_4: 8982194307633271037
+      Idle_Espirro-Sheet_5: -4419338627391568100
+      Idle_Espirro-Sheet_6: 7388582165400712884
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -12,7 +12,10 @@ public class PlayerController : MonoBehaviour
 
     [Header("Efeito de Morte")]
     [SerializeField] private float knockbackSpeed = 15f;
-    [SerializeField] private int reloadDelayMs = 400;
+    [Tooltip("Tempo em SEGUNDOS que o player é jogado para trás antes de congelar")]
+    [SerializeField] private float tempoDeQuiqueMorte = 0.15f;
+    [Tooltip("Ordem de renderização (Order in Layer) para a morte passar por cima de tudo")]
+    [SerializeField] private int sortingOrderMorte = 50;
 
     [Header("Configurações do Lançamento")]
     public float powerMultiplier = 5f;
@@ -40,18 +43,24 @@ public class PlayerController : MonoBehaviour
     [Header("Efeitos Visuais (Game Feel)")]
     public TrailRenderer rastroArremesso;
     public Transform visualTransform;
+    [Tooltip("Arraste o Animator que está dentro do VisualTransform aqui")]
+    public Animator playerAnimator; 
+    private SpriteRenderer playerSprite; 
     
+    [Header("Tremor de Tensão")]
+    public float forcaDoTremor = 0.05f;
+    public float distanciaParaTremer = 2.5f;
+    private Vector3 posicaoVisualOriginal; 
+
     [Header("Orientação do Desenho")]
     public SpriteOrientation spriteOriginalOlhaPara = SpriteOrientation.PointsUp;
     public float rotacaoNoLancador = 0f;
 
     [Header("Efeito Elástico (Celeste)")]
-    public float velocidadeMinimaParaEsticar = 5f;
+    public float velocidademinimaParaEsticar = 5f;
     public float velocidadeMaximaParaEsticar = 25f;
     [SerializeField] private float esticamentoBicoMaximo = 1.5f;
     [SerializeField] private float esmagamentoLadosMaximo = 0.7f;
-    
-    [Tooltip("Tempo em segundos que o efeito dura no começo do tiro antes de voltar ao normal (ex: 0.3)")]
     [SerializeField] private float tempoDoEfeitoElastico = 0.3f;
     private float timerElastico = 0f; 
 
@@ -59,7 +68,7 @@ public class PlayerController : MonoBehaviour
     public int maxMidAirLaunches = 1;
     private int midAirLaunchesLeft;
     
-    [HideInInspector] public bool tutorialTempoInfinito = false; // TRAVA DO TUTORIAL
+    [HideInInspector] public bool tutorialTempoInfinito = false; 
 
     [Header("Configurações da Trajetória")]
     public LineRenderer trajectoryLine;
@@ -94,6 +103,12 @@ public class PlayerController : MonoBehaviour
 
         if (camVirtual != null) tamanhoCameraOriginal = camVirtual.m_Lens.OrthographicSize;
         if (rastroArremesso != null) { rastroArremesso.emitting = false; rastroArremesso.Clear(); }
+        
+        if (visualTransform != null) 
+        {
+            posicaoVisualOriginal = visualTransform.localPosition;
+            playerSprite = visualTransform.GetComponent<SpriteRenderer>(); 
+        }
     }
 
     private void FixedUpdate()
@@ -118,7 +133,6 @@ public class PlayerController : MonoBehaviour
 
         if (isDragging && !isReadyToLaunch)
         {
-            // SÓ CONTA O TEMPO SE NÃO ESTIVER NO TUTORIAL
             if (!tutorialTempoInfinito)
             {
                 contadorMira += Time.unscaledDeltaTime;
@@ -134,6 +148,11 @@ public class PlayerController : MonoBehaviour
         if (rastroArremesso != null && rb.linearVelocity.magnitude < 0.5f && !isDragging) rastroArremesso.emitting = false;
 
         AtualizarVisualCeleste();
+
+        if (playerAnimator != null && !isDragging && !isReadyToLaunch && rb.linearVelocity.magnitude > 1f)
+            playerAnimator.SetBool("IsFlying", true);
+        else if (playerAnimator != null)
+            playerAnimator.SetBool("IsFlying", false);
 
         if (!isDragging && Input.GetMouseButtonDown(0))
         {
@@ -157,24 +176,44 @@ public class PlayerController : MonoBehaviour
 
             DrawTrajectory();
 
+            Vector2 currentMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            float currentDragDistance = Vector2.Distance(startPoint, currentMousePos);
+            
+            if (currentDragDistance >= distanciaParaTremer && visualTransform != null)
+            {
+                float tremorX = Random.Range(-forcaDoTremor, forcaDoTremor);
+                float tremorY = Random.Range(-forcaDoTremor, forcaDoTremor);
+                visualTransform.localPosition = posicaoVisualOriginal + new Vector3(tremorX, tremorY, 0f);
+            }
+            else if (visualTransform != null)
+            {
+                visualTransform.localPosition = posicaoVisualOriginal;
+            }
+
             if (Input.GetMouseButtonUp(0))
             {
                 isDragging = false;
                 trajectoryLine.enabled = false;
+                
+                if (visualTransform != null) visualTransform.localPosition = posicaoVisualOriginal; 
+                
                 endPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 Shoot();
             }
         }
     }
 
+    private void UpdateVisualCeleste()
+    {
+        // Mantido para compatibilidade interna de compilação
+        AtualizarVisualCeleste();
+    }
+
     private void AtualizarVisualCeleste()
     {
         if (visualTransform == null) return;
 
-        if (timerElastico > 0f)
-        {
-            timerElastico -= Time.deltaTime;
-        }
+        if (timerElastico > 0f) timerElastico -= Time.deltaTime;
 
         if (isReadyToLaunch || isDead || rb.linearVelocity.magnitude < 0.1f)
         {
@@ -191,9 +230,9 @@ public class PlayerController : MonoBehaviour
             float compensacao = (spriteOriginalOlhaPara == SpriteOrientation.PointsUp) ? -90f : 0f;
             visualTransform.rotation = Quaternion.Euler(0, 0, anguloBase + compensacao);
 
-            if (velocidade > velocidadeMinimaParaEsticar && timerElastico > 0f)
+            if (velocidade > velocidademinimaParaEsticar && timerElastico > 0f)
             {
-                float fatorVelocidade = Mathf.InverseLerp(velocidadeMinimaParaEsticar, velocidadeMaximaParaEsticar, velocidade);
+                float fatorVelocidade = Mathf.InverseLerp(velocidademinimaParaEsticar, velocidadeMaximaParaEsticar, velocidade);
                 float fatorTempo = Mathf.Clamp01(timerElastico / tempoDoEfeitoElastico);
                 float fatorFinal = fatorVelocidade * fatorTempo;
 
@@ -236,11 +275,20 @@ public class PlayerController : MonoBehaviour
 
         midAirLaunchesLeft = maxMidAirLaunches;
         if (rastroArremesso != null) rastroArremesso.emitting = false;
+        
+        if (playerAnimator != null) playerAnimator.SetTrigger("ResetToIdle");
     }
 
    private void IniciarArraste(Vector2 pontoDeInicio)
     {
         if(SoundManager.instance != null) SoundManager.instance.TocarPuxar();
+
+        if (playerAnimator != null)
+        {
+            int sorteio = Random.Range(0, 2); 
+            if (sorteio == 0) playerAnimator.SetTrigger("Pull_A");
+            else playerAnimator.SetTrigger("Pull_B");
+        }
 
         isDragging = true;
         startPoint = pontoDeInicio;
@@ -252,7 +300,6 @@ public class PlayerController : MonoBehaviour
         {
             if (tutorialTempoInfinito)
             {
-                // SE ESTIVER NO TUTORIAL: Congela o boneco 100% no ar e desliga a gravidade
                 Time.timeScale = 0f;
                 rb.gravityScale = 0f;
                 rb.linearVelocity = Vector2.zero; 
@@ -270,9 +317,7 @@ public class PlayerController : MonoBehaviour
 
     private void Shoot()
     {
-
         if(SoundManager.instance != null) SoundManager.instance.PararPuxar();
-
         if (SoundManager.instance != null) SoundManager.instance.TocarSoltar();
 
         Time.timeScale = 1f;
@@ -292,6 +337,7 @@ public class PlayerController : MonoBehaviour
         currentLauncher = null;
 
         if (rastroArremesso != null) rastroArremesso.emitting = true;
+        if (playerAnimator != null) playerAnimator.SetBool("IsFlying", true);
     }
 
     private void DrawTrajectory()
@@ -393,9 +439,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // ======= CÓDIGO DA MORTE DEFINITIVO E 100% AUTOMÁTICO =======
     private async Task DeathSequence(Vector2 direction)
     {
-
         if(SoundManager.instance != null) SoundManager.instance.TocarMorte();
         if (SoundManager.instance != null) SoundManager.instance.PararPuxar();
 
@@ -403,13 +449,57 @@ public class PlayerController : MonoBehaviour
         Time.fixedDeltaTime = 0.02f;
 
         isDead = true;
-        rb.gravityScale = 0f;
         col.enabled = false;
-        rb.linearVelocity = direction * knockbackSpeed;
+        
+        // 1. Puxa para a camada da frente de tudo
+        if (playerSprite != null) playerSprite.sortingOrder = sortingOrderMorte;
+
+        // 2. Trava a escala e limpa rotações imediatamente para a spritesheet rodar linda
+        if (visualTransform != null)
+        {
+            visualTransform.localScale = Vector3.one;
+            visualTransform.rotation = Quaternion.identity;
+        }
+
+        rb.gravityScale = 0f; 
 
         if (rastroArremesso != null) rastroArremesso.emitting = false;
+        if (playerAnimator != null) playerAnimator.SetBool("IsFlying", false);
+        if (playerAnimator != null) playerAnimator.SetTrigger("Morte");
 
-        await Task.Delay(reloadDelayMs);
+        // 3. O Freio Suave (Desaceleração via Lerp)
+        float tempoDecorrido = 0f;
+        Vector2 velocidadeInicial = direction * knockbackSpeed;
+
+        while (tempoDecorrido < tempoDeQuiqueMorte)
+        {
+            if (this == null || rb == null) return; 
+
+            rb.linearVelocity = Vector2.Lerp(velocidadeInicial, Vector2.zero, tempoDecorrido / tempoDeQuiqueMorte);
+            tempoDecorrido += Time.deltaTime;
+            
+            await Task.Yield(); 
+        }
+
+        if (rb != null) rb.linearVelocity = Vector2.zero; // Garante a parada completa no ar
+
+        // 4. O CRONÔMETRO INTELIGENTE: Espera a animação terminar de rodar (Normalized Time chegar a 1)
+        if (playerAnimator != null)
+        {
+            // Dá um frame de folga para o Animator registrar o estado da Morte perfeitamente
+            await Task.Yield();
+
+            // Enquanto a barra de progresso da animação atual for menor que 1.0 (100%), segura o jogo
+            while (playerAnimator != null && playerAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
+            {
+                if (this == null) return;
+                await Task.Yield();
+            }
+        }
+
+        if (this == null) return;
+
+        // 5. Reinicia a fase no exato milissegundo em que a animação acabou
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         if (rastroArremesso != null) { rastroArremesso.emitting = false; rastroArremesso.Clear(); }
     }

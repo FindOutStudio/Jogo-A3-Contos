@@ -1,0 +1,491 @@
+fileFormatVersion: 2
+guid: a684cce58f41a57429d951de1f615d5f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2087782504426524691
+    second: Morrendo BAH-Sheet_0
+  - first:
+      213: -1566268142548713282
+    second: Morrendo BAH-Sheet_1
+  - first:
+      213: -2027189267812548808
+    second: Morrendo BAH-Sheet_2
+  - first:
+      213: 7516755168525120471
+    second: Morrendo BAH-Sheet_3
+  - first:
+      213: 6553112116599265062
+    second: Morrendo BAH-Sheet_4
+  - first:
+      213: 1068580786243077096
+    second: Morrendo BAH-Sheet_5
+  - first:
+      213: 6268450118089363644
+    second: Morrendo BAH-Sheet_6
+  - first:
+      213: 2722302374769968430
+    second: Morrendo BAH-Sheet_7
+  - first:
+      213: -4773612208525854516
+    second: Morrendo BAH-Sheet_8
+  - first:
+      213: -8783464164558394350
+    second: Morrendo BAH-Sheet_9
+  - first:
+      213: -4610694239397880705
+    second: Morrendo BAH-Sheet_10
+  - first:
+      213: -5943379594437019032
+    second: Morrendo BAH-Sheet_11
+  - first:
+      213: 5558307927760827137
+    second: Morrendo BAH-Sheet_12
+  - first:
+      213: -7950691225005128625
+    second: Morrendo BAH-Sheet_13
+  - first:
+      213: -1019012769949863303
+    second: Morrendo BAH-Sheet_14
+  - first:
+      213: -1483079952184289680
+    second: Morrendo BAH-Sheet_15
+  - first:
+      213: -2130059646911581024
+    second: Morrendo BAH-Sheet_16
+  - first:
+      213: 8478576750086751032
+    second: Morrendo BAH-Sheet_17
+  - first:
+      213: -2424701680180279503
+    second: Morrendo BAH-Sheet_18
+  - first:
+      213: -4542085118354125017
+    second: Morrendo BAH-Sheet_19
+  - first:
+      213: -7360919095135542249
+    second: Morrendo BAH-Sheet_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Morrendo BAH-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: defa16fafd4b603e0800000000000000
+      internalID: -2087782504426524691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morrendo BAH-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 2
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb08f5c3c6f734ae0800000000000000
+      internalID: -1566268142548713282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morrendo BAH-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 2
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83f7c87f91afdd3e0800000000000000
+      internalID: -2027189267812548808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morrendo BAH-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 2
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d375831001e05860800000000000000
+      internalID: 7516755168525120471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morrendo BAH-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 2
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 627153b00c451fa50800000000000000
+      internalID: 6553112116599265062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morrendo BAH-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 3
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e383d1409c54de00800000000000000
+      internalID: 1068580786243077096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morrendo BAH-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb0d8f4bb220ef650800000000000000
+      internalID: 6268450118089363644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morrendo BAH-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 2
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e25cd53269f87c520800000000000000
+      internalID: 2722302374769968430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morrendo BAH-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 0
+        width: 33
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc8395fecf8b0cdb0800000000000000
+      internalID: -4773612208525854516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morrendo BAH-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 33
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21caf1e01edda1680800000000000000
+      internalID: -8783464164558394350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morrendo BAH-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 0
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7cdfbc84068300c0800000000000000
+      internalID: -4610694239397880705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morrendo BAH-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 0
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86ab64c8fbfd48da0800000000000000
+      internalID: -5943379594437019032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 121bbb6c13026ab4daa6e5c04a342f85
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Morrendo BAH-Sheet_0: -2087782504426524691
+      Morrendo BAH-Sheet_1: -1566268142548713282
+      Morrendo BAH-Sheet_10: -4610694239397880705
+      Morrendo BAH-Sheet_11: -5943379594437019032
+      Morrendo BAH-Sheet_12: 5558307927760827137
+      Morrendo BAH-Sheet_13: -7950691225005128625
+      Morrendo BAH-Sheet_14: -1019012769949863303
+      Morrendo BAH-Sheet_15: -1483079952184289680
+      Morrendo BAH-Sheet_16: -2130059646911581024
+      Morrendo BAH-Sheet_17: 8478576750086751032
+      Morrendo BAH-Sheet_18: -2424701680180279503
+      Morrendo BAH-Sheet_19: -4542085118354125017
+      Morrendo BAH-Sheet_2: -2027189267812548808
+      Morrendo BAH-Sheet_20: -7360919095135542249
+      Morrendo BAH-Sheet_3: 7516755168525120471
+      Morrendo BAH-Sheet_4: 6553112116599265062
+      Morrendo BAH-Sheet_5: 1068580786243077096
+      Morrendo BAH-Sheet_6: 6268450118089363644
+      Morrendo BAH-Sheet_7: 2722302374769968430
+      Morrendo BAH-Sheet_8: -4773612208525854516
+      Morrendo BAH-Sheet_9: -8783464164558394350
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

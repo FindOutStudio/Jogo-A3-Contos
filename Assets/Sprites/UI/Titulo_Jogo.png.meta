@@ -1,25 +1,34 @@
 fileFormatVersion: 2
-guid: 602d9b2c635ad9c42a5cb6ac965e383d
+guid: bacb5040519a9da4fbd31189d2c16c07
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4521531171625759107
-    second: Idle_Frente-Sheet_0
+      213: 5843084174429118930
+    second: Titulo_Jogo_0
   - first:
-      213: 1252919426937873428
-    second: Idle_Frente-Sheet_1
+      213: -8404817208357040776
+    second: Titulo_Jogo_1
   - first:
-      213: -4045184133655979990
-    second: Idle_Frente-Sheet_2
+      213: 7601837079782193032
+    second: Titulo_Jogo_2
   - first:
-      213: -5031138912603300037
-    second: Idle_Frente-Sheet_3
+      213: 188656249573221381
+    second: Titulo_Jogo_3
   - first:
-      213: -2671696689301455161
-    second: Idle_Frente-Sheet_4
+      213: 1804109166840410516
+    second: Titulo_Jogo_4
   - first:
-      213: 3466622974632767985
-    second: Idle_Frente-Sheet_5
+      213: -5908258435257739375
+    second: Titulo_Jogo_5
+  - first:
+      213: 1526301594484125508
+    second: Titulo_Jogo_6
+  - first:
+      213: 5496201419790014329
+    second: Titulo_Jogo_7
+  - first:
+      213: -966238943051482823
+    second: Titulo_Jogo_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +61,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -66,7 +75,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -90,7 +99,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -125,37 +134,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -167,133 +150,199 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_Frente-Sheet_0
+      name: Titulo_Jogo_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 48
         width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4}
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 381fb9df4a4bfbe30800000000000000
-      internalID: 4521531171625759107
+      spriteID: 2d1ed81491ec61150800000000000000
+      internalID: 5843084174429118930
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Frente-Sheet_1
+      name: Titulo_Jogo_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4}
+        x: 35
+        y: 48
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 41461de9493436110800000000000000
-      internalID: 1252919426937873428
+      spriteID: 87dc9c597471c5b80800000000000000
+      internalID: -8404817208357040776
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Frente-Sheet_2
+      name: Titulo_Jogo_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4}
+        x: 71
+        y: 48
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a289366767e9cd7c0800000000000000
-      internalID: -4045184133655979990
+      spriteID: 8877fcc3c862f7960800000000000000
+      internalID: 7601837079782193032
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Frente-Sheet_3
+      name: Titulo_Jogo_3
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4}
+        x: 107
+        y: 48
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b3f92aaa0ddcd2ab0800000000000000
-      internalID: -5031138912603300037
+      spriteID: 50428740cdd3e9200800000000000000
+      internalID: 188656249573221381
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Frente-Sheet_4
+      name: Titulo_Jogo_4
       rect:
         serializedVersion: 2
-        x: 128
+        x: 20
         y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4}
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7ce799e240a3cead0800000000000000
-      internalID: -2671696689301455161
+      spriteID: 4917c898abb790910800000000000000
+      internalID: 1804109166840410516
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Frente-Sheet_5
+      name: Titulo_Jogo_5
       rect:
         serializedVersion: 2
-        x: 160
+        x: 56
         y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4}
+        width: 38
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1f1b13d7a3beb1030800000000000000
-      internalID: 3466622974632767985
+      spriteID: 197d145a146a10ea0800000000000000
+      internalID: -5908258435257739375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titulo_Jogo_6
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 0
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44fa657a6338e2510800000000000000
+      internalID: 1526301594484125508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titulo_Jogo_7
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 0
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 977d498321e664c40800000000000000
+      internalID: 5496201419790014329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titulo_Jogo_8
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 0
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9397447fcca3792f0800000000000000
+      internalID: -966238943051482823
       vertices: []
       indices: 
       edges: []
@@ -302,7 +351,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2966f2cf7c8143d4b833221cc8c606ed
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -310,16 +359,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Idle_Frente-Sheet_0: 4521531171625759107
-      Idle_Frente-Sheet_1: 1252919426937873428
-      Idle_Frente-Sheet_2: -4045184133655979990
-      Idle_Frente-Sheet_3: -5031138912603300037
-      Idle_Frente-Sheet_4: -2671696689301455161
-      Idle_Frente-Sheet_5: 3466622974632767985
+      Titulo_Jogo_0: 5843084174429118930
+      Titulo_Jogo_1: -8404817208357040776
+      Titulo_Jogo_2: 7601837079782193032
+      Titulo_Jogo_3: 188656249573221381
+      Titulo_Jogo_4: 1804109166840410516
+      Titulo_Jogo_5: -5908258435257739375
+      Titulo_Jogo_6: 1526301594484125508
+      Titulo_Jogo_7: 5496201419790014329
+      Titulo_Jogo_8: -966238943051482823
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

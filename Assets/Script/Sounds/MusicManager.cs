@@ -12,11 +12,18 @@ public class MusicManager : MonoBehaviour
     public string nomeCenaMenu = "MainMenu";
     public string nomeCenaCreditos = "Credits";
 
-    [Header("Faixas de Áudio")]
+    [Header("Faixas de Áudio e Volumes")]
     public AudioClip musicaMenu;
+    [Range(0f, 1f)] public float volumeMusicaMenu = 1f;
+    
     public AudioClip musicaGameplay1;
+    [Range(0f, 1f)] public float volumeGameplay1 = 1f;
+    
     public AudioClip musicaGameplay2;
+    [Range(0f, 1f)] public float volumeGameplay2 = 1f;
+    
     public AudioClip musicaAlgoz;
+    [Range(0f, 1f)] public float volumeAlgoz = 1f;
 
     [Header("Efeito de Pause")]
     public float frequenciaNormal = 22000f;
@@ -28,6 +35,9 @@ public class MusicManager : MonoBehaviour
     private bool isGameplay = false;
     private bool tocandoAlgoz = false;
     private int musicaAtualGameplay = 1;
+    
+    // Variável invisível que guarda a preferência do jogador
+    private float volumeGlobalMusica = 1f; 
 
     private void Awake()
     {
@@ -40,7 +50,6 @@ public class MusicManager : MonoBehaviour
             
             lowPass.cutoffFrequency = frequenciaNormal;
             
-            // ======= A MÁGICA NOVA AQUI =======
             AtualizarVolume(); 
         }
         else
@@ -49,13 +58,19 @@ public class MusicManager : MonoBehaviour
         }
     }
 
-    // ======= FUNÇÃO NOVA =======
+    // ======= FUNÇÃO ATUALIZADA (MATEMÁTICA DA MIXAGEM) =======
     public void AtualizarVolume()
     {
-        if (audioSource != null)
+        // 1. Puxa o volume salvo lá no menu de config (Multiplicador do Jogador)
+        volumeGlobalMusica = PlayerPrefs.GetFloat("VolumeMusica", 1f);
+
+        // 2. Atualiza o volume da música que está tocando agora na mesma hora
+        if (audioSource != null && audioSource.clip != null)
         {
-            // Puxa o volume salvo lá no menu de config
-            audioSource.volume = PlayerPrefs.GetFloat("VolumeMusica", 1f);
+            if (audioSource.clip == musicaMenu) audioSource.volume = volumeMusicaMenu * volumeGlobalMusica;
+            else if (audioSource.clip == musicaGameplay1) audioSource.volume = volumeGameplay1 * volumeGlobalMusica;
+            else if (audioSource.clip == musicaGameplay2) audioSource.volume = volumeGameplay2 * volumeGlobalMusica;
+            else if (audioSource.clip == musicaAlgoz) audioSource.volume = volumeAlgoz * volumeGlobalMusica;
         }
     }
 
@@ -91,6 +106,7 @@ public class MusicManager : MonoBehaviour
         if (audioSource.clip != musicaMenu)
         {
             audioSource.clip = musicaMenu;
+            audioSource.volume = volumeMusicaMenu * volumeGlobalMusica; // Aplica o multiplicador
             audioSource.loop = true;
             audioSource.Play();
         }
@@ -110,7 +126,17 @@ public class MusicManager : MonoBehaviour
 
     private void TocarFaixaAtual()
     {
-        audioSource.clip = (musicaAtualGameplay == 1) ? musicaGameplay1 : musicaGameplay2;
+        if (musicaAtualGameplay == 1)
+        {
+            audioSource.clip = musicaGameplay1;
+            audioSource.volume = volumeGameplay1 * volumeGlobalMusica;
+        }
+        else
+        {
+            audioSource.clip = musicaGameplay2;
+            audioSource.volume = volumeGameplay2 * volumeGlobalMusica;
+        }
+        
         audioSource.Play();
     }
 
@@ -131,6 +157,7 @@ public class MusicManager : MonoBehaviour
             {
                 tocandoAlgoz = true;
                 audioSource.clip = musicaAlgoz;
+                audioSource.volume = volumeAlgoz * volumeGlobalMusica; // Aplica o multiplicador do Algoz
                 audioSource.loop = true;
                 audioSource.Play();
             }

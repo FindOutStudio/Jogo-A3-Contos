@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 602d9b2c635ad9c42a5cb6ac965e383d
+guid: ff26941017bf6a949b58f35ccf4f7fa0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4521531171625759107
-    second: Idle_Frente-Sheet_0
+      213: 8065542613215361279
+    second: Idle_Piscando-Sheet_0
   - first:
-      213: 1252919426937873428
-    second: Idle_Frente-Sheet_1
+      213: 4024280833123211032
+    second: Idle_Piscando-Sheet_1
   - first:
-      213: -4045184133655979990
-    second: Idle_Frente-Sheet_2
+      213: -1636195989369905394
+    second: Idle_Piscando-Sheet_2
   - first:
-      213: -5031138912603300037
-    second: Idle_Frente-Sheet_3
+      213: -3904291578776673050
+    second: Idle_Piscando-Sheet_3
   - first:
-      213: -2671696689301455161
-    second: Idle_Frente-Sheet_4
+      213: -4473652091807816108
+    second: Idle_Piscando-Sheet_4
   - first:
-      213: 3466622974632767985
-    second: Idle_Frente-Sheet_5
+      213: -5193358979815250511
+    second: Idle_Piscando-Sheet_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -66,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -125,37 +125,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -167,133 +141,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_Frente-Sheet_0
+      name: Idle_Piscando-Sheet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4}
+        x: 2
+        y: 2
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 381fb9df4a4bfbe30800000000000000
-      internalID: 4521531171625759107
+      spriteID: ff83a7d06409eef60800000000000000
+      internalID: 8065542613215361279
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Frente-Sheet_1
+      name: Idle_Piscando-Sheet_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4}
+        x: 34
+        y: 2
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 41461de9493436110800000000000000
-      internalID: 1252919426937873428
+      spriteID: 817d8be981e19d730800000000000000
+      internalID: 4024280833123211032
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Frente-Sheet_2
+      name: Idle_Piscando-Sheet_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4}
+        x: 66
+        y: 1
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a289366767e9cd7c0800000000000000
-      internalID: -4045184133655979990
+      spriteID: e0f10b6aa601b49e0800000000000000
+      internalID: -1636195989369905394
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Frente-Sheet_3
+      name: Idle_Piscando-Sheet_3
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4}
+        x: 98
+        y: 1
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b3f92aaa0ddcd2ab0800000000000000
-      internalID: -5031138912603300037
+      spriteID: 6e4a773be7b21d9c0800000000000000
+      internalID: -3904291578776673050
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Frente-Sheet_4
+      name: Idle_Piscando-Sheet_4
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4}
+        x: 130
+        y: 1
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7ce799e240a3cead0800000000000000
-      internalID: -2671696689301455161
+      spriteID: 456ac1bff156ae1c0800000000000000
+      internalID: -4473652091807816108
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Frente-Sheet_5
+      name: Idle_Piscando-Sheet_5
       rect:
         serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4}
+        x: 162
+        y: 2
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1f1b13d7a3beb1030800000000000000
-      internalID: 3466622974632767985
+      spriteID: 1b5e601068b7de7b0800000000000000
+      internalID: -5193358979815250511
       vertices: []
       indices: 
       edges: []
@@ -302,7 +276,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2966f2cf7c8143d4b833221cc8c606ed
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -310,16 +284,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Idle_Frente-Sheet_0: 4521531171625759107
-      Idle_Frente-Sheet_1: 1252919426937873428
-      Idle_Frente-Sheet_2: -4045184133655979990
-      Idle_Frente-Sheet_3: -5031138912603300037
-      Idle_Frente-Sheet_4: -2671696689301455161
-      Idle_Frente-Sheet_5: 3466622974632767985
+      Idle_Piscando-Sheet_0: 8065542613215361279
+      Idle_Piscando-Sheet_1: 4024280833123211032
+      Idle_Piscando-Sheet_2: -1636195989369905394
+      Idle_Piscando-Sheet_3: -3904291578776673050
+      Idle_Piscando-Sheet_4: -4473652091807816108
+      Idle_Piscando-Sheet_5: -5193358979815250511
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.UI; // Necessário para controlar as Imagens da HUD
+using UnityEngine.UI; 
 using UnityEngine.SceneManagement;
 
 public class GerenciadorMoedas : MonoBehaviour
@@ -11,6 +11,10 @@ public class GerenciadorMoedas : MonoBehaviour
     public Image[] iconesMoedas; 
     public Sprite iconeVazio; // A bolinha preta
     public Sprite iconeCheio; // A bolinha amarela
+
+    [Header("Progresso do Jogo")]
+    [Tooltip("Qual é o número desta fase? (0 para Level 0, 1 para Level 1...)")]
+    public int idDestaFase = 0;
 
     private int moedasColetadas = 0;
     private int totalMoedas = 3;
@@ -38,15 +42,13 @@ public class GerenciadorMoedas : MonoBehaviour
 
     private void AtualizarHUD()
     {
-        // Passa por cada um dos 3 ícones da tela
+        // Passa por cada um dos 3 ícones do ecrã
         for (int i = 0; i < iconesMoedas.Length; i++)
         {
-            // Se o índice do ícone for menor que o tanto de moedas que pegamos, ele fica amarelo
             if (i < moedasColetadas)
             {
                 iconesMoedas[i].sprite = iconeCheio;
             }
-            // Se não, continua preto
             else
             {
                 iconesMoedas[i].sprite = iconeVazio;
@@ -56,8 +58,15 @@ public class GerenciadorMoedas : MonoBehaviour
 
     private void FaseConcluida()
     {
-        // Aqui você decide o que acontece quando pega as 3! 
-        // Por enquanto, vou fazer carregar a próxima cena (ou reiniciar se for a última).
+        // === A MÁGICA DO DESBLOQUEIO AQUI ===
+        // Liberta automaticamente a próxima fase no menu guardando no disco
+        int proximaFaseID = idDestaFase + 1;
+        PlayerPrefs.SetInt("FaseLiberada_" + proximaFaseID, 1);
+        PlayerPrefs.Save();
+        
+        Debug.Log("Fase " + proximaFaseID + " desbloqueada com sucesso!");
+
+        // Carrega a próxima cena
         int proximaCena = SceneManager.GetActiveScene().buildIndex + 1;
         if (proximaCena < SceneManager.sceneCountInBuildSettings)
         {

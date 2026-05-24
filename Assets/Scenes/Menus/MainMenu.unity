@@ -854,7 +854,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1452,16 +1452,16 @@ MonoBehaviour:
     spriteBloqueado: {fileID: -2973097740050790323, guid: 72e35c4eff95ab244ad6abdef7118a02, type: 3}
   - nomeDaCena: Level 1
     spriteDesbloqueado: {fileID: -5579536332159929920, guid: 5ce4f07564e4a9e43827d16b3e2b9fde, type: 3}
-    spriteBloqueado: {fileID: -6418812964397451004, guid: f3f048c84ad55694fb6bea7b429ae376, type: 3}
+    spriteBloqueado: {fileID: -1764732064007622092, guid: d2e0d942f1e4c354a9d9d38d74a199a4, type: 3}
   - nomeDaCena: Level 2
     spriteDesbloqueado: {fileID: -624629382585571621, guid: 8b15b29c8f5c65f439c3ab290d5ce03b, type: 3}
-    spriteBloqueado: {fileID: 5742648751288322441, guid: d4e89861021ae764487c96d11912204a, type: 3}
+    spriteBloqueado: {fileID: -3570267755507409932, guid: 8900bed13d07c494881103cb3d8664b0, type: 3}
   - nomeDaCena: Level 3
     spriteDesbloqueado: {fileID: 520400928349229636, guid: ad57ff08f948add4984649a025459b73, type: 3}
-    spriteBloqueado: {fileID: 7377266016478929034, guid: 20541979abb543f4386af5d5a33dbfa2, type: 3}
+    spriteBloqueado: {fileID: -5054797665648482166, guid: a3449f9d98dc23a4eb8ad3a840b78be4, type: 3}
   - nomeDaCena: Level 4
     spriteDesbloqueado: {fileID: -2821444925891823473, guid: 2c9b2dc909551334bbbdd8e224c85627, type: 3}
-    spriteBloqueado: {fileID: -5768279139172942655, guid: 38ff6ade5b911ec45ac28f5278bc50c2, type: 3}
+    spriteBloqueado: {fileID: 5120035921311541407, guid: 149ec6ce70d55474c8ba8d8623773363, type: 3}
 --- !u!114 &663114043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1752,15 +1752,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.121568635, b: 0.17254902, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -1397940549306593854, guid: d6252ee0a3bdebc4da11326bf3d59400, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1840,14 +1840,14 @@ RectTransform:
   m_GameObject: {fileID: 838969175}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.914, y: 0.914, z: 0.914}
+  m_LocalScale: {x: 1.2290558, y: 1.2290558, z: 1.2290558}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 956096100}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -573, y: 347}
+  m_AnchoredPosition: {x: -539.45, y: 322.4}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &838969177
@@ -1880,15 +1880,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6d037802fa3cbdc43ade9c79b2ab5e4e, type: 2}
+  m_sharedMaterial: {fileID: -4424747335348935971, guid: 6d037802fa3cbdc43ade9c79b2ab5e4e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4292279990
+  m_fontColor: {r: 0.7137255, g: 0.9960785, b: 0.83921576, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2620,7 +2620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3991,8 +3991,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6d037802fa3cbdc43ade9c79b2ab5e4e, type: 2}
+  m_sharedMaterial: {fileID: -4424747335348935971, guid: 6d037802fa3cbdc43ade9c79b2ab5e4e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4085,7 +4085,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 203, y: -173}
+  m_AnchoredPosition: {x: 211.3, y: -92}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1928758256
@@ -4771,6 +4771,7 @@ GameObject:
   - component: {fileID: 2144359975}
   - component: {fileID: 2144359974}
   - component: {fileID: 2144359976}
+  - component: {fileID: 2144359977}
   m_Layer: 5
   m_Name: Personagem_E_Rastro_UI
   m_TagString: Untagged
@@ -4857,6 +4858,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2144359977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144359972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbcd3f5bee647714e989755caa4cad83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CheatNanoUI
+  seletorDeFases: {fileID: 663114042}
+  menuDeLogs: {fileID: 663114046}
+  tempoMaximoEntreCliques: 0.5
 --- !u!1001 &2389673140554345202
 PrefabInstance:
   m_ObjectHideFlags: 0

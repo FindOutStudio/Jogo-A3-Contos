@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-// Criamos essa caixinha para organizar as opções lá no Inspector
 [System.Serializable]
 public struct FaseConfig
 {
@@ -28,7 +27,6 @@ public class LevelSelector : MonoBehaviour
     public Transform containerDeBotoes; 
 
     [Header("Lista de Fases (Game Designer, mexa aqui!)")]
-    // Mudamos de uma lista de Textos para uma lista de Configurações
     public FaseConfig[] fases;
 
     void Start()
@@ -37,7 +35,8 @@ public class LevelSelector : MonoBehaviour
         GerarBotoesDeFase();
     }
 
-    void GerarBotoesDeFase()
+    // Tornamos pública para o sistema de cheat também poder atualizar a tela
+    public void GerarBotoesDeFase()
     {
         // 1. Limpa qualquer botão antigo
         foreach (Transform child in containerDeBotoes)
@@ -51,28 +50,24 @@ public class LevelSelector : MonoBehaviour
             FaseConfig faseAtual = fases[i];
             GameObject novoBotao = Instantiate(botaoLevelPrefab, containerDeBotoes);
             
-            // Pega os componentes cruciais do botão
             Button componenteBotao = novoBotao.GetComponent<Button>();
             Image imagemDoBotao = novoBotao.GetComponent<Image>();
 
             // LÓGICA DE DESBLOQUEIO:
-            // A primeira fase (i = 0) sempre está liberada. 
-            // As outras dependem de ter um "1" salvo no PlayerPrefs.
             bool estaDesbloqueada = (i == 0) || (PlayerPrefs.GetInt("FaseLiberada_" + i, 0) == 1);
 
             if (estaDesbloqueada)
             {
                 imagemDoBotao.sprite = faseAtual.spriteDesbloqueado;
-                componenteBotao.interactable = true; // Permite clicar
+                componenteBotao.interactable = true; 
                 
-                // Variável local para não bugar o Listener dentro do Loop
                 string cenaParaCarregar = faseAtual.nomeDaCena;
                 componenteBotao.onClick.AddListener(() => CarregarFase(cenaParaCarregar));
             }
             else
             {
                 imagemDoBotao.sprite = faseAtual.spriteBloqueado;
-                componenteBotao.interactable = false; // Impede o clique
+                componenteBotao.interactable = false; 
             }
         }
     }
@@ -86,6 +81,10 @@ public class LevelSelector : MonoBehaviour
     {
         telaMenuPrincipal.SetActive(false);
         telaSelecaoLevel.SetActive(true);
+        
+        // CORREÇÃO AQUI: Força o menu a ler o PlayerPrefs e recriar os botões toda vez que abrir!
+        // Evita que o painel mostre informações desatualizadas.
+        GerarBotoesDeFase(); 
     }
 
     public void FecharSelecao() 

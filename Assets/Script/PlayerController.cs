@@ -276,7 +276,13 @@ public class PlayerController : MonoBehaviour
         midAirLaunchesLeft = maxMidAirLaunches;
         if (rastroArremesso != null) rastroArremesso.emitting = false;
         
-        if (playerAnimator != null) playerAnimator.SetTrigger("ResetToIdle");
+        if (playerAnimator != null)
+        {
+            int carinhaSorteada = Random.Range(1, 7);
+
+            playerAnimator.SetInteger("RostoIdle", carinhaSorteada);
+            playerAnimator.SetTrigger("NovaExpressao");
+        }
     }
 
    private void IniciarArraste(Vector2 pontoDeInicio)

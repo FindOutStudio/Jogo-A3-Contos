@@ -80,7 +80,6 @@ public class TutorialEvento : MonoBehaviour
             case TipoDeTutorial.Lancador:
                 tutorialAtivo = true;
                 if (objetoMaozinha != null) objetoMaozinha.SetActive(true);
-                if (SoundManager.instance != null) SoundManager.instance.TocarMaozinha();
                 break;
 
             case TipoDeTutorial.PopUpColetavel:

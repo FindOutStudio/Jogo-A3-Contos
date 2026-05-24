@@ -1,25 +1,10 @@
 fileFormatVersion: 2
-guid: 7f2633196dfb780489948d1e7fcf1e9e
+guid: 5f0baac61a44e1d4e8af92331799a32f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7462860401471375457
-    second: Idle_Triste-Sheet_0
-  - first:
-      213: -7040645747960289264
-    second: Idle_Triste-Sheet_1
-  - first:
-      213: 4120862804757435225
-    second: Idle_Triste-Sheet_2
-  - first:
-      213: 5718775392799708920
-    second: Idle_Triste-Sheet_3
-  - first:
-      213: 5489066659400911174
-    second: Idle_Triste-Sheet_4
-  - first:
-      213: 2248441882314099487
-    second: Idle_Triste-Sheet_5
+      213: -3650851914534493679
+    second: Barra_Slider 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -141,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_Triste-Sheet_0
+      name: Barra_Slider 1_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 2
-        width: 28
-        height: 27
+        x: 0
+        y: 0
+        width: 100
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,118 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f9738f931089e6890800000000000000
-      internalID: -7462860401471375457
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_Triste-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 2
-        width: 28
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0186673cef99a4e90800000000000000
-      internalID: -7040645747960289264
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_Triste-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 66
-        y: 1
-        width: 28
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 953dfad33ee303930800000000000000
-      internalID: 4120862804757435225
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_Triste-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 98
-        y: 1
-        width: 28
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8f6521e9beb2d5f40800000000000000
-      internalID: 5718775392799708920
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_Triste-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 130
-        y: 1
-        width: 28
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 649080e5b051d2c40800000000000000
-      internalID: 5489066659400911174
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_Triste-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 162
-        y: 2
-        width: 28
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f1b417daaf1143f10800000000000000
-      internalID: 2248441882314099487
+      spriteID: 112ed9ad681955dc0800000000000000
+      internalID: -3650851914534493679
       vertices: []
       indices: 
       edges: []
@@ -286,12 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Idle_Triste-Sheet_0: -7462860401471375457
-      Idle_Triste-Sheet_1: -7040645747960289264
-      Idle_Triste-Sheet_2: 4120862804757435225
-      Idle_Triste-Sheet_3: 5718775392799708920
-      Idle_Triste-Sheet_4: 5489066659400911174
-      Idle_Triste-Sheet_5: 2248441882314099487
+      Barra_Slider 1_0: -3650851914534493679
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

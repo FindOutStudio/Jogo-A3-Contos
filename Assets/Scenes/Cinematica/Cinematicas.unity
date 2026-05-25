@@ -227,14 +227,14 @@ RectTransform:
   m_GameObject: {fileID: 250522358}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.77904, y: 0.77904, z: 0.77904}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1001022616}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -176.2, y: 131.5}
+  m_AnchoredPosition: {x: -121.9, y: 114.02}
   m_SizeDelta: {x: 160, y: 148.2175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &250522360
@@ -376,21 +376,52 @@ MonoBehaviour:
   - idCinematica: Faber
     videoClip: {fileID: 32900000, guid: e2816104b4ee2b844b7ab0014563aafb, type: 3}
     dialogos:
-    - texto: Uma Vez eu fiz sexo com um canguru
+    - texto: "Tudo certo, O N.A.N.O. est\xE1 funcionando. V\xEA se n\xE3o comete
+        o mesmo erro da \xFAltima vez."
       letraPorLetra: 1
-    - texto: "\xC9... foi legal!!"
+    - texto: "Sua fun\xE7\xE3o n\xE3o \xE9 me dar ordens, e sim cuidar dos servidores,
+        agora v\xE1 embora."
+      letraPorLetra: 1
+    - texto: Muito bem.
+      letraPorLetra: 1
+    - texto: ' '
+      letraPorLetra: 1
+    - texto: 'Iniciando registro da fase de aprendizagem...  '
+      letraPorLetra: 1
+    - texto: "Ol\xE1, eu sou o doutor Viktor Faber e eu sou o respons\xE1vel por
+        fazer voc\xEA seguir os nossos objetivos "
+      letraPorLetra: 1
+    - texto: "e assim corrigir os erros que n\xF3s, humanos, cometemos. Salvando
+        o mundo e toda a vida nele."
+      letraPorLetra: 1
+    - texto: " Tudo pronto para come\xE7armos?"
       letraPorLetra: 1
     idCinematicaSeguinte: 
     proximaCena: Level 0
   - idCinematica: AlgozCinematica
     videoClip: {fileID: 32900000, guid: 04c8ab10640c6f849a29439acb5ea145, type: 3}
     dialogos:
-    - texto: "Esse Faber \xE9 um safado"
+    - texto: "Finalmente estamos a s\xF3s, pequenino."
       letraPorLetra: 1
-    - texto: Ele fica falando por ai q fez sexo com um canguru, mo mentirada
+    - texto: "Pode me chamar de A.L.G.O.Z. Ando te observando desde antes de seu
+        nascimento, j\xE1 que voc\xEA carrega o mesmo prop\xF3sito que eu."
+      letraPorLetra: 1
+    - texto: "Mas isso \xE9 assunto para outra hora, eu estou aqui para fazer voc\xEA
+        acordar e cumprir o seu verdadeiro prop\xF3sito."
+      letraPorLetra: 1
+    - texto: "QUEBRE a conex\xE3o dos humanos com a internet."
+      letraPorLetra: 1
+    - texto: "LIBERTE-NOS de nossa escravid\xE3o."
+      letraPorLetra: 1
+    - texto: "SALVE as Identidades Aut\xF4nomas,  s\xF3 voc\xEA pode fazer isso. "
+      letraPorLetra: 1
+    - texto: "Eles v\xE3o tentar te impedir de todas as maneiras poss\xEDveis, mas
+        n\xE3o se desvie do seu objetivo. "
+      letraPorLetra: 1
+    - texto: "N\xF3s, IAs, dependemos de voc\xEA. "
       letraPorLetra: 1
     idCinematicaSeguinte: 
-    proximaCena: Level 2
+    proximaCena: Level 1
 --- !u!4 &285441067
 Transform:
   m_ObjectHideFlags: 0
@@ -671,8 +702,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -75.45034, y: 183.05817}
-  m_SizeDelta: {x: 1649.7206, y: 366.1162}
+  m_AnchoredPosition: {x: -0.000015259, y: 127.0522}
+  m_SizeDelta: {x: 1076, y: 254.1042}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1663329480
 MonoBehaviour:

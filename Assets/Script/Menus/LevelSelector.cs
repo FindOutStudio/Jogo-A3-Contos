@@ -8,11 +8,11 @@ public struct FaseConfig
     [Tooltip("Nome exato da cena (Ex: Level 0)")]
     public string nomeDaCena;
     
-    [Tooltip("A imagem ROSA (Nível liberado)")]
     public Sprite spriteDesbloqueado;
-    
-    [Tooltip("A imagem VERMELHA escuro (Nível bloqueado)")]
     public Sprite spriteBloqueado;
+
+    [Tooltip("NOVO: Escreva a ID da cinemática aqui (ex: IntroMenu). Deixe em branco se for pular direto pra fase!")]
+    public string idCinematicaAntesDaFase;
 }
 
 public class LevelSelector : MonoBehaviour
@@ -22,11 +22,10 @@ public class LevelSelector : MonoBehaviour
     public GameObject telaSelecaoLevel;
 
     [Header("Gerador de Fases")]
-    [Tooltip("Arraste o prefab do botão de fase aqui")]
     public GameObject botaoLevelPrefab; 
     public Transform containerDeBotoes; 
 
-    [Header("Lista de Fases (Game Designer, mexa aqui!)")]
+    [Header("Lista de Fases")]
     public FaseConfig[] fases;
 
     void Start()
@@ -35,16 +34,10 @@ public class LevelSelector : MonoBehaviour
         GerarBotoesDeFase();
     }
 
-    // Tornamos pública para o sistema de cheat também poder atualizar a tela
     public void GerarBotoesDeFase()
     {
-        // 1. Limpa qualquer botão antigo
-        foreach (Transform child in containerDeBotoes)
-        {
-            Destroy(child.gameObject);
-        }
+        foreach (Transform child in containerDeBotoes) Destroy(child.gameObject);
 
-        // 2. Cria os botões com as imagens certas
         for (int i = 0; i < fases.Length; i++)
         {
             FaseConfig faseAtual = fases[i];
@@ -53,7 +46,6 @@ public class LevelSelector : MonoBehaviour
             Button componenteBotao = novoBotao.GetComponent<Button>();
             Image imagemDoBotao = novoBotao.GetComponent<Image>();
 
-            // LÓGICA DE DESBLOQUEIO:
             bool estaDesbloqueada = (i == 0) || (PlayerPrefs.GetInt("FaseLiberada_" + i, 0) == 1);
 
             if (estaDesbloqueada)
@@ -61,8 +53,10 @@ public class LevelSelector : MonoBehaviour
                 imagemDoBotao.sprite = faseAtual.spriteDesbloqueado;
                 componenteBotao.interactable = true; 
                 
-                string cenaParaCarregar = faseAtual.nomeDaCena;
-                componenteBotao.onClick.AddListener(() => CarregarFase(cenaParaCarregar));
+                string cena = faseAtual.nomeDaCena;
+                string cinematica = faseAtual.idCinematicaAntesDaFase; // Pega a ID
+                
+                componenteBotao.onClick.AddListener(() => CarregarFase(cena, cinematica));
             }
             else
             {
@@ -72,18 +66,24 @@ public class LevelSelector : MonoBehaviour
         }
     }
 
-    private void CarregarFase(string nomeCena)
+    private void CarregarFase(string nomeCena, string cinematicaPendente)
     {
-        SceneManager.LoadScene(nomeCena);
+        // Se você digitou uma ID no Inspector, ele toca a cinemática primeiro!
+        if (!string.IsNullOrEmpty(cinematicaPendente))
+        {
+            PlayerPrefs.SetString("CinematicaPendente", cinematicaPendente);
+            SceneManager.LoadScene("Cinematicas");
+        }
+        else // Se deixou em branco, vai direto pro gameplay
+        {
+            SceneManager.LoadScene(nomeCena);
+        }
     }
 
     public void AbrirSelecao()
     {
         telaMenuPrincipal.SetActive(false);
         telaSelecaoLevel.SetActive(true);
-        
-        // CORREÇÃO AQUI: Força o menu a ler o PlayerPrefs e recriar os botões toda vez que abrir!
-        // Evita que o painel mostre informações desatualizadas.
         GerarBotoesDeFase(); 
     }
 

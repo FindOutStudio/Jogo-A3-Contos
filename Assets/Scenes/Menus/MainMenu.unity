@@ -1450,18 +1450,23 @@ MonoBehaviour:
   - nomeDaCena: Level 0
     spriteDesbloqueado: {fileID: -602314428781607792, guid: e2db929ac611d66448792471a33234bc, type: 3}
     spriteBloqueado: {fileID: -2973097740050790323, guid: 72e35c4eff95ab244ad6abdef7118a02, type: 3}
+    idCinematicaAntesDaFase: IntroMenu
   - nomeDaCena: Level 1
     spriteDesbloqueado: {fileID: -5579536332159929920, guid: 5ce4f07564e4a9e43827d16b3e2b9fde, type: 3}
     spriteBloqueado: {fileID: -1764732064007622092, guid: d2e0d942f1e4c354a9d9d38d74a199a4, type: 3}
+    idCinematicaAntesDaFase: AlgozCinematica
   - nomeDaCena: Level 2
     spriteDesbloqueado: {fileID: -624629382585571621, guid: 8b15b29c8f5c65f439c3ab290d5ce03b, type: 3}
     spriteBloqueado: {fileID: -3570267755507409932, guid: 8900bed13d07c494881103cb3d8664b0, type: 3}
+    idCinematicaAntesDaFase: 
   - nomeDaCena: Level 3
     spriteDesbloqueado: {fileID: 520400928349229636, guid: ad57ff08f948add4984649a025459b73, type: 3}
     spriteBloqueado: {fileID: -5054797665648482166, guid: a3449f9d98dc23a4eb8ad3a840b78be4, type: 3}
+    idCinematicaAntesDaFase: 
   - nomeDaCena: Level 4
     spriteDesbloqueado: {fileID: -2821444925891823473, guid: 2c9b2dc909551334bbbdd8e224c85627, type: 3}
     spriteBloqueado: {fileID: 5120035921311541407, guid: 149ec6ce70d55474c8ba8d8623773363, type: 3}
+    idCinematicaAntesDaFase: 
 --- !u!114 &663114043
 MonoBehaviour:
   m_ObjectHideFlags: 0

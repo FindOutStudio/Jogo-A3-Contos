@@ -7,14 +7,16 @@ public class GerenciadorMoedas : MonoBehaviour
     public static GerenciadorMoedas instance;
 
     [Header("Configuração da HUD")]
-    [Tooltip("Arraste as 3 imagens da HUD aqui, na ordem (Esquerda, Meio, Direita)")]
     public Image[] iconesMoedas; 
-    public Sprite iconeVazio; // A bolinha preta
-    public Sprite iconeCheio; // A bolinha amarela
+    public Sprite iconeVazio; 
+    public Sprite iconeCheio; 
 
     [Header("Progresso do Jogo")]
-    [Tooltip("Qual é o número desta fase? (0 para Level 0, 1 para Level 1...)")]
     public int idDestaFase = 0;
+
+    [Header("Cinemática de Vitória")]
+    [Tooltip("Nome da cinemática para tocar quando vencer (Ex: AlgozCinematica). Deixe vazio para pular direto para a próxima fase.")]
+    public string idCinematicaVitoria;
 
     private int moedasColetadas = 0;
     private int totalMoedas = 3;
@@ -26,7 +28,7 @@ public class GerenciadorMoedas : MonoBehaviour
 
     private void Start()
     {
-        AtualizarHUD(); // Garante que comece com tudo preto
+        AtualizarHUD(); 
     }
 
     public void AdicionarMoeda()
@@ -42,7 +44,6 @@ public class GerenciadorMoedas : MonoBehaviour
 
     private void AtualizarHUD()
     {
-        // Passa por cada um dos 3 ícones do ecrã
         for (int i = 0; i < iconesMoedas.Length; i++)
         {
             if (i < moedasColetadas)
@@ -58,24 +59,32 @@ public class GerenciadorMoedas : MonoBehaviour
 
     private void FaseConcluida()
     {
-        // === A MÁGICA DO DESBLOQUEIO AQUI ===
-        // Liberta automaticamente a próxima fase no menu guardando no disco
+        // 1. Salva o progresso
         int proximaFaseID = idDestaFase + 1;
         PlayerPrefs.SetInt("FaseLiberada_" + proximaFaseID, 1);
         PlayerPrefs.Save();
         
         Debug.Log("Fase " + proximaFaseID + " desbloqueada com sucesso!");
 
-        // Carrega a próxima cena
-        int proximaCena = SceneManager.GetActiveScene().buildIndex + 1;
-        if (proximaCena < SceneManager.sceneCountInBuildSettings)
+        // 2. Toca a cinemática se você tiver digitado um nome no Inspector
+        if (!string.IsNullOrEmpty(idCinematicaVitoria))
         {
-            SceneManager.LoadScene(proximaCena);
+            PlayerPrefs.SetString("CinematicaPendente", idCinematicaVitoria);
+            SceneManager.LoadScene("Cinematicas");
         }
-        else
+        else 
         {
-            Debug.Log("Fim de Jogo! Você zerou!");
-            SceneManager.LoadScene("MainMenu");
+            // 3. Se deixou vazio, ele vai direto pro próximo Level (ou Menu se zerou)
+            int proximaCena = SceneManager.GetActiveScene().buildIndex + 1;
+            if (proximaCena < SceneManager.sceneCountInBuildSettings)
+            {
+                SceneManager.LoadScene(proximaCena);
+            }
+            else
+            {
+                Debug.Log("Fim de Jogo! Você zerou!");
+                SceneManager.LoadScene("MainMenu");
+            }
         }
     }
 }

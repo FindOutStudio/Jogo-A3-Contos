@@ -21160,9 +21160,25 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2036955289}
+    - target: {fileID: 2710463989081262702, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+      propertyPath: m_text
+      value: VIKTOR FABER
+      objectReference: {fileID: 0}
     - target: {fileID: 3487239003075023303, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635093685078196544, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+      propertyPath: m_text
+      value: "Colete tr\xEAs energias para passar para o pr\xF3ximo dispositivo."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635093685078196544, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635093685078196544, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4906926221361460002, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

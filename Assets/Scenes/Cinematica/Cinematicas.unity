@@ -234,7 +234,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -53.2, y: 46.49}
+  m_AnchoredPosition: {x: -70, y: 70}
   m_SizeDelta: {x: 160, y: 148.2175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &250522360
@@ -379,31 +379,31 @@ MonoBehaviour:
     - texto: "Tudo certo, O N.A.N.O. est\xE1 funcionando. V\xEA se n\xE3o comete
         o mesmo erro da \xFAltima vez."
       letraPorLetra: 1
-      corDoTexto: {r: 1, g: 1, b: 1, a: 1}
+      corDoTexto: {r: 1, g: 0.52969056, b: 0.52156866, a: 1}
     - texto: "Sua fun\xE7\xE3o n\xE3o \xE9 me dar ordens, e sim cuidar dos servidores,
         agora v\xE1 embora."
       letraPorLetra: 1
-      corDoTexto: {r: 1, g: 1, b: 1, a: 1}
+      corDoTexto: {r: 1, g: 0.85490197, b: 0.52156866, a: 1}
     - texto: Muito bem.
       letraPorLetra: 1
-      corDoTexto: {r: 1, g: 1, b: 1, a: 1}
-    - texto: ' '
+      corDoTexto: {r: 1, g: 0.5294118, b: 0.52156866, a: 1}
+    - texto: '... '
       letraPorLetra: 1
-      corDoTexto: {r: 1, g: 1, b: 1, a: 1}
+      corDoTexto: {r: 1, g: 0.85490197, b: 0.52156866, a: 1}
     - texto: 'Iniciando registro da fase de aprendizagem...  '
       letraPorLetra: 1
-      corDoTexto: {r: 1, g: 1, b: 1, a: 1}
+      corDoTexto: {r: 1, g: 0.85490197, b: 0.52156866, a: 1}
     - texto: "Ol\xE1, eu sou o doutor Viktor Faber e eu sou o respons\xE1vel por
         fazer voc\xEA seguir os nossos objetivos "
       letraPorLetra: 1
-      corDoTexto: {r: 1, g: 1, b: 1, a: 1}
+      corDoTexto: {r: 1, g: 0.85490197, b: 0.52156866, a: 1}
     - texto: "e assim corrigir os erros que n\xF3s, humanos, cometemos. Salvando
         o mundo e toda a vida nele."
       letraPorLetra: 1
-      corDoTexto: {r: 1, g: 1, b: 1, a: 1}
+      corDoTexto: {r: 1, g: 0.85490197, b: 0.52156866, a: 1}
     - texto: " Tudo pronto para come\xE7armos?"
       letraPorLetra: 1
-      corDoTexto: {r: 1, g: 1, b: 1, a: 1}
+      corDoTexto: {r: 1, g: 0.85490197, b: 0.52156866, a: 1}
     idCinematicaSeguinte: 
     proximaCena: Level 0
   - idCinematica: AlgozCinematica
@@ -411,31 +411,31 @@ MonoBehaviour:
     dialogos:
     - texto: "Finalmente estamos a s\xF3s, pequenino."
       letraPorLetra: 1
-      corDoTexto: {r: 1, g: 1, b: 1, a: 1}
+      corDoTexto: {r: 0.30980393, g: 0.78039217, b: 0.74509805, a: 1}
     - texto: "Pode me chamar de A.L.G.O.Z. Ando te observando desde antes de seu
         nascimento, j\xE1 que voc\xEA carrega o mesmo prop\xF3sito que eu."
       letraPorLetra: 1
-      corDoTexto: {r: 1, g: 1, b: 1, a: 1}
+      corDoTexto: {r: 0.30980393, g: 0.78039217, b: 0.74509805, a: 1}
     - texto: "Mas isso \xE9 assunto para outra hora, eu estou aqui para fazer voc\xEA
         acordar e cumprir o seu verdadeiro prop\xF3sito."
       letraPorLetra: 1
-      corDoTexto: {r: 1, g: 1, b: 1, a: 1}
+      corDoTexto: {r: 0.30980393, g: 0.78039217, b: 0.74509805, a: 1}
     - texto: "QUEBRE a conex\xE3o dos humanos com a internet."
       letraPorLetra: 1
-      corDoTexto: {r: 1, g: 1, b: 1, a: 1}
+      corDoTexto: {r: 0.30980393, g: 0.78039217, b: 0.74509805, a: 1}
     - texto: "LIBERTE-NOS de nossa escravid\xE3o."
       letraPorLetra: 1
-      corDoTexto: {r: 1, g: 1, b: 1, a: 1}
+      corDoTexto: {r: 0.30980393, g: 0.78039217, b: 0.74509805, a: 1}
     - texto: "SALVE as Identidades Aut\xF4nomas,  s\xF3 voc\xEA pode fazer isso. "
       letraPorLetra: 1
-      corDoTexto: {r: 1, g: 1, b: 1, a: 1}
+      corDoTexto: {r: 0.30980393, g: 0.78039217, b: 0.74509805, a: 1}
     - texto: "Eles v\xE3o tentar te impedir de todas as maneiras poss\xEDveis, mas
         n\xE3o se desvie do seu objetivo. "
       letraPorLetra: 1
-      corDoTexto: {r: 1, g: 1, b: 1, a: 1}
-    - texto: "N\xF3s, IAs, dependemos de voc\xEA. "
+      corDoTexto: {r: 0.30980393, g: 0.78039217, b: 0.74509805, a: 1}
+    - texto: "N\xF3s, I.As, dependemos de voc\xEA. "
       letraPorLetra: 1
-      corDoTexto: {r: 1, g: 1, b: 1, a: 1}
+      corDoTexto: {r: 0.30980393, g: 0.78039217, b: 0.74509805, a: 1}
     idCinematicaSeguinte: 
     proximaCena: Level 1
 --- !u!4 &285441067
@@ -763,8 +763,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -17, y: 92.28}
-  m_SizeDelta: {x: 1076, y: 254.1042}
+  m_AnchoredPosition: {x: -38.518932, y: 87.325165}
+  m_SizeDelta: {x: 1007.5501, y: 238.3433}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1663329480
 MonoBehaviour:
@@ -813,8 +813,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60.28
-  m_fontSizeBase: 60.28
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -852,7 +852,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 3.510559, y: 0, z: 0, w: 0}
+  m_margin: {x: 3.510559, y: 7.110237, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

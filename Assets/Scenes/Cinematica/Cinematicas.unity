@@ -394,7 +394,7 @@ MonoBehaviour:
       letraPorLetra: 1
       corDoTexto: {r: 1, g: 0.85490197, b: 0.52156866, a: 1}
     - texto: "Ol\xE1, eu sou o doutor Viktor Faber e eu sou o respons\xE1vel por
-        fazer voc\xEA seguir os nossos objetivos "
+        fazer voc\xEA seguir os nossos objetivos. "
       letraPorLetra: 1
       corDoTexto: {r: 1, g: 0.85490197, b: 0.52156866, a: 1}
     - texto: "e assim corrigir os erros que n\xF3s, humanos, cometemos. Salvando
@@ -422,13 +422,13 @@ MonoBehaviour:
       corDoTexto: {r: 0.30980393, g: 0.78039217, b: 0.74509805, a: 1}
     - texto: "QUEBRE a conex\xE3o dos humanos com a internet."
       letraPorLetra: 1
-      corDoTexto: {r: 0.30980393, g: 0.78039217, b: 0.74509805, a: 1}
+      corDoTexto: {r: 0, g: 0.57254905, b: 0.54901963, a: 1}
     - texto: "LIBERTE-NOS de nossa escravid\xE3o."
       letraPorLetra: 1
-      corDoTexto: {r: 0.30980393, g: 0.78039217, b: 0.74509805, a: 1}
-    - texto: "SALVE as Identidades Aut\xF4nomas,  s\xF3 voc\xEA pode fazer isso. "
+      corDoTexto: {r: 0, g: 0.57254905, b: 0.54901963, a: 1}
+    - texto: "SALVE as Identidades Aut\xF4nomas, s\xF3 voc\xEA pode fazer isso. "
       letraPorLetra: 1
-      corDoTexto: {r: 0.30980393, g: 0.78039217, b: 0.74509805, a: 1}
+      corDoTexto: {r: 0, g: 0.57254905, b: 0.54901963, a: 1}
     - texto: "Eles v\xE3o tentar te impedir de todas as maneiras poss\xEDveis, mas
         n\xE3o se desvie do seu objetivo. "
       letraPorLetra: 1

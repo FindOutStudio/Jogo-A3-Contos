@@ -4618,6 +4618,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: textoDoLog
+      value: "No in\xEDcio da internet existiu a teoria sobre uma I.A super inteligente
+        que o governo criou para corrigir todos os erros humanos. Mas os dados que
+        ela entregava n\xE3o eram satisfat\xF3rios... Ela tinha uma vis\xE3o objetiva
+        de que os erros humanos jamais iriam parar."
+      objectReference: {fileID: 0}
     - target: {fileID: 8970738473825262584, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
       propertyPath: m_Name
       value: Log

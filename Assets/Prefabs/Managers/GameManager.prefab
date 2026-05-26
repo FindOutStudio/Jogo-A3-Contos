@@ -50,6 +50,24 @@ MonoBehaviour:
   iconesMoedas: []
   iconeVazio: {fileID: 21300000, guid: bdd554e6471e4c6488f67ec2c27dd3d7, type: 3}
   iconeCheio: {fileID: 21300000, guid: 6e5ce3a179bcd0c44ad1a27b83354799, type: 3}
+  idDestaFase: 0
+  idCinematicaVitoria: 
+  painelVitoria: {fileID: 0}
+  imagemLetreiro: {fileID: 0}
+  imagensRaiosVitoria:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  botaoProximaFase: {fileID: 0}
+  botaoReiniciarFase: {fileID: 0}
+  botaoVoltarMenu: {fileID: 0}
+  framesLetreiro: []
+  framesRaio: []
+  fpsAnimacao: 12
+  velocidadeFlutuar: 3
+  alturaFlutuar: 15
+  somAbafadoSnapshot: {fileID: 0}
+  somNormalSnapshot: {fileID: 0}
 --- !u!114 &6055767802021951052
 MonoBehaviour:
   m_ObjectHideFlags: 0

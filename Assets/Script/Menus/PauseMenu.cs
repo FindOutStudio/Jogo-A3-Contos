@@ -4,14 +4,18 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+    // === NOVO: Criamos uma instância para o Gerenciador de Moedas achar o PauseMenu
+    public static PauseMenu instance; 
+    
     [SerializeField] private GameObject pausePanel;
-    [SerializeField] private GameObject pauseButton;
-    [SerializeField] private GameObject painelConfig; // Arraste seu painel de config aqui
+    [SerializeField] private GameObject pauseButton; 
+    [SerializeField] private GameObject painelConfig; 
     
     public static bool isPaused = false;
 
     void Awake()
     {
+        instance = this; // O script se registra ao nascer
         isPaused = false;
         Time.timeScale = 1f;
     }
@@ -20,16 +24,17 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            // ======= A TRAVINHA DA VITÓRIA =======
+            // Se o jogador já ganhou a fase, ele não pode mais pausar!
+            if (GerenciadorMoedas.vitoriaAlcancada) return;
+
             // ======= A TRAVINHA DO LOG =======
-            // Verifica se o Gerenciador de Log existe e se o painel dele está ativado na tela.
-            // Se estiver, a gente dá um "return", que faz o código parar aqui e não pausar o jogo.
             if (LogUIManager.instance != null && LogUIManager.instance.painelLog != null && LogUIManager.instance.painelLog.activeSelf)
             {
                 return; 
             }
             // =================================
 
-            // Se apertar ESC com a config aberta, ele só volta pro pause normal
             if (painelConfig != null && painelConfig.activeSelf)
             {
                 FecharConfig();
@@ -43,6 +48,12 @@ public class PauseMenu : MonoBehaviour
                 Pausar();
             }
         }
+    }
+
+    // ======= NOVA FUNÇÃO: Esconder o botão =======
+    public void EsconderBotaoPauseUI()
+    {
+        if (pauseButton != null) pauseButton.SetActive(false);
     }
 
     public void Continuar()

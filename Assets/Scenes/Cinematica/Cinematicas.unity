@@ -366,7 +366,7 @@ MonoBehaviour:
   videoPlayer: {fileID: 285441068}
   textoDialogo: {fileID: 1663329480}
   botaoAvancar: {fileID: 250522360}
-  velocidadeLetra: 0.05
+  velocidademain: 0.05
   todasAsCinematicas:
   - idCinematica: IntroMenu
     videoClip: {fileID: 32900000, guid: 21690a08036b8b44ba3cc21df07934db, type: 3}
@@ -379,23 +379,31 @@ MonoBehaviour:
     - texto: "Tudo certo, O N.A.N.O. est\xE1 funcionando. V\xEA se n\xE3o comete
         o mesmo erro da \xFAltima vez."
       letraPorLetra: 1
+      corDoTexto: {r: 1, g: 1, b: 1, a: 1}
     - texto: "Sua fun\xE7\xE3o n\xE3o \xE9 me dar ordens, e sim cuidar dos servidores,
         agora v\xE1 embora."
       letraPorLetra: 1
+      corDoTexto: {r: 1, g: 1, b: 1, a: 1}
     - texto: Muito bem.
       letraPorLetra: 1
+      corDoTexto: {r: 1, g: 1, b: 1, a: 1}
     - texto: ' '
       letraPorLetra: 1
+      corDoTexto: {r: 1, g: 1, b: 1, a: 1}
     - texto: 'Iniciando registro da fase de aprendizagem...  '
       letraPorLetra: 1
+      corDoTexto: {r: 1, g: 1, b: 1, a: 1}
     - texto: "Ol\xE1, eu sou o doutor Viktor Faber e eu sou o respons\xE1vel por
         fazer voc\xEA seguir os nossos objetivos "
       letraPorLetra: 1
+      corDoTexto: {r: 1, g: 1, b: 1, a: 1}
     - texto: "e assim corrigir os erros que n\xF3s, humanos, cometemos. Salvando
         o mundo e toda a vida nele."
       letraPorLetra: 1
+      corDoTexto: {r: 1, g: 1, b: 1, a: 1}
     - texto: " Tudo pronto para come\xE7armos?"
       letraPorLetra: 1
+      corDoTexto: {r: 1, g: 1, b: 1, a: 1}
     idCinematicaSeguinte: 
     proximaCena: Level 0
   - idCinematica: AlgozCinematica
@@ -403,23 +411,31 @@ MonoBehaviour:
     dialogos:
     - texto: "Finalmente estamos a s\xF3s, pequenino."
       letraPorLetra: 1
+      corDoTexto: {r: 1, g: 1, b: 1, a: 1}
     - texto: "Pode me chamar de A.L.G.O.Z. Ando te observando desde antes de seu
         nascimento, j\xE1 que voc\xEA carrega o mesmo prop\xF3sito que eu."
       letraPorLetra: 1
+      corDoTexto: {r: 1, g: 1, b: 1, a: 1}
     - texto: "Mas isso \xE9 assunto para outra hora, eu estou aqui para fazer voc\xEA
         acordar e cumprir o seu verdadeiro prop\xF3sito."
       letraPorLetra: 1
+      corDoTexto: {r: 1, g: 1, b: 1, a: 1}
     - texto: "QUEBRE a conex\xE3o dos humanos com a internet."
       letraPorLetra: 1
+      corDoTexto: {r: 1, g: 1, b: 1, a: 1}
     - texto: "LIBERTE-NOS de nossa escravid\xE3o."
       letraPorLetra: 1
+      corDoTexto: {r: 1, g: 1, b: 1, a: 1}
     - texto: "SALVE as Identidades Aut\xF4nomas,  s\xF3 voc\xEA pode fazer isso. "
       letraPorLetra: 1
+      corDoTexto: {r: 1, g: 1, b: 1, a: 1}
     - texto: "Eles v\xE3o tentar te impedir de todas as maneiras poss\xEDveis, mas
         n\xE3o se desvie do seu objetivo. "
       letraPorLetra: 1
+      corDoTexto: {r: 1, g: 1, b: 1, a: 1}
     - texto: "N\xF3s, IAs, dependemos de voc\xEA. "
       letraPorLetra: 1
+      corDoTexto: {r: 1, g: 1, b: 1, a: 1}
     idCinematicaSeguinte: 
     proximaCena: Level 1
 --- !u!4 &285441067
@@ -587,6 +603,7 @@ GameObject:
   - component: {fileID: 1648835270}
   - component: {fileID: 1648835269}
   - component: {fileID: 1648835268}
+  - component: {fileID: 1648835271}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -668,6 +685,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1648835271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648835267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
 --- !u!1 &1663329478
 GameObject:
   m_ObjectHideFlags: 0

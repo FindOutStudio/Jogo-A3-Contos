@@ -13,6 +13,9 @@ public class DialogoCinematica
     
     [Tooltip("Marque para máquina de escrever. Desmarque para aparecer o texto todo de uma vez.")]
     public bool letraPorLetra; 
+
+    [Tooltip("Escolha a cor deste bloco de texto no Inspector!")]
+    public Color corDoTexto = Color.white; // Começa branco por padrão para não vir invisível
 }
 
 [System.Serializable]
@@ -41,7 +44,7 @@ public class CinematicaManager : MonoBehaviour
     public Button botaoAvancar; 
 
     [Header("Configurações")]
-    public float velocidadeLetra = 0.05f;
+    public float velocidademain = 0.05f;
     public CinematicaConfig[] todasAsCinematicas;
 
     private CinematicaConfig cinematicaAtual;
@@ -64,21 +67,47 @@ public class CinematicaManager : MonoBehaviour
 
         if (cinematicaAtual != null)
         {
+            bool temDialogo = cinematicaAtual.dialogos != null && cinematicaAtual.dialogos.Length > 0;
+
             if(videoPlayer != null && cinematicaAtual.videoClip != null)
             {
                 videoPlayer.clip = cinematicaAtual.videoClip;
-                videoPlayer.isLooping = true; 
+                
+                if (temDialogo)
+                {
+                    videoPlayer.isLooping = true; 
+                }
+                else
+                {
+                    videoPlayer.isLooping = false; 
+                    videoPlayer.loopPointReached += FimDoVideoAlcancado; 
+                }
+                
                 videoPlayer.Play();
             }
 
-            botaoAvancar.onClick.AddListener(AvancarDialogo);
-            MostrarDialogoAtual();
+            if (temDialogo)
+            {
+                botaoAvancar.gameObject.SetActive(true);
+                botaoAvancar.onClick.AddListener(AvancarDialogo);
+                MostrarDialogoAtual();
+            }
+            else
+            {
+                botaoAvancar.gameObject.SetActive(false);
+                if (textoDialogo != null) textoDialogo.text = "";
+            }
         }
         else
         {
             Debug.LogError("Cinemática não encontrada! Pulando direto para o Menu...");
             SceneManager.LoadScene("MainMenu");
         }
+    }
+
+    private void FimDoVideoAlcancado(VideoPlayer vp)
+    {
+        FinalizarCinematica();
     }
 
     public void AvancarDialogo()
@@ -93,28 +122,29 @@ public class CinematicaManager : MonoBehaviour
 
         indiceDialogoAtual++;
 
-        // TRAVA DE SEGURANÇA: Só tenta mostrar diálogo se a lista não for nula e ainda tiver falas
         if (cinematicaAtual.dialogos != null && indiceDialogoAtual < cinematicaAtual.dialogos.Length)
         {
             MostrarDialogoAtual(); 
         }
         else
         {
-            FinalizarCinematica(); // Se acabou as falas (ou se nunca teve nenhuma), avança de cena!
+            FinalizarCinematica();
         }
     }
 
     private void MostrarDialogoAtual()
     {
-        // TRAVA DE SEGURANÇA: Se a lista de diálogos estiver vazia, deixa o texto em branco e sai da função!
-        if (cinematicaAtual.dialogos == null || cinematicaAtual.dialogos.Length == 0)
-        {
-            if (textoDialogo != null) textoDialogo.text = "";
-            return;
-        }
+        if (cinematicaAtual.dialogos == null || cinematicaAtual.dialogos.Length == 0) return;
 
         DialogoCinematica dialogo = cinematicaAtual.dialogos[indiceDialogoAtual];
         textoCompletoAtual = dialogo.texto;
+
+        // === MÁGICA DA COR AQUI ===
+        // Altera a cor do componente de texto antes de começar a exibir as letras!
+        if (textoDialogo != null)
+        {
+            textoDialogo.color = dialogo.corDoTexto;
+        }
 
         if (dialogo.letraPorLetra)
         {
@@ -134,7 +164,7 @@ public class CinematicaManager : MonoBehaviour
         foreach (char letra in texto.ToCharArray())
         {
             textoDialogo.text += letra;
-            yield return new WaitForSeconds(velocidadeLetra);
+            yield return new WaitForSeconds(velocidademain);
         }
 
         digitando = false;
@@ -142,7 +172,6 @@ public class CinematicaManager : MonoBehaviour
 
     private void FinalizarCinematica()
     {
-        // Se tiver outra cinemática configurada, ele recarrega a cena passando o novo ID
         if (!string.IsNullOrEmpty(cinematicaAtual.idCinematicaSeguinte))
         {
             PlayerPrefs.SetString("CinematicaPendente", cinematicaAtual.idCinematicaSeguinte);
@@ -150,7 +179,6 @@ public class CinematicaManager : MonoBehaviour
         }
         else
         {
-            // Se não, vai pro jogo normal!
             SceneManager.LoadScene(cinematicaAtual.proximaCena);
         }
     }

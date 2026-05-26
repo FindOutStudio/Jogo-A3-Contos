@@ -1,0 +1,897 @@
+fileFormatVersion: 2
+guid: d9de124d37dd88f4b8a012b02b094a07
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4993547337272072238
+    second: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_0"
+  - first:
+      213: -8841136923660525956
+    second: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_1"
+  - first:
+      213: -2543492740397375796
+    second: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_2"
+  - first:
+      213: 8633312257699685821
+    second: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_3"
+  - first:
+      213: 1037956018175541960
+    second: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_4"
+  - first:
+      213: -2482709420782512860
+    second: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_5"
+  - first:
+      213: -7861896784937489903
+    second: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_6"
+  - first:
+      213: 6687118731326766759
+    second: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_7"
+  - first:
+      213: 6719003398548863576
+    second: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_8"
+  - first:
+      213: 8549743163783896435
+    second: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_9"
+  - first:
+      213: -5032298753747351455
+    second: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_10"
+  - first:
+      213: -5253517168383972279
+    second: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_11"
+  - first:
+      213: 7769394145175889474
+    second: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_12"
+  - first:
+      213: 4260891438443890899
+    second: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_13"
+  - first:
+      213: -8646546275823561981
+    second: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_14"
+  - first:
+      213: -615262221870168616
+    second: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_15"
+  - first:
+      213: 3555737828315871456
+    second: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_16"
+  - first:
+      213: -193173194783931846
+    second: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_17"
+  - first:
+      213: 3041256921121917571
+    second: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_18"
+  - first:
+      213: -5568705736294602783
+    second: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_19"
+  - first:
+      213: -4903897419013063355
+    second: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_20"
+  - first:
+      213: -4668750083041729593
+    second: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_21"
+  - first:
+      213: 9093076786007972429
+    second: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_22"
+  - first:
+      213: 8350081813198352610
+    second: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_23"
+  - first:
+      213: 6544879434538170390
+    second: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_24"
+  - first:
+      213: 6577036202367790593
+    second: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_25"
+  - first:
+      213: -2540872673705957374
+    second: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_26"
+  - first:
+      213: 2764617979762141833
+    second: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_27"
+  - first:
+      213: -4015807463046956453
+    second: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_28"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 118
+        width: 35
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d7ecc8572b53bab0800000000000000
+      internalID: -4993547337272072238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_1"
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 113
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7edf9e6fc8fd4580800000000000000
+      internalID: -8841136923660525956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_2"
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 110
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cce54df14d2b3bcd0800000000000000
+      internalID: -2543492740397375796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_3"
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 118
+        width: 36
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db52733d1cfafc770800000000000000
+      internalID: 8633312257699685821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_4"
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 107
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c205dbcf7f876e00800000000000000
+      internalID: 1037956018175541960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_5"
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 113
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4251ebd8fe4ab8dd0800000000000000
+      internalID: -2482709420782512860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_6"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 56
+        width: 35
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11ae309378ee4e290800000000000000
+      internalID: -7861896784937489903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_7"
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 56
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aeb7976e0b6dcc50800000000000000
+      internalID: 6687118731326766759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_8"
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 64
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85ab52ffdf1be3d50800000000000000
+      internalID: 6719003398548863576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_9"
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 56
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37dd926eb1ac6a670800000000000000
+      internalID: 8549743163783896435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_10"
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 53
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1688f3b12fea92ab0800000000000000
+      internalID: -5032298753747351455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_11"
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 59
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94cae0d38f1c717b0800000000000000
+      internalID: -5253517168383972279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_12"
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 56
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 246653f9fce62db60800000000000000
+      internalID: 7769394145175889474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_13"
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 56
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d883f6203ab12b30800000000000000
+      internalID: 4260891438443890899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_14"
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 56
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3035f8739fb410880800000000000000
+      internalID: -8646546275823561981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_15"
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 56
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d506bdd4462677f0800000000000000
+      internalID: -615262221870168616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_16"
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 56
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e8bf2b37b4885130800000000000000
+      internalID: 3555737828315871456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_17"
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 53
+        width: 35
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a32c6c8b006b15df0800000000000000
+      internalID: -193173194783931846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_18"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4
+        width: 35
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38a8b267e07b43a20800000000000000
+      internalID: 3041256921121917571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_19"
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 4
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e7ea7913abf7b2b0800000000000000
+      internalID: -5568705736294602783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_20"
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 4
+        width: 70
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54d75c4874bd1fbb0800000000000000
+      internalID: -4903897419013063355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_21"
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 8
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c3e83b1984453fb0800000000000000
+      internalID: -4668750083041729593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_22"
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 8
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4a1b51e829113e70800000000000000
+      internalID: 9093076786007972429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_23"
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 5
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e033212b2371e370800000000000000
+      internalID: 8350081813198352610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_24"
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 5
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61838616b2514da50800000000000000
+      internalID: 6544879434538170390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_25"
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 5
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10e24055493564b50800000000000000
+      internalID: 6577036202367790593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_26"
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 0
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2086240f3c10dbcd0800000000000000
+      internalID: -2540872673705957374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_27"
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 0
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98a616fa765ed5620800000000000000
+      internalID: 2764617979762141833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_28"
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 0
+        width: 35
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5a39b6936cf448c0800000000000000
+      internalID: -4015807463046956453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_0": -4993547337272072238
+      "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_1": -8841136923660525956
+      "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_10": -5032298753747351455
+      "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_11": -5253517168383972279
+      "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_12": 7769394145175889474
+      "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_13": 4260891438443890899
+      "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_14": -8646546275823561981
+      "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_15": -615262221870168616
+      "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_16": 3555737828315871456
+      "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_17": -193173194783931846
+      "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_18": 3041256921121917571
+      "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_19": -5568705736294602783
+      "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_2": -2543492740397375796
+      "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_20": -4903897419013063355
+      "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_21": -4668750083041729593
+      "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_22": 9093076786007972429
+      "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_23": 8350081813198352610
+      "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_24": 6544879434538170390
+      "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_25": 6577036202367790593
+      "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_26": -2540872673705957374
+      "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_27": 2764617979762141833
+      "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_28": -4015807463046956453
+      "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_3": 8633312257699685821
+      "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_4": 1037956018175541960
+      "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_5": -2482709420782512860
+      "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_6": -7861896784937489903
+      "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_7": 6687118731326766759
+      "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_8": 6719003398548863576
+      "Anima\xE7\xE3o_Raios_Menu_Sheet(150x54)_9": 8549743163783896435
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

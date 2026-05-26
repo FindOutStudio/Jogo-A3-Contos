@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI; // Necessário para controlar o Raycast Target da Imagem
 
 public class CheatNanoUI : MonoBehaviour, IPointerClickHandler
 {
@@ -12,10 +13,29 @@ public class CheatNanoUI : MonoBehaviour, IPointerClickHandler
     
     private int contagemCliques = 0;
     private float tempoUltimoClique = 0f;
+    
+    // Variável para guardar a imagem do Nano
+    private Image imagemNano; 
 
-    // ======= ATALHO DE TECLADO PARA TESTAR O CÓDIGO =======
+    private void Awake()
+    {
+        // Pega o componente Image do próprio objeto do Nano automaticamente
+        imagemNano = GetComponent<Image>();
+    }
+
     private void Update()
     {
+        bool painelFasesLigado = seletorDeFases != null && seletorDeFases.telaSelecaoLevel != null && seletorDeFases.telaSelecaoLevel.activeSelf;
+        bool painelLogsLigado = menuDeLogs != null && menuDeLogs.telaGradeLogs != null && menuDeLogs.telaGradeLogs.activeSelf;
+
+        // ======= A MÁGICA DO RAYCAST AQUI =======
+        // Se um dos dois painéis estiver aberto, o Raycast liga (true). Se não, desliga (false).
+        if (imagemNano != null)
+        {
+            imagemNano.raycastTarget = (painelFasesLigado || painelLogsLigado);
+        }
+
+        // Atalho de teclado para testar o código
         if (Input.GetKeyDown(KeyCode.C))
         {
             ExecutarLogicaDoCheat();

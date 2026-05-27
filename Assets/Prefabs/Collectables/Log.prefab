@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4595178408547045745}
   - component: {fileID: 3637364363184700223}
   - component: {fileID: 8595958913000721111}
+  - component: {fileID: 8192830340415781332}
   m_Layer: 0
   m_Name: Log
   m_TagString: Untagged
@@ -131,7 +132,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5, y: 2}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -152,7 +153,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LogColetavel
   logID: 1
-  textoDoLog: "No in\xEDcio da internet existiu a teoria sobre uma IA super inteligente
+  textoDoLog: "No in\xEDcio da internet existiu a teoria sobre uma I.A super inteligente
     que o governo criou para corrigir todos os erros humanos. Mas os dados que ela
     entregava n\xE3o eram satisfat\xF3rios... Ela tinha uma vis\xE3o objetiva de
     que os erros humanos jamais iriam parar."
+--- !u!95 &8192830340415781332
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970738473825262584}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2779bb7329db0d047bbec111ea997c2a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

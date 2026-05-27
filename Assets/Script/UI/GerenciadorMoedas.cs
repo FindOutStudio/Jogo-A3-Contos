@@ -9,13 +9,14 @@ public class GerenciadorMoedas : MonoBehaviour
     public static GerenciadorMoedas instance;
     public static bool vitoriaAlcancada = false;
 
-    [Header("=== NOVA HUD VISUAL ===")]
-    [Tooltip("Arraste o OBJETO PAI da HUD aqui (o 'HUD_Raios') para ele poder sumir inteiro")]
+    [Header("=== HUD DE RAIOS (DURANTE A FASE) ===")]
     public GameObject painelHUD; 
-    [Tooltip("Arraste as 3 imagens da HUD aqui (Ordem: Esq, Meio, Dir)")]
     public Image[] iconesRaiosHUD; 
-    public Color corVazio = Color.black; 
-    public Color corCheio = Color.white; 
+    
+    [Tooltip("Arraste a imagem do raio apagado aqui!")]
+    public Sprite raioVazio; 
+    [Tooltip("Arraste a imagem do raio colorido e brilhante aqui!")]
+    public Sprite raioCheio; 
 
     [Header("Progresso do Jogo")]
     public int idDestaFase = 0;
@@ -56,8 +57,6 @@ public class GerenciadorMoedas : MonoBehaviour
 
     private void Start()
     {
-        // ======= CORREÇÃO AQUI =======
-        // Força o contador a zerar toda vez que a fase inicia!
         moedasColetadas = 0; 
         AtualizarHUD(); 
         
@@ -132,14 +131,21 @@ public class GerenciadorMoedas : MonoBehaviour
         }
     }
 
+    // ======= A MÁGICA DA TROCA DE SPRITES AQUI =======
     private void AtualizarHUD()
     {
         for (int i = 0; i < iconesRaiosHUD.Length; i++)
         {
             if (iconesRaiosHUD[i] != null)
             {
-                if (i < moedasColetadas) iconesRaiosHUD[i].color = corCheio; 
-                else iconesRaiosHUD[i].color = corVazio; 
+                // Limpa o truque da cor preta que a gente usava antes para as imagens aparecerem perfeitas
+                iconesRaiosHUD[i].color = Color.white; 
+
+                // Troca as imagens dependendo de quantos ele já pegou
+                if (i < moedasColetadas) 
+                    iconesRaiosHUD[i].sprite = raioCheio; 
+                else 
+                    iconesRaiosHUD[i].sprite = raioVazio; 
             }
         }
     }
@@ -262,8 +268,6 @@ public class GerenciadorMoedas : MonoBehaviour
         jogoPausadoVitoria = false;
         vitoriaAlcancada = false;
         
-        // ======= CORREÇÃO AQUI TAMBÉM =======
-        // Garante que ao clicar no botão, a variável interna zera na hora
         moedasColetadas = 0; 
         
         if (somNormalSnapshot != null) somNormalSnapshot.TransitionTo(0.1f);

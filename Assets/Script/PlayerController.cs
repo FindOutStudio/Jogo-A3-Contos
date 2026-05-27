@@ -12,9 +12,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Efeito de Morte")]
     [SerializeField] private float knockbackSpeed = 15f;
-    [Tooltip("Tempo em SEGUNDOS que o player é jogado para trás antes de congelar")]
     [SerializeField] private float tempoDeQuiqueMorte = 0.15f;
-    [Tooltip("Ordem de renderização (Order in Layer) para a morte passar por cima de tudo")]
     [SerializeField] private int sortingOrderMorte = 50;
 
     [Header("Configurações do Lançamento")]
@@ -33,17 +31,28 @@ public class PlayerController : MonoBehaviour
     public float tempoMaximoMira = 2f; 
     private float contadorMira;
 
-    [Header("Efeito de Câmera")]
+    [Header("Efeito de Câmera e Mira")]
+    public CinemachineVirtualCamera camVirtual; 
     public float zoomMultiplicador = 0.85f; 
     public float zoomMultiplicadorLancador = 0.95f;
     public float zoomVelocidade = 8f;
-    public CinemachineVirtualCamera camVirtual; 
+    
+    // ======= NOVAS VARIÁVEIS DA MIRA =======
+    [Tooltip("O máximo que a câmera vai olhar para frente (em unidades)")]
+    public float maxCameraLookAhead = 4f; 
+    [Tooltip("Velocidade que a câmera arrasta para olhar a mira")]
+    public float cameraLookAheadSpeed = 5f;
+    private CinemachineFramingTransposer framingTransposer;
+    private Vector3 originalCameraOffset = Vector3.zero;
+    
+    // ======= VARIÁVEL DO SCREEN SHAKE =======
+    private CinemachineImpulseSource impulseSource;
+
     private float tamanhoCameraOriginal;
 
     [Header("Efeitos Visuais (Game Feel)")]
     public TrailRenderer rastroArremesso;
     public Transform visualTransform;
-    [Tooltip("Arraste o Animator que está dentro do VisualTransform aqui")]
     public Animator playerAnimator; 
     private SpriteRenderer playerSprite; 
     
@@ -67,8 +76,7 @@ public class PlayerController : MonoBehaviour
     [Header("Lançamento Aéreo")]
     public int maxMidAirLaunches = 1;
     private int midAirLaunchesLeft;
-    [Tooltip("Desmarque isso apenas na fase do Tutorial para bloquear o pulo duplo no começo!")]
-    public bool puloDuploDesbloqueado = true; // ======= A TRAVA NOVA AQUI =======
+    public bool puloDuploDesbloqueado = true; 
     
     [HideInInspector] public bool tutorialTempoInfinito = false; 
 
@@ -98,12 +106,24 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
+        impulseSource = GetComponent<CinemachineImpulseSource>(); // Pega o tremor automaticamente!
         originalGravity = rb.gravityScale;
         
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous; 
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 
-        if (camVirtual != null) tamanhoCameraOriginal = camVirtual.m_Lens.OrthographicSize;
+        if (camVirtual != null) 
+        {
+            tamanhoCameraOriginal = camVirtual.m_Lens.OrthographicSize;
+            
+            // ======= INICIA O FRAMING TRANSPOSER =======
+            framingTransposer = camVirtual.GetCinemachineComponent<CinemachineFramingTransposer>();
+            if (framingTransposer != null)
+            {
+                originalCameraOffset = framingTransposer.m_TrackedObjectOffset;
+            }
+        }
+        
         if (rastroArremesso != null) { rastroArremesso.emitting = false; rastroArremesso.Clear(); }
         
         if (visualTransform != null) 
@@ -122,11 +142,35 @@ public class PlayerController : MonoBehaviour
     {
         if (timerImunidadeLancador > 0f) timerImunidadeLancador -= Time.unscaledDeltaTime;
 
+        // ======= MÁGICA DA CÂMERA (ZOOM E MIRA) =======
         if (camVirtual != null)
         {
             float zoomAlvo = tamanhoCameraOriginal;
-            if (isDragging) zoomAlvo = tamanhoCameraOriginal * (isReadyToLaunch ? zoomMultiplicadorLancador : zoomMultiplicador);
+            Vector3 offsetAlvo = originalCameraOffset;
+
+            if (isDragging && !isDead)
+            {
+                zoomAlvo = tamanhoCameraOriginal * (isReadyToLaunch ? zoomMultiplicadorLancador : zoomMultiplicador);
+
+                // Calcula a direção em que o jogador quer lançar o Nano
+                Vector2 currentMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                Vector2 direction = (startPoint - currentMousePos).normalized;
+                float distance = Vector2.Distance(startPoint, currentMousePos);
+                distance = Mathf.Clamp(distance, 0, maxDragDistance);
+
+                // Empurra o centro da câmera na direção do lançamento, limitado pelo máximo que definimos!
+                float proporcaoForca = distance / maxDragDistance;
+                offsetAlvo = originalCameraOffset + (Vector3)(direction * proporcaoForca * maxCameraLookAhead);
+            }
+
+            // Aplica o Zoom
             camVirtual.m_Lens.OrthographicSize = Mathf.Lerp(camVirtual.m_Lens.OrthographicSize, zoomAlvo, Time.unscaledDeltaTime * zoomVelocidade);
+            
+            // Aplica a deslocação da Mira (suavemente)
+            if (framingTransposer != null)
+            {
+                framingTransposer.m_TrackedObjectOffset = Vector3.Lerp(framingTransposer.m_TrackedObjectOffset, offsetAlvo, Time.unscaledDeltaTime * cameraLookAheadSpeed);
+            }
         }
 
         if (isDead || PauseMenu.isPaused) return;
@@ -164,7 +208,6 @@ public class PlayerController : MonoBehaviour
             {
                 IniciarArraste(currentLauncher.position);
             }
-            // ======= VERIFICA SE A TRAVA ESTÁ LIBERADA =======
             else if (midAirLaunchesLeft > 0 && puloDuploDesbloqueado) 
             {
                 IniciarArraste(transform.position);
@@ -451,6 +494,13 @@ public class PlayerController : MonoBehaviour
 
         isDead = true;
         col.enabled = false;
+
+        // ======= EXPLOSÃO DE CÂMERA =======
+        // Ativa o tranco do Screen Shake no exato frame que ele encosta no espinho!
+        if (impulseSource != null)
+        {
+            impulseSource.GenerateImpulse(); 
+        }
         
         if (playerSprite != null) playerSprite.sortingOrder = sortingOrderMorte;
 

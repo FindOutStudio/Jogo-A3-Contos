@@ -1,46 +1,64 @@
 fileFormatVersion: 2
-guid: 3cd94f9f7d09bae47b4eacbbd2c5eeff
+guid: 7bc085b75e107804f84a4fbae778f502
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3142573519112900811
-    second: Idle_Helicopter-Sheet_0
+      213: 8627092020783953341
+    second: TXT_Sheet_Maior_0
   - first:
-      213: -8144801843496535535
-    second: Idle_Helicopter-Sheet_1
+      213: -5286060480667703649
+    second: TXT_Sheet_Maior_1
   - first:
-      213: 2473874683633565004
-    second: Idle_Helicopter-Sheet_2
+      213: -8491396983665124684
+    second: TXT_Sheet_Maior_2
   - first:
-      213: -8816288375940493027
-    second: Idle_Helicopter-Sheet_3
+      213: -8899932871722524936
+    second: TXT_Sheet_Maior_3
   - first:
-      213: 1886195830261932139
-    second: Idle_Helicopter-Sheet_4
+      213: -2766987243437470995
+    second: TXT_Sheet_Maior_4
   - first:
-      213: 7744762553874322644
-    second: Idle_Helicopter-Sheet_5
+      213: -7652387564416169077
+    second: TXT_Sheet_Maior_5
   - first:
-      213: 1976517475885271007
-    second: Idle_Helicopter-Sheet_6
+      213: -3879461742935559506
+    second: TXT_Sheet_Maior_6
   - first:
-      213: 8978991004282165236
-    second: Idle_Helicopter-Sheet_7
+      213: -4853598447117630366
+    second: TXT_Sheet_Maior_7
   - first:
-      213: 2070936401278067294
-    second: Idle_Helicopter-Sheet_8
+      213: 482653656255677951
+    second: TXT_Sheet_Maior_8
   - first:
-      213: 1922963963611992617
-    second: Idle_Helicopter-Sheet_9
+      213: -7116239393250652428
+    second: TXT_Sheet_Maior_9
   - first:
-      213: -3944185183212379186
-    second: Idle_Helicopter-Sheet_10
+      213: -4279585171759065728
+    second: TXT_Sheet_Maior_10
   - first:
-      213: -2091873704678648448
-    second: Idle_Helicopter-Sheet_11
+      213: -2428408620288692601
+    second: TXT_Sheet_Maior_11
   - first:
-      213: 7560333371085471752
-    second: Idle_Helicopter-Sheet_12
+      213: 7535901056380245955
+    second: TXT_Sheet_Maior_12
+  - first:
+      213: -4887129800164473396
+    second: TXT_Sheet_Maior_13
+  - first:
+      213: 2935480922433694571
+    second: TXT_Sheet_Maior_14
+  - first:
+      213: -6222920234932268101
+    second: TXT_Sheet_Maior_15
+  - first:
+      213: 4192772082630825910
+    second: TXT_Sheet_Maior_16
+  - first:
+      213: 365408923633088553
+    second: TXT_Sheet_Maior_17
+  - first:
+      213: 2872331967040931276
+    second: TXT_Sheet_Maior_18
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -133,37 +151,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -175,13 +167,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_Helicopter-Sheet_0
+      name: TXT_Sheet_Maior_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 32
-        height: 32
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 53fe9b0d8065364d0800000000000000
-      internalID: -3142573519112900811
+      spriteID: db53f6f0c7699b770800000000000000
+      internalID: 8627092020783953341
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Helicopter-Sheet_1
+      name: TXT_Sheet_Maior_1
       rect:
         serializedVersion: 2
         x: 32
         y: 0
         width: 32
-        height: 32
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -212,20 +204,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 11a317850e9d7fe80800000000000000
-      internalID: -8144801843496535535
+      spriteID: f962294eff324a6b0800000000000000
+      internalID: -5286060480667703649
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Helicopter-Sheet_2
+      name: TXT_Sheet_Maior_2
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 32
-        height: 32
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,20 +226,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c4d7fc8eae7f45220800000000000000
-      internalID: 2473874683633565004
+      spriteID: 4ba11d5ce6f782a80800000000000000
+      internalID: -8491396983665124684
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Helicopter-Sheet_3
+      name: TXT_Sheet_Maior_3
       rect:
         serializedVersion: 2
         x: 96
         y: 0
         width: 32
-        height: 32
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,20 +248,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d1159aace6046a580800000000000000
-      internalID: -8816288375940493027
+      spriteID: 8fe182005361d7480800000000000000
+      internalID: -8899932871722524936
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Helicopter-Sheet_4
+      name: TXT_Sheet_Maior_4
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 32
-        height: 32
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,20 +270,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b60e5973d1d1d2a10800000000000000
-      internalID: 1886195830261932139
+      spriteID: dea4fd023cfa999d0800000000000000
+      internalID: -2766987243437470995
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Helicopter-Sheet_5
+      name: TXT_Sheet_Maior_5
       rect:
         serializedVersion: 2
         x: 160
         y: 0
         width: 32
-        height: 32
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -300,20 +292,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4d41d6d528cea7b60800000000000000
-      internalID: 7744762553874322644
+      spriteID: b8b8b53ed024dc590800000000000000
+      internalID: -7652387564416169077
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Helicopter-Sheet_6
+      name: TXT_Sheet_Maior_6
       rect:
         serializedVersion: 2
         x: 192
         y: 0
         width: 32
-        height: 32
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -322,20 +314,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fd74e7a1c200e6b10800000000000000
-      internalID: 1976517475885271007
+      spriteID: ea2bb9c5912692ac0800000000000000
+      internalID: -3879461742935559506
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Helicopter-Sheet_7
+      name: TXT_Sheet_Maior_7
       rect:
         serializedVersion: 2
         x: 224
         y: 0
         width: 32
-        height: 32
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -344,20 +336,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4f79aa3eeb8cb9c70800000000000000
-      internalID: 8978991004282165236
+      spriteID: 2648a258ded84acb0800000000000000
+      internalID: -4853598447117630366
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Helicopter-Sheet_8
+      name: TXT_Sheet_Maior_8
       rect:
         serializedVersion: 2
         x: 256
         y: 0
         width: 32
-        height: 32
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -366,20 +358,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e52ea964fa17dbc10800000000000000
-      internalID: 2070936401278067294
+      spriteID: ff5c9a271fab2b600800000000000000
+      internalID: 482653656255677951
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Helicopter-Sheet_9
+      name: TXT_Sheet_Maior_9
       rect:
         serializedVersion: 2
         x: 288
         y: 0
         width: 32
-        height: 32
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -388,20 +380,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 92258fe598dbfaa10800000000000000
-      internalID: 1922963963611992617
+      spriteID: 4fe47aca9f90e3d90800000000000000
+      internalID: -7116239393250652428
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Helicopter-Sheet_10
+      name: TXT_Sheet_Maior_10
       rect:
         serializedVersion: 2
         x: 320
         y: 0
         width: 32
-        height: 32
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -410,20 +402,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ec3644a19707349c0800000000000000
-      internalID: -3944185183212379186
+      spriteID: 0859543e5fbdb94c0800000000000000
+      internalID: -4279585171759065728
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Helicopter-Sheet_11
+      name: TXT_Sheet_Maior_11
       rect:
         serializedVersion: 2
         x: 352
         y: 0
         width: 32
-        height: 32
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -432,20 +424,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 08516a5e2fb28f2e0800000000000000
-      internalID: -2091873704678648448
+      spriteID: 78e2232e93f8c4ed0800000000000000
+      internalID: -2428408620288692601
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Helicopter-Sheet_12
+      name: TXT_Sheet_Maior_12
       rect:
         serializedVersion: 2
         x: 384
         y: 0
         width: 32
-        height: 32
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -454,8 +446,140 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 800c4170523bbe860800000000000000
-      internalID: 7560333371085471752
+      spriteID: 3c719087516e49860800000000000000
+      internalID: 7535901056380245955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TXT_Sheet_Maior_13
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 0
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc588f1075d6d2cb0800000000000000
+      internalID: -4887129800164473396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TXT_Sheet_Maior_14
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6ba89a985cecb820800000000000000
+      internalID: 2935480922433694571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TXT_Sheet_Maior_15
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb3954b440fb3a9a0800000000000000
+      internalID: -6222920234932268101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TXT_Sheet_Maior_16
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b79261bef7bf2a30800000000000000
+      internalID: 4192772082630825910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TXT_Sheet_Maior_17
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 0
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92878e2ea71321500800000000000000
+      internalID: 365408923633088553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TXT_Sheet_Maior_18
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc5497ca4b29cd720800000000000000
+      internalID: 2872331967040931276
       vertices: []
       indices: 
       edges: []
@@ -464,7 +588,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 741347207c09fdc44b418b77476c0f8c
+    spriteID: 3b3b980c7043d5049b7b93f6c34518fa
     internalID: 0
     vertices: []
     indices: 
@@ -474,21 +598,27 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":48.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Idle_Helicopter-Sheet_0: -3142573519112900811
-      Idle_Helicopter-Sheet_1: -8144801843496535535
-      Idle_Helicopter-Sheet_10: -3944185183212379186
-      Idle_Helicopter-Sheet_11: -2091873704678648448
-      Idle_Helicopter-Sheet_12: 7560333371085471752
-      Idle_Helicopter-Sheet_2: 2473874683633565004
-      Idle_Helicopter-Sheet_3: -8816288375940493027
-      Idle_Helicopter-Sheet_4: 1886195830261932139
-      Idle_Helicopter-Sheet_5: 7744762553874322644
-      Idle_Helicopter-Sheet_6: 1976517475885271007
-      Idle_Helicopter-Sheet_7: 8978991004282165236
-      Idle_Helicopter-Sheet_8: 2070936401278067294
-      Idle_Helicopter-Sheet_9: 1922963963611992617
+      TXT_Sheet_Maior_0: 8627092020783953341
+      TXT_Sheet_Maior_1: -5286060480667703649
+      TXT_Sheet_Maior_10: -4279585171759065728
+      TXT_Sheet_Maior_11: -2428408620288692601
+      TXT_Sheet_Maior_12: 7535901056380245955
+      TXT_Sheet_Maior_13: -4887129800164473396
+      TXT_Sheet_Maior_14: 2935480922433694571
+      TXT_Sheet_Maior_15: -6222920234932268101
+      TXT_Sheet_Maior_16: 4192772082630825910
+      TXT_Sheet_Maior_17: 365408923633088553
+      TXT_Sheet_Maior_18: 2872331967040931276
+      TXT_Sheet_Maior_2: -8491396983665124684
+      TXT_Sheet_Maior_3: -8899932871722524936
+      TXT_Sheet_Maior_4: -2766987243437470995
+      TXT_Sheet_Maior_5: -7652387564416169077
+      TXT_Sheet_Maior_6: -3879461742935559506
+      TXT_Sheet_Maior_7: -4853598447117630366
+      TXT_Sheet_Maior_8: 482653656255677951
+      TXT_Sheet_Maior_9: -7116239393250652428
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class TutorialEvento : MonoBehaviour
 {
-    public enum TipoDeTutorial { Lancador, PopUpColetavel, SlowMotionMidAir }
+    public enum TipoDeTutorial { Lancador, PopUpColetavel, SlowMotionMidAir, LiberarPuloDuplo }
 
-    [Header("Configuração do Evento")]
+    [Header("Configuração do Evento Principal")]
     public TipoDeTutorial tipoDoEvento;
     
     [Tooltip("Se for Lançador ou MidAir, arraste o objeto da Mãozinha aqui")]
@@ -19,6 +19,10 @@ public class TutorialEvento : MonoBehaviour
     public float slowMotionInicial = 0.2f;
     [Tooltip("Quantos segundos reais ele viaja em câmera lenta até parar de vez no meio")]
     public float tempoAteCongelar = 0.4f;
+
+    [Header("Habilidades Bônus")]
+    [Tooltip("Marque esta caixa se quiser que ESTE colisor libere o pulo duplo junto com o evento de cima!")]
+    public bool tambemLiberaPuloDuplo = false; // ======= A MÁGICA NOVA AQUI =======
 
     private bool tutorialAtivo = false;
     private bool jaAtivouNestaRun = false; 
@@ -37,8 +41,6 @@ public class TutorialEvento : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                // Apenas esconde a mãozinha. Não mexemos no Time.timeScale aqui!
-                // Quem vai devolver o tempo normal é o PlayerController quando soltar o dedo.
                 if (objetoMaozinha != null) objetoMaozinha.SetActive(false);
                 tutorialAtivo = false;
             }
@@ -75,6 +77,7 @@ public class TutorialEvento : MonoBehaviour
     {
         jaAtivouNestaRun = true;
 
+        // 1. Roda o evento principal que você escolheu na lista
         switch (tipoDoEvento)
         {
             case TipoDeTutorial.Lancador:
@@ -98,6 +101,17 @@ public class TutorialEvento : MonoBehaviour
                 if (SoundManager.instance != null) SoundManager.instance.TocarSlowMotion();
                 StartCoroutine(RotinaMatrix());
                 break;
+
+            case TipoDeTutorial.LiberarPuloDuplo:
+                // Mantido caso você queira um colisor que SÓ libera o pulo duplo e não faz mais nada
+                if (playerScript != null) playerScript.puloDuploDesbloqueado = true;
+                break;
+        }
+
+        // 2. COMBO BÔNUS: Libera o pulo duplo de forma simultânea e invisível!
+        if (tambemLiberaPuloDuplo && playerScript != null)
+        {
+            playerScript.puloDuploDesbloqueado = true;
         }
     }
 

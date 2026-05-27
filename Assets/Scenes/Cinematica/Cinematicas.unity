@@ -379,7 +379,7 @@ MonoBehaviour:
     - texto: "Tudo certo, O N.A.N.O. est\xE1 funcionando. V\xEA se n\xE3o comete
         o mesmo erro da \xFAltima vez."
       letraPorLetra: 1
-      corDoTexto: {r: 1, g: 0.52969056, b: 0.52156866, a: 1}
+      corDoTexto: {r: 1, g: 0.5294118, b: 0.52156866, a: 1}
     - texto: "Sua fun\xE7\xE3o n\xE3o \xE9 me dar ordens, e sim cuidar dos servidores,
         agora v\xE1 embora."
       letraPorLetra: 1

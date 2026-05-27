@@ -67,6 +67,8 @@ public class PlayerController : MonoBehaviour
     [Header("Lançamento Aéreo")]
     public int maxMidAirLaunches = 1;
     private int midAirLaunchesLeft;
+    [Tooltip("Desmarque isso apenas na fase do Tutorial para bloquear o pulo duplo no começo!")]
+    public bool puloDuploDesbloqueado = true; // ======= A TRAVA NOVA AQUI =======
     
     [HideInInspector] public bool tutorialTempoInfinito = false; 
 
@@ -162,7 +164,8 @@ public class PlayerController : MonoBehaviour
             {
                 IniciarArraste(currentLauncher.position);
             }
-            else if (midAirLaunchesLeft > 0)
+            // ======= VERIFICA SE A TRAVA ESTÁ LIBERADA =======
+            else if (midAirLaunchesLeft > 0 && puloDuploDesbloqueado) 
             {
                 IniciarArraste(transform.position);
                 midAirLaunchesLeft--;
@@ -201,12 +204,6 @@ public class PlayerController : MonoBehaviour
                 Shoot();
             }
         }
-    }
-
-    private void UpdateVisualCeleste()
-    {
-        // Mantido para compatibilidade interna de compilação
-        AtualizarVisualCeleste();
     }
 
     private void AtualizarVisualCeleste()
@@ -279,7 +276,6 @@ public class PlayerController : MonoBehaviour
         if (playerAnimator != null)
         {
             int carinhaSorteada = Random.Range(1, 7);
-
             playerAnimator.SetInteger("RostoIdle", carinhaSorteada);
             playerAnimator.SetTrigger("NovaExpressao");
         }
@@ -445,7 +441,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // ======= CÓDIGO DA MORTE DEFINITIVO E 100% AUTOMÁTICO =======
     private async Task DeathSequence(Vector2 direction)
     {
         if(SoundManager.instance != null) SoundManager.instance.TocarMorte();
@@ -457,10 +452,8 @@ public class PlayerController : MonoBehaviour
         isDead = true;
         col.enabled = false;
         
-        // 1. Puxa para a camada da frente de tudo
         if (playerSprite != null) playerSprite.sortingOrder = sortingOrderMorte;
 
-        // 2. Trava a escala e limpa rotações imediatamente para a spritesheet rodar linda
         if (visualTransform != null)
         {
             visualTransform.localScale = Vector3.one;
@@ -473,7 +466,6 @@ public class PlayerController : MonoBehaviour
         if (playerAnimator != null) playerAnimator.SetBool("IsFlying", false);
         if (playerAnimator != null) playerAnimator.SetTrigger("Morte");
 
-        // 3. O Freio Suave (Desaceleração via Lerp)
         float tempoDecorrido = 0f;
         Vector2 velocidadeInicial = direction * knockbackSpeed;
 
@@ -487,15 +479,12 @@ public class PlayerController : MonoBehaviour
             await Task.Yield(); 
         }
 
-        if (rb != null) rb.linearVelocity = Vector2.zero; // Garante a parada completa no ar
+        if (rb != null) rb.linearVelocity = Vector2.zero;
 
-        // 4. O CRONÔMETRO INTELIGENTE: Espera a animação terminar de rodar (Normalized Time chegar a 1)
         if (playerAnimator != null)
         {
-            // Dá um frame de folga para o Animator registrar o estado da Morte perfeitamente
             await Task.Yield();
 
-            // Enquanto a barra de progresso da animação atual for menor que 1.0 (100%), segura o jogo
             while (playerAnimator != null && playerAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
             {
                 if (this == null) return;
@@ -505,7 +494,6 @@ public class PlayerController : MonoBehaviour
 
         if (this == null) return;
 
-        // 5. Reinicia a fase no exato milissegundo em que a animação acabou
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         if (rastroArremesso != null) { rastroArremesso.emitting = false; rastroArremesso.Clear(); }
     }

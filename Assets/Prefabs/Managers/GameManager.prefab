@@ -47,11 +47,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af386be523ce0334eafa7918cc8d87eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelTimer
-  iconesMoedas: []
-  iconeVazio: {fileID: 21300000, guid: bdd554e6471e4c6488f67ec2c27dd3d7, type: 3}
-  iconeCheio: {fileID: 21300000, guid: 6e5ce3a179bcd0c44ad1a27b83354799, type: 3}
+  iconesRaiosHUD:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  corVazio: {r: 0, g: 0, b: 0, a: 1}
+  corCheio: {r: 1, g: 1, b: 1, a: 1}
   idDestaFase: 0
-  idCinematicaVitoria: 
+  idCinematicaVitoria: AlgozCinematica
   painelVitoria: {fileID: 0}
   imagemLetreiro: {fileID: 0}
   imagensRaiosVitoria:

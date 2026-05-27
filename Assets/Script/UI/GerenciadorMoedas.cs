@@ -7,14 +7,15 @@ using UnityEngine.Audio;
 public class GerenciadorMoedas : MonoBehaviour
 {
     public static GerenciadorMoedas instance;
-    
-    // === NOVO: Variável global que avisa o resto do jogo que a fase acabou
     public static bool vitoriaAlcancada = false;
 
-    [Header("Configuração da HUD (Durante a Fase)")]
-    public Image[] iconesMoedas; 
-    public Sprite iconeVazio; 
-    public Sprite iconeCheio; 
+    [Header("=== NOVA HUD VISUAL ===")]
+    [Tooltip("Arraste o OBJETO PAI da HUD aqui (o 'HUD_Raios') para ele poder sumir inteiro")]
+    public GameObject painelHUD; 
+    [Tooltip("Arraste as 3 imagens da HUD aqui (Ordem: Esq, Meio, Dir)")]
+    public Image[] iconesRaiosHUD; 
+    public Color corVazio = Color.black; 
+    public Color corCheio = Color.white; 
 
     [Header("Progresso do Jogo")]
     public int idDestaFase = 0;
@@ -50,11 +51,14 @@ public class GerenciadorMoedas : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        vitoriaAlcancada = false; // Garante que a trava do pause reseta sempre que a fase começa
+        vitoriaAlcancada = false; 
     }
 
     private void Start()
     {
+        // ======= CORREÇÃO AQUI =======
+        // Força o contador a zerar toda vez que a fase inicia!
+        moedasColetadas = 0; 
         AtualizarHUD(); 
         
         if (painelVitoria != null) painelVitoria.SetActive(false);
@@ -100,6 +104,21 @@ public class GerenciadorMoedas : MonoBehaviour
             AnimarSpritesheets();
             FlutuarRaios();
         }
+
+        if (painelHUD != null)
+        {
+            bool telaLogsAberta = (LogUIManager.instance != null && LogUIManager.instance.painelLog != null && LogUIManager.instance.painelLog.activeSelf);
+            bool telaVitoriaAberta = (painelVitoria != null && painelVitoria.activeSelf);
+
+            if (telaLogsAberta || telaVitoriaAberta)
+            {
+                painelHUD.SetActive(false);
+            }
+            else
+            {
+                painelHUD.SetActive(true);
+            }
+        }
     }
 
     public void AdicionarMoeda()
@@ -115,19 +134,21 @@ public class GerenciadorMoedas : MonoBehaviour
 
     private void AtualizarHUD()
     {
-        for (int i = 0; i < iconesMoedas.Length; i++)
+        for (int i = 0; i < iconesRaiosHUD.Length; i++)
         {
-            if (i < moedasColetadas) iconesMoedas[i].sprite = iconeCheio;
-            else iconesMoedas[i].sprite = iconeVazio;
+            if (iconesRaiosHUD[i] != null)
+            {
+                if (i < moedasColetadas) iconesRaiosHUD[i].color = corCheio; 
+                else iconesRaiosHUD[i].color = corVazio; 
+            }
         }
     }
 
     private IEnumerator SequenciaDeVitoria()
     {
         jogoPausadoVitoria = true;
-        vitoriaAlcancada = true; // Trava o botão ESC no outro script!
+        vitoriaAlcancada = true; 
 
-        // Manda o botão de Pause normal da tela sumir!
         if (PauseMenu.instance != null) PauseMenu.instance.EsconderBotaoPauseUI();
 
         Time.timeScale = 0f;
@@ -154,17 +175,16 @@ public class GerenciadorMoedas : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(0.5f);
 
-        // ======= PIPOCANDO OS BOTÕES EM ORDEM =======
         if (botaoVoltarMenu != null) 
         {
             botaoVoltarMenu.gameObject.SetActive(true);
-            yield return new WaitForSecondsRealtime(0.25f); // Espera um pouquinho
+            yield return new WaitForSecondsRealtime(0.25f); 
         }
 
         if (botaoReiniciarFase != null) 
         {
             botaoReiniciarFase.gameObject.SetActive(true);
-            yield return new WaitForSecondsRealtime(0.25f); // Espera mais um pouquinho
+            yield return new WaitForSecondsRealtime(0.25f); 
         }
 
         if (botaoProximaFase != null) 
@@ -204,18 +224,13 @@ public class GerenciadorMoedas : MonoBehaviour
         }
     }
 
-    // ======= METODOS DOS BOTOES =======
-
     public void BotaoProximaFase()
     {
         LimparEfeitosPause();
-
         int proximaFaseID = idDestaFase + 1;
         PlayerPrefs.SetInt("FaseLiberada_" + proximaFaseID, 1);
         PlayerPrefs.Save();
         
-        Debug.Log("Fase " + proximaFaseID + " desbloqueada com sucesso!");
-
         if (!string.IsNullOrEmpty(idCinematicaVitoria))
         {
             PlayerPrefs.SetString("CinematicaPendente", idCinematicaVitoria);
@@ -246,6 +261,11 @@ public class GerenciadorMoedas : MonoBehaviour
         Time.timeScale = 1f;
         jogoPausadoVitoria = false;
         vitoriaAlcancada = false;
+        
+        // ======= CORREÇÃO AQUI TAMBÉM =======
+        // Garante que ao clicar no botão, a variável interna zera na hora
+        moedasColetadas = 0; 
+        
         if (somNormalSnapshot != null) somNormalSnapshot.TransitionTo(0.1f);
     }
 }

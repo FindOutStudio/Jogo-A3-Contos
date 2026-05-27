@@ -47,12 +47,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af386be523ce0334eafa7918cc8d87eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelTimer
+  painelHUD: {fileID: 0}
   iconesRaiosHUD:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  corVazio: {r: 0, g: 0, b: 0, a: 1}
-  corCheio: {r: 1, g: 1, b: 1, a: 1}
+  raioVazio: {fileID: -5592720868682799156, guid: b6ad6a2b44f3d4d45b6e16aa2b77789f, type: 3}
+  raioCheio: {fileID: -8221917375796601600, guid: 4f6736d17eecf374498a9ebbb2b9888c, type: 3}
   idDestaFase: 0
   idCinematicaVitoria: AlgozCinematica
   painelVitoria: {fileID: 0}

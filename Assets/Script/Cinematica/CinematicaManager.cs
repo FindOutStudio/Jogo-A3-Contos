@@ -26,12 +26,10 @@ public class CinematicaConfig
     
     public VideoClip videoClip; 
     
-    // ======= NOVAS CONFIGURAÇÕES DE MÚSICA AQUI =======
     [Header("Trilha Sonora da Cinemática")]
     [Tooltip("A música que vai tocar no fundo! (Deixe vazio para ficar em silêncio)")]
     public AudioClip musicaFundo;
     [Range(0f, 1f)] public float volumeMusica = 1f;
-    // ==================================================
 
     public DialogoCinematica[] dialogos; 
     
@@ -74,21 +72,17 @@ public class CinematicaManager : MonoBehaviour
 
         if (cinematicaAtual != null)
         {
-            // === MÁGICA DA MÚSICA ENTRANDO EM AÇÃO ===
             if (MusicManager.instance != null)
             {
                 if (cinematicaAtual.musicaFundo != null)
                 {
-                    // Toca a música exclusiva configurada para esta cena
                     MusicManager.instance.TocarMusicaEspecifica(cinematicaAtual.musicaFundo, cinematicaAtual.volumeMusica);
                 }
                 else
                 {
-                    // Se você não colocar nenhuma música no Inspector, ele para a música anterior e fica mudo!
                     MusicManager.instance.PararMusica();
                 }
             }
-            // =========================================
 
             bool temDialogo = cinematicaAtual.dialogos != null && cinematicaAtual.dialogos.Length > 0;
 
@@ -124,7 +118,8 @@ public class CinematicaManager : MonoBehaviour
         else
         {
             Debug.LogError("Cinemática não encontrada! Pulando direto para o Menu...");
-            SceneManager.LoadScene("MainMenu");
+            // ======= MUDANÇA AQUI: Usa a transição mesmo se houver erro! =======
+            GerenciadorTransicoes.instance.TrocarCena("MainMenu");
         }
     }
 
@@ -193,14 +188,15 @@ public class CinematicaManager : MonoBehaviour
 
     private void FinalizarCinematica()
     {
+        // ======= MUDANÇAS AQUI: As duas saídas da cinemática usam o Gerenciador! =======
         if (!string.IsNullOrEmpty(cinematicaAtual.idCinematicaSeguinte))
         {
             PlayerPrefs.SetString("CinematicaPendente", cinematicaAtual.idCinematicaSeguinte);
-            SceneManager.LoadScene("Cinematicas"); 
+            GerenciadorTransicoes.instance.TrocarCena("Cinematicas"); 
         }
         else
         {
-            SceneManager.LoadScene(cinematicaAtual.proximaCena);
+            GerenciadorTransicoes.instance.TrocarCena(cinematicaAtual.proximaCena);
         }
     }
 }

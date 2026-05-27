@@ -1,0 +1,1623 @@
+fileFormatVersion: 2
+guid: e93c7492b9076c943a56f481471b9772
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7911468141947097502
+    second: Transicao_Popups_V1-Sheet_0
+  - first:
+      213: -1626701530434466719
+    second: Transicao_Popups_V1-Sheet_1
+  - first:
+      213: -730079603772193381
+    second: Transicao_Popups_V1-Sheet_2
+  - first:
+      213: 4530729371292397117
+    second: Transicao_Popups_V1-Sheet_3
+  - first:
+      213: -6137051292012550787
+    second: Transicao_Popups_V1-Sheet_4
+  - first:
+      213: -332030218580122921
+    second: Transicao_Popups_V1-Sheet_5
+  - first:
+      213: -4231122809953439174
+    second: Transicao_Popups_V1-Sheet_6
+  - first:
+      213: 9093865166453706934
+    second: Transicao_Popups_V1-Sheet_7
+  - first:
+      213: 8136236473625601169
+    second: Transicao_Popups_V1-Sheet_8
+  - first:
+      213: -3983351016844379462
+    second: Transicao_Popups_V1-Sheet_9
+  - first:
+      213: -4328949582511840136
+    second: Transicao_Popups_V1-Sheet_10
+  - first:
+      213: 1476451001188411411
+    second: Transicao_Popups_V1-Sheet_11
+  - first:
+      213: 6817539121511678038
+    second: Transicao_Popups_V1-Sheet_12
+  - first:
+      213: 3663211581316561096
+    second: Transicao_Popups_V1-Sheet_13
+  - first:
+      213: -4998427933449747907
+    second: Transicao_Popups_V1-Sheet_14
+  - first:
+      213: -4402847368605234275
+    second: Transicao_Popups_V1-Sheet_15
+  - first:
+      213: -8382528662683798121
+    second: Transicao_Popups_V1-Sheet_16
+  - first:
+      213: -4570722318445823650
+    second: Transicao_Popups_V1-Sheet_17
+  - first:
+      213: -1801589531907735258
+    second: Transicao_Popups_V1-Sheet_18
+  - first:
+      213: -1674983411880676365
+    second: Transicao_Popups_V1-Sheet_19
+  - first:
+      213: -1147294578970506928
+    second: Transicao_Popups_V1-Sheet_20
+  - first:
+      213: -7830344869010918990
+    second: Transicao_Popups_V1-Sheet_21
+  - first:
+      213: 731985678199821725
+    second: Transicao_Popups_V1-Sheet_22
+  - first:
+      213: -7297571414924028808
+    second: Transicao_Popups_V1-Sheet_23
+  - first:
+      213: -3743556293855029727
+    second: Transicao_Popups_V1-Sheet_24
+  - first:
+      213: 613284912954177224
+    second: Transicao_Popups_V1-Sheet_25
+  - first:
+      213: -1143499110730233001
+    second: Transicao_Popups_V1-Sheet_26
+  - first:
+      213: 8077088548497102207
+    second: Transicao_Popups_V1-Sheet_27
+  - first:
+      213: -7520203226575865275
+    second: Transicao_Popups_V1-Sheet_28
+  - first:
+      213: -3725956463311608281
+    second: Transicao_Popups_V1-Sheet_29
+  - first:
+      213: 607205938519301717
+    second: Transicao_Popups_V1-Sheet_30
+  - first:
+      213: 8437905799646396158
+    second: Transicao_Popups_V1-Sheet_31
+  - first:
+      213: -9075002642761994817
+    second: Transicao_Popups_V1-Sheet_32
+  - first:
+      213: -6768496034666994373
+    second: Transicao_Popups_V1-Sheet_33
+  - first:
+      213: -6918084561207762739
+    second: Transicao_Popups_V1-Sheet_34
+  - first:
+      213: 8143895006541725990
+    second: Transicao_Popups_V1-Sheet_35
+  - first:
+      213: -8148075767947712871
+    second: Transicao_Popups_V1-Sheet_36
+  - first:
+      213: -3640003011570314683
+    second: Transicao_Popups_V1-Sheet_37
+  - first:
+      213: 6167091128170162627
+    second: Transicao_Popups_V1-Sheet_38
+  - first:
+      213: 1734309195096382133
+    second: Transicao_Popups_V1-Sheet_39
+  - first:
+      213: 5733664896723002885
+    second: Transicao_Popups_V1-Sheet_40
+  - first:
+      213: 2722661623426289795
+    second: Transicao_Popups_V1-Sheet_41
+  - first:
+      213: -7468523597421441354
+    second: Transicao_Popups_V1-Sheet_42
+  - first:
+      213: -6991869505652250312
+    second: Transicao_Popups_V1-Sheet_43
+  - first:
+      213: 3101580477184288056
+    second: Transicao_Popups_V1-Sheet_44
+  - first:
+      213: -3354892621413096622
+    second: Transicao_Popups_V1-Sheet_45
+  - first:
+      213: 4250646778841004834
+    second: Transicao_Popups_V1-Sheet_46
+  - first:
+      213: -3474365344110109033
+    second: Transicao_Popups_V1-Sheet_47
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1008
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e91939cbb5e2bcd60800000000000000
+      internalID: 7911468141947097502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1008
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16c8ed2a39bcc69e0800000000000000
+      internalID: -1626701530434466719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1008
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b95866fe77c3ed5f0800000000000000
+      internalID: -730079603772193381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1008
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3eef4dbb5260ee30800000000000000
+      internalID: 4530729371292397117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1008
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d756d3b8d50d4daa0800000000000000
+      internalID: -6137051292012550787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1008
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d226de7644646bf0800000000000000
+      internalID: -332030218580122921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1008
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a323ca7c8380845c0800000000000000
+      internalID: -4231122809953439174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 864
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b095c10036e33e70800000000000000
+      internalID: 9093865166453706934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 864
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 194e70317f7b9e070800000000000000
+      internalID: 8136236473625601169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 864
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ababc49da5b48b8c0800000000000000
+      internalID: -3983351016844379462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 864
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8746ecb5a4b7ce3c0800000000000000
+      internalID: -4328949582511840136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 864
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 318ea1eec586d7410800000000000000
+      internalID: 1476451001188411411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 864
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 650480cc5b3cc9e50800000000000000
+      internalID: 6817539121511678038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 864
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c87871568756d230800000000000000
+      internalID: 3663211581316561096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 864
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d32865ff64402aab0800000000000000
+      internalID: -4998427933449747907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 720
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9b850245a1f5e2c0800000000000000
+      internalID: -4402847368605234275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 720
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 795b33508964bab80800000000000000
+      internalID: -8382528662683798121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 720
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e593612a4488190c0800000000000000
+      internalID: -4570722318445823650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 720
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 621c39fadd77ff6e0800000000000000
+      internalID: -1801589531907735258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 720
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f33e2a167341c8e0800000000000000
+      internalID: -1674983411880676365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 720
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0594bb7b8adf310f0800000000000000
+      internalID: -1147294578970506928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 720
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b13dcd14d6055390800000000000000
+      internalID: -7830344869010918990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 720
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9516c99819882a00800000000000000
+      internalID: 731985678199821725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 874986a5671d9ba90800000000000000
+      internalID: -7297571414924028808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 576
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 126d71c82673c0cc0800000000000000
+      internalID: -3743556293855029727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 576
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c67db60163d28800800000000000000
+      internalID: 613284912954177224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 576
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75b03f70e997120f0800000000000000
+      internalID: -1143499110730233001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 576
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f759b889d35971070800000000000000
+      internalID: 8077088548497102207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 576
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54af239520fd2a790800000000000000
+      internalID: -7520203226575865275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 576
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 726adbb665eba4cc0800000000000000
+      internalID: -3725956463311608281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 576
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55e53fe759a3d6800800000000000000
+      internalID: 607205938519301717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 432
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efeb12c6e96791570800000000000000
+      internalID: 8437905799646396158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 432
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbda0768d2d1f0280800000000000000
+      internalID: -9075002642761994817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 432
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b35a80ea7b87112a0800000000000000
+      internalID: -6768496034666994373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 432
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc0e813ceb60eff90800000000000000
+      internalID: -6918084561207762739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 432
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6214ff83c5de40170800000000000000
+      internalID: 8143895006541725990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 432
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 996228862483cee80800000000000000
+      internalID: -8148075767947712871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 432
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 542dff9eb8c1c7dc0800000000000000
+      internalID: -3640003011570314683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 432
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c9ab08d4b8e59550800000000000000
+      internalID: 6167091128170162627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bad9603601811810800000000000000
+      internalID: 1734309195096382133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 288
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5062d4668d1129f40800000000000000
+      internalID: 5733664896723002885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 288
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38099eb3256d8c520800000000000000
+      internalID: 2722661623426289795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 288
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6be821bab597a5890800000000000000
+      internalID: -7468523597421441354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 288
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83926b7aab3e7fe90800000000000000
+      internalID: -6991869505652250312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 288
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8352bd8d2070b0b20800000000000000
+      internalID: 3101580477184288056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 288
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 253e7119fe60171d0800000000000000
+      internalID: -3354892621413096622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 288
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22bf97679b45dfa30800000000000000
+      internalID: 4250646778841004834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79e9364a02398cfc0800000000000000
+      internalID: -3474365344110109033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 144
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fe8bdf7e4ed55b419bd8e0cb3361c4f
+      internalID: 1265453149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 144
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5396aa0d8045dd74db077e8481d2572c
+      internalID: 628165856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 144
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f43c42058c82c24492dd8c30041a3df
+      internalID: -2068610005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 144
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 016c66563f014da46841ba940321abc2
+      internalID: -1778017923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 144
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: face52886f9ea0646bfab4421cbba50a
+      internalID: -496450758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 144
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415d2236a69c2474ea373ed7e26f74e9
+      internalID: -365243146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_54
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 144
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a8af54f9cf32644d842aca5c57b90d1
+      internalID: 1494985607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b163accb995dec745b26188ff65d6930
+      internalID: 1089997328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_56
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b06549844eb782a4b9009026d6eeb21e
+      internalID: -1979137015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_Popups_V1-Sheet_57
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc545b7feddfbd74eb70452b56ca81b6
+      internalID: -461640514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 31e44c5e91b92cd4ba2b3b7743be0e2b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":256.0,"y":144.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Transicao_Popups_V1-Sheet_0: 7911468141947097502
+      Transicao_Popups_V1-Sheet_1: -1626701530434466719
+      Transicao_Popups_V1-Sheet_10: -4328949582511840136
+      Transicao_Popups_V1-Sheet_11: 1476451001188411411
+      Transicao_Popups_V1-Sheet_12: 6817539121511678038
+      Transicao_Popups_V1-Sheet_13: 3663211581316561096
+      Transicao_Popups_V1-Sheet_14: -4998427933449747907
+      Transicao_Popups_V1-Sheet_15: -4402847368605234275
+      Transicao_Popups_V1-Sheet_16: -8382528662683798121
+      Transicao_Popups_V1-Sheet_17: -4570722318445823650
+      Transicao_Popups_V1-Sheet_18: -1801589531907735258
+      Transicao_Popups_V1-Sheet_19: -1674983411880676365
+      Transicao_Popups_V1-Sheet_2: -730079603772193381
+      Transicao_Popups_V1-Sheet_20: -1147294578970506928
+      Transicao_Popups_V1-Sheet_21: -7830344869010918990
+      Transicao_Popups_V1-Sheet_22: 731985678199821725
+      Transicao_Popups_V1-Sheet_23: -7297571414924028808
+      Transicao_Popups_V1-Sheet_24: -3743556293855029727
+      Transicao_Popups_V1-Sheet_25: 613284912954177224
+      Transicao_Popups_V1-Sheet_26: -1143499110730233001
+      Transicao_Popups_V1-Sheet_27: 8077088548497102207
+      Transicao_Popups_V1-Sheet_28: -7520203226575865275
+      Transicao_Popups_V1-Sheet_29: -3725956463311608281
+      Transicao_Popups_V1-Sheet_3: 4530729371292397117
+      Transicao_Popups_V1-Sheet_30: 607205938519301717
+      Transicao_Popups_V1-Sheet_31: 8437905799646396158
+      Transicao_Popups_V1-Sheet_32: -9075002642761994817
+      Transicao_Popups_V1-Sheet_33: -6768496034666994373
+      Transicao_Popups_V1-Sheet_34: -6918084561207762739
+      Transicao_Popups_V1-Sheet_35: 8143895006541725990
+      Transicao_Popups_V1-Sheet_36: -8148075767947712871
+      Transicao_Popups_V1-Sheet_37: -3640003011570314683
+      Transicao_Popups_V1-Sheet_38: 6167091128170162627
+      Transicao_Popups_V1-Sheet_39: 1734309195096382133
+      Transicao_Popups_V1-Sheet_4: -6137051292012550787
+      Transicao_Popups_V1-Sheet_40: 5733664896723002885
+      Transicao_Popups_V1-Sheet_41: 2722661623426289795
+      Transicao_Popups_V1-Sheet_42: -7468523597421441354
+      Transicao_Popups_V1-Sheet_43: -6991869505652250312
+      Transicao_Popups_V1-Sheet_44: 3101580477184288056
+      Transicao_Popups_V1-Sheet_45: -3354892621413096622
+      Transicao_Popups_V1-Sheet_46: 4250646778841004834
+      Transicao_Popups_V1-Sheet_47: -3474365344110109033
+      Transicao_Popups_V1-Sheet_48: 1265453149
+      Transicao_Popups_V1-Sheet_49: 628165856
+      Transicao_Popups_V1-Sheet_5: -332030218580122921
+      Transicao_Popups_V1-Sheet_50: -2068610005
+      Transicao_Popups_V1-Sheet_51: -1778017923
+      Transicao_Popups_V1-Sheet_52: -496450758
+      Transicao_Popups_V1-Sheet_53: -365243146
+      Transicao_Popups_V1-Sheet_54: 1494985607
+      Transicao_Popups_V1-Sheet_55: 1089997328
+      Transicao_Popups_V1-Sheet_56: -1979137015
+      Transicao_Popups_V1-Sheet_57: -461640514
+      Transicao_Popups_V1-Sheet_6: -4231122809953439174
+      Transicao_Popups_V1-Sheet_7: 9093865166453706934
+      Transicao_Popups_V1-Sheet_8: 8136236473625601169
+      Transicao_Popups_V1-Sheet_9: -3983351016844379462
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

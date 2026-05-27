@@ -54,7 +54,7 @@ public class LevelSelector : MonoBehaviour
                 componenteBotao.interactable = true; 
                 
                 string cena = faseAtual.nomeDaCena;
-                string cinematica = faseAtual.idCinematicaAntesDaFase; // Pega a ID
+                string cinematica = faseAtual.idCinematicaAntesDaFase; 
                 
                 componenteBotao.onClick.AddListener(() => CarregarFase(cena, cinematica));
             }
@@ -68,15 +68,15 @@ public class LevelSelector : MonoBehaviour
 
     private void CarregarFase(string nomeCena, string cinematicaPendente)
     {
-        // Se você digitou uma ID no Inspector, ele toca a cinemática primeiro!
+        // ======= MUDANÇA AQUI =======
         if (!string.IsNullOrEmpty(cinematicaPendente))
         {
             PlayerPrefs.SetString("CinematicaPendente", cinematicaPendente);
-            SceneManager.LoadScene("Cinematicas");
+            GerenciadorTransicoes.instance.TrocarCena("Cinematicas");
         }
-        else // Se deixou em branco, vai direto pro gameplay
+        else 
         {
-            SceneManager.LoadScene(nomeCena);
+            GerenciadorTransicoes.instance.TrocarCena(nomeCena);
         }
     }
 

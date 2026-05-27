@@ -370,14 +370,14 @@ MonoBehaviour:
   todasAsCinematicas:
   - idCinematica: IntroMenu
     videoClip: {fileID: 32900000, guid: 21690a08036b8b44ba3cc21df07934db, type: 3}
-    musicaFundo: {fileID: 0}
+    musicaFundo: {fileID: 8300000, guid: 4222cfd0a961bd144bc5c81f137ebfc9, type: 3}
     volumeMusica: 1
     dialogos: []
     idCinematicaSeguinte: Faber
     proximaCena: 
   - idCinematica: Faber
     videoClip: {fileID: 32900000, guid: e2816104b4ee2b844b7ab0014563aafb, type: 3}
-    musicaFundo: {fileID: 0}
+    musicaFundo: {fileID: 8300000, guid: b15b03a8316761f41a43a74017b6df71, type: 3}
     volumeMusica: 1
     dialogos:
     - texto: "Tudo certo, O N.A.N.O. est\xE1 funcionando. V\xEA se n\xE3o comete

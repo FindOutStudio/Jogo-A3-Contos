@@ -131,17 +131,14 @@ public class GerenciadorMoedas : MonoBehaviour
         }
     }
 
-    // ======= A MÁGICA DA TROCA DE SPRITES AQUI =======
     private void AtualizarHUD()
     {
         for (int i = 0; i < iconesRaiosHUD.Length; i++)
         {
             if (iconesRaiosHUD[i] != null)
             {
-                // Limpa o truque da cor preta que a gente usava antes para as imagens aparecerem perfeitas
                 iconesRaiosHUD[i].color = Color.white; 
 
-                // Troca as imagens dependendo de quantos ele já pegou
                 if (i < moedasColetadas) 
                     iconesRaiosHUD[i].sprite = raioCheio; 
                 else 
@@ -230,6 +227,7 @@ public class GerenciadorMoedas : MonoBehaviour
         }
     }
 
+    // ======= MUDANÇAS AQUI =======
     public void BotaoProximaFase()
     {
         LimparEfeitosPause();
@@ -237,29 +235,40 @@ public class GerenciadorMoedas : MonoBehaviour
         PlayerPrefs.SetInt("FaseLiberada_" + proximaFaseID, 1);
         PlayerPrefs.Save();
         
+        // Verifica se há cinemática pós-vitória antes de avançar[cite: 2]
         if (!string.IsNullOrEmpty(idCinematicaVitoria))
         {
             PlayerPrefs.SetString("CinematicaPendente", idCinematicaVitoria);
-            SceneManager.LoadScene("Cinematicas");
+            GerenciadorTransicoes.instance.TrocarCena("Cinematicas");
         }
         else 
         {
             int proximaCena = SceneManager.GetActiveScene().buildIndex + 1;
-            if (proximaCena < SceneManager.sceneCountInBuildSettings) SceneManager.LoadScene(proximaCena);
-            else SceneManager.LoadScene("MainMenu");
+            if (proximaCena < SceneManager.sceneCountInBuildSettings) 
+            {
+                string caminhoCena = SceneUtility.GetScenePathByBuildIndex(proximaCena);
+                string nomeDaCenaNova = System.IO.Path.GetFileNameWithoutExtension(caminhoCena);
+                // Utiliza a transição suave em vez de LoadScene direto[cite: 2]
+                GerenciadorTransicoes.instance.TrocarCena(nomeDaCenaNova);
+            }
+            else 
+            {
+                GerenciadorTransicoes.instance.TrocarCena("MainMenu");
+            }
         }
     }
 
     public void BotaoReiniciarFase()
     {
         LimparEfeitosPause();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        // A transição de morte/reset é tratada dentro do GerenciadorTransicoes[cite: 2]
+        GerenciadorTransicoes.instance.TrocarCena(SceneManager.GetActiveScene().name);
     }
 
     public void BotaoVoltarMenu()
     {
         LimparEfeitosPause();
-        SceneManager.LoadScene("MainMenu");
+        GerenciadorTransicoes.instance.TrocarCena("MainMenu");
     }
 
     private void LimparEfeitosPause()

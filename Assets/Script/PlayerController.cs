@@ -494,9 +494,7 @@ public class PlayerController : MonoBehaviour
 
         isDead = true;
         col.enabled = false;
-
-        // ======= EXPLOSÃO DE CÂMERA =======
-        // Ativa o tranco do Screen Shake no exato frame que ele encosta no espinho!
+        
         if (impulseSource != null)
         {
             impulseSource.GenerateImpulse(); 
@@ -544,7 +542,10 @@ public class PlayerController : MonoBehaviour
 
         if (this == null) return;
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        // ======= A MUDANÇA ACONTECE AQUI =======
         if (rastroArremesso != null) { rastroArremesso.emitting = false; rastroArremesso.Clear(); }
+        
+        // Em vez do corte seco do SceneManager, chamamos a transição linda de morte!
+        GerenciadorTransicoes.instance.TrocarCena(SceneManager.GetActiveScene().name);
     }
 }

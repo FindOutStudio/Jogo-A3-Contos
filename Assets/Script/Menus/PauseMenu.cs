@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    // === NOVO: Criamos uma instância para o Gerenciador de Moedas achar o PauseMenu
     public static PauseMenu instance; 
     
     [SerializeField] private GameObject pausePanel;
@@ -15,7 +14,7 @@ public class PauseMenu : MonoBehaviour
 
     void Awake()
     {
-        instance = this; // O script se registra ao nascer
+        instance = this; 
         isPaused = false;
         Time.timeScale = 1f;
     }
@@ -24,16 +23,12 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            // ======= A TRAVINHA DA VITÓRIA =======
-            // Se o jogador já ganhou a fase, ele não pode mais pausar!
             if (GerenciadorMoedas.vitoriaAlcancada) return;
 
-            // ======= A TRAVINHA DO LOG =======
             if (LogUIManager.instance != null && LogUIManager.instance.painelLog != null && LogUIManager.instance.painelLog.activeSelf)
             {
                 return; 
             }
-            // =================================
 
             if (painelConfig != null && painelConfig.activeSelf)
             {
@@ -50,7 +45,6 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    // ======= NOVA FUNÇÃO: Esconder o botão =======
     public void EsconderBotaoPauseUI()
     {
         if (pauseButton != null) pauseButton.SetActive(false);
@@ -79,7 +73,8 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         isPaused = false;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        // ======= MUDANÇA AQUI =======
+        GerenciadorTransicoes.instance.TrocarCena(SceneManager.GetActiveScene().name);
     }
 
     public void AbrirConfig()
@@ -98,6 +93,7 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         isPaused = false;
-        SceneManager.LoadScene("MainMenu");
+        // ======= MUDANÇA AQUI =======
+        GerenciadorTransicoes.instance.TrocarCena("MainMenu");
     }
 }

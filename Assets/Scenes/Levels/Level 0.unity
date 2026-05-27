@@ -805,6 +805,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5969005027666478409, guid: 8d2fe898f7639ff4b8e81cc69defcd9e, type: 3}
   m_PrefabInstance: {fileID: 108037709}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &109688095 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3710856986835354308, guid: a8319c2b71bb4604aa0269db2a6f4240, type: 3}
+  m_PrefabInstance: {fileID: 1241808136}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &134859325
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7141,13 +7146,69 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3710856986835354308, guid: a8319c2b71bb4604aa0269db2a6f4240, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1241808142}
   m_SourcePrefab: {fileID: 100100000, guid: a8319c2b71bb4604aa0269db2a6f4240, type: 3}
 --- !u!4 &1241808137 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8546814723608952754, guid: a8319c2b71bb4604aa0269db2a6f4240, type: 3}
   m_PrefabInstance: {fileID: 1241808136}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1241808142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109688095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Cinemachine::Cinemachine.CinemachineImpulseSource
+  m_ImpulseDefinition:
+    m_ImpulseChannel: 1
+    m_ImpulseShape: 2
+    m_CustomImpulseShape:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_ImpulseDuration: 0.2
+    m_ImpulseType: 0
+    m_DissipationRate: 0.25
+    m_RawSignal: {fileID: 0}
+    m_AmplitudeGain: 1
+    m_FrequencyGain: 1
+    m_RepeatMode: 0
+    m_Randomize: 1
+    m_TimeEnvelope:
+      m_AttackShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_DecayShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_AttackTime: 0
+      m_SustainTime: 0.2
+      m_DecayTime: 0.7
+      m_ScaleWithImpact: 1
+      m_HoldForever: 0
+    m_ImpactRadius: 100
+    m_DirectionMode: 0
+    m_DissipationMode: 2
+    m_DissipationDistance: 100
+    m_PropagationSpeed: 343
+  m_DefaultVelocity: {x: 2, y: 2, z: 0}
 --- !u!1001 &1249159064
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7211,7 +7272,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3451911385036580317, guid: 07056154a17d5784c883f9d19d69de20, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2056480506}
   m_SourcePrefab: {fileID: 100100000, guid: 07056154a17d5784c883f9d19d69de20, type: 3}
 --- !u!4 &1249159065 stripped
 Transform:
@@ -7223,7 +7287,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6347922182509419204, guid: 07056154a17d5784c883f9d19d69de20, type: 3}
   m_PrefabInstance: {fileID: 1249159064}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2056480505}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
@@ -20810,6 +20874,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1987402863}
     - target: {fileID: 1227594260810957375, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
+      propertyPath: raioCheio
+      value: 
+      objectReference: {fileID: -8221917375796601600, guid: 4f6736d17eecf374498a9ebbb2b9888c, type: 3}
+    - target: {fileID: 1227594260810957375, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
+      propertyPath: raioVazio
+      value: 
+      objectReference: {fileID: -5592720868682799156, guid: b6ad6a2b44f3d4d45b6e16aa2b77789f, type: 3}
+    - target: {fileID: 1227594260810957375, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
       propertyPath: painelVitoria
       value: 
       objectReference: {fileID: 2100280312}
@@ -20960,6 +21032,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af386be523ce0334eafa7918cc8d87eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelTimer
+--- !u!1 &2056480505 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3451911385036580317, guid: 07056154a17d5784c883f9d19d69de20, type: 3}
+  m_PrefabInstance: {fileID: 1249159064}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2056480506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056480505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Cinemachine::Cinemachine.CinemachineImpulseListener
+  m_ApplyAfter: 2
+  m_ChannelMask: 1
+  m_Gain: 1
+  m_Use2DDistance: 0
+  m_UseCameraSpace: 1
+  m_ReactionSettings:
+    m_SecondaryNoise: {fileID: 0}
+    m_AmplitudeGain: 1
+    m_FrequencyGain: 1
+    m_Duration: 1
+    m_NoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1001 &2075925909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21262,6 +21362,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1112540651}
     m_Modifications:
+    - target: {fileID: 85204042809179937, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5592720868682799156, guid: b6ad6a2b44f3d4d45b6e16aa2b77789f, type: 3}
     - target: {fileID: 179086946744691939, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -21302,6 +21406,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2036955289}
+    - target: {fileID: 4885169767513270251, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5592720868682799156, guid: b6ad6a2b44f3d4d45b6e16aa2b77789f, type: 3}
     - target: {fileID: 4906926221361460002, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -21330,6 +21438,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6249728770954899605, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5592720868682799156, guid: b6ad6a2b44f3d4d45b6e16aa2b77789f, type: 3}
     - target: {fileID: 6374887283468803524, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
       propertyPath: m_Pivot.x
       value: 0

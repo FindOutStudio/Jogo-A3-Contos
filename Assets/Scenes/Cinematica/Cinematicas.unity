@@ -370,11 +370,15 @@ MonoBehaviour:
   todasAsCinematicas:
   - idCinematica: IntroMenu
     videoClip: {fileID: 32900000, guid: 21690a08036b8b44ba3cc21df07934db, type: 3}
+    musicaFundo: {fileID: 0}
+    volumeMusica: 1
     dialogos: []
     idCinematicaSeguinte: Faber
     proximaCena: 
   - idCinematica: Faber
     videoClip: {fileID: 32900000, guid: e2816104b4ee2b844b7ab0014563aafb, type: 3}
+    musicaFundo: {fileID: 0}
+    volumeMusica: 1
     dialogos:
     - texto: "Tudo certo, O N.A.N.O. est\xE1 funcionando. V\xEA se n\xE3o comete
         o mesmo erro da \xFAltima vez."
@@ -408,6 +412,8 @@ MonoBehaviour:
     proximaCena: Level 0
   - idCinematica: AlgozCinematica
     videoClip: {fileID: 32900000, guid: 04c8ab10640c6f849a29439acb5ea145, type: 3}
+    musicaFundo: {fileID: 8300000, guid: 06112f2c8fb7b9a4ba126d149de79974, type: 3}
+    volumeMusica: 0.451
     dialogos:
     - texto: "Finalmente estamos a s\xF3s, pequenino."
       letraPorLetra: 1

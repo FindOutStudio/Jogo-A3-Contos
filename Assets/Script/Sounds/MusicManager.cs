@@ -11,6 +11,7 @@ public class MusicManager : MonoBehaviour
     [Header("Configurações de Cena")]
     public string nomeCenaMenu = "MainMenu";
     public string nomeCenaCreditos = "Credits";
+    public string nomeCenaCinematicas = "Cinematicas"; // === NOVO ===
 
     [Header("Faixas de Áudio e Volumes")]
     public AudioClip musicaMenu;
@@ -36,7 +37,6 @@ public class MusicManager : MonoBehaviour
     private bool tocandoAlgoz = false;
     private int musicaAtualGameplay = 1;
     
-    // Variável invisível que guarda a preferência do jogador
     private float volumeGlobalMusica = 1f; 
 
     private void Awake()
@@ -58,13 +58,10 @@ public class MusicManager : MonoBehaviour
         }
     }
 
-    // ======= FUNÇÃO ATUALIZADA (MATEMÁTICA DA MIXAGEM) =======
     public void AtualizarVolume()
     {
-        // 1. Puxa o volume salvo lá no menu de config (Multiplicador do Jogador)
         volumeGlobalMusica = PlayerPrefs.GetFloat("VolumeMusica", 1f);
 
-        // 2. Atualiza o volume da música que está tocando agora na mesma hora
         if (audioSource != null && audioSource.clip != null)
         {
             if (audioSource.clip == musicaMenu) audioSource.volume = volumeMusicaMenu * volumeGlobalMusica;
@@ -92,6 +89,11 @@ public class MusicManager : MonoBehaviour
         {
             TocarMusicaMenu();
         }
+        else if (scene.name == nomeCenaCinematicas)
+        {
+            // === NOVO === 
+            // Não faz nada! Deixa o CinematicaManager decidir o que vai tocar!
+        }
         else 
         {
             IniciarMusicaGameplay();
@@ -106,7 +108,7 @@ public class MusicManager : MonoBehaviour
         if (audioSource.clip != musicaMenu)
         {
             audioSource.clip = musicaMenu;
-            audioSource.volume = volumeMusicaMenu * volumeGlobalMusica; // Aplica o multiplicador
+            audioSource.volume = volumeMusicaMenu * volumeGlobalMusica; 
             audioSource.loop = true;
             audioSource.Play();
         }
@@ -140,6 +142,28 @@ public class MusicManager : MonoBehaviour
         audioSource.Play();
     }
 
+    // ======= NOVA FUNÇÃO: TOCAR MÚSICAS ESPECÍFICAS DA CINEMÁTICA =======
+    public void TocarMusicaEspecifica(AudioClip novaMusica, float volumeEspecifico)
+    {
+        isGameplay = false;
+        tocandoAlgoz = false;
+        
+        if (audioSource.clip != novaMusica)
+        {
+            audioSource.clip = novaMusica;
+            audioSource.volume = volumeEspecifico * volumeGlobalMusica;
+            audioSource.loop = true;
+            audioSource.Play();
+        }
+    }
+
+    // ======= NOVA FUNÇÃO: DEIXAR EM SILÊNCIO =======
+    public void PararMusica()
+    {
+        audioSource.Stop();
+        audioSource.clip = null;
+    }
+
     private void Update()
     {
         float frequenciaAlvo = PauseMenu.isPaused ? frequenciaAbafada : frequenciaNormal;
@@ -157,7 +181,7 @@ public class MusicManager : MonoBehaviour
             {
                 tocandoAlgoz = true;
                 audioSource.clip = musicaAlgoz;
-                audioSource.volume = volumeAlgoz * volumeGlobalMusica; // Aplica o multiplicador do Algoz
+                audioSource.volume = volumeAlgoz * volumeGlobalMusica; 
                 audioSource.loop = true;
                 audioSource.Play();
             }

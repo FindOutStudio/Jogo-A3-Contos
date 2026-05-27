@@ -15,7 +15,7 @@ public class DialogoCinematica
     public bool letraPorLetra; 
 
     [Tooltip("Escolha a cor deste bloco de texto no Inspector!")]
-    public Color corDoTexto = Color.white; // Começa branco por padrão para não vir invisível
+    public Color corDoTexto = Color.white; 
 }
 
 [System.Serializable]
@@ -26,6 +26,13 @@ public class CinematicaConfig
     
     public VideoClip videoClip; 
     
+    // ======= NOVAS CONFIGURAÇÕES DE MÚSICA AQUI =======
+    [Header("Trilha Sonora da Cinemática")]
+    [Tooltip("A música que vai tocar no fundo! (Deixe vazio para ficar em silêncio)")]
+    public AudioClip musicaFundo;
+    [Range(0f, 1f)] public float volumeMusica = 1f;
+    // ==================================================
+
     public DialogoCinematica[] dialogos; 
     
     [Header("Para Onde Vai Depois?")]
@@ -67,6 +74,22 @@ public class CinematicaManager : MonoBehaviour
 
         if (cinematicaAtual != null)
         {
+            // === MÁGICA DA MÚSICA ENTRANDO EM AÇÃO ===
+            if (MusicManager.instance != null)
+            {
+                if (cinematicaAtual.musicaFundo != null)
+                {
+                    // Toca a música exclusiva configurada para esta cena
+                    MusicManager.instance.TocarMusicaEspecifica(cinematicaAtual.musicaFundo, cinematicaAtual.volumeMusica);
+                }
+                else
+                {
+                    // Se você não colocar nenhuma música no Inspector, ele para a música anterior e fica mudo!
+                    MusicManager.instance.PararMusica();
+                }
+            }
+            // =========================================
+
             bool temDialogo = cinematicaAtual.dialogos != null && cinematicaAtual.dialogos.Length > 0;
 
             if(videoPlayer != null && cinematicaAtual.videoClip != null)
@@ -139,8 +162,6 @@ public class CinematicaManager : MonoBehaviour
         DialogoCinematica dialogo = cinematicaAtual.dialogos[indiceDialogoAtual];
         textoCompletoAtual = dialogo.texto;
 
-        // === MÁGICA DA COR AQUI ===
-        // Altera a cor do componente de texto antes de começar a exibir as letras!
         if (textoDialogo != null)
         {
             textoDialogo.color = dialogo.corDoTexto;

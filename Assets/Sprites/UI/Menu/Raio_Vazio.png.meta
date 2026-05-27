@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: b96dd5ab4cadc3243ab2aa684754b17f
+guid: b6ad6a2b44f3d4d45b6e16aa2b77789f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2993853370708833743
-    second: TXT_Coletavel_Sheet_0
-  - first:
-      213: -7057737414018921280
-    second: TXT_Coletavel_Sheet_1
-  - first:
-      213: -430793523329388473
-    second: TXT_Coletavel_Sheet_2
-  - first:
-      213: -218590931085489641
-    second: TXT_Coletavel_Sheet_3
+      213: -5592720868682799156
+    second: Raio_Vazio_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -106,19 +97,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -148,89 +126,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TXT_Coletavel_Sheet_0
+      name: Raio_Vazio_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
+        x: 6
+        y: 1
+        width: 36
+        height: 45
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fc5b4be47cd4c8920800000000000000
-      internalID: 2993853370708833743
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TXT_Coletavel_Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0cc0b672731ed0e90800000000000000
-      internalID: -7057737414018921280
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TXT_Coletavel_Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 740b96ea293850af0800000000000000
-      internalID: -430793523329388473
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TXT_Coletavel_Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 71a0781d4b867fcf0800000000000000
-      internalID: -218590931085489641
+      spriteID: cc76f3e500aa262b0800000000000000
+      internalID: -5592720868682799156
       vertices: []
       indices: 
       edges: []
@@ -239,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2f61de84ce73609469abd39e1fa9cbcd
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -247,14 +159,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      TXT_Coletavel_Sheet_0: 2993853370708833743
-      TXT_Coletavel_Sheet_1: -7057737414018921280
-      TXT_Coletavel_Sheet_2: -430793523329388473
-      TXT_Coletavel_Sheet_3: -218590931085489641
+      Raio_Vazio_0: -5592720868682799156
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

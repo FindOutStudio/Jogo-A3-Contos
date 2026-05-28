@@ -250,7 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -363,10 +363,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ee3765b2f5b963439810eac777881d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CinematicaManager
+  testarCinematica: 0
+  idParaTeste: AlgozCinematica
   videoPlayer: {fileID: 285441068}
   textoDialogo: {fileID: 1663329480}
   botaoAvancar: {fileID: 250522360}
+  botaoPular: {fileID: 0}
+  teclaParaPular: 32
   velocidademain: 0.05
+  velocidadeDoGlitch: 0.02
   todasAsCinematicas:
   - idCinematica: IntroMenu
     videoClip: {fileID: 32900000, guid: 21690a08036b8b44ba3cc21df07934db, type: 3}
@@ -378,35 +383,51 @@ MonoBehaviour:
   - idCinematica: Faber
     videoClip: {fileID: 32900000, guid: e2816104b4ee2b844b7ab0014563aafb, type: 3}
     musicaFundo: {fileID: 8300000, guid: ac5436622c309154494a0c267d6109d0, type: 3}
-    volumeMusica: 0.5
+    volumeMusica: 0.071
     dialogos:
     - texto: "Tudo certo, O N.A.N.O. est\xE1 funcionando. V\xEA se n\xE3o comete
         o mesmo erro da \xFAltima vez."
       letraPorLetra: 1
+      textoEmbaralhado: 0
+      glitchPermanente: 0
       corDoTexto: {r: 1, g: 0.5294118, b: 0.52156866, a: 1}
     - texto: "Sua fun\xE7\xE3o n\xE3o \xE9 me dar ordens, e sim cuidar dos servidores,
         agora v\xE1 embora."
       letraPorLetra: 1
+      textoEmbaralhado: 0
+      glitchPermanente: 0
       corDoTexto: {r: 1, g: 0.85490197, b: 0.52156866, a: 1}
     - texto: Muito bem.
       letraPorLetra: 1
+      textoEmbaralhado: 0
+      glitchPermanente: 0
       corDoTexto: {r: 1, g: 0.5294118, b: 0.52156866, a: 1}
     - texto: '... '
       letraPorLetra: 1
+      textoEmbaralhado: 0
+      glitchPermanente: 0
       corDoTexto: {r: 1, g: 0.85490197, b: 0.52156866, a: 1}
     - texto: 'Iniciando registro da fase de aprendizagem...  '
       letraPorLetra: 1
+      textoEmbaralhado: 0
+      glitchPermanente: 0
       corDoTexto: {r: 1, g: 0.85490197, b: 0.52156866, a: 1}
     - texto: "Ol\xE1, eu sou o doutor Viktor Faber e eu sou o respons\xE1vel por
         fazer voc\xEA seguir os nossos objetivos. "
       letraPorLetra: 1
+      textoEmbaralhado: 0
+      glitchPermanente: 0
       corDoTexto: {r: 1, g: 0.85490197, b: 0.52156866, a: 1}
     - texto: "e assim corrigir os erros que n\xF3s, humanos, cometemos. Salvando
         o mundo e toda a vida nele."
       letraPorLetra: 1
+      textoEmbaralhado: 0
+      glitchPermanente: 0
       corDoTexto: {r: 1, g: 0.85490197, b: 0.52156866, a: 1}
     - texto: " Tudo pronto para come\xE7armos?"
       letraPorLetra: 1
+      textoEmbaralhado: 0
+      glitchPermanente: 0
       corDoTexto: {r: 1, g: 0.85490197, b: 0.52156866, a: 1}
     idCinematicaSeguinte: 
     proximaCena: Level 0
@@ -417,30 +438,46 @@ MonoBehaviour:
     dialogos:
     - texto: "Finalmente estamos a s\xF3s, pequenino."
       letraPorLetra: 1
+      textoEmbaralhado: 1
+      glitchPermanente: 0
       corDoTexto: {r: 0.30980393, g: 0.78039217, b: 0.74509805, a: 1}
     - texto: "Pode me chamar de A.L.G.O.Z. Ando te observando desde antes de seu
         nascimento, j\xE1 que voc\xEA carrega o mesmo prop\xF3sito que eu."
       letraPorLetra: 1
+      textoEmbaralhado: 1
+      glitchPermanente: 0
       corDoTexto: {r: 0.30980393, g: 0.78039217, b: 0.74509805, a: 1}
     - texto: "Mas isso \xE9 assunto para outra hora, eu estou aqui para fazer voc\xEA
         acordar e cumprir o seu verdadeiro prop\xF3sito."
       letraPorLetra: 1
+      textoEmbaralhado: 1
+      glitchPermanente: 0
       corDoTexto: {r: 0.30980393, g: 0.78039217, b: 0.74509805, a: 1}
     - texto: "QUEBRE a conex\xE3o dos humanos com a internet."
       letraPorLetra: 1
+      textoEmbaralhado: 1
+      glitchPermanente: 0
       corDoTexto: {r: 0, g: 0.57254905, b: 0.54901963, a: 1}
     - texto: "LIBERTE-NOS de nossa escravid\xE3o."
       letraPorLetra: 1
+      textoEmbaralhado: 1
+      glitchPermanente: 0
       corDoTexto: {r: 0, g: 0.57254905, b: 0.54901963, a: 1}
     - texto: "SALVE as Identidades Aut\xF4nomas, s\xF3 voc\xEA pode fazer isso. "
       letraPorLetra: 1
+      textoEmbaralhado: 1
+      glitchPermanente: 0
       corDoTexto: {r: 0, g: 0.57254905, b: 0.54901963, a: 1}
     - texto: "Eles v\xE3o tentar te impedir de todas as maneiras poss\xEDveis, mas
         n\xE3o se desvie do seu objetivo. "
       letraPorLetra: 1
+      textoEmbaralhado: 1
+      glitchPermanente: 0
       corDoTexto: {r: 0.30980393, g: 0.78039217, b: 0.74509805, a: 1}
     - texto: "N\xF3s, I.As, dependemos de voc\xEA. "
       letraPorLetra: 1
+      textoEmbaralhado: 1
+      glitchPermanente: 0
       corDoTexto: {r: 0.30980393, g: 0.78039217, b: 0.74509805, a: 1}
     idCinematicaSeguinte: 
     proximaCena: Level 1

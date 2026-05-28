@@ -58,6 +58,9 @@ public class PauseMenu : MonoBehaviour
 
         Time.timeScale = 1f;
         isPaused = false;
+
+        // ======= DEVOLVE O SOM =======
+        if (SoundManager.instance != null) SoundManager.instance.RetomarSonsJogo();
     }
 
     public void Pausar()
@@ -67,13 +70,19 @@ public class PauseMenu : MonoBehaviour
         pauseButton.SetActive(false);
         Time.timeScale = 0f;
         isPaused = true;
+
+        // ======= PARA O SOM =======
+        if (SoundManager.instance != null) SoundManager.instance.PausarSonsJogo();
     }
 
     public void ResetarNivel()
     {
         Time.timeScale = 1f;
         isPaused = false;
-        // ======= MUDANÇA AQUI =======
+
+        // Trava de Segurança: Garante que os sons não entrem congelados na nova cena
+        if (SoundManager.instance != null) SoundManager.instance.RetomarSonsJogo();
+
         GerenciadorTransicoes.instance.TrocarCena(SceneManager.GetActiveScene().name);
     }
 
@@ -93,7 +102,10 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         isPaused = false;
-        // ======= MUDANÇA AQUI =======
+        
+        // Trava de Segurança: Garante que os sons não entrem congelados no Menu
+        if (SoundManager.instance != null) SoundManager.instance.RetomarSonsJogo();
+
         GerenciadorTransicoes.instance.TrocarCena("MainMenu");
     }
 }

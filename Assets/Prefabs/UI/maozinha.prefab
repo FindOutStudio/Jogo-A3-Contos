@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2064975996687144197
 Transform:
   m_ObjectHideFlags: 0
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 7
   m_MaskInteraction: 0
   m_Sprite: {fileID: 3599980015515088417, guid: cdcc14fa2da5b454396a6bb662d6a10e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -104,6 +104,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ab28bd700b68814c9596f133d7f274a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnimacaoMaozinha
-  posicaoPuxao: {x: -1.5, y: -1.5, z: 0}
+  spriteNormal: {fileID: 3599980015515088417, guid: cdcc14fa2da5b454396a6bb662d6a10e, type: 3}
+  spriteClicando: {fileID: 4874289776862933005, guid: 0fc8f7bc785e12b46b2cd8b5ef828684, type: 3}
+  posicaoPuxao: {x: -3, y: -0.7, z: 0}
   velocidadePuxao: 2
   tempoDeEspera: 0.5

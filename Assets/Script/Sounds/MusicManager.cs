@@ -11,7 +11,7 @@ public class MusicManager : MonoBehaviour
     [Header("Configurações de Cena")]
     public string nomeCenaMenu = "MainMenu";
     public string nomeCenaCreditos = "Credits";
-    public string nomeCenaCinematicas = "Cinematicas"; // === NOVO ===
+    public string nomeCenaCinematicas = "Cinematicas"; 
 
     [Header("Faixas de Áudio e Volumes")]
     public AudioClip musicaMenu;
@@ -48,6 +48,9 @@ public class MusicManager : MonoBehaviour
             audioSource = GetComponent<AudioSource>();
             lowPass = GetComponent<AudioLowPassFilter>();
             
+            // A MÁGICA DO PASSE VIP (A música não é afetada pelo pause global!)
+            audioSource.ignoreListenerPause = true;
+
             lowPass.cutoffFrequency = frequenciaNormal;
             
             AtualizarVolume(); 
@@ -91,8 +94,7 @@ public class MusicManager : MonoBehaviour
         }
         else if (scene.name == nomeCenaCinematicas)
         {
-            // === NOVO === 
-            // Não faz nada! Deixa o CinematicaManager decidir o que vai tocar!
+            // Deixa o CinematicaManager decidir
         }
         else 
         {
@@ -142,7 +144,6 @@ public class MusicManager : MonoBehaviour
         audioSource.Play();
     }
 
-    // ======= NOVA FUNÇÃO: TOCAR MÚSICAS ESPECÍFICAS DA CINEMÁTICA =======
     public void TocarMusicaEspecifica(AudioClip novaMusica, float volumeEspecifico)
     {
         isGameplay = false;
@@ -157,7 +158,15 @@ public class MusicManager : MonoBehaviour
         }
     }
 
-    // ======= NOVA FUNÇÃO: DEIXAR EM SILÊNCIO =======
+    // ======= A FUNÇÃO QUE FALTAVA (O ERRO VERMELHO SUMIRÁ AGORA) =======
+    public void SetVolumeEmTempoReal(float volumeEspecifico)
+    {
+        if (audioSource != null && !isGameplay && !tocandoAlgoz)
+        {
+            audioSource.volume = volumeEspecifico * volumeGlobalMusica;
+        }
+    }
+
     public void PararMusica()
     {
         audioSource.Stop();

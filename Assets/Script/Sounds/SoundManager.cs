@@ -6,10 +6,10 @@ public class SoundManager : MonoBehaviour
 
     [Header("Fontes de Áudio (Audio Sources)")]
     public AudioSource sfxSource;
+    public AudioSource uiSource; 
     public AudioSource ambienteSource;
     public AudioSource puxaoSource; 
 
-    // O multiplicador invisível que o Slider vai controlar
     [HideInInspector] public float volumeGlobalSFX = 1f;
 
     [Header("Sons da Fase (Obstáculos 3D)")]
@@ -79,10 +79,12 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
-        // 1. Puxa o volume salvo do PC do jogador
+        // ======= O PASSE VIP DA UI =======
+        // Garante que os cliques de botões funcionam mesmo no Pause global!
+        if (uiSource != null) uiSource.ignoreListenerPause = true;
+
         volumeGlobalSFX = PlayerPrefs.GetFloat("VolumeSFX", 1f);
 
-        // 2. Aplica o volume na ambiência considerando a configuração do produtor * a configuração do jogador
         if (somAmbiente != null && ambienteSource != null)
         {
             ambienteSource.clip = somAmbiente;
@@ -92,7 +94,6 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    // === FUNÇÕES MESTRES COM MATEMÁTICA DE VOLUME ===
     public void TocarSFX(AudioClip clip, float volumeScale)
     {
         if (clip != null && sfxSource != null) 
@@ -101,13 +102,26 @@ public class SoundManager : MonoBehaviour
         }
     }
 
+    public void TocarSFXUI(AudioClip clip, float volumeScale)
+    {
+        if (clip != null && uiSource != null) 
+        {
+            uiSource.PlayOneShot(clip, volumeScale * volumeGlobalSFX);
+        }
+    }
+
     public void TocarSFX(AudioClip clip)
     {
         if (clip == null) return;
-        float volumeDefinido = 1f;
-        if (clip == uiHover) volumeDefinido = volumeUiHover;
-        else if (clip == uiSelecao) volumeDefinido = volumeUiSelecao;
-        TocarSFX(clip, volumeDefinido);
+        
+        if (clip == uiHover || clip == uiSelecao)
+        {
+            float volumeDefinido = (clip == uiHover) ? volumeUiHover : volumeUiSelecao;
+            TocarSFXUI(clip, volumeDefinido);
+            return; 
+        }
+        
+        TocarSFX(clip, 1f);
     }
 
     public void TocarSom3D(AudioClip clip, Vector3 posicao, float volume)
@@ -118,7 +132,6 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    // === ATALHOS ===
     public void TocarMorte() { TocarSFX(playerMorte, volumePlayerMorte); }
     public void TocarRaio() { TocarSFX(playerPegarRaio, volumePlayerPegarRaio); }
     public void TocarLog() { TocarSFX(playerPegarLog, volumePlayerPegarLog); }
@@ -143,7 +156,6 @@ public class SoundManager : MonoBehaviour
         if (puxaoSource != null && puxaoSource.isPlaying) puxaoSource.Stop();
     }
 
-    // === ATUALIZAR EM TEMPO REAL PELO SLIDER ===
     public void AtualizarVolumeGlobalSFX(float novoVolume)
     {
         volumeGlobalSFX = novoVolume;
@@ -153,5 +165,18 @@ public class SoundManager : MonoBehaviour
             
         if (puxaoSource != null && puxaoSource.isPlaying) 
             puxaoSource.volume = volumeLancadorPuxar * volumeGlobalSFX;
+    }
+
+    // ======= A SOLUÇÃO ABSOLUTA =======
+    public void PausarSonsJogo()
+    {
+        // Desliga o "ouvido" da câmara globalmente. Nada no mundo toca!
+        AudioListener.pause = true;
+    }
+
+    public void RetomarSonsJogo()
+    {
+        // Devolve a audição ao mundo!
+        AudioListener.pause = false;
     }
 }

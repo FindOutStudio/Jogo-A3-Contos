@@ -564,6 +564,10 @@ MonoBehaviour:
     cenaDeDestino: Level 2
     idDaCinematica: 
     transicoesPossiveis: 030000000000000001000000
+  - cenaDeOrigem: Level 2
+    cenaDeDestino: Level 3
+    idDaCinematica: 
+    transicoesPossiveis: 030000000000000001000000
 --- !u!1 &327851941
 GameObject:
   m_ObjectHideFlags: 0

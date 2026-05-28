@@ -19,6 +19,9 @@ public class PlayerController : MonoBehaviour
     public float powerMultiplier = 5f;
     public float maxDragDistance = 3f;
     public float imunidadeMesmoLancador = 0.5f; 
+    
+    [Tooltip("Ajuste a velocidade do arraste do mouse aqui! Como mudamos para pixels, 0.015f é um bom padrão.")]
+    public float sensibilidadeMira = 0.015f;
 
     [Header("Ricochete Clássico (Espelho)")]
     public float multiplicadorRicochete = 0.9f; 
@@ -37,17 +40,12 @@ public class PlayerController : MonoBehaviour
     public float zoomMultiplicadorLancador = 0.95f;
     public float zoomVelocidade = 8f;
     
-    // ======= NOVAS VARIÁVEIS DA MIRA =======
-    [Tooltip("O máximo que a câmera vai olhar para frente (em unidades)")]
     public float maxCameraLookAhead = 4f; 
-    [Tooltip("Velocidade que a câmera arrasta para olhar a mira")]
     public float cameraLookAheadSpeed = 5f;
     private CinemachineFramingTransposer framingTransposer;
     private Vector3 originalCameraOffset = Vector3.zero;
     
-    // ======= VARIÁVEL DO SCREEN SHAKE =======
     private CinemachineImpulseSource impulseSource;
-
     private float tamanhoCameraOriginal;
 
     [Header("Efeitos Visuais (Game Feel)")]
@@ -91,8 +89,6 @@ public class PlayerController : MonoBehaviour
 
     private bool isReadyToLaunch = false;
     private bool isDragging = false;
-    private Vector2 startPoint;
-    private Vector2 endPoint;
     private float originalGravity;
     private Transform currentLauncher;
 
@@ -106,7 +102,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
-        impulseSource = GetComponent<CinemachineImpulseSource>(); // Pega o tremor automaticamente!
+        impulseSource = GetComponent<CinemachineImpulseSource>(); 
         originalGravity = rb.gravityScale;
         
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous; 
@@ -115,8 +111,6 @@ public class PlayerController : MonoBehaviour
         if (camVirtual != null) 
         {
             tamanhoCameraOriginal = camVirtual.m_Lens.OrthographicSize;
-            
-            // ======= INICIA O FRAMING TRANSPOSER =======
             framingTransposer = camVirtual.GetCinemachineComponent<CinemachineFramingTransposer>();
             if (framingTransposer != null)
             {
@@ -138,11 +132,27 @@ public class PlayerController : MonoBehaviour
         if (rb != null) lastFrameVelocity = rb.linearVelocity;
     }
 
+    // ======= O CÉREBRO DA NOVA MIRA =======
+    // Pega as informações do arraste baseado SOMENTE nos pixels da tela física
+    private (Vector2 direcao, float distancia) CalcularMiraNaTela()
+    {
+        Vector2 diferencaPixels = (Vector2)Input.mousePosition - telaPosicaoInicialMouse;
+        
+        // Estilingue (puxa pra trás, atira pra frente), então invertemos (-) a diferença
+        Vector2 vetorMira = -diferencaPixels * sensibilidadeMira;
+
+        float distancia = vetorMira.magnitude;
+        distancia = Mathf.Clamp(distancia, 0, maxDragDistance);
+
+        Vector2 direcao = vetorMira.normalized;
+
+        return (direcao, distancia);
+    }
+
     private void Update()
     {
         if (timerImunidadeLancador > 0f) timerImunidadeLancador -= Time.unscaledDeltaTime;
 
-        // ======= MÁGICA DA CÂMERA (ZOOM E MIRA) =======
         if (camVirtual != null)
         {
             float zoomAlvo = tamanhoCameraOriginal;
@@ -152,21 +162,15 @@ public class PlayerController : MonoBehaviour
             {
                 zoomAlvo = tamanhoCameraOriginal * (isReadyToLaunch ? zoomMultiplicadorLancador : zoomMultiplicador);
 
-                // Calcula a direção em que o jogador quer lançar o Nano
-                Vector2 currentMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                Vector2 direction = (startPoint - currentMousePos).normalized;
-                float distance = Vector2.Distance(startPoint, currentMousePos);
-                distance = Mathf.Clamp(distance, 0, maxDragDistance);
+                // Usa o novo sistema imune à câmera
+                var mira = CalcularMiraNaTela();
 
-                // Empurra o centro da câmera na direção do lançamento, limitado pelo máximo que definimos!
-                float proporcaoForca = distance / maxDragDistance;
-                offsetAlvo = originalCameraOffset + (Vector3)(direction * proporcaoForca * maxCameraLookAhead);
+                float proporcaoForca = mira.distancia / maxDragDistance;
+                offsetAlvo = originalCameraOffset + (Vector3)(mira.direcao * proporcaoForca * maxCameraLookAhead);
             }
 
-            // Aplica o Zoom
             camVirtual.m_Lens.OrthographicSize = Mathf.Lerp(camVirtual.m_Lens.OrthographicSize, zoomAlvo, Time.unscaledDeltaTime * zoomVelocidade);
             
-            // Aplica a deslocação da Mira (suavemente)
             if (framingTransposer != null)
             {
                 framingTransposer.m_TrackedObjectOffset = Vector3.Lerp(framingTransposer.m_TrackedObjectOffset, offsetAlvo, Time.unscaledDeltaTime * cameraLookAheadSpeed);
@@ -206,26 +210,22 @@ public class PlayerController : MonoBehaviour
 
             if (isReadyToLaunch && currentLauncher != null)
             {
-                IniciarArraste(currentLauncher.position);
+                IniciarArraste();
             }
             else if (midAirLaunchesLeft > 0 && puloDuploDesbloqueado) 
             {
-                IniciarArraste(transform.position);
+                IniciarArraste();
                 midAirLaunchesLeft--;
             }
         }
 
         if (isDragging)
         {
-            if (isReadyToLaunch && currentLauncher != null) startPoint = currentLauncher.position;
-            else if (!isReadyToLaunch) startPoint = Camera.main.ScreenToWorldPoint(telaPosicaoInicialMouse);
-
             DrawTrajectory();
 
-            Vector2 currentMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            float currentDragDistance = Vector2.Distance(startPoint, currentMousePos);
+            var mira = CalcularMiraNaTela();
             
-            if (currentDragDistance >= distanciaParaTremer && visualTransform != null)
+            if (mira.distancia >= distanciaParaTremer && visualTransform != null)
             {
                 float tremorX = Random.Range(-forcaDoTremor, forcaDoTremor);
                 float tremorY = Random.Range(-forcaDoTremor, forcaDoTremor);
@@ -240,10 +240,7 @@ public class PlayerController : MonoBehaviour
             {
                 isDragging = false;
                 trajectoryLine.enabled = false;
-                
                 if (visualTransform != null) visualTransform.localPosition = posicaoVisualOriginal; 
-                
-                endPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 Shoot();
             }
         }
@@ -252,7 +249,6 @@ public class PlayerController : MonoBehaviour
     private void AtualizarVisualCeleste()
     {
         if (visualTransform == null) return;
-
         if (timerElastico > 0f) timerElastico -= Time.deltaTime;
 
         if (isReadyToLaunch || isDead || rb.linearVelocity.magnitude < 0.1f)
@@ -324,7 +320,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-   private void IniciarArraste(Vector2 pontoDeInicio)
+    private void IniciarArraste()
     {
         if(SoundManager.instance != null) SoundManager.instance.TocarPuxar();
 
@@ -336,8 +332,7 @@ public class PlayerController : MonoBehaviour
         }
 
         isDragging = true;
-        startPoint = pontoDeInicio;
-        telaPosicaoInicialMouse = Input.mousePosition; 
+        telaPosicaoInicialMouse = Input.mousePosition; // O segredo começa aqui!
         trajectoryLine.enabled = true;
         contadorMira = 0f; 
 
@@ -368,13 +363,11 @@ public class PlayerController : MonoBehaviour
         Time.timeScale = 1f;
         Time.fixedDeltaTime = 0.02f;
 
-        Vector2 direction = (startPoint - endPoint).normalized;
-        float distance = Vector2.Distance(startPoint, endPoint);
-        distance = Mathf.Clamp(distance, 0, maxDragDistance);
+        var mira = CalcularMiraNaTela();
 
         rb.gravityScale = originalGravity;
         rb.linearVelocity = Vector2.zero; 
-        rb.AddForce(direction * distance * powerMultiplier, ForceMode2D.Impulse);
+        rb.AddForce(mira.direcao * mira.distancia * powerMultiplier, ForceMode2D.Impulse);
         
         timerElastico = tempoDoEfeitoElastico;
         timerImunidadeLancador = imunidadeMesmoLancador;
@@ -387,14 +380,10 @@ public class PlayerController : MonoBehaviour
 
     private void DrawTrajectory()
     {
-        Vector2 currentMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        
-        Vector2 direction = (startPoint - currentMousePos).normalized;
-        float distance = Vector2.Distance(startPoint, currentMousePos);
-        distance = Mathf.Clamp(distance, 0, maxDragDistance);
+        var mira = CalcularMiraNaTela();
 
-        Vector2 currentVel = (direction * distance * powerMultiplier) / rb.mass;
-        Vector2 currentPos = transform.position;
+        Vector2 currentVel = (mira.direcao * mira.distancia * powerMultiplier) / rb.mass;
+        Vector2 currentPos = transform.position; // O ponto de início SEMPRE é o jogador
 
         trajectoryLine.positionCount = trajectoryResolution;
         trajectoryLine.SetPosition(0, currentPos);
@@ -495,6 +484,9 @@ public class PlayerController : MonoBehaviour
         isDead = true;
         col.enabled = false;
         
+        // ======= TRAVANDO A FÍSICA PARA O GERENCIADOR TRANSICOES RODAR LISO =======
+        rb.simulated = false;
+        
         if (impulseSource != null)
         {
             impulseSource.GenerateImpulse(); 
@@ -517,22 +509,20 @@ public class PlayerController : MonoBehaviour
         float tempoDecorrido = 0f;
         Vector2 velocidadeInicial = direction * knockbackSpeed;
 
+        // Animação de Knockback "falsa" ignorando a física
         while (tempoDecorrido < tempoDeQuiqueMorte)
         {
             if (this == null || rb == null) return; 
 
-            rb.linearVelocity = Vector2.Lerp(velocidadeInicial, Vector2.zero, tempoDecorrido / tempoDeQuiqueMorte);
+            transform.position += (Vector3)(Vector2.Lerp(velocidadeInicial, Vector2.zero, tempoDecorrido / tempoDeQuiqueMorte) * Time.deltaTime);
             tempoDecorrido += Time.deltaTime;
             
             await Task.Yield(); 
         }
 
-        if (rb != null) rb.linearVelocity = Vector2.zero;
-
         if (playerAnimator != null)
         {
             await Task.Yield();
-
             while (playerAnimator != null && playerAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
             {
                 if (this == null) return;
@@ -542,10 +532,8 @@ public class PlayerController : MonoBehaviour
 
         if (this == null) return;
 
-        // ======= A MUDANÇA ACONTECE AQUI =======
         if (rastroArremesso != null) { rastroArremesso.emitting = false; rastroArremesso.Clear(); }
         
-        // Em vez do corte seco do SceneManager, chamamos a transição linda de morte!
         GerenciadorTransicoes.instance.TrocarCena(SceneManager.GetActiveScene().name);
     }
 }

@@ -3,7 +3,6 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
-// Seletor chique para você não errar nomes de transições
 public enum TipoTransicao { Laser, PCB, Popups, Serra, Morte }
 
 [System.Serializable]
@@ -45,10 +44,9 @@ public class GerenciadorTransicoes : MonoBehaviour
         if (imagemDaTransicao != null) imagemDaTransicao.enabled = false;
     }
 
-    // --- CHAME ISSO DURANTE CINEMÁTICAS OU TELA DE VITÓRIA ---
     public void PreCarregarCena(string nomeCena)
     {
-        if (preCarregamento == null || preCarregamento.progress < 0.9f)
+        if (preCarregamento == null)
         {
             preCarregamento = SceneManager.LoadSceneAsync(nomeCena);
             preCarregamento.allowSceneActivation = false;
@@ -69,7 +67,6 @@ public class GerenciadorTransicoes : MonoBehaviour
         string triggerAbrir = "End_Laser";
         bool achouRegra = false;
 
-        // 1. REINICIAR FASE / MORTE
         if (cenaAtual == nomeProximaCena && cenaAtual != "Cinematicas") 
         {
             triggerFechar = "Start_Morte"; 
@@ -78,7 +75,6 @@ public class GerenciadorTransicoes : MonoBehaviour
         }
         else
         {
-            // 2. LENDO OS BLOQUINHOS (Agora com sorteio interno)
             foreach (var bloco in bloquinhos)
             {
                 bool cenaBate = (cenaAtual == bloco.cenaDeOrigem && nomeProximaCena == bloco.cenaDeDestino);
@@ -106,21 +102,29 @@ public class GerenciadorTransicoes : MonoBehaviour
             else { triggerFechar = "Start_Serra"; triggerAbrir = "End_Serra"; }
         }
 
-        // ======= EXECUÇÃO =======
         if (imagemDaTransicao != null) { imagemDaTransicao.color = Color.white; imagemDaTransicao.enabled = true; }
         if (animatorTransicao != null) animatorTransicao.SetTrigger(triggerFechar);
 
         yield return new WaitForSecondsRealtime(tempoParaCobrirTela);
 
-        // ATIVAÇÃO DO PRÉ-CARREGAMENTO (Aqui o travamento é mascarado)
-        if (preCarregamento != null && preCarregamento.allowSceneActivation == false)
+        // ======= CORREÇÃO DO CARREGAMENTO =======
+        AsyncOperation operacao = preCarregamento;
+        preCarregamento = null; // Limpa para permitir futuros pre-loads!
+
+        if (operacao != null)
         {
-            preCarregamento.allowSceneActivation = true;
+            operacao.allowSceneActivation = true;
         }
         else
         {
-            AsyncOperation op = SceneManager.LoadSceneAsync(nomeProximaCena);
-            op.allowSceneActivation = true;
+            operacao = SceneManager.LoadSceneAsync(nomeProximaCena);
+            operacao.allowSceneActivation = true;
+        }
+
+        // Isso garante que ele nunca vai tentar tocar a animação antes da fase nova nascer!
+        while (!operacao.isDone)
+        {
+            yield return null;
         }
 
         Resources.UnloadUnusedAssets();
@@ -130,7 +134,5 @@ public class GerenciadorTransicoes : MonoBehaviour
         if (animatorTransicao != null) animatorTransicao.SetTrigger(triggerAbrir);
         yield return new WaitForSecondsRealtime(tempoParaRevelarTela);
         if (imagemDaTransicao != null) imagemDaTransicao.enabled = false;
-        
-        preCarregamento = null;
     }
 }

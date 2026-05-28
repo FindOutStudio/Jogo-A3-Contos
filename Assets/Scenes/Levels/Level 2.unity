@@ -23239,10 +23239,78 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1112540651}
     m_Modifications:
+    - target: {fileID: 797763056962179419, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
+      propertyPath: sliderSFX
+      value: 
+      objectReference: {fileID: 2100280325}
+    - target: {fileID: 797763056962179419, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
+      propertyPath: sliderMaster
+      value: 
+      objectReference: {fileID: 2100280326}
+    - target: {fileID: 797763056962179419, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
+      propertyPath: sliderMusica
+      value: 
+      objectReference: {fileID: 2100280324}
+    - target: {fileID: 1227594260810957375, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
+      propertyPath: painelHUD
+      value: 
+      objectReference: {fileID: 2100280315}
     - target: {fileID: 1227594260810957375, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
       propertyPath: textoTempo
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1227594260810957375, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
+      propertyPath: idDestaFase
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1227594260810957375, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
+      propertyPath: painelVitoria
+      value: 
+      objectReference: {fileID: 2100280323}
+    - target: {fileID: 1227594260810957375, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
+      propertyPath: imagemLetreiro
+      value: 
+      objectReference: {fileID: 2100280322}
+    - target: {fileID: 1227594260810957375, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
+      propertyPath: botaoVoltarMenu
+      value: 
+      objectReference: {fileID: 2100280318}
+    - target: {fileID: 1227594260810957375, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
+      propertyPath: botaoProximaFase
+      value: 
+      objectReference: {fileID: 2100280316}
+    - target: {fileID: 1227594260810957375, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
+      propertyPath: botaoReiniciarFase
+      value: 
+      objectReference: {fileID: 2100280317}
+    - target: {fileID: 1227594260810957375, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
+      propertyPath: idCinematicaVitoria
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1227594260810957375, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
+      propertyPath: 'iconesRaiosHUD.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100280314}
+    - target: {fileID: 1227594260810957375, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
+      propertyPath: 'iconesRaiosHUD.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100280313}
+    - target: {fileID: 1227594260810957375, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
+      propertyPath: 'iconesRaiosHUD.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100280312}
+    - target: {fileID: 1227594260810957375, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
+      propertyPath: 'imagensRaiosVitoria.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100280321}
+    - target: {fileID: 1227594260810957375, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
+      propertyPath: 'imagensRaiosVitoria.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100280320}
+    - target: {fileID: 1227594260810957375, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
+      propertyPath: 'imagensRaiosVitoria.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100280319}
     - target: {fileID: 2376509581205463844, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -23287,6 +23355,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6055767802021951052, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
+      propertyPath: painelConfig
+      value: 
+      objectReference: {fileID: 2100280328}
+    - target: {fileID: 6055767802021951052, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
+      propertyPath: painelAnterior
+      value: 
+      objectReference: {fileID: 2100280327}
     - target: {fileID: 6219600205754120830, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
       propertyPath: painelLog
       value: 
@@ -23885,6 +23961,169 @@ MonoBehaviour:
 --- !u!1 &2100280311 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3487239003075023303, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+  m_PrefabInstance: {fileID: 2100280307}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2100280312 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4885169767513270251, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+  m_PrefabInstance: {fileID: 2100280307}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!114 &2100280313 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6249728770954899605, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+  m_PrefabInstance: {fileID: 2100280307}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!114 &2100280314 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 85204042809179937, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+  m_PrefabInstance: {fileID: 2100280307}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!1 &2100280315 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8337211896552288018, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+  m_PrefabInstance: {fileID: 2100280307}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2100280316 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1052825727040973245, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+  m_PrefabInstance: {fileID: 2100280307}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!114 &2100280317 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1584081308568833901, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+  m_PrefabInstance: {fileID: 2100280307}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!114 &2100280318 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7349367459194325073, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+  m_PrefabInstance: {fileID: 2100280307}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!114 &2100280319 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6828447139772308076, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+  m_PrefabInstance: {fileID: 2100280307}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!114 &2100280320 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 421254334599562041, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+  m_PrefabInstance: {fileID: 2100280307}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!114 &2100280321 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9059226640979089810, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+  m_PrefabInstance: {fileID: 2100280307}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!114 &2100280322 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8221648122902049686, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+  m_PrefabInstance: {fileID: 2100280307}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!1 &2100280323 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6658603956036004452, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+  m_PrefabInstance: {fileID: 2100280307}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2100280324 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6450238436793752255, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+  m_PrefabInstance: {fileID: 2100280307}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Slider
+--- !u!114 &2100280325 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4885950104438196541, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+  m_PrefabInstance: {fileID: 2100280307}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Slider
+--- !u!114 &2100280326 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1125237737327235482, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+  m_PrefabInstance: {fileID: 2100280307}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Slider
+--- !u!1 &2100280327 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 747564798222112900, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+  m_PrefabInstance: {fileID: 2100280307}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2100280328 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8217597352124757397, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
   m_PrefabInstance: {fileID: 2100280307}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2100689655

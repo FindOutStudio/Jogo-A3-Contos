@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using TMPro; 
+using System.Collections.Generic;
 
 public class LogUIManager : MonoBehaviour
 {
@@ -34,10 +35,8 @@ public class LogUIManager : MonoBehaviour
         if (painelLog != null) painelLog.SetActive(false);
     }
 
-    // ======== ADICIONAMOS ISSO AQUI ========
     private void Update()
     {
-        // Se o painel do Log estiver ligado na tela E o jogador apertar ESC
         if (painelLog != null && painelLog.activeSelf)
         {
             if (Input.GetKeyDown(KeyCode.Escape))
@@ -46,9 +45,9 @@ public class LogUIManager : MonoBehaviour
             }
         }
     }
-    // =======================================
 
-    public void MostrarLog(int id, string lore)
+    // ======= AQUI ELE RECEBE AS CORES DO INSPECTOR DO COLETÁVEL =======
+    public void MostrarLog(int id, string nome, Color corNome, string lore, Color corTexto)
     {
         Time.timeScale = 0f;
         PauseMenu.isPaused = true; 
@@ -59,8 +58,26 @@ public class LogUIManager : MonoBehaviour
 
         painelLog.transform.localScale = Vector3.zero;
 
+        // O código junta o nome e a fala com as cores que você escolheu no Inspector!
+        string textoPronto = MontarTextoComCores(nome, corNome, lore, corTexto);
+
         StopAllCoroutines(); 
-        StartCoroutine(AnimacaoAparecer(lore));
+        StartCoroutine(AnimacaoAparecer(textoPronto));
+    }
+
+    private string MontarTextoComCores(string nome, Color corNome, string texto, Color corTexto)
+    {
+        string hexNome = ColorUtility.ToHtmlStringRGBA(corNome);
+        string hexTexto = ColorUtility.ToHtmlStringRGBA(corTexto);
+
+        if (string.IsNullOrEmpty(nome))
+        {
+            return $"<color=#{hexTexto}>{texto}</color>";
+        }
+        else
+        {
+            return $"<color=#{hexNome}>{nome}: </color><color=#{hexTexto}>{texto}</color>";
+        }
     }
 
     public void FecharLog()
@@ -70,7 +87,7 @@ public class LogUIManager : MonoBehaviour
         PauseMenu.isPaused = false;
     }
 
-    private IEnumerator AnimacaoAparecer(string lore)
+    private IEnumerator AnimacaoAparecer(string textoFinal)
     {
         while (painelLog.transform.localScale.x < 0.99f)
         {
@@ -79,33 +96,67 @@ public class LogUIManager : MonoBehaviour
         }
         painelLog.transform.localScale = Vector3.one;
 
-        StartCoroutine(EfeitoTextoMinecraft(lore));
+        StartCoroutine(EfeitoTextoMinecraft(textoFinal));
     }
 
+    // O Analisador Inteligente: Faz o Glitch funcionar sem quebrar as cores!
     private IEnumerator EfeitoTextoMinecraft(string textoReal)
     {
-        for (int i = 0; i <= textoReal.Length + tamanhoDoRastro; i++)
+        List<string> parsedText = new List<string>();
+        List<bool> isTag = new List<bool>();
+        int totalVisibleChars = 0;
+
+        int idx = 0;
+        while (idx < textoReal.Length)
+        {
+            if (textoReal[idx] == '<')
+            {
+                int closingIdx = textoReal.IndexOf('>', idx);
+                if (closingIdx != -1)
+                {
+                    parsedText.Add(textoReal.Substring(idx, closingIdx - idx + 1));
+                    isTag.Add(true);
+                    idx = closingIdx + 1;
+                    continue;
+                }
+            }
+            parsedText.Add(textoReal[idx].ToString());
+            isTag.Add(false);
+            totalVisibleChars++;
+            idx++;
+        }
+
+        for (int i = 0; i <= totalVisibleChars + tamanhoDoRastro; i++)
         {
             for (int j = 0; j < vezesParaEmbaralhar; j++)
             {
                 string textoAtual = "";
-                
-                for (int k = 0; k < textoReal.Length; k++)
+                int visibleCount = 0;
+
+                for (int k = 0; k < parsedText.Count; k++)
                 {
-                    if (k < i - tamanhoDoRastro)
+                    if (isTag[k])
                     {
-                        textoAtual += textoReal[k];
-                    }
-                    else if (k < i)
-                    {
-                        if (textoReal[k] == ' ' || textoReal[k] == '\n') 
-                            textoAtual += textoReal[k];
-                        else 
-                            textoAtual += caracteresRandom[Random.Range(0, caracteresRandom.Length)];
+                        textoAtual += parsedText[k];
                     }
                     else
                     {
-                        break; 
+                        if (visibleCount < i - tamanhoDoRastro)
+                        {
+                            textoAtual += parsedText[k];
+                        }
+                        else if (visibleCount < i)
+                        {
+                            if (string.IsNullOrWhiteSpace(parsedText[k])) 
+                                textoAtual += parsedText[k];
+                            else 
+                                textoAtual += caracteresRandom[Random.Range(0, caracteresRandom.Length)].ToString();
+                        }
+                        else
+                        {
+                            break; 
+                        }
+                        visibleCount++;
                     }
                 }
 

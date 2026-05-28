@@ -439,7 +439,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &318849446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5212,8 +5212,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -15}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 506.81, y: 0}
-  m_SizeDelta: {x: 1129.531, y: 1129.542}
+  m_AnchoredPosition: {x: 112, y: -221}
+  m_SizeDelta: {x: 1824.6296, y: 1770.8228}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2144359974
 MonoBehaviour:
@@ -5235,7 +5235,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6241924522059696973, guid: bfe30eacd0895ff41b9d8329983f0ce2, type: 3}
+  m_Sprite: {fileID: -4782456634516879734, guid: a7a01243846329c49a42ae9b53f48b98, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -1363,7 +1363,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: VOLUME MUSICA
+  m_text: "VOLUME M\xDASICA"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6d037802fa3cbdc43ade9c79b2ab5e4e, type: 2}
   m_sharedMaterial: {fileID: -4424747335348935971, guid: 6d037802fa3cbdc43ade9c79b2ab5e4e, type: 2}
@@ -5337,30 +5337,6 @@ PrefabInstance:
     - target: {fileID: 656116075782511347, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5989580565467710740, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
-      propertyPath: volumeLaser
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5989580565467710740, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
-      propertyPath: volumePlayerMorte
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5989580565467710740, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
-      propertyPath: volumeUxSlowMotion
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5989580565467710740, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
-      propertyPath: volumeLancadorPuxar
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 5989580565467710740, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
-      propertyPath: volumePlayerPegarLog
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5989580565467710740, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
-      propertyPath: volumePlayerPegarRaio
-      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6853959403100760164, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
       propertyPath: m_Name

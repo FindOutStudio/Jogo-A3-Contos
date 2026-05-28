@@ -262,7 +262,7 @@ MonoBehaviour:
   volumeUxSlowMotion: 1
   uxErro: {fileID: 8300000, guid: f5203d7035f6c7c469088bc77e92c3d1, type: 3}
   volumeUxErro: 0.7
-  uxVitoria: {fileID: 8300000, guid: ae538605dbb31f847b1fcfd2660fa0bc, type: 3}
+  uxVitoria: {fileID: 8300000, guid: 216fcc5a698b76c41be5c639dd2e4539, type: 3}
   volumeUxVitoria: 1
   playerMorte: {fileID: 8300000, guid: 436aad4a7c0c5a049af2fcbba04905ee, type: 3}
   volumePlayerMorte: 0.3

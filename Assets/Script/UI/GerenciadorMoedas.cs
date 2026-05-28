@@ -20,6 +20,8 @@ public class GerenciadorMoedas : MonoBehaviour
 
     [Header("Progresso do Jogo")]
     public int idDestaFase = 0;
+    
+    [Tooltip("Deixe VAZIO nas fases normais para ir para a próxima fase. Só preencha se quiser um vídeo!")]
     public string idCinematicaVitoria;
 
     [Header("=== TELA DE VITÓRIA ===")]
@@ -104,12 +106,15 @@ public class GerenciadorMoedas : MonoBehaviour
             FlutuarRaios();
         }
 
+        // ======= A MÁGICA DE ESCONDER O HUD =======
         if (painelHUD != null)
         {
             bool telaLogsAberta = (LogUIManager.instance != null && LogUIManager.instance.painelLog != null && LogUIManager.instance.painelLog.activeSelf);
             bool telaVitoriaAberta = (painelVitoria != null && painelVitoria.activeSelf);
+            bool jogoPausado = PauseMenu.isPaused; // Se o Menu de Pause estiver aberto...
 
-            if (telaLogsAberta || telaVitoriaAberta)
+            // Esconde se for Log, Vitória OU Pause!
+            if (telaLogsAberta || telaVitoriaAberta || jogoPausado)
             {
                 painelHUD.SetActive(false);
             }
@@ -227,7 +232,6 @@ public class GerenciadorMoedas : MonoBehaviour
         }
     }
 
-    // ======= MUDANÇAS AQUI =======
     public void BotaoProximaFase()
     {
         LimparEfeitosPause();
@@ -235,7 +239,6 @@ public class GerenciadorMoedas : MonoBehaviour
         PlayerPrefs.SetInt("FaseLiberada_" + proximaFaseID, 1);
         PlayerPrefs.Save();
         
-        // Verifica se há cinemática pós-vitória antes de avançar[cite: 2]
         if (!string.IsNullOrEmpty(idCinematicaVitoria))
         {
             PlayerPrefs.SetString("CinematicaPendente", idCinematicaVitoria);
@@ -248,7 +251,6 @@ public class GerenciadorMoedas : MonoBehaviour
             {
                 string caminhoCena = SceneUtility.GetScenePathByBuildIndex(proximaCena);
                 string nomeDaCenaNova = System.IO.Path.GetFileNameWithoutExtension(caminhoCena);
-                // Utiliza a transição suave em vez de LoadScene direto[cite: 2]
                 GerenciadorTransicoes.instance.TrocarCena(nomeDaCenaNova);
             }
             else 
@@ -261,7 +263,6 @@ public class GerenciadorMoedas : MonoBehaviour
     public void BotaoReiniciarFase()
     {
         LimparEfeitosPause();
-        // A transição de morte/reset é tratada dentro do GerenciadorTransicoes[cite: 2]
         GerenciadorTransicoes.instance.TrocarCena(SceneManager.GetActiveScene().name);
     }
 

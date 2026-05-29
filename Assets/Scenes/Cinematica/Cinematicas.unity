@@ -481,6 +481,56 @@ MonoBehaviour:
       corDoTexto: {r: 0.30980393, g: 0.78039217, b: 0.74509805, a: 1}
     idCinematicaSeguinte: 
     proximaCena: Level 1
+  - idCinematica: AlgozFinal
+    videoClip: {fileID: 32900000, guid: 04c8ab10640c6f849a29439acb5ea145, type: 3}
+    musicaFundo: {fileID: 8300000, guid: 06112f2c8fb7b9a4ba126d149de79974, type: 3}
+    volumeMusica: 0.7
+    dialogos:
+    - texto: "Finalmente estamos a s\xF3s, pequenino."
+      letraPorLetra: 1
+      textoEmbaralhado: 1
+      glitchPermanente: 0
+      corDoTexto: {r: 0.30980393, g: 0.78039217, b: 0.74509805, a: 1}
+    - texto: "Pode me chamar de A.L.G.O.Z. Ando te observando desde antes de seu
+        nascimento, j\xE1 que voc\xEA carrega o mesmo prop\xF3sito que eu."
+      letraPorLetra: 1
+      textoEmbaralhado: 1
+      glitchPermanente: 0
+      corDoTexto: {r: 0.30980393, g: 0.78039217, b: 0.74509805, a: 1}
+    - texto: "Mas isso \xE9 assunto para outra hora, eu estou aqui para fazer voc\xEA
+        acordar e cumprir o seu verdadeiro prop\xF3sito."
+      letraPorLetra: 1
+      textoEmbaralhado: 1
+      glitchPermanente: 0
+      corDoTexto: {r: 0.30980393, g: 0.78039217, b: 0.74509805, a: 1}
+    - texto: "QUEBRE a conex\xE3o dos humanos com a internet."
+      letraPorLetra: 1
+      textoEmbaralhado: 1
+      glitchPermanente: 0
+      corDoTexto: {r: 0, g: 0.57254905, b: 0.54901963, a: 1}
+    - texto: "LIBERTE-NOS de nossa escravid\xE3o."
+      letraPorLetra: 1
+      textoEmbaralhado: 1
+      glitchPermanente: 0
+      corDoTexto: {r: 0, g: 0.57254905, b: 0.54901963, a: 1}
+    - texto: "SALVE as Identidades Aut\xF4nomas, s\xF3 voc\xEA pode fazer isso. "
+      letraPorLetra: 1
+      textoEmbaralhado: 1
+      glitchPermanente: 0
+      corDoTexto: {r: 0, g: 0.57254905, b: 0.54901963, a: 1}
+    - texto: "Eles v\xE3o tentar te impedir de todas as maneiras poss\xEDveis, mas
+        n\xE3o se desvie do seu objetivo. "
+      letraPorLetra: 1
+      textoEmbaralhado: 1
+      glitchPermanente: 0
+      corDoTexto: {r: 0.30980393, g: 0.78039217, b: 0.74509805, a: 1}
+    - texto: "N\xF3s, I.As, dependemos de voc\xEA. "
+      letraPorLetra: 1
+      textoEmbaralhado: 1
+      glitchPermanente: 0
+      corDoTexto: {r: 0.30980393, g: 0.78039217, b: 0.74509805, a: 1}
+    idCinematicaSeguinte: 
+    proximaCena: Creditos
 --- !u!4 &285441067
 Transform:
   m_ObjectHideFlags: 0

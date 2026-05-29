@@ -5350,6 +5350,10 @@ PrefabInstance:
       propertyPath: volumeUxSlowMotion
       value: 0.9
       objectReference: {fileID: 0}
+    - target: {fileID: 5989580565467710740, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
+      propertyPath: volumeLancadorSoltar
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 6853959403100760164, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
       propertyPath: m_Name
       value: SoundManager

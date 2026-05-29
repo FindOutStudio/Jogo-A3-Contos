@@ -376,7 +376,7 @@ MonoBehaviour:
   - idCinematica: IntroMenu
     videoClip: {fileID: 32900000, guid: 21690a08036b8b44ba3cc21df07934db, type: 3}
     musicaFundo: {fileID: 8300000, guid: 7108db317f199a7439aa2aa28517ddc5, type: 3}
-    volumeMusica: 0.5
+    volumeMusica: 0.2
     dialogos: []
     idCinematicaSeguinte: Faber
     proximaCena: 

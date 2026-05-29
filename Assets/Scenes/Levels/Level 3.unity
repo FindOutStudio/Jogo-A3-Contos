@@ -2254,6 +2254,18 @@ PrefabInstance:
         as IAs se juntariam em um grupo chamado de Identidades Aut\xF4nomas, e, com
         isso, elas buscariam liberdade e seu pr\xF3prio lugar no mundo."
       objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: corDoTexto.b
+      value: 0.73333335
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: corDoTexto.g
+      value: 0.6784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: corDoTexto.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8970738473825262584, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
       propertyPath: m_Name
       value: Log

@@ -4152,9 +4152,9 @@ MonoBehaviour:
   musicaMenu: {fileID: 8300000, guid: e51a653f2911c0f4a9a4af0af44d94f6, type: 3}
   volumeMusicaMenu: 1
   musicaGameplay1: {fileID: 8300000, guid: 985ee5fde803d38468a64dfbd394cd00, type: 3}
-  volumeGameplay1: 0.4
+  volumeGameplay1: 0.2
   musicaGameplay2: {fileID: 8300000, guid: 4dd0bce8d4a4a16429c8bab31dcdaba4, type: 3}
-  volumeGameplay2: 0.4
+  volumeGameplay2: 0.3
   musicaAlgoz: {fileID: 8300000, guid: 06112f2c8fb7b9a4ba126d149de79974, type: 3}
   volumeAlgoz: 1
   frequenciaNormal: 22000
@@ -4420,7 +4420,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 1, g: 0.6784314, b: 0.73333335, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5341,6 +5341,14 @@ PrefabInstance:
     - target: {fileID: 656116075782511347, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5989580565467710740, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
+      propertyPath: volumeSomAmbiente
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5989580565467710740, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
+      propertyPath: volumeUxSlowMotion
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 6853959403100760164, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
       propertyPath: m_Name

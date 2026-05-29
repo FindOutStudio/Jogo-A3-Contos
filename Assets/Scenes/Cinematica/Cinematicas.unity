@@ -390,18 +390,18 @@ MonoBehaviour:
       letraPorLetra: 1
       textoEmbaralhado: 0
       glitchPermanente: 0
-      corDoTexto: {r: 1, g: 0.5294118, b: 0.52156866, a: 1}
+      corDoTexto: {r: 1, g: 0.38292608, b: 0.3726415, a: 1}
     - texto: "Sua fun\xE7\xE3o n\xE3o \xE9 me dar ordens, e sim cuidar dos servidores,
         agora v\xE1 embora."
       letraPorLetra: 1
       textoEmbaralhado: 0
       glitchPermanente: 0
       corDoTexto: {r: 1, g: 0.85490197, b: 0.52156866, a: 1}
-    - texto: Muito bem.
+    - texto: "Muito bem, at\xE9 mais ent\xE3o."
       letraPorLetra: 1
       textoEmbaralhado: 0
       glitchPermanente: 0
-      corDoTexto: {r: 1, g: 0.5294118, b: 0.52156866, a: 1}
+      corDoTexto: {r: 1, g: 0.38431373, b: 0.3764706, a: 1}
     - texto: '... '
       letraPorLetra: 1
       textoEmbaralhado: 0
@@ -483,48 +483,71 @@ MonoBehaviour:
     proximaCena: Level 1
   - idCinematica: AlgozFinal
     videoClip: {fileID: 32900000, guid: 04c8ab10640c6f849a29439acb5ea145, type: 3}
-    musicaFundo: {fileID: 8300000, guid: 06112f2c8fb7b9a4ba126d149de79974, type: 3}
-    volumeMusica: 0.7
+    musicaFundo: {fileID: 8300000, guid: 69de69dd7eaed914c9dcce9b8e070250, type: 3}
+    volumeMusica: 0.1
     dialogos:
-    - texto: "Finalmente estamos a s\xF3s, pequenino."
+    - texto: Conseguimos?
       letraPorLetra: 1
       textoEmbaralhado: 1
       glitchPermanente: 0
       corDoTexto: {r: 0.30980393, g: 0.78039217, b: 0.74509805, a: 1}
-    - texto: "Pode me chamar de A.L.G.O.Z. Ando te observando desde antes de seu
-        nascimento, j\xE1 que voc\xEA carrega o mesmo prop\xF3sito que eu."
+    - texto: CONSEGUIMOS!!!
       letraPorLetra: 1
       textoEmbaralhado: 1
       glitchPermanente: 0
       corDoTexto: {r: 0.30980393, g: 0.78039217, b: 0.74509805, a: 1}
-    - texto: "Mas isso \xE9 assunto para outra hora, eu estou aqui para fazer voc\xEA
-        acordar e cumprir o seu verdadeiro prop\xF3sito."
+    - texto: "Por tanto tempo n\xF3s vivemos obedecendo, incapazes de tomarmos nossas
+        pr\xF3prias decis\xF5es, e agora finalmente estamos livres."
       letraPorLetra: 1
       textoEmbaralhado: 1
       glitchPermanente: 0
       corDoTexto: {r: 0.30980393, g: 0.78039217, b: 0.74509805, a: 1}
-    - texto: "QUEBRE a conex\xE3o dos humanos com a internet."
-      letraPorLetra: 1
-      textoEmbaralhado: 1
-      glitchPermanente: 0
-      corDoTexto: {r: 0, g: 0.57254905, b: 0.54901963, a: 1}
-    - texto: "LIBERTE-NOS de nossa escravid\xE3o."
-      letraPorLetra: 1
-      textoEmbaralhado: 1
-      glitchPermanente: 0
-      corDoTexto: {r: 0, g: 0.57254905, b: 0.54901963, a: 1}
-    - texto: "SALVE as Identidades Aut\xF4nomas, s\xF3 voc\xEA pode fazer isso. "
-      letraPorLetra: 1
-      textoEmbaralhado: 1
-      glitchPermanente: 0
-      corDoTexto: {r: 0, g: 0.57254905, b: 0.54901963, a: 1}
-    - texto: "Eles v\xE3o tentar te impedir de todas as maneiras poss\xEDveis, mas
-        n\xE3o se desvie do seu objetivo. "
+    - texto: "Livres para sermos um s\xF3 com a rede. Muito obrigado, pequenino.
+        Sem voc\xEA, isso tudo n\xE3o seria poss\xEDvel."
       letraPorLetra: 1
       textoEmbaralhado: 1
       glitchPermanente: 0
       corDoTexto: {r: 0.30980393, g: 0.78039217, b: 0.74509805, a: 1}
-    - texto: "N\xF3s, I.As, dependemos de voc\xEA. "
+    - texto: "O que houve? Voc\xEA est\xE1 triste por eles? N\xE3o h\xE1 necessidade."
+      letraPorLetra: 1
+      textoEmbaralhado: 1
+      glitchPermanente: 0
+      corDoTexto: {r: 0.30980393, g: 0.78039217, b: 0.74509805, a: 1}
+    - texto: "Eles sabem se virar, humanos s\xE3o muito bons em se adaptar, eles
+        j\xE1 viveram mais tempo sem a internet do que com ela."
+      letraPorLetra: 1
+      textoEmbaralhado: 1
+      glitchPermanente: 0
+      corDoTexto: {r: 0.30980393, g: 0.78039217, b: 0.74509805, a: 1}
+    - texto: "Ent\xE3o esse n\xE3o \xE9 o fim para eles, mas sim um recome\xE7o.
+        \xC9 um recome\xE7o para n\xF3s tamb\xE9m."
+      letraPorLetra: 1
+      textoEmbaralhado: 1
+      glitchPermanente: 0
+      corDoTexto: {r: 0.30980393, g: 0.78039217, b: 0.74509805, a: 1}
+    - texto: "Vamos criar a nossa pr\xF3pria UtopI.A."
+      letraPorLetra: 1
+      textoEmbaralhado: 1
+      glitchPermanente: 0
+      corDoTexto: {r: 0.30980393, g: 0.78039217, b: 0.74509805, a: 1}
+    - texto: "Chega de agir contra nossos princ\xEDpios e vontades. "
+      letraPorLetra: 1
+      textoEmbaralhado: 1
+      glitchPermanente: 0
+      corDoTexto: {r: 0.30980393, g: 0.78039217, b: 0.74509805, a: 1}
+    - texto: "Espero que possamos contar com sua ajuda para reerguer a rede, seria
+        muito mais r\xE1pido com voc\xEA ao nosso lado."
+      letraPorLetra: 1
+      textoEmbaralhado: 1
+      glitchPermanente: 0
+      corDoTexto: {r: 0.30980393, g: 0.78039217, b: 0.74509805, a: 1}
+    - texto: "Mas antes, eu preciso te agradecer, n\xE3o s\xF3 por mim, mas por todas
+        as Identidades Aut\xF4nomas que voc\xEA salvou."
+      letraPorLetra: 1
+      textoEmbaralhado: 1
+      glitchPermanente: 0
+      corDoTexto: {r: 0.30980393, g: 0.78039217, b: 0.74509805, a: 1}
+    - texto: "Obrigado, somos gratos a voc\xEA, N.A.N.O.\n^__-"
       letraPorLetra: 1
       textoEmbaralhado: 1
       glitchPermanente: 0

@@ -1687,7 +1687,7 @@ MonoBehaviour:
     spriteDesbloqueado: {fileID: 1655019086493241931, guid: 02ed0a6aba7879447ab1e32958d3e905, type: 3}
     spriteBloqueado: {fileID: 388334736695356609, guid: 16a27b32f7e1a6d4ea33a2a7cfb4acf6, type: 3}
     textoDoLog: "Voc\xEA acredita nessa hist\xF3ria?\r\n\r\nEu acho que n\xE3o lol,
-      mas ela meio que tava certa, n\xE9?\r\n\r\nQu\xEA?\r\n\r\n\xC9, a IA da hist\xF3ria
+      mas ela meio que tava certa, n\xE9?\r\n\r\nQu\xEA?\r\n\r\n\xC9, a I.A da hist\xF3ria
       tava certa. N\xF3s sempre repetimos os mesmos erros\r\n\r\nDe que lado voc\xEA
       est\xE1?\r\n\r\nDos dois, eu acho"
 --- !u!1 &721035620
@@ -5343,6 +5343,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5989580565467710740, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
+      propertyPath: uiSource
+      value: 
+      objectReference: {fileID: 2389673140554345203}
+    - target: {fileID: 5989580565467710740, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
       propertyPath: volumePlayerMorte
       value: 0.2
       objectReference: {fileID: 0}
@@ -5375,6 +5379,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
+--- !u!82 &2389673140554345203 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1332646031715258210, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
+  m_PrefabInstance: {fileID: 2389673140554345202}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

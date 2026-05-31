@@ -230,7 +230,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -3860}
+  m_AnchoredPosition: {x: 0, y: -4161}
   m_SizeDelta: {x: 410.9028, y: 262.1329}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &236043503
@@ -513,9 +513,11 @@ MonoBehaviour:
     Uva Morgado\n\"Uva\"\nComposi\xE7\xE3o e Produ\xE7\xE3o Musical\n\nAgradecimento
     especial aos professores;\n\nDelmar Galisi Domingues\nGabriel Davini de Siqueira\n\nAgradecimento
     especial para esses nomes, que auxiliaram na realiza\xE7\xE3o do projeto, dando
-    feedbacks construtivos e apoio.\n\nRafael Cerchiaro\n\nKayk dos Santos Carneiro\n\nAntonio
-    Junior\n\nJulia Duarte Calazans\n\nJo\xE3o Pedro Silva Miranda Saraiva\n\nOt\xE1vio
-    Luiz de Oliveira Porto\n\nPedro Silva Oliveira\n\nGabriel \"Bisteca\" Pereira\n\r\n"
+    feedbacks construtivos e apoio.\n\nAntonio Junior\r\n\r\nGabriel \"Bisteca\"
+    Pereira\r\n\r\nHenrique Santos\r\n\r\nJo\xE3o Pedro Silva Miranda Saraiva\r\n\r\nJulia
+    Duarte Calazans\r\n\r\nKayk dos Santos Carneiro\r\n\r\nLoreena Murakami Leme
+    do Prado\r\n\r\nMaria Clara Oliveira Bonfim\r\n\r\nOt\xE1vio Luiz de Oliveira
+    Porto\r\n\r\nPedro Silva Oliveira\r\n\r\nRafael Cerchiaro\r\n\r\nYara Heimeshoff\n\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6d037802fa3cbdc43ade9c79b2ab5e4e, type: 2}
   m_sharedMaterial: {fileID: -4424747335348935971, guid: 6d037802fa3cbdc43ade9c79b2ab5e4e, type: 2}
@@ -1067,8 +1069,11 @@ MonoBehaviour:
   rastroDuble: {fileID: 693266304}
   tempoMinimoEspera: 2
   tempoMaximoEspera: 5
-  velocidadeMovimento: 25
+  velocidadeHorizontal: 12
+  velocidadeVertical: 4
   limitesTela: {x: 12, y: 7}
+  limiteAlturaVoo: 3.5
+  posicaoXDasColunas: 6
 --- !u!4 &1537521875
 Transform:
   m_ObjectHideFlags: 0
@@ -1323,7 +1328,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -4148}
+  m_AnchoredPosition: {x: 0, y: -4442}
   m_SizeDelta: {x: 1104.3428, y: 151.0703}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2079285960

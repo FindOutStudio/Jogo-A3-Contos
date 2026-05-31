@@ -1,22 +1,23 @@
 using UnityEngine;
+using System.Collections.Generic;
+
+// O bloquinho que vai aparecer no Inspector: só a Fala e a Cor
+[System.Serializable]
+public class LinhaDeDialogo
+{
+    [TextArea(2, 4)]
+    public string fala;
+    public Color corDaFala = Color.white;
+}
 
 [RequireComponent(typeof(Collider2D))]
 public class LogColetavel : MonoBehaviour
 {
     [Header("Dados do Log")]
-    [Tooltip("O número de identificação único desse log (Ex: 1 para o Log #1)")]
     public int logID;
     
-    [Header("Estilo do Texto (Cores)")]
-    [Tooltip("Nome de quem escreveu o log (Ex: SISTEMA, ALGOZ). Deixe vazio para esconder.")]
-    public string nomePersonagem;
-    public Color corDoNome = Color.red; 
-    
-    [Space(10)]
-    [Tooltip("O texto da história que vai aparecer no pop-up")]
-    [TextArea(5, 10)] 
-    public string textoDoLog;
-    public Color corDoTexto = Color.white;
+    [Header("Bate-Papo (Adicione as linhas no +)")]
+    public List<LinhaDeDialogo> batePapo;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -33,12 +34,36 @@ public class LogColetavel : MonoBehaviour
         PlayerPrefs.SetInt("LogColetado_" + logID, 1);
         PlayerPrefs.Save();
 
-        // Agora ele envia as variáveis de nome e cor mastigadinhas pra UI!
+        // Envia o textão montado para o UI Manager
         if (LogUIManager.instance != null)
         {
-            LogUIManager.instance.MostrarLog(logID, nomePersonagem, corDoNome, textoDoLog, corDoTexto);
+            string textoPronto = MontarConversa();
+            LogUIManager.instance.MostrarLog(logID, textoPronto);
         }
 
         Destroy(gameObject);
+    }
+
+    // A mágica acontece aqui: ele pega a lista e transforma num textão só com as cores embutidas
+    private string MontarConversa()
+    {
+        string textoFinal = "";
+
+        for (int i = 0; i < batePapo.Count; i++)
+        {
+            // O "RGB" no final garante que a Unity não deixe seu texto invisível por causa do Alpha!
+            string corHex = ColorUtility.ToHtmlStringRGB(batePapo[i].corDaFala);
+
+            // Coloca a cor em volta da frase atual
+            textoFinal += $"<color=#{corHex}>{batePapo[i].fala}</color>";
+
+            // Pula de linha para a resposta da outra pessoa ficar embaixo (exceto na última frase)
+            if (i < batePapo.Count - 1)
+            {
+                textoFinal += "\n\n"; // Se quiser que fique mais juntinho, deixe apenas um "\n"
+            }
+        }
+
+        return textoFinal;
     }
 }

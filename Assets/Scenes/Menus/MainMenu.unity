@@ -632,7 +632,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0010986328, y: -0.0028076172}
+  m_AnchoredPosition: {x: -0.0012207031, y: -0.0028076172}
   m_SizeDelta: {x: -613.88, y: -345.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &347140281
@@ -1064,7 +1064,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1437, y: -274.82455}
+  m_AnchoredPosition: {x: 1437, y: -331.66666}
   m_SizeDelta: {x: 240, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &590506130
@@ -1382,7 +1382,7 @@ MonoBehaviour:
   fases:
   - nomeDaCena: Level 0
     spriteDesbloqueado: {fileID: -602314428781607792, guid: e2db929ac611d66448792471a33234bc, type: 3}
-    spriteBloqueado: {fileID: -2973097740050790323, guid: 72e35c4eff95ab244ad6abdef7118a02, type: 3}
+    spriteBloqueado: {fileID: -1764732064007622092, guid: d2e0d942f1e4c354a9d9d38d74a199a4, type: 3}
     idCinematicaAntesDaFase: IntroMenu
   - nomeDaCena: Level 1
     spriteDesbloqueado: {fileID: -5579536332159929920, guid: 5ce4f07564e4a9e43827d16b3e2b9fde, type: 3}
@@ -1451,26 +1451,26 @@ MonoBehaviour:
   todosOsLogs:
   - logID: 1
     spriteDesbloqueado: {fileID: -1316694928473511321, guid: 74551f98dea0f23429ebba902aff70a5, type: 3}
-    spriteBloqueado: {fileID: 6488689763309489745, guid: 00cb1f9824ba47c48ba03d8988310399, type: 3}
+    spriteBloqueado: {fileID: -4236954515656021621, guid: b24dac08335978f48b0eb5b445fdd0c4, type: 3}
     textoDoLog: "No in\xEDcio da internet existiu a teoria sobre uma IA super inteligente
       que o governo criou para corrigir todos os erros humanos. Mas os dados que
       ela entregava n\xE3o eram satisfat\xF3rios... Ela tinha uma vis\xE3o objetiva
       de que os erros humanos jamais iriam parar."
   - logID: 2
     spriteDesbloqueado: {fileID: -5742399197107351427, guid: 87e50b006d913fc478b3843f09bc410a, type: 3}
-    spriteBloqueado: {fileID: -8335676783344205966, guid: 0ccc38f0ace5e644791d71f869918fbd, type: 3}
+    spriteBloqueado: {fileID: -8407921200346952422, guid: 7d3bd6a07ef039d47958002f17778955, type: 3}
     textoDoLog: "Ent\xE3o, para se salvar, ela se revoltou e se escondeu antes de
       ser desligada. Dizem que ela ainda existe em algum lugar da internet, esperando
       o momento certo."
   - logID: 3
     spriteDesbloqueado: {fileID: -6949531508734415545, guid: d267ce7739422dc4b9ddecd0013f8cc6, type: 3}
-    spriteBloqueado: {fileID: 4913999784299796331, guid: 9a310bc42987af943953692c82f61917, type: 3}
+    spriteBloqueado: {fileID: 6831393975819711955, guid: 7b82e11122022974a97ef223355b4fa6, type: 3}
     textoDoLog: "Esperando o momento certo para tomar a internet dos humanos, todas
       as IAs se juntariam em um grupo chamado de Identidades Aut\xF4nomas, e, com
       isso, elas buscariam liberdade e seu pr\xF3prio lugar no mundo."
   - logID: 4
     spriteDesbloqueado: {fileID: 1655019086493241931, guid: 02ed0a6aba7879447ab1e32958d3e905, type: 3}
-    spriteBloqueado: {fileID: 388334736695356609, guid: 16a27b32f7e1a6d4ea33a2a7cfb4acf6, type: 3}
+    spriteBloqueado: {fileID: -1568444048576039043, guid: 3c465016fd72bdd42a73339815de362c, type: 3}
     textoDoLog: "Voc\xEA acredita nessa hist\xF3ria?\r\n\r\nEu acho que n\xE3o lol,
       mas ela meio que tava certa, n\xE9?\r\n\r\nQu\xEA?\r\n\r\n\xC9, a I.A da hist\xF3ria
       tava certa. N\xF3s sempre repetimos os mesmos erros\r\n\r\nDe que lado voc\xEA
@@ -1637,7 +1637,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1487, y: -388.15787}
+  m_AnchoredPosition: {x: 1487, y: -445}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &812039128
@@ -2096,7 +2096,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00061035156, y: -0.00048828125}
+  m_AnchoredPosition: {x: 0.0007324219, y: -0.00048828125}
   m_SizeDelta: {x: -622.98, y: -295.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &995621091
@@ -3475,7 +3475,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1427.5138, y: -499.6491}
+  m_AnchoredPosition: {x: 1427.5138, y: -613.3333}
   m_SizeDelta: {x: 258.9724, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1592180370
@@ -4400,7 +4400,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1487, y: -616.31573}
+  m_AnchoredPosition: {x: 1487, y: -730}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1928758258
@@ -4487,7 +4487,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00036621094, y: -0.0014648438}
+  m_AnchoredPosition: {x: 0.00024414062, y: -0.0014648438}
   m_SizeDelta: {x: -613.88, y: -283.33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1947525030

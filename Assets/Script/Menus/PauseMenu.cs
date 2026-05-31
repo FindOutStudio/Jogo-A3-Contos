@@ -65,6 +65,23 @@ public class PauseMenu : MonoBehaviour
 
     public void Pausar()
     {
+        // ======= MÁGICA AQUI: Força o fechamento de Logs antes de pausar =======
+        if (LogUIManager.instance != null && LogUIManager.instance.painelLog != null && LogUIManager.instance.painelLog.activeSelf)
+        {
+            LogUIManager.instance.FecharLog();
+        }
+
+        // ======= MÁGICA AQUI: Força o fechamento de Tutoriais (Pop-ups) antes de pausar =======
+        TutorialEvento[] tutoriais = FindObjectsOfType<TutorialEvento>();
+        foreach (TutorialEvento t in tutoriais)
+        {
+            if (t.painelPopUp != null && t.painelPopUp.activeSelf)
+            {
+                t.FecharPopUp();
+            }
+        }
+
+        // Agora sim, abre o Pause de verdade!
         pausePanel.SetActive(true);
         if (painelConfig != null) painelConfig.SetActive(false);
         pauseButton.SetActive(false);

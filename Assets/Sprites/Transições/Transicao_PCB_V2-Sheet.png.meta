@@ -1,0 +1,728 @@
+fileFormatVersion: 2
+guid: aaa00c4f8f2d1c343ba16ba2d4104b37
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5872418108192828079
+    second: Transicao_PCB_V2-Sheet_0
+  - first:
+      213: -3877831559030087984
+    second: Transicao_PCB_V2-Sheet_1
+  - first:
+      213: 5285154897945442769
+    second: Transicao_PCB_V2-Sheet_2
+  - first:
+      213: -232354330748968121
+    second: Transicao_PCB_V2-Sheet_3
+  - first:
+      213: 4650785970843092524
+    second: Transicao_PCB_V2-Sheet_4
+  - first:
+      213: -4143685291284528212
+    second: Transicao_PCB_V2-Sheet_5
+  - first:
+      213: -3421057939963312934
+    second: Transicao_PCB_V2-Sheet_6
+  - first:
+      213: 1210879957715970606
+    second: Transicao_PCB_V2-Sheet_7
+  - first:
+      213: -8931317518859706701
+    second: Transicao_PCB_V2-Sheet_8
+  - first:
+      213: 1953111279743305459
+    second: Transicao_PCB_V2-Sheet_9
+  - first:
+      213: 5416042610310665618
+    second: Transicao_PCB_V2-Sheet_10
+  - first:
+      213: -6881235905610431335
+    second: Transicao_PCB_V2-Sheet_11
+  - first:
+      213: 7612581087140167306
+    second: Transicao_PCB_V2-Sheet_12
+  - first:
+      213: 2531646115398109998
+    second: Transicao_PCB_V2-Sheet_13
+  - first:
+      213: 1917513409205669800
+    second: Transicao_PCB_V2-Sheet_14
+  - first:
+      213: -98831334808536515
+    second: Transicao_PCB_V2-Sheet_15
+  - first:
+      213: -8374505624059994249
+    second: Transicao_PCB_V2-Sheet_16
+  - first:
+      213: 6819162897700299751
+    second: Transicao_PCB_V2-Sheet_17
+  - first:
+      213: -5521401309604424587
+    second: Transicao_PCB_V2-Sheet_18
+  - first:
+      213: -8031157046209723816
+    second: Transicao_PCB_V2-Sheet_19
+  - first:
+      213: 2616518666812210500
+    second: Transicao_PCB_V2-Sheet_20
+  - first:
+      213: 5165826569528953249
+    second: Transicao_PCB_V2-Sheet_21
+  - first:
+      213: 8687239502608010154
+    second: Transicao_PCB_V2-Sheet_22
+  - first:
+      213: 377225603253432453
+    second: Transicao_PCB_V2-Sheet_23
+  - first:
+      213: 6350766419617567753
+    second: Transicao_PCB_V2-Sheet_24
+  - first:
+      213: 832258239965812268
+    second: Transicao_PCB_V2-Sheet_25
+  - first:
+      213: 8374927626674466742
+    second: Transicao_PCB_V2-Sheet_26
+  - first:
+      213: 5021506941047451681
+    second: Transicao_PCB_V2-Sheet_27
+  - first:
+      213: -3713619869305514747
+    second: Transicao_PCB_V2-Sheet_28
+  - first:
+      213: -3448478900271384033
+    second: Transicao_PCB_V2-Sheet_29
+  - first:
+      213: 6442364079462537472
+    second: Transicao_PCB_V2-Sheet_30
+  - first:
+      213: -3632155986162648501
+    second: Transicao_PCB_V2-Sheet_31
+  - first:
+      213: -3132646549172743216
+    second: Transicao_PCB_V2-Sheet_32
+  - first:
+      213: -2200910351735312796
+    second: Transicao_PCB_V2-Sheet_33
+  - first:
+      213: 6193909982693409905
+    second: Transicao_PCB_V2-Sheet_34
+  - first:
+      213: 2266865483272193798
+    second: Transicao_PCB_V2-Sheet_35
+  - first:
+      213: -9181513538673113515
+    second: Transicao_PCB_V2-Sheet_36
+  - first:
+      213: -7966837484225578639
+    second: Transicao_PCB_V2-Sheet_37
+  - first:
+      213: -6358525628661444727
+    second: Transicao_PCB_V2-Sheet_38
+  - first:
+      213: -3870970009582520000
+    second: Transicao_PCB_V2-Sheet_39
+  - first:
+      213: -5701921457554993104
+    second: Transicao_PCB_V2-Sheet_40
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Transicao_PCB_V2-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 576
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faaa76fe7250f7150800000000000000
+      internalID: 5872418108192828079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_PCB_V2-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 576
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0de56312ebc2f2ac0800000000000000
+      internalID: -3877831559030087984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_PCB_V2-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 576
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d934f2b064a85940800000000000000
+      internalID: 5285154897945442769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_PCB_V2-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 576
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7432fad97f286ccf0800000000000000
+      internalID: -232354330748968121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_PCB_V2-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 432
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2609761339ea8040800000000000000
+      internalID: 4650785970843092524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_PCB_V2-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 432
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca389f78e2cae76c0800000000000000
+      internalID: -4143685291284528212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_PCB_V2-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 432
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad4057cdde5f580d0800000000000000
+      internalID: -3421057939963312934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_PCB_V2-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 432
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2aec41f7e8edc010800000000000000
+      internalID: 1210879957715970606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_PCB_V2-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 432
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bed42869069d0480800000000000000
+      internalID: -8931317518859706701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_PCB_V2-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f688e36c58da1b10800000000000000
+      internalID: 1953111279743305459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_PCB_V2-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 288
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29552f30f06a92b40800000000000000
+      internalID: 5416042610310665618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_PCB_V2-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 288
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9944d66f660f080a0800000000000000
+      internalID: -6881235905610431335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_PCB_V2-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 288
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8eb8d26a2255a960800000000000000
+      internalID: 7612581087140167306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_PCB_V2-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 288
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2b4d4d8ab6322320800000000000000
+      internalID: 2531646115398109998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_PCB_V2-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8af80c749406c9a10800000000000000
+      internalID: 1917513409205669800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_PCB_V2-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 144
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3a3f04bc61e0aef0800000000000000
+      internalID: -98831334808536515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_PCB_V2-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 144
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77f94644187c7cb80800000000000000
+      internalID: -8374505624059994249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_PCB_V2-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 144
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e323f6a68882ae50800000000000000
+      internalID: 6819162897700299751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_PCB_V2-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 144
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 574d6a633ca0063b0800000000000000
+      internalID: -5521401309604424587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transicao_PCB_V2-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8524b45a7399b8090800000000000000
+      internalID: -8031157046209723816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 54560fe75db6c7348afcb65f7f04999a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":256.0,"y":144.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Transicao_PCB_V2-Sheet_0: 5872418108192828079
+      Transicao_PCB_V2-Sheet_1: -3877831559030087984
+      Transicao_PCB_V2-Sheet_10: 5416042610310665618
+      Transicao_PCB_V2-Sheet_11: -6881235905610431335
+      Transicao_PCB_V2-Sheet_12: 7612581087140167306
+      Transicao_PCB_V2-Sheet_13: 2531646115398109998
+      Transicao_PCB_V2-Sheet_14: 1917513409205669800
+      Transicao_PCB_V2-Sheet_15: -98831334808536515
+      Transicao_PCB_V2-Sheet_16: -8374505624059994249
+      Transicao_PCB_V2-Sheet_17: 6819162897700299751
+      Transicao_PCB_V2-Sheet_18: -5521401309604424587
+      Transicao_PCB_V2-Sheet_19: -8031157046209723816
+      Transicao_PCB_V2-Sheet_2: 5285154897945442769
+      Transicao_PCB_V2-Sheet_3: -232354330748968121
+      Transicao_PCB_V2-Sheet_4: 4650785970843092524
+      Transicao_PCB_V2-Sheet_5: -4143685291284528212
+      Transicao_PCB_V2-Sheet_6: -3421057939963312934
+      Transicao_PCB_V2-Sheet_7: 1210879957715970606
+      Transicao_PCB_V2-Sheet_8: -8931317518859706701
+      Transicao_PCB_V2-Sheet_9: 1953111279743305459
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

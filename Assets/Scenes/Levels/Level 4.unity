@@ -1133,11 +1133,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5191899499211787744, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.3241682
+      value: 0.52
       objectReference: {fileID: 0}
     - target: {fileID: 5191899499211787744, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.750594
+      value: 9.93
       objectReference: {fileID: 0}
     - target: {fileID: 5191899499211787744, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1181,6 +1181,107 @@ PrefabInstance:
         mas ela meio que tava certa, n\xE9?\r\n\r\nQu\xEA?\r\n\r\n\xC9, a IA da hist\xF3ria
         tava certa. N\xF3s sempre repetimos os mesmos erros\r\n\r\nDe que lado voc\xEA
         est\xE1?\r\n\r\nDos dois, eu acho"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[0].fala
+      value: "Voc\xEA acredita nessa hist\xF3ria?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[1].fala
+      value: "Eu acho que n\xE3o lol, mas ela meio que tava certa, n\xE9?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[2].fala
+      value: "Qu\xEA?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[3].fala
+      value: "\xC9, a IA da hist\xF3ria tava certa. N\xF3s sempre repetimos os mesmos
+        erros"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[4].fala
+      value: "De que lado voc\xEA est\xE1?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[5].fala
+      value: Dos dois, eu acho
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[0].corDaFala.b
+      value: 0.25365877
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[0].corDaFala.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[0].corDaFala.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[1].corDaFala.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[1].corDaFala.g
+      value: 0.06282711
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[1].corDaFala.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[2].corDaFala.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[2].corDaFala.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[2].corDaFala.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[3].corDaFala.b
+      value: 0.8991847
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[3].corDaFala.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[3].corDaFala.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[4].corDaFala.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[4].corDaFala.g
+      value: 0.930426
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[4].corDaFala.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[5].corDaFala.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[5].corDaFala.g
+      value: 0.42864963
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[5].corDaFala.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8970738473825262584, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
       propertyPath: m_Name

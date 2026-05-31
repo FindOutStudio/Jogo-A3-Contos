@@ -46,8 +46,7 @@ public class LogUIManager : MonoBehaviour
         }
     }
 
-    // ======= AQUI ELE RECEBE AS CORES DO INSPECTOR DO COLETÁVEL =======
-    public void MostrarLog(int id, string nome, Color corNome, string lore, Color corTexto)
+    public void MostrarLog(int id, string lore)
     {
         Time.timeScale = 0f;
         PauseMenu.isPaused = true; 
@@ -58,26 +57,8 @@ public class LogUIManager : MonoBehaviour
 
         painelLog.transform.localScale = Vector3.zero;
 
-        // O código junta o nome e a fala com as cores que você escolheu no Inspector!
-        string textoPronto = MontarTextoComCores(nome, corNome, lore, corTexto);
-
         StopAllCoroutines(); 
-        StartCoroutine(AnimacaoAparecer(textoPronto));
-    }
-
-    private string MontarTextoComCores(string nome, Color corNome, string texto, Color corTexto)
-    {
-        string hexNome = ColorUtility.ToHtmlStringRGBA(corNome);
-        string hexTexto = ColorUtility.ToHtmlStringRGBA(corTexto);
-
-        if (string.IsNullOrEmpty(nome))
-        {
-            return $"<color=#{hexTexto}>{texto}</color>";
-        }
-        else
-        {
-            return $"<color=#{hexNome}>{nome}: </color><color=#{hexTexto}>{texto}</color>";
-        }
+        StartCoroutine(AnimacaoAparecer(lore));
     }
 
     public void FecharLog()
@@ -99,7 +80,6 @@ public class LogUIManager : MonoBehaviour
         StartCoroutine(EfeitoTextoMinecraft(textoFinal));
     }
 
-    // O Analisador Inteligente: Faz o Glitch funcionar sem quebrar as cores!
     private IEnumerator EfeitoTextoMinecraft(string textoReal)
     {
         List<string> parsedText = new List<string>();

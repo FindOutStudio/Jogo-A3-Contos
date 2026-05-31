@@ -377,6 +377,8 @@ MonoBehaviour:
     videoClip: {fileID: 32900000, guid: 21690a08036b8b44ba3cc21df07934db, type: 3}
     musicaFundo: {fileID: 8300000, guid: 7108db317f199a7439aa2aa28517ddc5, type: 3}
     volumeMusica: 0.2
+    sfxNoComeco: {fileID: 0}
+    sfxNoFim: {fileID: 0}
     dialogos: []
     idCinematicaSeguinte: Faber
     proximaCena: 
@@ -384,6 +386,8 @@ MonoBehaviour:
     videoClip: {fileID: 32900000, guid: e2816104b4ee2b844b7ab0014563aafb, type: 3}
     musicaFundo: {fileID: 8300000, guid: ac5436622c309154494a0c267d6109d0, type: 3}
     volumeMusica: 0.071
+    sfxNoComeco: {fileID: 0}
+    sfxNoFim: {fileID: 0}
     dialogos:
     - texto: "Tudo certo, O N.A.N.O. est\xE1 funcionando. V\xEA se n\xE3o comete
         o mesmo erro da \xFAltima vez."
@@ -435,6 +439,8 @@ MonoBehaviour:
     videoClip: {fileID: 32900000, guid: 04c8ab10640c6f849a29439acb5ea145, type: 3}
     musicaFundo: {fileID: 8300000, guid: 06112f2c8fb7b9a4ba126d149de79974, type: 3}
     volumeMusica: 0.7
+    sfxNoComeco: {fileID: 8300000, guid: 7cf7ab453f551014983267a509ac1dd3, type: 3}
+    sfxNoFim: {fileID: 8300000, guid: 7cf7ab453f551014983267a509ac1dd3, type: 3}
     dialogos:
     - texto: "Finalmente estamos a s\xF3s, pequenino."
       letraPorLetra: 1
@@ -485,6 +491,8 @@ MonoBehaviour:
     videoClip: {fileID: 32900000, guid: 04c8ab10640c6f849a29439acb5ea145, type: 3}
     musicaFundo: {fileID: 8300000, guid: 69de69dd7eaed914c9dcce9b8e070250, type: 3}
     volumeMusica: 0.1
+    sfxNoComeco: {fileID: 0}
+    sfxNoFim: {fileID: 0}
     dialogos:
     - texto: Conseguimos?
       letraPorLetra: 1

@@ -107,9 +107,8 @@ public class GerenciadorTransicoes : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(tempoParaCobrirTela);
 
-        // ======= CORREÇÃO DO CARREGAMENTO =======
         AsyncOperation operacao = preCarregamento;
-        preCarregamento = null; // Limpa para permitir futuros pre-loads!
+        preCarregamento = null; 
 
         if (operacao != null)
         {
@@ -121,14 +120,12 @@ public class GerenciadorTransicoes : MonoBehaviour
             operacao.allowSceneActivation = true;
         }
 
-        // Isso garante que ele nunca vai tentar tocar a animação antes da fase nova nascer!
         while (!operacao.isDone)
         {
             yield return null;
         }
 
-        Resources.UnloadUnusedAssets();
-        System.GC.Collect();
+        // ======= LAG RESOLVIDO: O GC.Collect e UnloadUnusedAssets foram removidos daqui! =======
 
         yield return new WaitForSecondsRealtime(0.5f);
         if (animatorTransicao != null) animatorTransicao.SetTrigger(triggerAbrir);

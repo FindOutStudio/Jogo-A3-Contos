@@ -31,6 +31,12 @@ public class CinematicaConfig
     public AudioClip musicaFundo;
     [Range(0f, 1f)] public float volumeMusica = 1f;
 
+    [Header("Efeitos Sonoros Únicos")]
+    [Tooltip("Toca no exato momento em que a cinemática começa")]
+    public AudioClip sfxNoComeco;
+    [Tooltip("Toca no exato momento em que a cinemática acaba (ou é pulada)")]
+    public AudioClip sfxNoFim;
+
     public DialogoCinematica[] dialogos; 
     
     [Header("Para Onde Vai Depois?")]
@@ -93,6 +99,12 @@ public class CinematicaManager : MonoBehaviour
             {
                 if (cinematicaAtual.musicaFundo != null) MusicManager.instance.TocarMusicaEspecifica(cinematicaAtual.musicaFundo, cinematicaAtual.volumeMusica);
                 else MusicManager.instance.PararMusica();
+            }
+
+            // ======= TOCA O SFX NO COMEÇO =======
+            if (cinematicaAtual.sfxNoComeco != null && SoundManager.instance != null)
+            {
+                SoundManager.instance.TocarSFX(cinematicaAtual.sfxNoComeco);
             }
 
             bool temDialogo = cinematicaAtual.dialogos != null && cinematicaAtual.dialogos.Length > 0;
@@ -159,8 +171,6 @@ public class CinematicaManager : MonoBehaviour
             StopAllCoroutines();
             DialogoCinematica d = cinematicaAtual.dialogos[indiceDialogoAtual];
             
-            // Se o jogador der um clique duplo para pular o texto, 
-            // e for um Glitch Permanente, ele preenche a tela com lixo. Senão, revela a frase certa!
             if (d.glitchPermanente)
             {
                 string lixo = "";
@@ -215,13 +225,11 @@ public class CinematicaManager : MonoBehaviour
             string caracteresAleatorios = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*?";
             int tamanhoDoTexto = texto.Length;
             
-            // AGORA SIM: A frase começa no zero e vai crescendo igual máquina de escrever!
             int letrasLidas = 0; 
             
             float timerLetraReal = 0f;
             float timerGlitch = 0f;
 
-            // Fase 1: Escrevendo da esquerda pra direita
             while (letrasLidas < tamanhoDoTexto)
             {
                 timerLetraReal += Time.deltaTime;
@@ -231,7 +239,6 @@ public class CinematicaManager : MonoBehaviour
                 {
                     string textoExibido = "";
                     
-                    // Mostra as letras que já saíram da máquina
                     for (int i = 0; i < letrasLidas; i++)
                     {
                         if (char.IsWhiteSpace(texto[i])) textoExibido += texto[i];
@@ -239,7 +246,6 @@ public class CinematicaManager : MonoBehaviour
                         else textoExibido += texto[i];
                     }
                     
-                    // Adiciona o "cursor de glitch" piscando nas pontas (Só faz sentido se for decodificar)
                     if (!permanente)
                     {
                         int letrasRestantes = tamanhoDoTexto - letrasLidas;
@@ -265,7 +271,6 @@ public class CinematicaManager : MonoBehaviour
                 yield return null; 
             }
 
-            // Fase 2: Se for permanente, ele continua preso num loop infinito de símbolos rodando!
             if (permanente)
             {
                 while (true)
@@ -288,7 +293,6 @@ public class CinematicaManager : MonoBehaviour
         }
         else
         {
-            // Máquina de Escrever Normal
             foreach (char letra in texto.ToCharArray())
             {
                 textoDialogo.text += letra;
@@ -313,6 +317,12 @@ public class CinematicaManager : MonoBehaviour
 
     private void FinalizarCinematica()
     {
+        // ======= TOCA O SFX NO FIM =======
+        if (cinematicaAtual.sfxNoFim != null && SoundManager.instance != null)
+        {
+            SoundManager.instance.TocarSFX(cinematicaAtual.sfxNoFim);
+        }
+
         if (!string.IsNullOrEmpty(cinematicaAtual.idCinematicaSeguinte))
         {
             PlayerPrefs.SetString("CinematicaPendente", cinematicaAtual.idCinematicaSeguinte);

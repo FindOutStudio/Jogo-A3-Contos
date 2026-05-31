@@ -177,6 +177,15 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        if (GerenciadorMoedas.vitoriaAlcancada)
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.gravityScale = 0f;
+            return; // Impede que o resto do Update rode
+        }
+
+        if (isDead || PauseMenu.isPaused || GerenciadorMoedas.vitoriaAlcancada) return;
+
         if (isDead || PauseMenu.isPaused) return;
 
         if (isReadyToLaunch && currentLauncher != null) transform.position = currentLauncher.position;
@@ -434,7 +443,7 @@ public class PlayerController : MonoBehaviour
 
     private async void OnCollisionEnter2D(Collision2D collision)
     {
-        if (isDead) return;
+        if (isDead || GerenciadorMoedas.vitoriaAlcancada) return;
 
         if (collision.gameObject.CompareTag("Bouncy"))
         {
@@ -464,7 +473,7 @@ public class PlayerController : MonoBehaviour
 
     private async void OnTriggerEnter2D(Collider2D collision)
     {
-        if (isDead) return;
+        if (isDead || GerenciadorMoedas.vitoriaAlcancada) return;
         if (collision.gameObject.CompareTag("Obstacle"))
         {
             Vector2 knockbackDir = (transform.position - collision.transform.position).normalized;
@@ -483,8 +492,15 @@ public class PlayerController : MonoBehaviour
 
         isDead = true;
         col.enabled = false;
+
+        // ======= MÁGICA DA OTIMIZAÇÃO AQUI =======
+        // O jogador acabou de bater! Já mandamos a Unity carregar a cena de fundo
+        // enquanto a animação do Nano tocando a tela acontece.
+        if (GerenciadorTransicoes.instance != null)
+        {
+            GerenciadorTransicoes.instance.PreCarregarCena(SceneManager.GetActiveScene().name);
+        }
         
-        // ======= TRAVANDO A FÍSICA PARA O GERENCIADOR TRANSICOES RODAR LISO =======
         rb.simulated = false;
         
         if (impulseSource != null)
@@ -509,7 +525,6 @@ public class PlayerController : MonoBehaviour
         float tempoDecorrido = 0f;
         Vector2 velocidadeInicial = direction * knockbackSpeed;
 
-        // Animação de Knockback "falsa" ignorando a física
         while (tempoDecorrido < tempoDeQuiqueMorte)
         {
             if (this == null || rb == null) return; 
@@ -534,6 +549,7 @@ public class PlayerController : MonoBehaviour
 
         if (rastroArremesso != null) { rastroArremesso.emitting = false; rastroArremesso.Clear(); }
         
+        // A transição chama a cena, mas ela já está na ponta da agulha pronta pra rodar!
         GerenciadorTransicoes.instance.TrocarCena(SceneManager.GetActiveScene().name);
     }
 }

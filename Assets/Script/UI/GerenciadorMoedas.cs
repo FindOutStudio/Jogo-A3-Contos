@@ -273,13 +273,13 @@ public class GerenciadorMoedas : MonoBehaviour
     }
 
     private void LimparEfeitosPause()
-    {
-        Time.timeScale = 1f;
-        jogoPausadoVitoria = false;
-        vitoriaAlcancada = false;
-        
-        moedasColetadas = 0; 
-        
-        if (somNormalSnapshot != null) somNormalSnapshot.TransitionTo(0.1f);
-    }
+{
+    Time.timeScale = 1f;
+    jogoPausadoVitoria = false;
+    
+    
+    moedasColetadas = 0; 
+    
+    if (somNormalSnapshot != null) somNormalSnapshot.TransitionTo(0.1f);
+}
 }

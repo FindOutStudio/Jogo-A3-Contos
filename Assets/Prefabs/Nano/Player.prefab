@@ -232,12 +232,13 @@ MonoBehaviour:
   powerMultiplier: 6.5
   maxDragDistance: 5
   imunidadeMesmoLancador: 0
+  sensibilidadeMira: 0.015
   multiplicadorRicochete: 0.9
   forcaExtraParaCima: 5
   maximoDeQuiquesNaLinha: 1
   slowMotionTimeScale: 0.2
   slowMotionGravityMultiplier: 0.2
-  tempoMaximoMira: 1.3
+  tempoMaximoMira: 1e+13
   camVirtual: {fileID: 0}
   zoomMultiplicador: 0.65
   zoomMultiplicadorLancador: 1.3

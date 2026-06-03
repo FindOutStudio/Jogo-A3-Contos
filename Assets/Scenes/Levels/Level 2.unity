@@ -129,11 +129,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 613827924740548566, guid: 45343aa8d69ad4c4aa7360de78f7f394, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22.21015
+      value: -21.96015
       objectReference: {fileID: 0}
     - target: {fileID: 613827924740548566, guid: 45343aa8d69ad4c4aa7360de78f7f394, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.15978432
+      value: -3.4097843
       objectReference: {fileID: 0}
     - target: {fileID: 613827924740548566, guid: 45343aa8d69ad4c4aa7360de78f7f394, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8235,11 +8235,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8546814723608952754, guid: a8319c2b71bb4604aa0269db2a6f4240, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22.21
+      value: -21.96
       objectReference: {fileID: 0}
     - target: {fileID: 8546814723608952754, guid: a8319c2b71bb4604aa0269db2a6f4240, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.16
+      value: -3.4099998
       objectReference: {fileID: 0}
     - target: {fileID: 8546814723608952754, guid: a8319c2b71bb4604aa0269db2a6f4240, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8367,11 +8367,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9103730488506695823, guid: 07056154a17d5784c883f9d19d69de20, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22.21015
+      value: -21.96015
       objectReference: {fileID: 0}
     - target: {fileID: 9103730488506695823, guid: 07056154a17d5784c883f9d19d69de20, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.15978432
+      value: -3.4097843
       objectReference: {fileID: 0}
     - target: {fileID: 9103730488506695823, guid: 07056154a17d5784c883f9d19d69de20, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8829,7 +8829,7 @@ Transform:
   m_GameObject: {fileID: 1325061346}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.04, y: -0.43, z: 0}
+  m_LocalPosition: {x: -1.03, y: -0.43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11242,7 +11242,7 @@ TilemapRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1835500507}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1

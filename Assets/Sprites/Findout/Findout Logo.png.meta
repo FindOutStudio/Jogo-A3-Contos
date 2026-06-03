@@ -5,6 +5,24 @@ TextureImporter:
   - first:
       213: 845782027163234362
     second: Findout Logo_0
+  - first:
+      213: -8775777171343158955
+    second: Findout Logo_1
+  - first:
+      213: -3492139203850387053
+    second: Findout Logo_2
+  - first:
+      213: 6580198183367382252
+    second: Findout Logo_3
+  - first:
+      213: 3992919297432853763
+    second: Findout Logo_4
+  - first:
+      213: 1501929627570476804
+    second: Findout Logo_5
+  - first:
+      213: -6906170560945963304
+    second: Findout Logo_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -143,9 +161,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 573
-        height: 572
+        y: 21
+        width: 111
+        height: 138
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,6 +174,138 @@ TextureImporter:
       bones: []
       spriteID: a307976c542dcbb00800000000000000
       internalID: 845782027163234362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Findout Logo_1
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 150
+        width: 372
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 551db12a82d263680800000000000000
+      internalID: -8775777171343158955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Findout Logo_2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 7
+        width: 84
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 391484075ed698fc0800000000000000
+      internalID: -3492139203850387053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Findout Logo_3
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 6
+        width: 82
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce49847626f815b50800000000000000
+      internalID: 6580198183367382252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Findout Logo_4
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 0
+        width: 95
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30d994412f2b96730800000000000000
+      internalID: 3992919297432853763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Findout Logo_5
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 19
+        width: 90
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40719f8e90de7d410800000000000000
+      internalID: 1501929627570476804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Findout Logo_6
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 34
+        width: 78
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8de3e8c177a5820a0800000000000000
+      internalID: -6906170560945963304
       vertices: []
       indices: 
       edges: []
@@ -175,6 +325,12 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       Findout Logo_0: 845782027163234362
+      Findout Logo_1: -8775777171343158955
+      Findout Logo_2: -3492139203850387053
+      Findout Logo_3: 6580198183367382252
+      Findout Logo_4: 3992919297432853763
+      Findout Logo_5: 1501929627570476804
+      Findout Logo_6: -6906170560945963304
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

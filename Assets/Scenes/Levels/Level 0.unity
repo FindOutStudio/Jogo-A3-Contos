@@ -7096,11 +7096,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6575636462667145680, guid: 07056154a17d5784c883f9d19d69de20, type: 3}
       propertyPath: m_TrackedObjectOffset.x
-      value: -0.0001507258
+      value: -0.0001507259
       objectReference: {fileID: 0}
     - target: {fileID: 6575636462667145680, guid: 07056154a17d5784c883f9d19d69de20, type: 3}
       propertyPath: m_TrackedObjectOffset.y
-      value: 0.0002153481
+      value: 0.0002153482
       objectReference: {fileID: 0}
     - target: {fileID: 9103730488506695823, guid: 07056154a17d5784c883f9d19d69de20, type: 3}
       propertyPath: m_LocalPosition.x

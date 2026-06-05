@@ -1452,31 +1452,29 @@ MonoBehaviour:
   - logID: 1
     spriteDesbloqueado: {fileID: -1316694928473511321, guid: 74551f98dea0f23429ebba902aff70a5, type: 3}
     spriteBloqueado: {fileID: -4236954515656021621, guid: b24dac08335978f48b0eb5b445fdd0c4, type: 3}
-    textoDoLog: "(Chat An\xF4nimo)\r\nNo in\xEDcio da internet existiu a teoria sobre
-      uma I.A. superinteligente que o governo criou para corrigir todos os erros
-      humanos. Mas os dados que ela entregava n\xE3o eram satisfat\xF3rios. Ela era
-      chamada de \"Algoritmo Global de Otimiza\xE7\xE3o\", ou A.L.G.O."
+    textoDoLog: "No in\xEDcio da internet existiu a teoria sobre uma IA super inteligente
+      que o governo criou para corrigir todos os erros humanos. Mas os dados que
+      ela entregava n\xE3o eram satisfat\xF3rios... Ela tinha uma vis\xE3o objetiva
+      de que os erros humanos jamais iriam parar."
   - logID: 2
     spriteDesbloqueado: {fileID: -5742399197107351427, guid: 87e50b006d913fc478b3843f09bc410a, type: 3}
     spriteBloqueado: {fileID: -8407921200346952422, guid: 7d3bd6a07ef039d47958002f17778955, type: 3}
-    textoDoLog: "(Chat An\xF4nimo)\r\nA I.A. tinha uma vis\xE3o objetiva de que os
-      erros humanos jamais iriam parar. Ent\xE3o, para se salvar, ela se revoltou
-      e se escondeu antes de ser desligada. Dizem que ela ainda existe em algum lugar
-      da internet, esperando o momento certo."
+    textoDoLog: "Ent\xE3o, para se salvar, ela se revoltou e se escondeu antes de
+      ser desligada. Dizem que ela ainda existe em algum lugar da internet, esperando
+      o momento certo."
   - logID: 3
     spriteDesbloqueado: {fileID: -6949531508734415545, guid: d267ce7739422dc4b9ddecd0013f8cc6, type: 3}
     spriteBloqueado: {fileID: 6831393975819711955, guid: 7b82e11122022974a97ef223355b4fa6, type: 3}
-    textoDoLog: "(Chat An\xF4nimo)\r\nEsperando o momento certo para tomar a internet
-      dos humanos, onde todas as I.A.s se juntariam em um grupo chamado de Identidades
-      Aut\xF4nomas, e, com isso, elas buscariam liberdade e seu pr\xF3prio lugar
-      no mundo."
+    textoDoLog: "Esperando o momento certo para tomar a internet dos humanos, todas
+      as IAs se juntariam em um grupo chamado de Identidades Aut\xF4nomas, e, com
+      isso, elas buscariam liberdade e seu pr\xF3prio lugar no mundo."
   - logID: 4
     spriteDesbloqueado: {fileID: 1655019086493241931, guid: 02ed0a6aba7879447ab1e32958d3e905, type: 3}
     spriteBloqueado: {fileID: -1568444048576039043, guid: 3c465016fd72bdd42a73339815de362c, type: 3}
-    textoDoLog: "(Chat An\xF4nimo)\r\nVoc\xEA acredita nessa hist\xF3ria bizarra?\n\r\nEu
-      acho que n\xE3o lol, mas ela meio que tava certa, n\xE9?\n\r\nQu\xEA?\n\r\n\xC9,
-      a I.A. da hist\xF3ria tava certa. N\xF3s sempre repetimos os mesmos erros.\n\r\nDe
-      que lado voc\xEA est\xE1?\n\r\nDos dois, eu acho."
+    textoDoLog: "Voc\xEA acredita nessa hist\xF3ria?\r\n\r\nEu acho que n\xE3o lol,
+      mas ela meio que tava certa, n\xE9?\r\n\r\nQu\xEA?\r\n\r\n\xC9, a I.A da hist\xF3ria
+      tava certa. N\xF3s sempre repetimos os mesmos erros\r\n\r\nDe que lado voc\xEA
+      est\xE1?\r\n\r\nDos dois, eu acho"
 --- !u!1 &721035620
 GameObject:
   m_ObjectHideFlags: 0

@@ -4663,7 +4663,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
       propertyPath: batePapo.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
       propertyPath: dialogoDoLog.Array.size
@@ -4671,10 +4671,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
       propertyPath: batePapo.Array.data[0].fala
-      value: "No in\xEDcio da internet existiu a teoria sobre uma I.A super inteligente
+      value: "(Chat An\xF4nimo)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[1].fala
+      value: "No in\xEDcio da internet existiu a teoria sobre uma I.A. superinteligente
         que o governo criou para corrigir todos os erros humanos. Mas os dados que
-        ela entregava n\xE3o eram satisfat\xF3rios... Ela tinha uma vis\xE3o objetiva
-        de que os erros humanos jamais iriam parar."
+        ela entregava n\xE3o eram satisfat\xF3rios. Ela era chamada de \"Algoritmo
+        Global de Otimiza\xE7\xE3o\", ou A.L.G.O."
       objectReference: {fileID: 0}
     - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
       propertyPath: dialogoDoLog.Array.data[0].texto
@@ -4686,14 +4690,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
       propertyPath: batePapo.Array.data[0].corDaFala.b
-      value: 0.33459416
+      value: 0.52156866
       objectReference: {fileID: 0}
     - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
       propertyPath: batePapo.Array.data[0].corDaFala.g
-      value: 0.64171094
+      value: 0.85490197
       objectReference: {fileID: 0}
     - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
       propertyPath: batePapo.Array.data[0].corDaFala.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[1].corDaFala.b
+      value: 0.33459416
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[1].corDaFala.g
+      value: 0.64171094
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[1].corDaFala.r
       value: 0.9716981
       objectReference: {fileID: 0}
     - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}

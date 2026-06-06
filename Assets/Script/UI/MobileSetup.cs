@@ -6,5 +6,6 @@ public class MobileSetup : MonoBehaviour
     {
         Application.targetFrameRate = 60;
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
+        Screen.orientation = ScreenOrientation.AutoRotation;
     }
 }

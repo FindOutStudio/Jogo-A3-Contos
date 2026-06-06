@@ -25,7 +25,13 @@ public class DialogoCinematica
 public class CinematicaConfig
 {
     public string idCinematica; 
-    public VideoClip videoClip; 
+    
+    // ======== MUDANÇA AQUI ========
+    // Substituímos o VideoClip pelo nome do arquivo.
+    [Header("Vídeo (Deve estar na pasta StreamingAssets)")]
+    [Tooltip("Exemplo: 'abertura.mp4' ou 'cutscene.webm'")]
+    public string nomeArquivoVideo; 
+    // ===============================
     
     [Header("Trilha Sonora Adicional (Fundo)")]
     public AudioClip musicaFundo;
@@ -101,7 +107,6 @@ public class CinematicaManager : MonoBehaviour
                 else MusicManager.instance.PararMusica();
             }
 
-            // ======= TOCA O SFX NO COMEÇO =======
             if (cinematicaAtual.sfxNoComeco != null && SoundManager.instance != null)
             {
                 SoundManager.instance.TocarSFX(cinematicaAtual.sfxNoComeco);
@@ -109,9 +114,15 @@ public class CinematicaManager : MonoBehaviour
 
             bool temDialogo = cinematicaAtual.dialogos != null && cinematicaAtual.dialogos.Length > 0;
 
-            if(videoPlayer != null && cinematicaAtual.videoClip != null)
+            // ======== MUDANÇA AQUI ========
+            // Agora o VideoPlayer lê o arquivo via URL da pasta StreamingAssets
+            if(videoPlayer != null && !string.IsNullOrEmpty(cinematicaAtual.nomeArquivoVideo))
             {
-                videoPlayer.clip = cinematicaAtual.videoClip;
+                // Cria o caminho correto dependendo se está no Editor, PC ou WebGL
+                string caminhoDoVideo = System.IO.Path.Combine(Application.streamingAssetsPath, cinematicaAtual.nomeArquivoVideo);
+                
+                videoPlayer.source = VideoSource.Url;
+                videoPlayer.url = caminhoDoVideo;
                 
                 if (temDialogo) videoPlayer.isLooping = true; 
                 else
@@ -122,6 +133,7 @@ public class CinematicaManager : MonoBehaviour
                 
                 videoPlayer.Play();
             }
+            // ===============================
 
             if (temDialogo)
             {
@@ -317,7 +329,6 @@ public class CinematicaManager : MonoBehaviour
 
     private void FinalizarCinematica()
     {
-        // ======= TOCA O SFX NO FIM =======
         if (cinematicaAtual.sfxNoFim != null && SoundManager.instance != null)
         {
             SoundManager.instance.TocarSFX(cinematicaAtual.sfxNoFim);

@@ -153,10 +153,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LogColetavel
   logID: 1
-  textoDoLog: "No in\xEDcio da internet existiu a teoria sobre uma I.A super inteligente
-    que o governo criou para corrigir todos os erros humanos. Mas os dados que ela
-    entregava n\xE3o eram satisfat\xF3rios... Ela tinha uma vis\xE3o objetiva de
-    que os erros humanos jamais iriam parar."
+  opacidadeFantasma: 0.8
+  batePapo: []
 --- !u!95 &8192830340415781332
 Animator:
   serializedVersion: 7

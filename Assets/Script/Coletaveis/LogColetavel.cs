@@ -16,8 +16,28 @@ public class LogColetavel : MonoBehaviour
     [Header("Dados do Log")]
     public int logID;
     
+    [Header("Efeito Fantasma (Estilo Celeste)")]
+    [Tooltip("Transparência do log caso já tenha sido coletado antes (0 = invisível, 1 = normal)")]
+    [Range(0f, 1f)] public float opacidadeFantasma = 0.4f;
+    
     [Header("Bate-Papo (Adicione as linhas no +)")]
     public List<LinhaDeDialogo> batePapo;
+
+    private void Start()
+    {
+        // O Segredo: Assim que a fase carregar, ele verifica no save se já foi pego
+        if (PlayerPrefs.GetInt("LogColetado_" + logID, 0) == 1)
+        {
+            // Se já pegou, pega o componente de imagem e deixa ele meio "apagado"
+            SpriteRenderer meuSprite = GetComponent<SpriteRenderer>();
+            if (meuSprite != null)
+            {
+                Color corAtual = meuSprite.color;
+                corAtual.a = opacidadeFantasma; // Aplica a opacidade (ex: 40%)
+                meuSprite.color = corAtual;
+            }
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -57,10 +77,10 @@ public class LogColetavel : MonoBehaviour
             // Coloca a cor em volta da frase atual
             textoFinal += $"<color=#{corHex}>{batePapo[i].fala}</color>";
 
-            // Pula de linha para a resposta da outra pessoa ficar embaixo (exceto na última frase)
+            // Pula de linha para a resposta da outra pessoa ficar embaixo (exceto a última)
             if (i < batePapo.Count - 1)
             {
-                textoFinal += "\n\n"; // Se quiser que fique mais juntinho, deixe apenas um "\n"
+                textoFinal += "\n\n";
             }
         }
 

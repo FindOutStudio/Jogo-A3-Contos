@@ -8,17 +8,22 @@ using System.Collections;
 [System.Serializable]
 public class DialogoCinematica
 {
+    [Header("Quem está falando?")]
+    [Tooltip("Nome do personagem (Ex: Victor Faber). Deixe vazio para esconder a caixa de nome.")]
+    public string nomePersonagem;
+    public Color corDoNome = Color.yellow; 
+
+    [Header("O que ele diz?")]
     [TextArea(3, 10)]
     public string texto;
-    public bool letraPorLetra; 
+    public Color corDoTexto = Color.white; 
     
+    [Header("Efeitos")]
+    public bool letraPorLetra; 
     [Tooltip("As letras vão nascendo da esquerda pra direita com glitch na ponta, mas SE REVELAM no final (Efeito Decodificador).")]
     public bool textoEmbaralhado; 
-    
     [Tooltip("As letras nascem da esquerda pra direita, mas NUNCA se revelam! Ficam mudando de símbolo pra sempre (Efeito §k do Minecraft).")]
     public bool glitchPermanente;
-
-    public Color corDoTexto = Color.white; 
 }
 
 [System.Serializable]
@@ -26,12 +31,9 @@ public class CinematicaConfig
 {
     public string idCinematica; 
     
-    // ======== MUDANÇA AQUI ========
-    // Substituímos o VideoClip pelo nome do arquivo.
     [Header("Vídeo (Deve estar na pasta StreamingAssets)")]
     [Tooltip("Exemplo: 'abertura.mp4' ou 'cutscene.webm'")]
     public string nomeArquivoVideo; 
-    // ===============================
     
     [Header("Trilha Sonora Adicional (Fundo)")]
     public AudioClip musicaFundo;
@@ -58,6 +60,7 @@ public class CinematicaManager : MonoBehaviour
 
     [Header("Componentes da Tela")]
     public VideoPlayer videoPlayer; 
+    public TextMeshProUGUI campoNomePersonagem; // ======= NOVA CAIXA DO NOME AQUI =======
     public TextMeshProUGUI textoDialogo; 
     public Button botaoAvancar; 
     public Button botaoPular; 
@@ -114,11 +117,8 @@ public class CinematicaManager : MonoBehaviour
 
             bool temDialogo = cinematicaAtual.dialogos != null && cinematicaAtual.dialogos.Length > 0;
 
-            // ======== MUDANÇA AQUI ========
-            // Agora o VideoPlayer lê o arquivo via URL da pasta StreamingAssets
             if(videoPlayer != null && !string.IsNullOrEmpty(cinematicaAtual.nomeArquivoVideo))
             {
-                // Cria o caminho correto dependendo se está no Editor, PC ou WebGL
                 string caminhoDoVideo = System.IO.Path.Combine(Application.streamingAssetsPath, cinematicaAtual.nomeArquivoVideo);
                 
                 videoPlayer.source = VideoSource.Url;
@@ -133,7 +133,6 @@ public class CinematicaManager : MonoBehaviour
                 
                 videoPlayer.Play();
             }
-            // ===============================
 
             if (temDialogo)
             {
@@ -148,6 +147,7 @@ public class CinematicaManager : MonoBehaviour
             {
                 if (botaoAvancar != null) botaoAvancar.gameObject.SetActive(false);
                 if (textoDialogo != null) textoDialogo.text = "";
+                if (campoNomePersonagem != null) campoNomePersonagem.gameObject.SetActive(false);
             }
         }
         else
@@ -216,6 +216,24 @@ public class CinematicaManager : MonoBehaviour
         textoCompletoAtual = dialogo.texto;
 
         if (textoDialogo != null) textoDialogo.color = dialogo.corDoTexto;
+
+        // ======== LÓGICA DO NOME (ONDE A MÁGICA ACONTECE) ========
+        if (campoNomePersonagem != null)
+        {
+            if (string.IsNullOrEmpty(dialogo.nomePersonagem))
+            {
+                // Esconde a caixa do nome se o producer não preencheu (narração/pensamento)
+                campoNomePersonagem.gameObject.SetActive(false);
+            }
+            else
+            {
+                // Se tem nome, liga a caixa, coloca os ":" no final e pinta com a cor escolhida
+                campoNomePersonagem.gameObject.SetActive(true);
+                campoNomePersonagem.text = dialogo.nomePersonagem + ":";
+                campoNomePersonagem.color = dialogo.corDoNome;
+            }
+        }
+        // =========================================================
 
         if (dialogo.letraPorLetra || dialogo.textoEmbaralhado || dialogo.glitchPermanente) 
         {

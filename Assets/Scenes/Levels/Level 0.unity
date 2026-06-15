@@ -7090,18 +7090,6 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1241808137}
-    - target: {fileID: 6347922182509419204, guid: 07056154a17d5784c883f9d19d69de20, type: 3}
-      propertyPath: m_Lens.OrthographicSize
-      value: 8.000015
-      objectReference: {fileID: 0}
-    - target: {fileID: 6575636462667145680, guid: 07056154a17d5784c883f9d19d69de20, type: 3}
-      propertyPath: m_TrackedObjectOffset.x
-      value: -0.0001507259
-      objectReference: {fileID: 0}
-    - target: {fileID: 6575636462667145680, guid: 07056154a17d5784c883f9d19d69de20, type: 3}
-      propertyPath: m_TrackedObjectOffset.y
-      value: 0.0002153482
-      objectReference: {fileID: 0}
     - target: {fileID: 9103730488506695823, guid: 07056154a17d5784c883f9d19d69de20, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20.73015

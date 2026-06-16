@@ -1,6 +1,26 @@
 using UnityEngine;
 using System.Collections.Generic;
 
+[System.Serializable]
+public class SpritesDoAutoTile
+{
+    public Sprite cantoSupEsq;
+    public Sprite bordaSupCentro;
+    public Sprite cantoSupDir;
+    
+    public Sprite bordaMeioEsq;
+    public Sprite centro;
+    public Sprite bordaMeioDir;
+    
+    public Sprite cantoInfEsq;
+    public Sprite bordaInfCentro;
+    public Sprite cantoInfDir;
+    public Sprite quinaExtSupEsq;
+    public Sprite quinaExtSupDir;
+    public Sprite quinaExtInfEsq;
+    public Sprite quinaExtInfDir;
+}
+
 public class LevelEditorManager : MonoBehaviour
 {
     public enum TipoFerramenta { Bloco, Serra, Laser, Raio, Borracha, Espinho }
@@ -14,6 +34,13 @@ public class LevelEditorManager : MonoBehaviour
     public GameObject prefabLaser;
     public GameObject prefabEspinho;
     public GameObject prefabRaio;
+
+    [Header("=== Imagens do Bloco (Auto-Tile) ===")]
+    public SpritesDoAutoTile spritesBloco;
+
+    [Header("=== Ajuste de Rotação (Bases) ===")]
+    public float rotacaoExtraBaseA = 0f;
+    public float rotacaoExtraBaseB = 180f; 
 
     [Header("=== Configurações de Câmera e Zoom ===")]
     public float zoomMinimoGameplay = 5f;
@@ -40,6 +67,8 @@ public class LevelEditorManager : MonoBehaviour
     private bool arrastandoDoisPontos = false;
     private Vector2 pontoInicialDrag;
     private LineRenderer linhaDeVisualizacao; 
+
+    private float tempoUltimoCliqueBloco = 0f;
 
     private void Awake()
     {
@@ -110,10 +139,11 @@ public class LevelEditorManager : MonoBehaviour
                 if (colisorNoLocal != null && objetosConstruidos.Contains(colisorNoLocal.gameObject))
                 {
                     objetosConstruidos.Remove(colisorNoLocal.gameObject);
+                    colisorNoLocal.gameObject.SetActive(false); 
                     Destroy(colisorNoLocal.gameObject);
-                   
                 }
             }
+            if (Input.GetMouseButtonUp(0)) AtualizarTodosOsBlocos();
         }
         else if (ferramentaAtual == TipoFerramenta.Laser || ferramentaAtual == TipoFerramenta.Serra)
         {
@@ -141,24 +171,192 @@ public class LevelEditorManager : MonoBehaviour
                 }
             }
         }
+        else if (ferramentaAtual == TipoFerramenta.Bloco)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (Time.time - tempoUltimoCliqueBloco < 0.3f)
+                {
+                    PreencherComBlocos(posicaoSnapMouse);
+                    return; 
+                }
+                tempoUltimoCliqueBloco = Time.time;
+            }
+
+            if (Input.GetMouseButton(0)) 
+            {
+                if (!LocalEstaOcupado(posicaoSnapMouse))
+                {
+                    GameObject novoObjeto = Instantiate(prefabBloco, posicaoSnapMouse, Quaternion.identity);
+                    objetosConstruidos.Add(novoObjeto);
+                    
+                    // Coloca visualmente como borda superior temporária enquanto arrasta
+                    SpriteRenderer sr = novoObjeto.GetComponent<SpriteRenderer>();
+                    if(sr != null && spritesBloco.bordaSupCentro != null) sr.sprite = spritesBloco.bordaSupCentro;
+                }
+            }
+
+            if (Input.GetMouseButtonUp(0))
+            {
+                AtualizarTodosOsBlocos();
+            }
+        }
         else
         {
             if (Input.GetMouseButton(0)) 
             {
-                Collider2D colisorNoLocal = Physics2D.OverlapPoint(posicaoSnapMouse);
-                if (colisorNoLocal == null) 
+                if (!LocalEstaOcupado(posicaoSnapMouse))
                 {
                     GameObject prefabAlvo = ObterPrefabDaFerramentaAtual();
                     if (prefabAlvo != null)
                     {
                         GameObject novoObjeto = Instantiate(prefabAlvo, posicaoSnapMouse, Quaternion.identity);
                         objetosConstruidos.Add(novoObjeto);
-                    
                     }
                 }
             }
         }
     }
+
+    private bool LocalEstaOcupado(Vector2 pos)
+    {
+        foreach (GameObject obj in objetosConstruidos)
+        {
+            if (obj != null)
+            {
+                if (Vector2.Distance(obj.transform.position, pos) < 0.1f) return true;
+            }
+        }
+        return false;
+    }
+
+    private void PreencherComBlocos(Vector2 startPos)
+    {
+        HashSet<Vector2> ocupados = new HashSet<Vector2>();
+        foreach (GameObject obj in objetosConstruidos)
+        {
+            if (obj != null)
+            {
+                float rX = Mathf.Round(obj.transform.position.x / tamanhoGrade) * tamanhoGrade;
+                float rY = Mathf.Round(obj.transform.position.y / tamanhoGrade) * tamanhoGrade;
+                ocupados.Add(new Vector2(rX, rY));
+            }
+        }
+
+        Vector2 startGrid = new Vector2(
+            Mathf.Round(startPos.x / tamanhoGrade) * tamanhoGrade,
+            Mathf.Round(startPos.y / tamanhoGrade) * tamanhoGrade
+        );
+
+        if (ocupados.Contains(startGrid)) return; 
+
+        Queue<Vector2> fila = new Queue<Vector2>();
+        HashSet<Vector2> visitados = new HashSet<Vector2>();
+        List<Vector2> posicoesParaConstruir = new List<Vector2>();
+
+        fila.Enqueue(startGrid);
+        visitados.Add(startGrid);
+
+        while (fila.Count > 0)
+        {
+            Vector2 atual = fila.Dequeue();
+
+            if (atual.x < limiteEsquerdo || atual.x > limiteDireito ||
+                atual.y < limiteInferior || atual.y > limiteSuperior)
+            {
+                continue;
+            }
+
+            if (!ocupados.Contains(atual))
+            {
+                posicoesParaConstruir.Add(atual);
+
+                Vector2 up = atual + Vector2.up * tamanhoGrade;
+                Vector2 down = atual + Vector2.down * tamanhoGrade;
+                Vector2 left = atual + Vector2.left * tamanhoGrade;
+                Vector2 right = atual + Vector2.right * tamanhoGrade;
+
+                if (!visitados.Contains(up)) { fila.Enqueue(up); visitados.Add(up); }
+                if (!visitados.Contains(down)) { fila.Enqueue(down); visitados.Add(down); }
+                if (!visitados.Contains(left)) { fila.Enqueue(left); visitados.Add(left); }
+                if (!visitados.Contains(right)) { fila.Enqueue(right); visitados.Add(right); }
+            }
+        }
+
+        int maxBlocos = 800; 
+        int construidos = 0;
+
+        foreach (Vector2 pos in posicoesParaConstruir)
+        {
+            if (construidos >= maxBlocos) break;
+            
+            GameObject novoBloco = Instantiate(prefabBloco, pos, Quaternion.identity);
+            objetosConstruidos.Add(novoBloco);
+            construidos++;
+        }
+
+        AtualizarTodosOsBlocos();
+    }
+
+    // ========================================================
+    // ======= A MATEMÁTICA DAS 16 FACES PERFEITA =============
+    // ========================================================
+    private void AtualizarTodosOsBlocos()
+{
+    HashSet<Vector2> posicoesBlocos = new HashSet<Vector2>();
+    foreach (GameObject obj in objetosConstruidos)
+    {
+        if (obj != null && obj.name.Contains(prefabBloco.name))
+        {
+            float rX = Mathf.Round(obj.transform.position.x / tamanhoGrade) * tamanhoGrade;
+            float rY = Mathf.Round(obj.transform.position.y / tamanhoGrade) * tamanhoGrade;
+            posicoesBlocos.Add(new Vector2(rX, rY));
+        }
+    }
+
+    foreach (GameObject obj in objetosConstruidos)
+    {
+        if (obj == null || !obj.name.Contains(prefabBloco.name)) continue;
+        
+        SpriteRenderer sr = obj.GetComponent<SpriteRenderer>();
+        Vector2 p = new Vector2(Mathf.Round(obj.transform.position.x), Mathf.Round(obj.transform.position.y));
+
+        bool u = posicoesBlocos.Contains(p + Vector2.up);
+        bool d = posicoesBlocos.Contains(p + Vector2.down);
+        bool l = posicoesBlocos.Contains(p + Vector2.left);
+        bool r = posicoesBlocos.Contains(p + Vector2.right);
+        
+        // Checagem de diagonais para a escadinha
+        bool ul = posicoesBlocos.Contains(p + new Vector2(-1, 1));
+        bool ur = posicoesBlocos.Contains(p + new Vector2(1, 1));
+        bool dl = posicoesBlocos.Contains(p + new Vector2(-1, -1));
+        bool dr = posicoesBlocos.Contains(p + new Vector2(1, -1));
+
+        // Lógica de seleção das Quinas (Degraus)
+        if (!u && !l && r && d) sr.sprite = spritesBloco.quinaExtSupEsq;
+        else if (!u && !r && l && d) sr.sprite = spritesBloco.quinaExtSupDir;
+        else if (!d && !l && r && u) sr.sprite = spritesBloco.quinaExtInfEsq;
+        else if (!d && !r && l && u) sr.sprite = spritesBloco.quinaExtInfDir;
+        // Se não for quina, segue a lógica anterior de bordas
+        else
+        {
+            int soma = (u ? 1 : 0) + (r ? 2 : 0) + (d ? 4 : 0) + (l ? 8 : 0);
+            switch (soma)
+            {
+                case 3: sr.sprite = spritesBloco.cantoInfEsq; break;
+                case 6: sr.sprite = spritesBloco.cantoSupEsq; break;
+                case 7: sr.sprite = spritesBloco.bordaMeioEsq; break;
+                case 9: sr.sprite = spritesBloco.cantoInfDir; break;
+                case 11: sr.sprite = spritesBloco.bordaInfCentro; break;
+                case 12: sr.sprite = spritesBloco.cantoSupDir; break;
+                case 13: sr.sprite = spritesBloco.bordaMeioDir; break;
+                case 14: sr.sprite = spritesBloco.bordaSupCentro; break;
+                case 15: sr.sprite = spritesBloco.centro; break;
+                default: sr.sprite = spritesBloco.bordaSupCentro; break;
+            }
+        }
+    }
+}
 
     private void ConstruirObjetoDeDoisPontos(Vector2 inicio, Vector2 fim)
     {
@@ -168,51 +366,43 @@ public class LevelEditorManager : MonoBehaviour
         Vector2 centro = (inicio + fim) / 2f;
         GameObject novoObjeto = Instantiate(prefabAlvo, centro, Quaternion.identity);
 
-        // ======= A BUSCA INTELIGENTE QUE NÃO QUEBRA NUNCA =======
         Transform baseA = EncontrarBaseSegura(novoObjeto.transform, "basea");
         Transform baseB = EncontrarBaseSegura(novoObjeto.transform, "baseb");
 
         if (baseA != null && baseB != null)
         {
+            Vector2 direcao = fim - inicio;
+            float anguloPai = Mathf.Atan2(direcao.y, direcao.x) * Mathf.Rad2Deg;
+            novoObjeto.transform.rotation = Quaternion.Euler(0, 0, anguloPai);
+
             baseA.position = inicio;
             baseB.position = fim;
 
-            Vector2 direcaoParaB = fim - inicio;
-            float anguloA = Mathf.Atan2(direcaoParaB.y, direcaoParaB.x) * Mathf.Rad2Deg;
-            baseA.rotation = Quaternion.Euler(0, 0, anguloA);
+            baseA.up = direcao.normalized;
+            baseB.up = -direcao.normalized;
 
-            Vector2 direcaoParaA = inicio - fim;
-            float anguloB = Mathf.Atan2(direcaoParaA.y, direcaoParaA.x) * Mathf.Rad2Deg;
-            baseB.rotation = Quaternion.Euler(0, 0, anguloB);
-        }
-        else
-        {
-            Debug.LogWarning("Chefe, o prefab não tem bases detectáveis! Cheque a hierarquia.");
+            baseA.Rotate(0, 0, rotacaoExtraBaseA);
+            baseB.Rotate(0, 0, rotacaoExtraBaseB);
         }
 
         objetosConstruidos.Add(novoObjeto);
-       
     }
 
-    // A MÁGICA: Varre o prefab ignorando maiúsculas, minúsculas e espaços!
     private Transform EncontrarBaseSegura(Transform pai, string nomeDesejado)
     {
         nomeDesejado = nomeDesejado.ToLower().Replace(" ", "");
-        
         foreach (Transform filho in pai.GetComponentsInChildren<Transform>(true))
         {
             if (filho == pai) continue;
             string nomeFilho = filho.name.ToLower().Replace(" ", "");
             if (nomeFilho == nomeDesejado) return filho;
         }
-
         foreach (Transform filho in pai.GetComponentsInChildren<Transform>(true))
         {
             if (filho == pai) continue;
             string nomeFilho = filho.name.ToLower().Replace(" ", "");
             if (nomeFilho.Contains(nomeDesejado)) return filho;
         }
-
         return null;
     }
 
@@ -232,15 +422,11 @@ public class LevelEditorManager : MonoBehaviour
     public void SelecionarFerramenta(int idFerramenta)
     {
         ferramentaAtual = (TipoFerramenta)idFerramenta;
-        
         if (fantasmaRenderer != null)
         {
-            if (ferramentaAtual == TipoFerramenta.Borracha)
-                fantasmaRenderer.color = new Color(1f, 0f, 0f, 0.5f); 
-            else if (ferramentaAtual == TipoFerramenta.Laser || ferramentaAtual == TipoFerramenta.Serra)
-                fantasmaRenderer.color = new Color(0f, 0.5f, 1f, 0.5f); 
-            else
-                fantasmaRenderer.color = new Color(0.2f, 1f, 0.2f, 0.5f); 
+            if (ferramentaAtual == TipoFerramenta.Borracha) fantasmaRenderer.color = new Color(1f, 0f, 0f, 0.5f); 
+            else if (ferramentaAtual == TipoFerramenta.Laser || ferramentaAtual == TipoFerramenta.Serra) fantasmaRenderer.color = new Color(0f, 0.5f, 1f, 0.5f); 
+            else fantasmaRenderer.color = new Color(0.2f, 1f, 0.2f, 0.5f); 
         }
     }
 
@@ -250,18 +436,15 @@ public class LevelEditorManager : MonoBehaviour
         {
             int ultimoIndice = objetosConstruidos.Count - 1;
             GameObject objetoParaDeletar = objetosConstruidos[ultimoIndice];
-            
             objetosConstruidos.RemoveAt(ultimoIndice);
             Destroy(objetoParaDeletar);
+            AtualizarTodosOsBlocos();
         }
     }
 
     public void BotaoRefazerTudo() 
     {
-        foreach (GameObject obj in objetosConstruidos)
-        {
-            if (obj != null) Destroy(obj);
-        }
+        foreach (GameObject obj in objetosConstruidos) if (obj != null) Destroy(obj);
         objetosConstruidos.Clear();
     }
 
@@ -276,10 +459,8 @@ public class LevelEditorManager : MonoBehaviour
         if (raiosNaTela != 3)
         {
             Debug.LogWarning($"Bloqueado! A fase precisa ter exatamente 3 raios. Você colocou {raiosNaTela}.");
-            if (SoundManager.instance != null) SoundManager.instance.TocarErro();
             return;
         }
-
         Debug.Log("Fase validada com sucesso! Iniciando modo teste...");
     }
 
@@ -288,15 +469,10 @@ public class LevelEditorManager : MonoBehaviour
         Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         float snapX = Mathf.Round(mousePos.x / tamanhoGrade) * tamanhoGrade;
         float snapY = Mathf.Round(mousePos.y / tamanhoGrade) * tamanhoGrade;
-
-        float limiteConstrucaoEsq = limiteEsquerdo + compensacaoBorda;
-        float limiteConstrucaoDir = limiteDireito - compensacaoBorda;
-        float limiteConstrucaoInf = limiteInferior + compensacaoBorda;
-        float limiteConstrucaoSup = limiteSuperior - compensacaoBorda; 
-
-        snapX = Mathf.Clamp(snapX, limiteConstrucaoEsq, limiteConstrucaoDir);
-        snapY = Mathf.Clamp(snapY, limiteConstrucaoInf, limiteConstrucaoSup);
-
+        float limitEsq = limiteEsquerdo + compensacaoBorda; float limitDir = limiteDireito - compensacaoBorda;
+        float limitInf = limiteInferior + compensacaoBorda; float limitSup = limiteSuperior - compensacaoBorda; 
+        snapX = Mathf.Clamp(snapX, limitEsq, limitDir);
+        snapY = Mathf.Clamp(snapY, limitInf, limitSup);
         posicaoSnapMouse = new Vector2(snapX, snapY);
     }
 
@@ -309,7 +485,6 @@ public class LevelEditorManager : MonoBehaviour
     {
         if (cam == null) return;
         if (Input.GetMouseButtonDown(2)) ultimaPosicaoMouseJanela = Input.mousePosition;
-
         if (Input.GetMouseButton(2))
         {
             Vector3 deltaMouse = Input.mousePosition - ultimaPosicaoMouseJanela;
@@ -329,10 +504,10 @@ public class LevelEditorManager : MonoBehaviour
             if (scrollInput != 0f)
             {
                 float alvoZoom = cam.orthographicSize - (scrollInput * velocidadeZoom);
-                float maxTamanhoVertical = (limiteSuperior - limiteInferior) / 2f;
-                float maxTamanhoHorizontal = (limiteDireito - limiteEsquerdo) / (2f * cam.aspect);
-                float zoomMaximoPermitido = Mathf.Min(maxTamanhoVertical, maxTamanhoHorizontal);
-                cam.orthographicSize = Mathf.Clamp(alvoZoom, zoomMinimoGameplay, zoomMaximoPermitido);
+                float maxVertical = (limiteSuperior - limiteInferior) / 2f;
+                float maxHorizontal = (limiteDireito - limiteEsquerdo) / (2f * cam.aspect);
+                float zoomMaxPermitido = Mathf.Min(maxVertical, maxHorizontal);
+                cam.orthographicSize = Mathf.Clamp(alvoZoom, zoomMinimoGameplay, zoomMaxPermitido);
             }
         }
     }
@@ -340,10 +515,10 @@ public class LevelEditorManager : MonoBehaviour
     private void TravarCameraNosLimites()
     {
         if (cam == null) return;
-        float metadeAlturaCam = cam.orthographicSize;
-        float metadeLarguraCam = cam.orthographicSize * cam.aspect;
-        float clampX = Mathf.Clamp(cam.transform.position.x, limiteEsquerdo + metadeLarguraCam, limiteDireito - metadeLarguraCam);
-        float clampY = Mathf.Clamp(cam.transform.position.y, limiteInferior + metadeAlturaCam, limiteSuperior - metadeAlturaCam);
+        float metAlturaCam = cam.orthographicSize;
+        float metLarguraCam = cam.orthographicSize * cam.aspect;
+        float clampX = Mathf.Clamp(cam.transform.position.x, limiteEsquerdo + metLarguraCam, limiteDireito - metLarguraCam);
+        float clampY = Mathf.Clamp(cam.transform.position.y, limiteInferior + metAlturaCam, limiteSuperior - metAlturaCam);
         cam.transform.position = new Vector3(clampX, clampY, -10f);
     }
 
@@ -353,12 +528,5 @@ public class LevelEditorManager : MonoBehaviour
         Vector2 topoEsq = new Vector2(limiteEsquerdo, limiteSuperior); Vector2 topoDir = new Vector2(limiteDireito, limiteSuperior);
         Vector2 baixoEsq = new Vector2(limiteEsquerdo, limiteInferior); Vector2 baixoDir = new Vector2(limiteDireito, limiteInferior);
         Gizmos.DrawLine(topoEsq, topoDir); Gizmos.DrawLine(baixoEsq, baixoDir); Gizmos.DrawLine(topoEsq, baixoEsq); Gizmos.DrawLine(topoDir, baixoDir);    
-
-        Gizmos.color = Color.yellow;
-        float inEsq = limiteEsquerdo + compensacaoBorda; float inDir = limiteDireito - compensacaoBorda;
-        float inInf = limiteInferior + compensacaoBorda; float inSup = limiteSuperior - compensacaoBorda;
-        Vector2 inTopoEsq = new Vector2(inEsq, inSup); Vector2 inTopoDir = new Vector2(inDir, inSup);
-        Vector2 inBaixoEsq = new Vector2(inEsq, inInf); Vector2 inBaixoDir = new Vector2(inDir, inInf);
-        Gizmos.DrawLine(inTopoEsq, inTopoDir); Gizmos.DrawLine(inBaixoEsq, inBaixoDir); Gizmos.DrawLine(inTopoEsq, inBaixoEsq); Gizmos.DrawLine(inTopoDir, inBaixoDir); 
     }
 }

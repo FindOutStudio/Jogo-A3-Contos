@@ -1626,6 +1626,22 @@ MonoBehaviour:
   prefabLaser: {fileID: 6127576304505609091, guid: 5183bfb4d0544d94c847cdbbe7cd8899, type: 3}
   prefabEspinho: {fileID: 5837441849672996241, guid: 8d2fe898f7639ff4b8e81cc69defcd9e, type: 3}
   prefabRaio: {fileID: 3667886371197792909, guid: f9d5e73942ea6f942ba57c7f84765688, type: 3}
+  spritesBloco:
+    cantoSupEsq: {fileID: 9218920386516664502, guid: 062a134a1cb11d14aa7f43a6866c49ed, type: 3}
+    bordaSupCentro: {fileID: 972346794, guid: 062a134a1cb11d14aa7f43a6866c49ed, type: 3}
+    cantoSupDir: {fileID: 84450833, guid: 062a134a1cb11d14aa7f43a6866c49ed, type: 3}
+    bordaMeioEsq: {fileID: -713122655, guid: 062a134a1cb11d14aa7f43a6866c49ed, type: 3}
+    centro: {fileID: -2139533306, guid: 062a134a1cb11d14aa7f43a6866c49ed, type: 3}
+    bordaMeioDir: {fileID: 1369329607, guid: 062a134a1cb11d14aa7f43a6866c49ed, type: 3}
+    cantoInfEsq: {fileID: -1377554382, guid: 062a134a1cb11d14aa7f43a6866c49ed, type: 3}
+    bordaInfCentro: {fileID: 1461523620, guid: 062a134a1cb11d14aa7f43a6866c49ed, type: 3}
+    cantoInfDir: {fileID: -1666880617, guid: 062a134a1cb11d14aa7f43a6866c49ed, type: 3}
+    quinaExtSupEsq: {fileID: 273745037326157960, guid: 971d2e1cf0a428d4b87be18c79886690, type: 3}
+    quinaExtSupDir: {fileID: -778846786, guid: 971d2e1cf0a428d4b87be18c79886690, type: 3}
+    quinaExtInfEsq: {fileID: -1164360214, guid: 971d2e1cf0a428d4b87be18c79886690, type: 3}
+    quinaExtInfDir: {fileID: 606010285, guid: 971d2e1cf0a428d4b87be18c79886690, type: 3}
+  rotacaoExtraBaseA: 90
+  rotacaoExtraBaseB: -90
   zoomMinimoGameplay: 5
   velocidadeZoom: 10
   velocidadeArrasto: 1.2

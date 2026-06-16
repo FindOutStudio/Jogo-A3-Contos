@@ -1,0 +1,336 @@
+fileFormatVersion: 2
+guid: bc270417d97d8074b8abc28545639857
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6005470601558145078
+    second: Tilesets Basicos NanoBanana_0
+  - first:
+      213: 7824782581839974794
+    second: Tilesets Basicos NanoBanana_1
+  - first:
+      213: -574250110175410521
+    second: Tilesets Basicos NanoBanana_2
+  - first:
+      213: 7154245582597753137
+    second: Tilesets Basicos NanoBanana_3
+  - first:
+      213: 7756896609192569304
+    second: Tilesets Basicos NanoBanana_4
+  - first:
+      213: -2705959990930463266
+    second: Tilesets Basicos NanoBanana_5
+  - first:
+      213: -4936730427891877691
+    second: Tilesets Basicos NanoBanana_6
+  - first:
+      213: -5033743004410454793
+    second: Tilesets Basicos NanoBanana_7
+  - first:
+      213: 2839907068180070858
+    second: Tilesets Basicos NanoBanana_8
+  - first:
+      213: -2287877873341241028
+    second: Tilesets Basicos NanoBanana_9
+  - first:
+      213: 8804945363643449268
+    second: Tilesets Basicos NanoBanana_10
+  - first:
+      213: 2511670259702778250
+    second: Tilesets Basicos NanoBanana_11
+  - first:
+      213: 3727595501148212606
+    second: Tilesets Basicos NanoBanana_12
+  - first:
+      213: -5784691546196864372
+    second: Tilesets Basicos NanoBanana_13
+  - first:
+      213: -5166696944546494748
+    second: Tilesets Basicos NanoBanana_14
+  - first:
+      213: 9105052292966114399
+    second: Tilesets Basicos NanoBanana_15
+  - first:
+      213: -7728913008546209299
+    second: Tilesets Basicos NanoBanana_16
+  - first:
+      213: 5895417815114551746
+    second: Tilesets Basicos NanoBanana_17
+  - first:
+      213: 7068390982984432730
+    second: Tilesets Basicos NanoBanana_18
+  - first:
+      213: 4076836003146097242
+    second: Tilesets Basicos NanoBanana_19
+  - first:
+      213: 7255589098908306789
+    second: Tilesets Basicos NanoBanana_20
+  - first:
+      213: 3847340019180985646
+    second: Tilesets Basicos NanoBanana_21
+  - first:
+      213: 7543134464185677608
+    second: Tilesets Basicos NanoBanana_22
+  - first:
+      213: -4718674032447137925
+    second: Tilesets Basicos NanoBanana_23
+  - first:
+      213: 4997350037464252271
+    second: Tilesets Basicos NanoBanana_24
+  - first:
+      213: 7367818976906907315
+    second: Tilesets Basicos NanoBanana_25
+  - first:
+      213: -6840637099807328206
+    second: Tilesets Basicos NanoBanana_26
+  - first:
+      213: -8058942335765043632
+    second: Tilesets Basicos NanoBanana_27
+  - first:
+      213: -4620053523373300702
+    second: Tilesets Basicos NanoBanana_28
+  - first:
+      213: -2028951166884965991
+    second: Tilesets Basicos NanoBanana_29
+  - first:
+      213: 5879542281462156260
+    second: Tilesets Basicos NanoBanana_30
+  - first:
+      213: 4015112551919548041
+    second: Tilesets Basicos NanoBanana_31
+  - first:
+      213: -8442095653920488206
+    second: Tilesets Basicos NanoBanana_32
+  - first:
+      213: 4569831808769961974
+    second: Tilesets Basicos NanoBanana_33
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tilesets Basicos NanoBanana_2
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 259
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a604ca319ad708f0800000000000000
+      internalID: -574250110175410521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilesets Basicos NanoBanana_29
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 51
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 991153fd9a7b7d3e0800000000000000
+      internalID: -2028951166884965991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 8573d7d8ad0f6b144a5b91fac87cd58b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Tilesets Basicos NanoBanana_0: 6005470601558145078
+      Tilesets Basicos NanoBanana_1: 7824782581839974794
+      Tilesets Basicos NanoBanana_10: 8804945363643449268
+      Tilesets Basicos NanoBanana_11: 2511670259702778250
+      Tilesets Basicos NanoBanana_12: 3727595501148212606
+      Tilesets Basicos NanoBanana_13: -5784691546196864372
+      Tilesets Basicos NanoBanana_14: -5166696944546494748
+      Tilesets Basicos NanoBanana_15: 9105052292966114399
+      Tilesets Basicos NanoBanana_16: -7728913008546209299
+      Tilesets Basicos NanoBanana_17: 5895417815114551746
+      Tilesets Basicos NanoBanana_18: 7068390982984432730
+      Tilesets Basicos NanoBanana_19: 4076836003146097242
+      Tilesets Basicos NanoBanana_2: -574250110175410521
+      Tilesets Basicos NanoBanana_20: 7255589098908306789
+      Tilesets Basicos NanoBanana_21: 3847340019180985646
+      Tilesets Basicos NanoBanana_22: 7543134464185677608
+      Tilesets Basicos NanoBanana_23: -4718674032447137925
+      Tilesets Basicos NanoBanana_24: 4997350037464252271
+      Tilesets Basicos NanoBanana_25: 7367818976906907315
+      Tilesets Basicos NanoBanana_26: -6840637099807328206
+      Tilesets Basicos NanoBanana_27: -8058942335765043632
+      Tilesets Basicos NanoBanana_28: -4620053523373300702
+      Tilesets Basicos NanoBanana_29: -2028951166884965991
+      Tilesets Basicos NanoBanana_3: 7154245582597753137
+      Tilesets Basicos NanoBanana_30: 5879542281462156260
+      Tilesets Basicos NanoBanana_31: 4015112551919548041
+      Tilesets Basicos NanoBanana_32: -8442095653920488206
+      Tilesets Basicos NanoBanana_33: 4569831808769961974
+      Tilesets Basicos NanoBanana_4: 7756896609192569304
+      Tilesets Basicos NanoBanana_5: -2705959990930463266
+      Tilesets Basicos NanoBanana_6: -4936730427891877691
+      Tilesets Basicos NanoBanana_7: -5033743004410454793
+      Tilesets Basicos NanoBanana_8: 2839907068180070858
+      Tilesets Basicos NanoBanana_9: -2287877873341241028
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -9,6 +9,8 @@ public class IntermittentLaser : MonoBehaviour
     [SerializeField] private float laserThickness = 0.5f; 
 
     [Header("Configurações de Tempo")]
+    [Tooltip("Tempo (em segundos) antes do laser começar a funcionar pela primeira vez")]
+    [SerializeField] private float delayInicial = 0f; 
     [SerializeField] private float timeOn = 2f; 
     [SerializeField] private float timeOff = 1.5f; 
     [SerializeField] private bool startOn = true; 
@@ -25,6 +27,7 @@ public class IntermittentLaser : MonoBehaviour
     private float arcTimer; 
     
     private AudioSource meuAudio; 
+    private bool aguardandoDelay; // Variável para controlar o estado do Delay
 
     private void Awake()
     {
@@ -37,13 +40,44 @@ public class IntermittentLaser : MonoBehaviour
         SetupLaserTransform();
         ConfigurarAudio3D(); 
 
-        isLaserActive = startOn;
-        timer = isLaserActive ? timeOn : timeOff;
+        // LÓGICA DO NOVO DELAY INICIAL
+        if (delayInicial > 0f)
+        {
+            // Durante a largada, força o laser a ficar desligado enquanto espera
+            isLaserActive = false; 
+            timer = delayInicial;
+            aguardandoDelay = true;
+        }
+        else
+        {
+            // Se não tem delay, começa o jogo na hora usando o StartOn
+            isLaserActive = startOn;
+            timer = isLaserActive ? timeOn : timeOff;
+            aguardandoDelay = false;
+        }
+
         UpdateLaserState();
     }
 
     private void Update()
     {
+        // === 1. FASE DE ESPERA DO DELAY ===
+        if (aguardandoDelay)
+        {
+            timer -= Time.deltaTime;
+            if (timer <= 0f)
+            {
+                aguardandoDelay = false; // Saiu do delay inicial!
+                
+                // Agora ele assume o estado de inicialização real
+                isLaserActive = startOn;
+                timer = isLaserActive ? timeOn : timeOff;
+                UpdateLaserState();
+            }
+            return; // Impede que o resto do código rode enquanto estiver no delay
+        }
+
+        // === 2. LOOP NORMAL DO JOGO (PISCA-PISCA) ===
         timer -= Time.deltaTime;
         if (timer <= 0f)
         {
@@ -52,55 +86,59 @@ public class IntermittentLaser : MonoBehaviour
             UpdateLaserState();
         }
 
+        // === 3. EFEITO VISUAL DO RAIO TREMENDO ===
         if (isLaserActive)
         {
-            arcTimer -= Time.deltaTime;
-            if (arcTimer <= 0f)
+            arcTimer += Time.deltaTime;
+            if (arcTimer >= 1f / fps)
             {
                 DrawArc();
-                arcTimer = 1f / fps; 
+                arcTimer = 0f;
             }
         }
     }
 
     private void SetupLaserTransform()
     {
-        if (baseA == null || baseB == null) return;
-
-        transform.position = (baseA.position + baseB.position) / 2f;
-        Vector2 direction = baseB.position - baseA.position;
-        float distance = direction.magnitude;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, angle);
-        transform.localScale = new Vector3(distance, laserThickness, 1f);
-
-        if (arcRenderer != null)
+        if (baseA != null && baseB != null)
         {
-            arcRenderer.positionCount = segments + 1;
+            Vector2 start = baseA.position;
+            Vector2 end = baseB.position;
+
+            Vector2 center = (start + end) / 2f;
+            transform.position = center;
+
+            Vector2 dir = end - start;
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0, 0, angle);
+
+            float length = Vector2.Distance(start, end);
+            laserCollider.size = new Vector2(length, laserThickness);
+
+            if (arcRenderer != null)
+            {
+                arcRenderer.positionCount = segments;
+            }
         }
     }
 
-    // === PREPARAÇÃO DO SOM (COM BLINDAGEM) ===
     private void ConfigurarAudio3D()
     {
-        if (SoundManager.instance != null && SoundManager.instance.obstaculoLaser != null)
+        meuAudio = GetComponent<AudioSource>();
+        if (meuAudio == null)
         {
-            // 1. Tenta pegar uma caixa de som que já exista. Se não achar, aí sim fabrica uma!
-            meuAudio = GetComponent<AudioSource>();
-            if (meuAudio == null)
-            {
-                meuAudio = gameObject.AddComponent<AudioSource>();
-            }
+            meuAudio = gameObject.AddComponent<AudioSource>();
+        }
 
-            // 2. Trava de segurança: Proíbe a Unity de tocar o som automaticamente
-            meuAudio.playOnAwake = false;
+        meuAudio.playOnAwake = false;
+        meuAudio.loop = true;
+        meuAudio.spatialBlend = 1f;
+        meuAudio.rolloffMode = AudioRolloffMode.Linear;
+        meuAudio.minDistance = 2f;
+        meuAudio.maxDistance = 15f;
 
-            meuAudio.spatialBlend = 1f; 
-            meuAudio.rolloffMode = AudioRolloffMode.Linear;
-            meuAudio.minDistance = 2f;
-            meuAudio.maxDistance = 15f; 
-            meuAudio.loop = true;
-
+        if (SoundManager.instance != null)
+        {
             meuAudio.clip = SoundManager.instance.obstaculoLaser;
             meuAudio.volume = SoundManager.instance.volumeLaser;
             meuAudio.pitch = Random.Range(0.95f, 1.05f); 
@@ -143,12 +181,12 @@ public class IntermittentLaser : MonoBehaviour
             float t = (float)i / segments;
             Vector2 basePos = Vector2.Lerp(start, end, t);
 
-            float randomJitter = Random.Range(-arcVolatility, arcVolatility);
-            Vector2 finalPos = basePos + (perpendicular * randomJitter);
-
-            arcRenderer.SetPosition(i, finalPos);
+            float randomOffset = Random.Range(-arcVolatility, arcVolatility);
+            Vector2 point = basePos + (perpendicular * randomOffset);
+            
+            arcRenderer.SetPosition(i, point);
         }
 
-        arcRenderer.SetPosition(segments, end); 
+        arcRenderer.SetPosition(segments - 1, end);
     }
 }

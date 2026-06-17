@@ -1,0 +1,728 @@
+fileFormatVersion: 2
+guid: a77f4e8b91f0f544ab5733637e15c364
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7395621511376287813
+    second: Nano_Bronze_Morte_0
+  - first:
+      213: -5283199814158378304
+    second: Nano_Bronze_Morte_1
+  - first:
+      213: 3587559112367075366
+    second: Nano_Bronze_Morte_2
+  - first:
+      213: 7464474968441815580
+    second: Nano_Bronze_Morte_3
+  - first:
+      213: 6357699121185166261
+    second: Nano_Bronze_Morte_4
+  - first:
+      213: 4540078961718002328
+    second: Nano_Bronze_Morte_5
+  - first:
+      213: 294387596982537024
+    second: Nano_Bronze_Morte_6
+  - first:
+      213: -1937797446758571347
+    second: Nano_Bronze_Morte_7
+  - first:
+      213: -3607450423124145724
+    second: Nano_Bronze_Morte_8
+  - first:
+      213: 5124285990678469693
+    second: Nano_Bronze_Morte_9
+  - first:
+      213: -9095078190378779859
+    second: Nano_Bronze_Morte_10
+  - first:
+      213: 5070075387937544345
+    second: Nano_Bronze_Morte_11
+  - first:
+      213: 843781081451623296
+    second: Nano_Bronze_Morte_12
+  - first:
+      213: -5562746343225013981
+    second: Nano_Bronze_Morte_13
+  - first:
+      213: 3003877698793651944
+    second: Nano_Bronze_Morte_14
+  - first:
+      213: -1385889733182718945
+    second: Nano_Bronze_Morte_15
+  - first:
+      213: 257090325325313614
+    second: Nano_Bronze_Morte_16
+  - first:
+      213: 637488427059963492
+    second: Nano_Bronze_Morte_17
+  - first:
+      213: 6686835074957800536
+    second: Nano_Bronze_Morte_18
+  - first:
+      213: 1911164208038607181
+    second: Nano_Bronze_Morte_19
+  - first:
+      213: -7096302003656218409
+    second: Nano_Bronze_Morte_20
+  - first:
+      213: -7340918691944088042
+    second: Nano_Bronze_Morte_21
+  - first:
+      213: -556801004414202162
+    second: Nano_Bronze_Morte_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Nano_Bronze_Morte_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54832d6b49682a660800000000000000
+      internalID: 7395621511376287813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nano_Bronze_Morte_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ca1ea7b2cd4ea6b0800000000000000
+      internalID: -5283199814158378304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nano_Bronze_Morte_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 620fa57410299c130800000000000000
+      internalID: 3587559112367075366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nano_Bronze_Morte_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1205c07f64279760800000000000000
+      internalID: 7464474968441815580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nano_Bronze_Morte_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b31e0b8aa51b3850800000000000000
+      internalID: 6357699121185166261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nano_Bronze_Morte_5
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 0
+        width: 58
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8920d65e2c9910f30800000000000000
+      internalID: 4540078961718002328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nano_Bronze_Morte_6
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04bcc60b5ffd51400800000000000000
+      internalID: 294387596982537024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nano_Bronze_Morte_7
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 0
+        width: 37
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da2eb433d7f8b15e0800000000000000
+      internalID: -1937797446758571347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nano_Bronze_Morte_8
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 23
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c94ad804f2cfedc0800000000000000
+      internalID: -3607450423124145724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nano_Bronze_Morte_9
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 25
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3c96e975fe1d1740800000000000000
+      internalID: 5124285990678469693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nano_Bronze_Morte_10
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 26
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2bf11ad29ac7c180800000000000000
+      internalID: -9095078190378779859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nano_Bronze_Morte_11
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 0
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 998d772f3b68c5640800000000000000
+      internalID: 5070075387937544345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nano_Bronze_Morte_12
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 0
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0837e1c4c66b5bb00800000000000000
+      internalID: 843781081451623296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nano_Bronze_Morte_13
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 0
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 329487c6ca72dc2b0800000000000000
+      internalID: -5562746343225013981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nano_Bronze_Morte_14
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 18
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ee30511adaefa920800000000000000
+      internalID: 3003877698793651944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nano_Bronze_Morte_15
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 1
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1c78c361a454cce0800000000000000
+      internalID: -1385889733182718945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nano_Bronze_Morte_16
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 0
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e46743ce94e519300800000000000000
+      internalID: 257090325325313614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nano_Bronze_Morte_17
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 6
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 466e45bc850d8d800800000000000000
+      internalID: 637488427059963492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nano_Bronze_Morte_18
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 18
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8547b7282196ccc50800000000000000
+      internalID: 6686835074957800536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nano_Bronze_Morte_19
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 26
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d49f49fa8b1d58a10800000000000000
+      internalID: 1911164208038607181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nano_Bronze_Morte_20
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d8ad2deceed48d90800000000000000
+      internalID: -7096302003656218409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nano_Bronze_Morte_21
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 0
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61eb5a1f751df1a90800000000000000
+      internalID: -7340918691944088042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nano_Bronze_Morte_22
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 0
+        width: 39
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ece8f41cf68d548f0800000000000000
+      internalID: -556801004414202162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Nano_Bronze_Morte_0: 7395621511376287813
+      Nano_Bronze_Morte_1: -5283199814158378304
+      Nano_Bronze_Morte_10: -9095078190378779859
+      Nano_Bronze_Morte_11: 5070075387937544345
+      Nano_Bronze_Morte_12: 843781081451623296
+      Nano_Bronze_Morte_13: -5562746343225013981
+      Nano_Bronze_Morte_14: 3003877698793651944
+      Nano_Bronze_Morte_15: -1385889733182718945
+      Nano_Bronze_Morte_16: 257090325325313614
+      Nano_Bronze_Morte_17: 637488427059963492
+      Nano_Bronze_Morte_18: 6686835074957800536
+      Nano_Bronze_Morte_19: 1911164208038607181
+      Nano_Bronze_Morte_2: 3587559112367075366
+      Nano_Bronze_Morte_20: -7096302003656218409
+      Nano_Bronze_Morte_21: -7340918691944088042
+      Nano_Bronze_Morte_22: -556801004414202162
+      Nano_Bronze_Morte_3: 7464474968441815580
+      Nano_Bronze_Morte_4: 6357699121185166261
+      Nano_Bronze_Morte_5: 4540078961718002328
+      Nano_Bronze_Morte_6: 294387596982537024
+      Nano_Bronze_Morte_7: -1937797446758571347
+      Nano_Bronze_Morte_8: -3607450423124145724
+      Nano_Bronze_Morte_9: 5124285990678469693
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -571,7 +571,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &318849446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1920,8 +1920,8 @@ MonoBehaviour:
     spriteBloqueado: {fileID: 559740246649251523, guid: a44cda0f222287f4cbb8677cf165af9b, type: 3}
     batePapo: []
   - logID: 7
-    spriteDesbloqueado: {fileID: 3078117982867141812, guid: e1a3d640c49b77e4c89f9af565bec448, type: 3}
-    spriteBloqueado: {fileID: 559740246649251523, guid: a44cda0f222287f4cbb8677cf165af9b, type: 3}
+    spriteDesbloqueado: {fileID: -4138807268446010591, guid: 43d7b729eb98d094e9ab722c0af1d319, type: 3}
+    spriteBloqueado: {fileID: 3322198662875000764, guid: 75d72d3d89d15ec43a169e0b304a96d6, type: 3}
     batePapo: []
   idLogSecreto: 7
   quantidadeLogsParaDesbloquear: 6
@@ -2279,7 +2279,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -4697,7 +4697,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1866216338
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5264,7 +5264,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -5311,10 +5311,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1866216338}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00024414062, y: -0.0014648438}
-  m_SizeDelta: {x: -613.88, y: -283.33}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 219, y: -124}
+  m_SizeDelta: {x: 1306.12, y: 796.67004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1947525030
 MonoBehaviour:
@@ -5338,7 +5338,7 @@ MonoBehaviour:
   m_StartAxis: 0
   m_CellSize: {x: 100, y: 100}
   m_Spacing: {x: 50, y: 50}
-  m_Constraint: 1
+  m_Constraint: 2
   m_ConstraintCount: 2
 --- !u!1 &1963087723
 GameObject:
@@ -5684,7 +5684,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:

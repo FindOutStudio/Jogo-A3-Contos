@@ -571,7 +571,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &318849446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1919,6 +1919,12 @@ MonoBehaviour:
     spriteDesbloqueado: {fileID: 3078117982867141812, guid: e1a3d640c49b77e4c89f9af565bec448, type: 3}
     spriteBloqueado: {fileID: 559740246649251523, guid: a44cda0f222287f4cbb8677cf165af9b, type: 3}
     batePapo: []
+  - logID: 7
+    spriteDesbloqueado: {fileID: 3078117982867141812, guid: e1a3d640c49b77e4c89f9af565bec448, type: 3}
+    spriteBloqueado: {fileID: 559740246649251523, guid: a44cda0f222287f4cbb8677cf165af9b, type: 3}
+    batePapo: []
+  idLogSecreto: 7
+  quantidadeLogsParaDesbloquear: 6
 --- !u!1 &694985463
 GameObject:
   m_ObjectHideFlags: 0

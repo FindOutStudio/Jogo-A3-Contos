@@ -1835,6 +1835,14 @@ MonoBehaviour:
     spriteDesbloqueado: {fileID: -2821444925891823473, guid: 2c9b2dc909551334bbbdd8e224c85627, type: 3}
     spriteBloqueado: {fileID: 5120035921311541407, guid: 149ec6ce70d55474c8ba8d8623773363, type: 3}
     idCinematicaAntesDaFase: 
+  - nomeDaCena: Level 5
+    spriteDesbloqueado: {fileID: 8103602080212363961, guid: 83e8eeca9719a86498996ae115b7e880, type: 3}
+    spriteBloqueado: {fileID: -1797822505334519076, guid: ad027cd6c682eaf49b248beccbe98eaa, type: 3}
+    idCinematicaAntesDaFase: 
+  - nomeDaCena: Level 6
+    spriteDesbloqueado: {fileID: 8494560485682317195, guid: 3ea0007d06279934db3c0875066d345c, type: 3}
+    spriteBloqueado: {fileID: -42323376689860941, guid: cf6b231c226f47c46986222d9feb5f2a, type: 3}
+    idCinematicaAntesDaFase: 
 --- !u!114 &663114043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1864,7 +1872,7 @@ MonoBehaviour:
   sliderMaster: {fileID: 2036246255}
   sliderSFX: {fileID: 1928758258}
   sliderMusica: {fileID: 806877791}
-  cooldownSomFeedback: 0.15
+  somDeTesteSFX: {fileID: 8300000, guid: 9236b788cbdc1354189666f6803c0736, type: 3}
 --- !u!114 &663114046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1902,6 +1910,14 @@ MonoBehaviour:
   - logID: 4
     spriteDesbloqueado: {fileID: 1655019086493241931, guid: 02ed0a6aba7879447ab1e32958d3e905, type: 3}
     spriteBloqueado: {fileID: -1568444048576039043, guid: 3c465016fd72bdd42a73339815de362c, type: 3}
+    batePapo: []
+  - logID: 5
+    spriteDesbloqueado: {fileID: -8058092689057484630, guid: 170b38d4cf2df7b4c9fdd194f884e2da, type: 3}
+    spriteBloqueado: {fileID: -5358153675038649123, guid: 40eb2636fbce4a143a9431511681f572, type: 3}
+    batePapo: []
+  - logID: 6
+    spriteDesbloqueado: {fileID: 3078117982867141812, guid: e1a3d640c49b77e4c89f9af565bec448, type: 3}
+    spriteBloqueado: {fileID: 559740246649251523, guid: a44cda0f222287f4cbb8677cf165af9b, type: 3}
     batePapo: []
 --- !u!1 &694985463
 GameObject:
@@ -2260,7 +2276,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 663114045}
+        m_TargetAssemblyTypeName: ControleDeVolume, Assembly-CSharp
+        m_MethodName: MudarVolumeMusica
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &806877792
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5233,7 +5261,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 663114045}
+        m_TargetAssemblyTypeName: ControleDeVolume, Assembly-CSharp
+        m_MethodName: MudarVolumeSFX
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1947525028
 GameObject:
   m_ObjectHideFlags: 0
@@ -5641,7 +5681,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 663114045}
+        m_TargetAssemblyTypeName: ControleDeVolume, Assembly-CSharp
+        m_MethodName: MudarVolumeMaster
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2121458637
 GameObject:
   m_ObjectHideFlags: 0

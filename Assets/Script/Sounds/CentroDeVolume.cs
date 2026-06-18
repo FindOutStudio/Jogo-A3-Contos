@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems; // Biblioteca essencial para detectar o clique do mouse na UI
 
 public class ControleDeVolume : MonoBehaviour
 {
@@ -9,9 +10,8 @@ public class ControleDeVolume : MonoBehaviour
     public Slider sliderMusica; 
 
     [Header("Feedback Sonoro")]
-    [Tooltip("Impede o som de tocar como metralhadora enquanto arrasta (ex: 0.15 segundos)")]
-    public float cooldownSomFeedback = 0.15f;
-    private float tempoUltimoSom = 0f;
+    [Tooltip("Se deixar vazio, ele puxa o som 'uiSelecao' automático do seu SoundManager!")]
+    public AudioClip somDeTesteSFX;
 
     private void Start()
     {
@@ -28,6 +28,9 @@ public class ControleDeVolume : MonoBehaviour
         {
             sliderSFX.value = volSFX;
             sliderSFX.onValueChanged.AddListener(MudarVolumeSFX);
+            
+            // A MÁGICA AQUI: Ensina a Unity a disparar o som SOMENTE quando você soltar o clique!
+            AdicionarVigiaDeMouse(sliderSFX);
         }
         if (sliderMusica != null)
         {
@@ -35,8 +38,25 @@ public class ControleDeVolume : MonoBehaviour
             sliderMusica.onValueChanged.AddListener(MudarVolumeMusica);
         }
 
-        // Garante que o volume Master inicial seja aplicado
+        // Aplica os volumes iniciais
         AudioListener.volume = volMaster;
+        if (SoundManager.instance != null) SoundManager.instance.AtualizarVolumeGlobalSFX(volSFX);
+        if (MusicManager.instance != null) MusicManager.instance.SetVolumeEmTempoReal(volMusica);
+    }
+
+    // ====== FUNÇÃO QUE CRIA O DETECTOR DE SOLTAR ======
+    private void AdicionarVigiaDeMouse(Slider slider)
+    {
+        // Pega ou adiciona o componente EventTrigger no Slider
+        EventTrigger trigger = slider.gameObject.GetComponent<EventTrigger>();
+        if (trigger == null) trigger = slider.gameObject.AddComponent<EventTrigger>();
+
+        // Cria a regra: "EventTriggerType.PointerUp" (Quando o dedo/mouse levanta)
+        EventTrigger.Entry entry = new EventTrigger.Entry();
+        entry.eventID = EventTriggerType.PointerUp;
+        entry.callback.AddListener((data) => { TocarFeedbackAoSoltar(); });
+        
+        trigger.triggers.Add(entry);
     }
 
     public void MudarVolumeMaster(float valor)
@@ -44,9 +64,6 @@ public class ControleDeVolume : MonoBehaviour
         AudioListener.volume = valor; 
         PlayerPrefs.SetFloat("VolumeMaster", valor);
         PlayerPrefs.Save();
-
-        // Toca o bip para o jogador testar a nova altura global
-        TocarFeedbackSonoro();
     }
 
     public void MudarVolumeSFX(float valor)
@@ -54,30 +71,43 @@ public class ControleDeVolume : MonoBehaviour
         if (SoundManager.instance != null) SoundManager.instance.AtualizarVolumeGlobalSFX(valor);
         PlayerPrefs.SetFloat("VolumeSFX", valor);
         PlayerPrefs.Save();
-
-        // Toca o bip para o jogador testar a altura dos efeitos
-        TocarFeedbackSonoro();
+        
+        // Removi o som daqui! Ele não vai mais tocar loucamente enquanto você arrasta.
     }
 
     public void MudarVolumeMusica(float valor)
     {
-        // A música geralmente não precisa de bip porque o feedback é a própria música tocando
+        if (MusicManager.instance != null) MusicManager.instance.SetVolumeEmTempoReal(valor); 
         PlayerPrefs.SetFloat("VolumeMusica", valor);
         PlayerPrefs.Save();
     }
 
-    private void TocarFeedbackSonoro()
+    // ====== FUNÇÃO QUE TOCA O SOM ======
+    private void TocarFeedbackAoSoltar()
     {
-        // Só toca o som se já passou o tempo do cooldown
-        // Usamos unscaledTime porque as configurações abrem com o jogo pausado (Time.timeScale = 0)
-        if (Time.unscaledTime - tempoUltimoSom > cooldownSomFeedback)
+        if (SoundManager.instance != null && SoundManager.instance.sfxSource != null) 
         {
-            if (SoundManager.instance != null) 
+            // Se você esqueceu de arrastar o som no Inspector, ele puxa o do SoundManager para salvar a pátria
+            AudioClip clipeParaTocar = somDeTesteSFX != null ? somDeTesteSFX : SoundManager.instance.uiSelecao;
+
+            if (clipeParaTocar != null)
             {
-                // Reutilizamos o som de clique padrão da sua UI
-                SoundManager.instance.TocarMaozinha(); 
+                // Força tocar mesmo com o jogo pausado (Time.timeScale = 0)
+                SoundManager.instance.sfxSource.ignoreListenerPause = true; 
+                
+                // Toca usando o volume ATUAL do slider para você saber exatamente a altura em que ficou
+                float volumeAtual = sliderSFX != null ? sliderSFX.value : SoundManager.instance.volumeGlobalSFX;
+                
+                // Só toca se não estiver mutado (volume 0), se não é inútil!
+                if (volumeAtual > 0.01f)
+                {
+                    SoundManager.instance.sfxSource.PlayOneShot(clipeParaTocar, volumeAtual);
+                }
             }
-            tempoUltimoSom = Time.unscaledTime;
+            else
+            {
+                Debug.LogWarning("Chefe, o áudio de feedback tá vazio tanto aqui quanto no SoundManager!");
+            }
         }
     }
 }

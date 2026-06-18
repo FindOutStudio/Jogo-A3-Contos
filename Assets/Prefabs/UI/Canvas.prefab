@@ -2071,8 +2071,8 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 100, y: 100}
-  m_Spacing: {x: 20, y: 0}
+  m_CellSize: {x: 120.8, y: 120.7}
+  m_Spacing: {x: 183.7, y: 0}
   m_Constraint: 2
   m_ConstraintCount: 1
 --- !u!1 &4222154048956775770
@@ -3582,7 +3582,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 702, y: -402}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 120.8, y: 120.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &614463309705308491
 CanvasRenderer:
@@ -4416,8 +4416,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 582, y: -402}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 397.5, y: -402}
+  m_SizeDelta: {x: 120.8, y: 120.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6051661227252433725
 CanvasRenderer:
@@ -4703,8 +4703,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 822, y: -402}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 1006.5, y: -402}
+  m_SizeDelta: {x: 120.8, y: 120.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8552231100955301836
 CanvasRenderer:
@@ -4819,7 +4819,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 1, g: 0.85490197, b: 0.52156866, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5565,7 +5565,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: VIKTOR FABER
+  m_text: 'VIKTOR FABER:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6d037802fa3cbdc43ade9c79b2ab5e4e, type: 2}
   m_sharedMaterial: {fileID: -4424747335348935971, guid: 6d037802fa3cbdc43ade9c79b2ab5e4e, type: 2}
@@ -5575,7 +5575,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4286962431
-  m_fontColor: {r: 1, g: 0.85490197, b: 0.52156866, a: 1}
+  m_fontColor: {r: 0.8784314, g: 0.7058824, b: 0.23137255, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

@@ -108,6 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a98af546aa874a947b9ffb99c2ed0cc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LauncherBase
+  tempoCooldownReentrada: 0.1
   caiQuandoPisa: 0
   tempoParaCair: 0.5
 --- !u!58 &871552264838427554

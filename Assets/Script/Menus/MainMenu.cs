@@ -70,9 +70,10 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    // ==========================================
-    // ======= SISTEMA DE SAÍDA DO JOGO =======
-    // ==========================================
+    public void Credits()
+    {
+        SceneManager.LoadScene("Creditos");
+    }
 
     // 1. Coloque esta função no botão "Sair" do menu principal
     public void BotaoSair() 

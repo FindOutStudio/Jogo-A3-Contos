@@ -20769,6 +20769,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1227594260810957375, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
+      propertyPath: idDestaFase
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1227594260810957375, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
       propertyPath: painelVitoria
       value: 
       objectReference: {fileID: 2100280316}
@@ -20788,6 +20792,10 @@ PrefabInstance:
       propertyPath: botaoReiniciarFase
       value: 
       objectReference: {fileID: 2100280310}
+    - target: {fileID: 1227594260810957375, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
+      propertyPath: idCinematicaVitoria
+      value: AlgozFinal
+      objectReference: {fileID: 0}
     - target: {fileID: 1227594260810957375, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
       propertyPath: 'imagensRaiosVitoria.Array.data[0]'
       value: 

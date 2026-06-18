@@ -1,15 +1,22 @@
 using UnityEngine;
-using System.Threading.Tasks; // Para usar o temporizador moderno
+using System.Threading.Tasks;
 
-[RequireComponent(typeof(Rigidbody2D))] // Agora a base precisa de física para poder cair
+[RequireComponent(typeof(Rigidbody2D))] 
 public class LauncherBase : MonoBehaviour
 {
+    [Header("Configurações do Lançador")]
+    [Tooltip("Tempo que o lançador ignora o player após ele sair (evita grudar de novo no mesmo tiro)")]
+    [SerializeField] private float tempoCooldownReentrada = 0.1f;
+
     [Header("Configurações de Queda")]
     [SerializeField] private bool caiQuandoPisa = false;
-    [SerializeField] private float tempoParaCair = 0.5f; // Meio segundo de instabilidade antes de despencar
+    [SerializeField] private float tempoParaCair = 0.5f;
 
     private Rigidbody2D rb;
     private bool jaCaiu = false;
+    
+    // Variável para controlar o bloqueio temporário
+    private float cooldownAtual = 0f;
 
     private void Awake()
     {
@@ -19,8 +26,20 @@ public class LauncherBase : MonoBehaviour
         rb.bodyType = RigidbodyType2D.Kinematic; 
     }
 
+    private void Update()
+    {
+        // Se o cooldown estiver ativo, vai diminuindo o tempo como um cronômetro
+        if (cooldownAtual > 0f)
+        {
+            cooldownAtual -= Time.deltaTime;
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // SEGREDO 1: Se o cooldown ainda estiver rodando, ignora a colisão e cancela a função!
+        if (cooldownAtual > 0f) return;
+
         if (collision.CompareTag("Player"))
         {
             PlayerController player = collision.GetComponent<PlayerController>();
@@ -38,6 +57,16 @@ public class LauncherBase : MonoBehaviour
         }
     }
 
+    // SEGREDO 2: O evento que detecta a SAÍDA do Nano do lançador
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            // Assim que o jogador é disparado e sai do colisor, ativamos a trava de segurança!
+            cooldownAtual = tempoCooldownReentrada;
+        }
+    }
+
     private async void Cair()
     {
         jaCaiu = true; // Trava pra não rodar duas vezes
@@ -45,14 +74,9 @@ public class LauncherBase : MonoBehaviour
         // Espera o tempo configurado (converte de segundos para milissegundos)
         await Task.Delay((int)(tempoParaCair * 1000));
 
-        // Segurança: Se você resetar a fase (morrer) antes desse tempo acabar, o objeto é destruído.
-        // Isso evita que o código tente fazer cair algo que não existe mais.
         if (this == null) return; 
 
-        // O PULO DO GATO: Muda o corpo pra Dynamic. Agora a gravidade da Unity puxa ele pra baixo!
+        // Muda o corpo pra Dynamic. Agora a gravidade da Unity puxa ele pra baixo!
         rb.bodyType = RigidbodyType2D.Dynamic;
-        
-        // Opcional: Destrói a base depois de 3 segundos caindo pra não pesar a memória do jogo
-        Destroy(gameObject, 3f); 
     }
 }

@@ -1435,7 +1435,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: VOLUME MUSICA
+  m_text: "VOLUME M\xDASICA"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6d037802fa3cbdc43ade9c79b2ab5e4e, type: 2}
   m_sharedMaterial: {fileID: -4424747335348935971, guid: 6d037802fa3cbdc43ade9c79b2ab5e4e, type: 2}
@@ -1767,7 +1767,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 6219600205754120830, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
         m_TargetAssemblyTypeName: LogUIManager, Assembly-CSharp
         m_MethodName: FecharLog
         m_Mode: 1
@@ -2272,10 +2272,22 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 797763056962179419, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
+        m_TargetAssemblyTypeName: ControleDeVolume, Assembly-CSharp
+        m_MethodName: MudarVolumeSFX
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4540825621412628021
 GameObject:
   m_ObjectHideFlags: 0
@@ -2508,7 +2520,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1227594260810957375, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
         m_TargetAssemblyTypeName: GerenciadorMoedas, Assembly-CSharp
         m_MethodName: BotaoProximaFase
         m_Mode: 1
@@ -3016,10 +3028,22 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 797763056962179419, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
+        m_TargetAssemblyTypeName: ControleDeVolume, Assembly-CSharp
+        m_MethodName: MudarVolumeMusica
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5871853331064866930
 GameObject:
   m_ObjectHideFlags: 0
@@ -3216,7 +3240,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1227594260810957375, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
         m_TargetAssemblyTypeName: GerenciadorMoedas, Assembly-CSharp
         m_MethodName: BotaoReiniciarFase
         m_Mode: 1
@@ -3708,10 +3732,22 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 797763056962179419, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
+        m_TargetAssemblyTypeName: ControleDeVolume, Assembly-CSharp
+        m_MethodName: MudarVolumeMaster
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7257107542859196063
 GameObject:
   m_ObjectHideFlags: 0
@@ -3970,7 +4006,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1227594260810957375, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
         m_TargetAssemblyTypeName: GerenciadorMoedas, Assembly-CSharp
         m_MethodName: BotaoVoltarMenu
         m_Mode: 1

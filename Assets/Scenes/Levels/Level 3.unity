@@ -4695,6 +4695,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2122590097}
   - {fileID: 2036955287}
   - {fileID: 922716811}
   - {fileID: 2100280308}
@@ -18508,6 +18509,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: BotaoProximaFase
       objectReference: {fileID: 0}
+    - target: {fileID: 1584081308568833901, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2036955291}
+    - target: {fileID: 1584081308568833901, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BotaoReiniciarFase
+      objectReference: {fileID: 0}
     - target: {fileID: 1610490692478892414, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -18660,6 +18669,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7349367459194325073, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2036955291}
+    - target: {fileID: 7349367459194325073, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BotaoVoltarMenu
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18768,6 +18785,68 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!1001 &2122590096
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1112540651}
+    m_Modifications:
+    - target: {fileID: 656116075782511347, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 950.9633
+      objectReference: {fileID: 0}
+    - target: {fileID: 656116075782511347, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 627.3932
+      objectReference: {fileID: 0}
+    - target: {fileID: 656116075782511347, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 656116075782511347, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 656116075782511347, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 656116075782511347, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 656116075782511347, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 656116075782511347, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 656116075782511347, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 656116075782511347, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6853959403100760164, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
+      propertyPath: m_Name
+      value: SoundManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
+--- !u!4 &2122590097 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 656116075782511347, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
+  m_PrefabInstance: {fileID: 2122590096}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2139015851
 PrefabInstance:
   m_ObjectHideFlags: 0

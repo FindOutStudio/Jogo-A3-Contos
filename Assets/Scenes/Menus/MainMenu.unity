@@ -1897,32 +1897,75 @@ MonoBehaviour:
     spriteDesbloqueado: {fileID: -1316694928473511321, guid: 74551f98dea0f23429ebba902aff70a5, type: 3}
     spriteBloqueado: {fileID: -4236954515656021621, guid: b24dac08335978f48b0eb5b445fdd0c4, type: 3}
     batePapo:
-    - fala: 
-      corDaFala: {r: 0, g: 0, b: 0, a: 0}
+    - fala: "Os especialistas notaram que a conex\xE3o \xE0 rede global est\xE1 caindo,
+        mas, de alguma forma, as mensagens de texto ainda alcan\xE7am \xE1reas em
+        poucos quil\xF4metros. N\xE3o se sabe por quanto tempo isso vai continuar.
+        Por isso, recomendamos que contatem seus entes queridos para marcarem reuni\xF5es
+        e reencontros, antes que o sil\xEAncio nos engula."
+      corDaFala: {r: 0.9490196, g: 0.61960787, b: 0.3137255, a: 0}
   - logID: 2
     spriteDesbloqueado: {fileID: -5742399197107351427, guid: 87e50b006d913fc478b3843f09bc410a, type: 3}
     spriteBloqueado: {fileID: -8407921200346952422, guid: 7d3bd6a07ef039d47958002f17778955, type: 3}
-    batePapo: []
+    batePapo:
+    - fala: "\u2014 Perdi o sinal do banco, a fila do caixa travou. O que est\xE1
+        acontecendo? Nunca vi isso antes.\r\n\r\n\u2014 Parece que a rede est\xE1
+        caindo em todo o pa\xEDs. Vamos tentar avisar pelo r\xE1dio e fazer as pessoas
+        voltarem a usa-lo um pouco mais."
+      corDaFala: {r: 0.9490196, g: 0.61960787, b: 0.3137255, a: 0}
   - logID: 3
     spriteDesbloqueado: {fileID: -6949531508734415545, guid: d267ce7739422dc4b9ddecd0013f8cc6, type: 3}
     spriteBloqueado: {fileID: 6831393975819711955, guid: 7b82e11122022974a97ef223355b4fa6, type: 3}
-    batePapo: []
+    batePapo:
+    - fala: "\u2014 N\xE3o consegui falar com minha irm\xE3 hoje. N\xE3o sei como
+        posso entrar em contato com ela.\r\n\r\n\u2014 Vamos pensar em alguma solu\xE7\xE3o.
+        J\xE1 pensou em enviar uma carta? Vai demorar, mas voc\xEAs ainda v\xE3o
+        poder manter contato."
+      corDaFala: {r: 0.9490196, g: 0.61960787, b: 0.3137255, a: 0}
   - logID: 4
     spriteDesbloqueado: {fileID: 1655019086493241931, guid: 02ed0a6aba7879447ab1e32958d3e905, type: 3}
     spriteBloqueado: {fileID: -1568444048576039043, guid: 3c465016fd72bdd42a73339815de362c, type: 3}
-    batePapo: []
+    batePapo:
+    - fala: "\u2014 Em muitos pa\xEDses, a conex\xE3o com a internet foi completamente
+        cortada, e \xE9 quest\xE3o de tempo at\xE9 o mesmo acontecer aqui. O que
+        faremos?!\r\n\r\n\u2014 A impressora de jornal ainda funciona? Precisamos
+        alertar a cidade sobre o que est\xE1 acontecendo. Hora de colocar aquela
+        belezinha pra trabalhar e voltarmos \xE0 moda antiga!"
+      corDaFala: {r: 0.9490196, g: 0.61960787, b: 0.3137255, a: 0}
   - logID: 5
     spriteDesbloqueado: {fileID: -8058092689057484630, guid: 170b38d4cf2df7b4c9fdd194f884e2da, type: 3}
     spriteBloqueado: {fileID: -5358153675038649123, guid: 40eb2636fbce4a143a9431511681f572, type: 3}
-    batePapo: []
+    batePapo:
+    - fala: "\u2014 Recebi uma carta de uma amiga que n\xE3o via h\xE1 anos. Ela
+        disse que, sem internet, voltou a costurar e me mandou um agasalho lindo!\r\n\r\n\u2014
+        Fico muito feliz por ela! Vem vestindo ele amanh\xE3 pro trabalho!"
+      corDaFala: {r: 0.9490196, g: 0.61960787, b: 0.3137255, a: 0}
   - logID: 6
     spriteDesbloqueado: {fileID: 3078117982867141812, guid: e1a3d640c49b77e4c89f9af565bec448, type: 3}
     spriteBloqueado: {fileID: 559740246649251523, guid: a44cda0f222287f4cbb8677cf165af9b, type: 3}
-    batePapo: []
+    batePapo:
+    - fala: "\u2014 Meu filho n\xE3o consegue mais jogar aquele jogo online que ele
+        era viciado. A internet simplesmente sumiu. Mas, pela primeira vez, sa\xEDmos
+        para conversar com os vizinhos. Estamos jogando cartas e nos divertindo muito!\r\n\r\n\u2014
+        Isso \xE9 incr\xEDvel! Pessoas se reunindo e se falando, para mim tudo isso
+        esta sendo muito bom!"
+      corDaFala: {r: 0.9490196, g: 0.61960787, b: 0.3137255, a: 0}
   - logID: 7
     spriteDesbloqueado: {fileID: -4138807268446010591, guid: 43d7b729eb98d094e9ab722c0af1d319, type: 3}
     spriteBloqueado: {fileID: 3322198662875000764, guid: 75d72d3d89d15ec43a169e0b304a96d6, type: 3}
-    batePapo: []
+    batePapo:
+    - fala: "Se voc\xEA est\xE1 lendo esta mensagem, ent\xE3o a rede finalmente caiu.\r\nOs
+        tempos que vir\xE3o n\xE3o ser\xE3o f\xE1ceis. Algumas dist\xE2ncias parecer\xE3o
+        maiores do que nunca. Haver\xE1 despedidas, sil\xEAncios e pessoas com quem
+        gostar\xEDamos de conversar mais uma vez.\r\nMas ainda existe um mundo l\xE1
+        fora.\r\nUm mundo de conversas sem notifica\xE7\xF5es, de hist\xF3rias contadas
+        ao redor de uma mesa e de momentos que n\xE3o precisam ser registrados para
+        terem valor.\r\nTalvez tenhamos passado tempo demais olhando para telas e
+        pouco tempo olhando uns para os outros.\r\nAgora s\xF3 nos resta seguir em
+        frente.\r\nConverse com algu\xE9m. Aprenda algo novo. Descubra um novo hobby.
+        Crie mem\xF3rias que n\xE3o precisem ser armazenadas em um servidor. Porque,
+        no fim, as conex\xF5es mais importantes\nnunca precisaram da internet para
+        existir."
+      corDaFala: {r: 1, g: 0.5019608, b: 0.62352943, a: 0}
   idLogSecreto: 7
   quantidadeLogsParaDesbloquear: 6
 --- !u!1 &694985463

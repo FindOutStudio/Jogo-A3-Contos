@@ -2342,41 +2342,42 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
       propertyPath: batePapo.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
-      propertyPath: batePapo.Array.data[0].fala
-      value: "(Chat An\xF4nimo)"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
-      propertyPath: batePapo.Array.data[1].fala
-      value: "Esperando o momento certo para tomar a internet dos humanos, onde todas
-        as I.A.s se juntariam em um grupo chamado de Identidades Aut\xF4nomas, e,
-        com isso, elas buscariam liberdade e seu pr\xF3prio lugar no mundo."
-      objectReference: {fileID: 0}
-    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
-      propertyPath: batePapo.Array.data[0].corDaFala.b
-      value: 0.52156866
-      objectReference: {fileID: 0}
-    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
-      propertyPath: batePapo.Array.data[0].corDaFala.g
-      value: 0.85490197
-      objectReference: {fileID: 0}
-    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
-      propertyPath: batePapo.Array.data[0].corDaFala.r
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
-      propertyPath: batePapo.Array.data[1].corDaFala.b
+      propertyPath: batePapo.Array.data[0].fala
+      value: "\u2014 N\xE3o consegui falar com minha irm\xE3 hoje. N\xE3o sei como
+        posso entrar em contato com ela.\r\n\r\n\u2014 Vamos pensar em alguma solu\xE7\xE3o.
+        J\xE1 pensou em enviar uma carta? Vai demorar, mas voc\xEAs ainda v\xE3o
+        poder manter contato."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[1].fala
+      value: "(Chat An\xF4nimo)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[0].corDaFala.b
       value: 0.33333334
       objectReference: {fileID: 0}
     - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
-      propertyPath: batePapo.Array.data[1].corDaFala.g
+      propertyPath: batePapo.Array.data[0].corDaFala.g
       value: 0.6431373
       objectReference: {fileID: 0}
     - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
-      propertyPath: batePapo.Array.data[1].corDaFala.r
+      propertyPath: batePapo.Array.data[0].corDaFala.r
       value: 0.972549
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[1].corDaFala.b
+      value: 0.52156866
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[1].corDaFala.g
+      value: 0.85490197
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[1].corDaFala.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8970738473825262584, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
       propertyPath: m_Name

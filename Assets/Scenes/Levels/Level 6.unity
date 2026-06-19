@@ -1598,6 +1598,30 @@ PrefabInstance:
       propertyPath: opacidadeFantasma
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[0].fala
+      value: "\u2014 Meu filho n\xE3o consegue mais jogar aquele jogo online que
+        ele era viciado. A internet simplesmente sumiu. Mas, pela primeira vez, sa\xEDmos
+        para conversar com os vizinhos. Estamos jogando cartas e nos divertindo muito!\r\n\r\n\u2014
+        Isso \xE9 incr\xEDvel! Pessoas se reunindo e se falando, para mim tudo isso
+        esta sendo muito bom!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[0].corDaFala.b
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[0].corDaFala.g
+      value: 0.6431373
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[0].corDaFala.r
+      value: 0.972549
+      objectReference: {fileID: 0}
     - target: {fileID: 8970738473825262584, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
       propertyPath: m_Name
       value: Log

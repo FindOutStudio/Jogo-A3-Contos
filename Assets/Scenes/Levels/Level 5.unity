@@ -717,6 +717,28 @@ PrefabInstance:
       propertyPath: opacidadeFantasma
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[0].fala
+      value: "\u2014 Recebi uma carta de uma amiga que n\xE3o via h\xE1 anos. Ela
+        disse que, sem internet, voltou a costurar e me mandou um agasalho lindo!\r\n\r\n\u2014
+        Fico muito feliz por ela! Vem vestindo ele amanh\xE3 pro trabalho!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[0].corDaFala.b
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[0].corDaFala.g
+      value: 0.6431373
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595958913000721111, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
+      propertyPath: batePapo.Array.data[0].corDaFala.r
+      value: 0.972549
+      objectReference: {fileID: 0}
     - target: {fileID: 8970738473825262584, guid: b067e52aec62c1d458e3726e371ac6ab, type: 3}
       propertyPath: m_Name
       value: Log
@@ -20898,6 +20920,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 637899d382e4e024fb9a0ac464cc8acf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LogUIManager
+--- !u!114 &2036955290 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6055767802021951052, guid: c40d83ad7f0802f4eb21ccca2a90a424, type: 3}
+  m_PrefabInstance: {fileID: 2036955286}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d6839487625be149bc6a7d571c376b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuConfiguracoes
 --- !u!1001 &2039160299
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21326,6 +21359,14 @@ PrefabInstance:
     - target: {fileID: 1610490692478892414, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2400784003263376138, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2036955290}
+    - target: {fileID: 2400784003263376138, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: FecharConfiguracoes
       objectReference: {fileID: 0}
     - target: {fileID: 4906926221361460002, guid: 5efdc7e32b0bc484c9a4e6631f14589d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

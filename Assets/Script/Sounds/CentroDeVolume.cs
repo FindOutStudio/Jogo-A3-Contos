@@ -13,14 +13,18 @@ public class ControleDeVolume : MonoBehaviour
     [Tooltip("Se deixar vazio, ele puxa o som 'uiSelecao' automático do seu SoundManager!")]
     public AudioClip somDeTesteSFX;
 
+    // === A TRAVA DE SEGURANÇA ===
+    // Impede a Unity de zerar seus saves sozinhos quando a cena carregar!
+    private bool podeSalvar = false; 
+
     private void Start()
     {
+        // 1. Puxa os saves PRIMEIRO. Se for a primeira vez que joga, vai vir 1f (Máximo).
         float volMaster = PlayerPrefs.GetFloat("VolumeMaster", 1f);
         float volSFX = PlayerPrefs.GetFloat("VolumeSFX", 1f);
         float volMusica = PlayerPrefs.GetFloat("VolumeMusica", 1f);
 
-        // O PULO DO GATO CONTRA O BUG DE ZERAR: 
-        // Removemos o "ouvido" do Slider rapidinho, mudamos o valor pro seu Save, e só então ligamos o ouvido de novo!
+        // 2. Coloca os sliders nas posições certas ignorando os eventos automáticos
         if (sliderMaster != null)
         {
             sliderMaster.onValueChanged.RemoveAllListeners(); 
@@ -42,9 +46,13 @@ public class ControleDeVolume : MonoBehaviour
             sliderMusica.onValueChanged.AddListener(MudarVolumeMusica);
         }
 
+        // 3. Aplica os volumes iniciais nos Managers
         AudioListener.volume = volMaster;
         if (SoundManager.instance != null) SoundManager.instance.AtualizarVolumeGlobalSFX(volSFX);
         if (MusicManager.instance != null) MusicManager.instance.SetVolumeEmTempoReal(volMusica);
+
+        // 4. Libera o sistema para salvar as mudanças que VOCÊ fizer daqui pra frente!
+        podeSalvar = true;
     }
 
     private void AdicionarVigiaDeMouse(Slider slider)
@@ -61,6 +69,8 @@ public class ControleDeVolume : MonoBehaviour
 
     public void MudarVolumeMaster(float valor)
     {
+        if (!podeSalvar) return; // Se a cena acabou de abrir, ignora a falsiane da Unity!
+
         AudioListener.volume = valor; 
         PlayerPrefs.SetFloat("VolumeMaster", valor);
         PlayerPrefs.Save();
@@ -68,6 +78,8 @@ public class ControleDeVolume : MonoBehaviour
 
     public void MudarVolumeSFX(float valor)
     {
+        if (!podeSalvar) return; // Proteção
+
         if (SoundManager.instance != null) SoundManager.instance.AtualizarVolumeGlobalSFX(valor);
         PlayerPrefs.SetFloat("VolumeSFX", valor);
         PlayerPrefs.Save();
@@ -75,6 +87,8 @@ public class ControleDeVolume : MonoBehaviour
 
     public void MudarVolumeMusica(float valor)
     {
+        if (!podeSalvar) return; // Proteção
+
         if (MusicManager.instance != null) MusicManager.instance.SetVolumeEmTempoReal(valor); 
         PlayerPrefs.SetFloat("VolumeMusica", valor);
         PlayerPrefs.Save();
@@ -96,10 +110,6 @@ public class ControleDeVolume : MonoBehaviour
                 {
                     SoundManager.instance.sfxSource.PlayOneShot(clipeParaTocar, volumeAtual);
                 }
-            }
-            else
-            {
-                Debug.LogWarning("Chefe, o áudio de feedback tá vazio tanto aqui quanto no SoundManager!");
             }
         }
     }

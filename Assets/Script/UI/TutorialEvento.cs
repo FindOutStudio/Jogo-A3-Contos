@@ -22,53 +22,23 @@ public class TutorialEvento : MonoBehaviour
 
     [Header("Habilidades Bônus")]
     [Tooltip("Marque esta caixa se quiser que ESTE colisor libere o pulo duplo junto com o evento de cima!")]
-    public bool tambemLiberaPuloDuplo = false; // ======= A MÁGICA NOVA AQUI =======
+    public bool tambemLiberaPuloDuplo = false;
 
     private bool tutorialAtivo = false;
     private bool jaAtivouNestaRun = false; 
     
     private PlayerController playerScript; 
 
-    private void Start()
-    {
-        if (objetoMaozinha != null) objetoMaozinha.SetActive(false);
-        if (painelPopUp != null) painelPopUp.SetActive(false);
-    }
-
-    private void Update()
-    {
-        if (tutorialAtivo && (tipoDoEvento == TipoDeTutorial.Lancador || tipoDoEvento == TipoDeTutorial.SlowMotionMidAir))
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                if (objetoMaozinha != null) objetoMaozinha.SetActive(false);
-                tutorialAtivo = false;
-            }
-        }
-    }
+    // === A MÁGICA AQUI: Guardamos a corotina para poder matá-la a qualquer momento! ===
+    private Coroutine rotinaMatrixAtual;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && !jaAtivouNestaRun)
+        if (jaAtivouNestaRun) return;
+
+        if (collision.CompareTag("Player"))
         {
             playerScript = collision.GetComponent<PlayerController>();
-            AtivarTutorial();
-        }
-    }
-    
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player") && playerScript != null)
-        {
-            playerScript.tutorialTempoInfinito = false;
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player") && !jaAtivouNestaRun && tipoDoEvento == TipoDeTutorial.Lancador)
-        {
-            playerScript = collision.gameObject.GetComponent<PlayerController>();
             AtivarTutorial();
         }
     }
@@ -77,38 +47,33 @@ public class TutorialEvento : MonoBehaviour
     {
         jaAtivouNestaRun = true;
 
-        // 1. Roda o evento principal que você escolheu na lista
         switch (tipoDoEvento)
         {
             case TipoDeTutorial.Lancador:
-                tutorialAtivo = true;
+                Time.timeScale = 0f;
                 if (objetoMaozinha != null) objetoMaozinha.SetActive(true);
+                tutorialAtivo = true;
                 break;
 
             case TipoDeTutorial.PopUpColetavel:
+                if (painelPopUp != null) painelPopUp.SetActive(true);
+                Time.timeScale = 0f;
                 tutorialAtivo = true;
-                if (painelPopUp != null)
-                {
-                    painelPopUp.SetActive(true);
-                    Time.timeScale = 0f; 
-                    PauseMenu.isPaused = true;
-                }
-                if (SoundManager.instance != null) SoundManager.instance.TocarMaozinha();
                 break;
 
             case TipoDeTutorial.SlowMotionMidAir:
                 if (playerScript != null) playerScript.tutorialTempoInfinito = true;
                 if (SoundManager.instance != null) SoundManager.instance.TocarSlowMotion();
-                StartCoroutine(RotinaMatrix());
+                
+                // === Salvamos a corotina na variável ===
+                rotinaMatrixAtual = StartCoroutine(RotinaMatrix());
                 break;
 
             case TipoDeTutorial.LiberarPuloDuplo:
-                // Mantido caso você queira um colisor que SÓ libera o pulo duplo e não faz mais nada
                 if (playerScript != null) playerScript.puloDuploDesbloqueado = true;
                 break;
         }
 
-        // 2. COMBO BÔNUS: Libera o pulo duplo de forma simultânea e invisível!
         if (tambemLiberaPuloDuplo && playerScript != null)
         {
             playerScript.puloDuploDesbloqueado = true;
@@ -130,6 +95,34 @@ public class TutorialEvento : MonoBehaviour
         tutorialAtivo = true; 
     }
 
+    public void FecharTutorial()
+    {
+        // === CORREÇÃO: Se o jogador arrastar muito rápido, matamos a corotina 
+        // ANTES de ela congelar o jogo a meio do pulo dele! ===
+        if (rotinaMatrixAtual != null)
+        {
+            StopCoroutine(rotinaMatrixAtual);
+            rotinaMatrixAtual = null;
+        }
+
+        if (tipoDoEvento == TipoDeTutorial.PopUpColetavel)
+        {
+            if (painelPopUp != null) painelPopUp.SetActive(false);
+            Time.timeScale = 1f;
+            Time.fixedDeltaTime = 0.02f;
+            tutorialAtivo = false;
+        }
+        else if (tipoDoEvento == TipoDeTutorial.SlowMotionMidAir || tipoDoEvento == TipoDeTutorial.Lancador)
+        {
+            if (objetoMaozinha != null) objetoMaozinha.SetActive(false);
+            Time.timeScale = 1f;
+            Time.fixedDeltaTime = 0.02f;
+            tutorialAtivo = false;
+            
+            // Segurança extra para garantir que ele sai do modo tutorial no script dele
+            if (playerScript != null) playerScript.tutorialTempoInfinito = false;
+        }
+    }
     public void FecharPopUp()
     {
         if (painelPopUp != null) painelPopUp.SetActive(false);

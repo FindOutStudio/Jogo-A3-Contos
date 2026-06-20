@@ -158,12 +158,19 @@ public class MusicManager : MonoBehaviour
         }
     }
 
-    // ======= A FUNÇÃO QUE FALTAVA (O ERRO VERMELHO SUMIRÁ AGORA) =======
+    // ======= A FUNÇÃO QUE FALTAVA (Agora funciona em tempo real e em gameplay!) =======
     public void SetVolumeEmTempoReal(float volumeEspecifico)
     {
-        if (audioSource != null && !isGameplay && !tocandoAlgoz)
+        // 1. Atualiza a variável base do sistema
+        volumeGlobalMusica = volumeEspecifico;
+        
+        // 2. Calcula a matemática perfeita dependendo de qual música está tocando na tela agora
+        if (audioSource != null && audioSource.clip != null)
         {
-            audioSource.volume = volumeEspecifico * volumeGlobalMusica;
+            if (audioSource.clip == musicaMenu) audioSource.volume = volumeMusicaMenu * volumeGlobalMusica;
+            else if (audioSource.clip == musicaGameplay1) audioSource.volume = volumeGameplay1 * volumeGlobalMusica;
+            else if (audioSource.clip == musicaGameplay2) audioSource.volume = volumeGameplay2 * volumeGlobalMusica;
+            else if (audioSource.clip == musicaAlgoz) audioSource.volume = volumeAlgoz * volumeGlobalMusica;
         }
     }
 

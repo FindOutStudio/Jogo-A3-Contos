@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-// O bloquinho que vai aparecer no Inspector: só a Fala e a Cor
 [System.Serializable]
 public class LinhaDeDialogo
 {
@@ -25,15 +24,13 @@ public class LogColetavel : MonoBehaviour
 
     private void Start()
     {
-        // O Segredo: Assim que a fase carregar, ele verifica no save se já foi pego
         if (PlayerPrefs.GetInt("LogColetado_" + logID, 0) == 1)
         {
-            // Se já pegou, pega o componente de imagem e deixa ele meio "apagado"
             SpriteRenderer meuSprite = GetComponent<SpriteRenderer>();
             if (meuSprite != null)
             {
                 Color corAtual = meuSprite.color;
-                corAtual.a = opacidadeFantasma; // Aplica a opacidade (ex: 40%)
+                corAtual.a = opacidadeFantasma;
                 meuSprite.color = corAtual;
             }
         }
@@ -43,41 +40,52 @@ public class LogColetavel : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Coletar();
+            Coletar(collision.gameObject);
         }
     }
 
-    private void Coletar()
+    private void Coletar(GameObject jogador)
     {
         if (SoundManager.instance != null) SoundManager.instance.TocarLog();
         
         PlayerPrefs.SetInt("LogColetado_" + logID, 1);
         PlayerPrefs.Save();
 
-        // Envia o textão montado para o UI Manager
+        // Envia o texto montado para o UI Manager
         if (LogUIManager.instance != null)
         {
             string textoPronto = MontarConversa();
             LogUIManager.instance.MostrarLog(logID, textoPronto);
         }
 
+        // === CORREÇÃO DO LANÇAMENTO ===
+        // Comunica com o teu PlayerController para cortar o elástico e esconder a linha
+        if (jogador != null)
+        {
+            // Força a execução das funções de reset de arrasto no jogador
+            jogador.SendMessage("CancelarArrasto", SendMessageOptions.DontRequireReceiver);
+            jogador.SendMessage("ResetarLancamento", SendMessageOptions.DontRequireReceiver);
+            
+            // Segurança extra: Esconde a linha visual do rastro caso o rato/touch fique preso
+            TrailRenderer rastro = jogador.GetComponentInChildren<TrailRenderer>();
+            if (rastro != null) rastro.emitting = false;
+            
+            LineRenderer linha = jogador.GetComponentInChildren<LineRenderer>();
+            if (linha != null) linha.enabled = false;
+        }
+
         Destroy(gameObject);
     }
 
-    // A mágica acontece aqui: ele pega a lista e transforma num textão só com as cores embutidas
     private string MontarConversa()
     {
         string textoFinal = "";
 
         for (int i = 0; i < batePapo.Count; i++)
         {
-            // O "RGB" no final garante que a Unity não deixe seu texto invisível por causa do Alpha!
             string corHex = ColorUtility.ToHtmlStringRGB(batePapo[i].corDaFala);
-
-            // Coloca a cor em volta da frase atual
             textoFinal += $"<color=#{corHex}>{batePapo[i].fala}</color>";
 
-            // Pula de linha para a resposta da outra pessoa ficar embaixo (exceto a última)
             if (i < batePapo.Count - 1)
             {
                 textoFinal += "\n\n";

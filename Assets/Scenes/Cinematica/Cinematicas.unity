@@ -386,7 +386,7 @@ MonoBehaviour:
   - idCinematica: Faber
     nomeArquivoVideo: Faber.mp4
     musicaFundo: {fileID: 8300000, guid: ac5436622c309154494a0c267d6109d0, type: 3}
-    volumeMusica: 0.071
+    volumeMusica: 0.4
     sfxNoComeco: {fileID: 0}
     sfxNoFim: {fileID: 0}
     dialogos:

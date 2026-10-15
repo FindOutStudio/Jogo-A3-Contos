@@ -54,6 +54,10 @@ public class CinematicaConfig
 
 public class CinematicaManager : MonoBehaviour
 {
+    [Header("=== MODO EVENTO (BUILD) ===")]
+    [Tooltip("Se marcado aqui ou no LevelSelector, pula qualquer cutscene imediatamente!")]
+    public bool modoSemCutscenes = false;
+
     [Header("=== MODO DE TESTE (DEBUG) ===")]
     public bool testarCinematica = false;
     public string idParaTeste;
@@ -92,6 +96,39 @@ public class CinematicaManager : MonoBehaviour
                 break;
             }
         }
+
+        // ======= TRAVA DO MODO EVENTO (SEM CUTSCENES) =======
+        if (modoSemCutscenes || LevelSelector.pularCutscenesGlobal)
+        {
+            // Se houver cutscenes em sequência, segue até encontrar a cena final de destino
+            int segurancaLoop = 0;
+            while (cinematicaAtual != null && !string.IsNullOrEmpty(cinematicaAtual.idCinematicaSeguinte) && segurancaLoop < 20)
+            {
+                segurancaLoop++;
+                string proximoId = cinematicaAtual.idCinematicaSeguinte;
+                cinematicaAtual = null;
+                foreach (var c in todasAsCinematicas)
+                {
+                    if (c.idCinematica == proximoId)
+                    {
+                        cinematicaAtual = c;
+                        break;
+                    }
+                }
+            }
+
+            PlayerPrefs.DeleteKey("CinematicaPendente");
+            PlayerPrefs.Save();
+
+            string cenaDestino = (cinematicaAtual != null && !string.IsNullOrEmpty(cinematicaAtual.proximaCena)) 
+                                 ? cinematicaAtual.proximaCena 
+                                 : "MainMenu";
+
+            if (GerenciadorTransicoes.instance != null) GerenciadorTransicoes.instance.TrocarCena(cenaDestino);
+            else SceneManager.LoadScene(cenaDestino);
+            return;
+        }
+        // ====================================================
 
         if (botaoPular != null) botaoPular.onClick.AddListener(PularCinematica);
 

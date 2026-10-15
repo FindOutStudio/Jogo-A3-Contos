@@ -17,6 +17,11 @@ public struct FaseConfig
 
 public class LevelSelector : MonoBehaviour
 {
+    [Header("=== MODO EVENTO (BUILD) ===")]
+    [Tooltip("Marque esta caixinha para desativar TODAS as cutscenes do jogo!")]
+    public bool modoSemCutscenes = false;
+    public static bool pularCutscenesGlobal = false;
+
     [Header("Telas do Menu")]
     public GameObject telaMenuPrincipal;
     public GameObject telaSelecaoLevel;
@@ -28,8 +33,15 @@ public class LevelSelector : MonoBehaviour
     [Header("Lista de Fases")]
     public FaseConfig[] fases;
 
+    void Awake()
+    {
+        // Atualiza a chave global assim que o menu carrega
+        pularCutscenesGlobal = modoSemCutscenes;
+    }
+
     void Start()
     {
+        pularCutscenesGlobal = modoSemCutscenes;
         if (telaSelecaoLevel != null) telaSelecaoLevel.SetActive(false);
         GerarBotoesDeFase();
     }
@@ -68,8 +80,10 @@ public class LevelSelector : MonoBehaviour
 
     private void CarregarFase(string nomeCena, string cinematicaPendente)
     {
-        // ======= MUDANÇA AQUI =======
-        if (!string.IsNullOrEmpty(cinematicaPendente))
+        pularCutscenesGlobal = modoSemCutscenes;
+
+        // ======= MUDANÇA AQUI: Só carrega a cutscene se o Modo Sem Cutscenes estiver DESMARCADO =======
+        if (!modoSemCutscenes && !string.IsNullOrEmpty(cinematicaPendente))
         {
             PlayerPrefs.SetString("CinematicaPendente", cinematicaPendente);
             GerenciadorTransicoes.instance.TrocarCena("Cinematicas");

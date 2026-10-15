@@ -1810,6 +1810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1448bde89c54f94ba836c25a7780baa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelector
+  modoSemCutscenes: 1
   telaMenuPrincipal: {fileID: 995621087}
   telaSelecaoLevel: {fileID: 141125382}
   botaoLevelPrefab: {fileID: 3673112601167992957, guid: 884ef7dbec043a84aa85cd8ac5f1d46f, type: 3}
@@ -6113,6 +6114,10 @@ PrefabInstance:
     - target: {fileID: 6853959403100760164, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
       propertyPath: m_Name
       value: SoundManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6853959403100760164, guid: e7cdd8e034f48e845afd77e93e87f651, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -239,7 +239,8 @@ public class GerenciadorMoedas : MonoBehaviour
         PlayerPrefs.SetInt("FaseLiberada_" + proximaFaseID, 1);
         PlayerPrefs.Save();
         
-        if (!string.IsNullOrEmpty(idCinematicaVitoria))
+        // ======= MUDANÇA AQUI: Checa se as cutscenes estão ativadas antes de chamar a cena Cinematicas =======
+        if (!LevelSelector.pularCutscenesGlobal && !string.IsNullOrEmpty(idCinematicaVitoria))
         {
             PlayerPrefs.SetString("CinematicaPendente", idCinematicaVitoria);
             GerenciadorTransicoes.instance.TrocarCena("Cinematicas");
@@ -251,7 +252,16 @@ public class GerenciadorMoedas : MonoBehaviour
             {
                 string caminhoCena = SceneUtility.GetScenePathByBuildIndex(proximaCena);
                 string nomeDaCenaNova = System.IO.Path.GetFileNameWithoutExtension(caminhoCena);
-                GerenciadorTransicoes.instance.TrocarCena(nomeDaCenaNova);
+                
+                // Segurança extra: se a próxima cena no Build Settings for "Cinematicas", volta pro Menu
+                if (LevelSelector.pularCutscenesGlobal && nomeDaCenaNova == "Cinematicas")
+                {
+                    GerenciadorTransicoes.instance.TrocarCena("MainMenu");
+                }
+                else
+                {
+                    GerenciadorTransicoes.instance.TrocarCena(nomeDaCenaNova);
+                }
             }
             else 
             {
@@ -273,13 +283,12 @@ public class GerenciadorMoedas : MonoBehaviour
     }
 
     private void LimparEfeitosPause()
-{
-    Time.timeScale = 1f;
-    jogoPausadoVitoria = false;
-    
-    
-    moedasColetadas = 0; 
-    
-    if (somNormalSnapshot != null) somNormalSnapshot.TransitionTo(0.1f);
-}
+    {
+        Time.timeScale = 1f;
+        jogoPausadoVitoria = false;
+        
+        moedasColetadas = 0; 
+        
+        if (somNormalSnapshot != null) somNormalSnapshot.TransitionTo(0.1f);
+    }
 }
